@@ -12,8 +12,8 @@ Follow these steps to set up the project locally:
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/OCSPL/OneSource/tree/main
-    cd https://github.com/OCSPL/OneSource/tree/main
+    git clone https://github.com/SuyogBhereOcspl/oneSource.git/main
+    cd https://github.com/SuyogBhereOcspl/oneSource.git/main
     ```
 
 2. Create and activate a virtual environment:
