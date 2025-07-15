@@ -1,0 +1,77 @@
+{% extends 'main/index.html' %}
+{% load static %}
+
+{% block maincontent %}
+<div class="container mx-auto py-2 px-4">
+    <div class="flex items-center justify-between mb-4">
+        <a href="/" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-1 px-3 rounded shadow-md">
+            Back to Main Page
+        </a>
+        <h2 class="text-2xl font-bold text-center flex-1 text-gray-700">KF Factor Entry Register</h2>
+        <a href="{% url 'add_kf_factor_entry' %}" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded shadow-md">
+            + Add New
+        </a>
+    </div>
+
+    <div class="overflow-x-auto bg-white rounded shadow">
+        <table class="min-w-full border border-gray-300 text-xs">
+            <thead class="bg-blue-700 text-white text-center font-semibold">
+                <tr>
+                    <th class="px-2 py-2 border">Date</th>
+                    <th class="px-2 py-2 border">Instrument Used</th>
+                    <th class="px-2 py-2 border">Sample Weight 01 (mg)</th>
+                    <th class="px-2 py-2 border">Sample Weight 02 (mg)</th>
+                    <th class="px-2 py-2 border">Sample Weight 03 (mg)</th>
+                    <th class="px-2 py-2 border">Burette Reading 01 (mL)</th>
+                    <th class="px-2 py-2 border">Burette Reading 02 (mL)</th>
+                    <th class="px-2 py-2 border">Burette Reading 03 (mL)</th>
+                    <th class="px-2 py-2 border">Kf Factor 01 (mg/mL)</th>
+                    <th class="px-2 py-2 border">Kf Factor 02 (mg/mL)</th>
+                    <th class="px-2 py-2 border">Kf Factor 03 (mg/mL)</th>
+                    <th class="px-2 py-2 border bg-yellow-100 text-orange-700">Average Factor (mg/mL)</th>
+                    <th class="px-2 py-2 border">Analyst</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in table_data %}
+                <tr class="border-b hover:bg-blue-50 text-center">
+                    <td class="px-2 py-1 border">{{ row.entry.created_at|date:"d-m-Y" }}</td>
+                    <td class="px-2 py-1 border">{{ row.entry.instrument.name }}</td>
+                    {% for idx in range3 %}
+                        <td class="px-2 py-1 border">
+                            {% if row.lines|length > idx and row.lines.idx %}
+                                {{ row.lines.idx.sample_weight_mg }}
+                            {% elif row.lines|length > idx and row.lines[idx] %}
+                                {{ row.lines[idx].sample_weight_mg }}
+                            {% endif %}
+                        </td>
+                    {% endfor %}
+                    {% for idx in range3 %}
+                        <td class="px-2 py-1 border">
+                            {% if row.lines|length > idx and row.lines.idx %}
+                                {{ row.lines.idx.burette_reading_ml }}
+                            {% elif row.lines|length > idx and row.lines[idx] %}
+                                {{ row.lines[idx].burette_reading_ml }}
+                            {% endif %}
+                        </td>
+                    {% endfor %}
+                    {% for idx in range3 %}
+                        <td class="px-2 py-1 border">
+                            {% if row.lines|length > idx and row.lines.idx %}
+                                {{ row.lines.idx.kf_factor|floatformat:4 }}
+                            {% elif row.lines|length > idx and row.lines[idx] %}
+                                {{ row.lines[idx].kf_factor|floatformat:4 }}
+                            {% endif %}
+                        </td>
+                    {% endfor %}
+                    <td class="px-2 py-1 border bg-yellow-100 font-bold text-orange-700">{{ row.avg_kf|floatformat:4 }}</td>
+                    <td class="px-2 py-1 border">{{ row.entry.analysed_by.name }}</td>
+                </tr>
+                {% empty %}
+                <tr><td colspan="13" class="text-center text-gray-400 py-8">No entries found.</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

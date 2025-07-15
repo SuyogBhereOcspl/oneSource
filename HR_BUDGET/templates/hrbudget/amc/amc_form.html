@@ -75,6 +75,13 @@
                 {% endif %}
             </div>
             <div>
+                {{ form.custom_amc_name.label_tag }}
+                {{ form.custom_amc_name }}
+                {% if form.custom_amc_name.errors %}
+                    <p class="text-red-600 text-xs mt-1">{{ form.custom_amc_name.errors|striptags }}</p>
+                {% endif %}
+            </div>
+            <div>
                 {{ form.gst.label_tag }}
                 {{ form.gst }}
                 {% if form.gst.errors %}
@@ -103,4 +110,23 @@
         </button>
     </form>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var select = document.getElementById('id_amc_name');
+        var customField = document.getElementById('id_custom_amc_name');
+        function toggleCustom() {
+            if (select.value === 'Other') {
+                customField.parentElement.style.display = '';
+            } else {
+                customField.parentElement.style.display = 'none';
+                customField.value = '';
+            }
+        }
+        if (select && customField) {
+            select.addEventListener('change', toggleCustom);
+            toggleCustom();
+        }
+    });
+</script>
 {% endblock HRbudget_report_content %}

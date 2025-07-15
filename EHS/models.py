@@ -109,7 +109,7 @@ class Lagging_Indicator(models.Model):
         capa_entries = self.lagging_capa_entry.all()
 
         if not capa_entries.exists():
-            self.complience_status = None
+            self.complience_status = "Open"
             self.complience_status_date = None
         else:
             # If any entry is "Overdue", set to Overdue

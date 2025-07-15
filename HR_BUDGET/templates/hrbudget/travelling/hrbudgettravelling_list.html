@@ -7,7 +7,8 @@
 {% block HRbudget_report_header %}
 <div class="flex justify-between items-center mb-4">
     <h2 class="text-xl font-bold text-gray-600">Travelling / Lodging / Boarding Records</h2>
-    {% if perms.HR_BUDGET.add_hrbudgetravellinglodging %}
+
+    {% if perms.HR_BUDGET.add_hrbudgettravellinglodging %}
     <a href="{% url 'add_hrbudget_travelling_lodging' %}" class="bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded shadow text-sm">
         + Add New
     </a>
@@ -44,7 +45,8 @@
                 <th class="px-4 py-2 border text-right">GST</th>
                 <th class="px-4 py-2 border text-right">Bill Amount</th>
                 <th class="px-4 py-2 border">Description</th>
-                {% if perms.HR_BUDGET.change_hrbudgetravellinglodging or perms.HR_BUDGET.delete_hrbudgetravellinglodging %}
+
+                {% if perms.HR_BUDGET.change_hrbudgettravellinglodging or perms.HR_BUDGET.delete_hrbudgettravellinglodging %}
                 <th class="px-4 py-2 border">Action</th>
                 {% endif %}
             </tr>
@@ -58,15 +60,15 @@
                 <td class="px-4 py-2 border text-right">{% if obj.gst %}{{ obj.gst }}{% endif %}</td>
                 <td class="px-4 py-2 border text-right">{% if obj.bill_amount %}{{ obj.bill_amount }}{% endif %}</td>
                 <td class="px-4 py-2 border">{{ obj.description|default:"-" }}</td>
-                {% if perms.HR_BUDGET.change_hrbudgetravellinglodging or perms.HR_BUDGET.delete_hrbudgetravellinglodging %}
+                {% if perms.HR_BUDGET.change_hrbudgettravellinglodging or perms.HR_BUDGET.delete_hrbudgettravellinglodging %}
                 <td class="px-4 py-2 border text-center whitespace-nowrap">
-                    {% if perms.HR_BUDGET.change_hrbudgetravellinglodging %}
+                    {% if perms.HR_BUDGET.change_hrbudgettravellinglodging %}
                     <a href="{% url 'edit_hrbudget_travelling_lodging' obj.id %}" title="Edit"
                        class="inline-block px-2 py-1 bg-yellow-500 hover:bg-yellow-600 text-white rounded mr-1 text-xs">
                         <i class="fa fa-edit"></i>
                     </a>
                     {% endif %}
-                    {% if  perms.HR_BUDGET.delete_hrbudgetravellinglodging %}
+                    {% if  perms.HR_BUDGET.delete_hrbudgettravellinglodging %}
                     <form method="post" action="{% url 'delete_hrbudget_travelling_lodging' obj.id %}" style="display:inline;"
                         onsubmit="return confirm('Are you sure you want to delete this record?');">
                         {% csrf_token %}

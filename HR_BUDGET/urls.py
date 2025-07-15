@@ -75,6 +75,12 @@ urlpatterns = [
     path('training/edit/<int:pk>/', views.edit_hrbudget_training, name='edit_hrbudget_training'),
     path('training/delete/<int:pk>/', views.delete_hrbudget_training, name='delete_hrbudget_training'),
 
+
+    path('legal/', views.hrbudget_legal_list, name='hrbudget_legal_list'),
+    path('legal/add/', views.add_hrbudget_legal, name='add_hrbudget_legal'),
+    path('legal/edit/<int:pk>/', views.edit_hrbudget_legal, name='edit_hrbudget_legal'),
+    path('legal/delete/<int:pk>/', views.delete_hrbudget_legal, name='delete_hrbudget_legal'),
+
     path('monthly_hr_budget_summary/', views.monthly_hr_budget_summary, name='monthly_hr_budget_summary'),    
     path('download_hr_budget_excel/', views.download_hr_budget_excel, name='download_hr_budget_excel'),
 

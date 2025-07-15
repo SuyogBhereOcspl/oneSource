@@ -23,3 +23,36 @@ class Vehicle(models.Model):
         db_table = 'vehicle'
 
 
+class MaterialRequest(models.Model):
+    """One row for each material request / plan."""
+    DOMESTIC = "DOM"
+    EXPORT   = "EXP"
+
+    TYPE_CHOICES = [
+        (DOMESTIC, "Domestic"),
+        (EXPORT,   "Export"),
+    ]
+
+    type            = models.CharField(
+        max_length=3,
+        choices=TYPE_CHOICES,
+        default=DOMESTIC,
+    )
+    material_name   = models.CharField(max_length=150)
+    trade_name      = models.CharField(max_length=150, blank=True)
+    unit            = models.CharField(max_length=30, help_text="e.g. Kg / Litre / Nos")
+    qty             = models.DecimalField("Quantity", max_digits=12, decimal_places=3)
+    tentative_date  = models.DateField("Tentative Needed Date")
+
+    created_at      = models.DateTimeField(auto_now_add=True)
+    updated_at      = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ["-created_at"]
+        db_table = 'dispatch'
+
+    def __str__(self):
+        return f"{self.get_type_display()} – {self.material_name} ({self.qty} {self.unit})"
+
+    def get_absolute_url(self):
+        return reverse("store:material-detail", args=[self.pk])

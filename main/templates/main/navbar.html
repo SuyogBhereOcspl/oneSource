@@ -36,7 +36,7 @@
         <div class="hidden sm:ml-6 sm:block">
           <div class="flex space-x-4">
             
-            {% if 'HR' in user_groups or is_superuser %}
+            {% if 'HR' in user_groups  and show_admin_panel or is_superuser %}
             <div class="relative group pb-2"> <!-- Added 'group' class -->
               <button type="button" class="inline-flex items-center gap-x-1 rounded-md px-3 py-3 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-expanded="false" aria-haspopup="true">
                 HR Module
@@ -48,8 +48,9 @@
                   
                 <a href="{% url 'attendance_pivot_report' %}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-950 hover:text-white" role="menuitem" tabindex="-2">Attendance Summary</a>
                 <a href="{% url 'canteen_dashboard' %}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-950 hover:text-white" role="menuitem" tabindex="-2">Canteen Dashboard</a>
-                <a href="{% url 'contractor_worker_entry_add' %}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-950 hover:text-white" role="menuitem" tabindex="-2">Create Contract Worker Record</a>
 				<a href="{% url 'monthly_hr_budget_summary' %}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-950 hover:text-white" role="menuitem" tabindex="-2">HR Budget</a>
+				<a href="{% url 'contract_employee_matched_report' %}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-950 hover:text-white" role="menuitem" tabindex="-2">Contract attendance</a>
+				<a href="{% url 'contractor_worker_entry_add' %}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-950 hover:text-white" role="menuitem" tabindex="-2">Create Contract Worker Count</a>
               </div>
             </div>
             {% endif %}
@@ -97,8 +98,10 @@
                           invisible opacity-0 scale-95 group-hover:visible group-hover:opacity-100 group-hover:scale-100  
                           transition ease-out duration-100"
                    role="menu" aria-orientation="vertical" tabindex="-1">
-                  <a href="{% url 'add_vehicle' %}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-950 hover:text-white" role="menuitem" tabindex="-1">Create Vehicle Record</a>
-                  <a href="{% url 'vehicle_list' %}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-950 hover:text-white" role="menuitem" tabindex="-1">Store Reports</a>
+                   <a href="{% url 'add_vehicle' %}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-950 hover:text-white" role="menuitem" tabindex="-1">Create Vehicle Record</a>
+                   <a href="{% url 'vehicle_list' %}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-950 hover:text-white" role="menuitem" tabindex="-1">Store Reports</a>
+
+                  
               </div>
             </div>
             {% endif %}
@@ -143,6 +146,20 @@
                             transition ease-out duration-100"
                      role="menu" aria-orientation="vertical" tabindex="-1">
                     <a href="{% url 'qc_home' %}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-950 hover:text-white" role="menuitem" tabindex="-1">QC Module</a>
+                </div>
+            </div>
+            {% endif %}
+			{% if 'R&D' in user_groups and show_admin_panel or is_superuser %}  
+             <div class="relative group pb-2"> <!-- Added 'group' class -->
+                <button type="button" class="inline-flex items-center gap-x-1 rounded-md px-3 py-3 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-expanded="false" aria-haspopup="true">
+                    R&D Module
+                </button>
+                <div class="absolute left-0 z-10 mt-2 w-48 origin-top-left rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none
+                            invisible opacity-0 scale-95 group-hover:visible group-hover:opacity-100 group-hover:scale-100  
+                            transition ease-out duration-100"
+                     role="menu" aria-orientation="vertical" tabindex="-1">
+                    <a href="{% url 'add_r_and_d_moisture' %}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-950 hover:text-white" role="menuitem" tabindex="-1">Add R&D Moisture</a>
+					<a href="{% url 'r_and_d_moisture_list' %}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-950 hover:text-white" role="menuitem" tabindex="-1">View R&D Moisture</a>
                 </div>
             </div>
             {% endif %}

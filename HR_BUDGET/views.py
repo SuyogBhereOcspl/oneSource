@@ -5,7 +5,7 @@ from HR_BUDGET.models import *
 from HR_BUDGET.forms import (ContractorWagesForm,SecurityWagesForm,HrBudgetWelfareForm,
                              HrBudgetCanteenForm,HrBudgetMedicalForm,HrBudgetVehicleForm,HrBudgetTravellingForm,
                              HRBudgetGuestHouseForm, HRBudgetGeneralAdminForm,HRBudgetCommunicationForm,InsuranceMediclaimForm,
-                             HRBudgetAMCForm,HRBudgetTrainingForm)
+                             HRBudgetAMCForm,HRBudgetTrainingForm,HRBudgetLegalForm)
 from django.shortcuts import render, redirect, get_object_or_404
 from django.core.paginator import Paginator
 from django.db.models import Sum, F, Value, Min, Max
@@ -19,6 +19,9 @@ from django.db.models import DateField
 import io
 import xlsxwriter
 from django.http import HttpResponse
+from .templatetags.dict_utils import indian_currency_format
+from django.db.models import Q
+
 
 
 # Add Contractor Wages
@@ -165,7 +168,36 @@ def add_hrbudget_welfare(request):
 @login_required
 def hrbudget_welfare_list(request):
     records = HrBudgetWelfare.objects.order_by('-invoice_date', '-id')
-    return render(request, 'hrbudget/welfare/hrbudgetwelfare_list.html', {'records': records,'active_link': 'welfare'})
+
+    # Filters
+    invoice_date_from = request.GET.get('invoice_date_from')
+    invoice_date_to = request.GET.get('invoice_date_to')
+    welfare_name = request.GET.get('welfare_name')
+
+    if invoice_date_from:
+        records = records.filter(invoice_date__gte=invoice_date_from)
+    if invoice_date_to:
+        records = records.filter(invoice_date__lte=invoice_date_to)
+    if welfare_name:
+        records = records.filter(welfare_name__icontains=welfare_name)
+
+    paginator = Paginator(records, 10)  # Show 10 per page (change as needed)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
+    # Remove page parameter from GET for clean pagination links
+    filter_dict = request.GET.copy()
+    if 'page' in filter_dict:
+        del filter_dict['page']
+    filter_query = filter_dict.urlencode()
+
+    context = {
+        'page_obj': page_obj,
+        'filter_params': request.GET,
+        'filter_query': filter_query,   # Add this to context!
+        'active_link': 'welfare'
+    }
+    return render(request, 'hrbudget/welfare/hrbudgetwelfare_list.html', context)
 
 
 
@@ -275,7 +307,7 @@ def add_hrbudget_medical(request):
 @login_required
 def hrbudget_medical_list(request):
     records = HrBudgetMedical.objects.all().order_by('-invoice_date', '-id')
-    return render(request, 'hrbudget/medical/hrbudgetmedical_list.html', {'records': records})
+    return render(request, 'hrbudget/medical/hrbudgetmedical_list.html', {'records': records,'active_link': 'medical'})
 
 
 
@@ -770,8 +802,66 @@ def hrbudget_training_list(request):
     })
 
 
-# ==========================Dashboard==================================================
 
+@login_required
+def add_hrbudget_legal(request):
+    if request.method == 'POST':
+        form = HRBudgetLegalForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Legal record added successfully!")
+            return redirect('hrbudget_legal_list')  # Update with your list view name
+        else:
+            messages.error(request, "Please correct the errors below.")
+    else:
+        form = HRBudgetLegalForm()
+
+    return render(request, 'hrbudget/legal/legal_form.html', {
+        'form': form,
+        'active_link': 'hrbudget_legal',
+    })
+
+@login_required
+def edit_hrbudget_legal(request, pk):
+    obj = get_object_or_404(HRBudgetLegal, pk=pk)
+    if request.method == 'POST':
+        form = HRBudgetLegalForm(request.POST, instance=obj)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Legal record updated successfully!")
+            return redirect('hrbudget_legal_list')
+        else:
+            messages.error(request, "Please correct the errors below.")
+    else:
+        form = HRBudgetLegalForm(instance=obj)
+    return render(request, 'hrbudget/legal/legal_form.html', {
+        'form': form,
+        'active_link': 'hrbudget_legal',
+    })
+
+@login_required
+def delete_hrbudget_legal(request, pk):
+    obj = get_object_or_404(HRBudgetLegal, pk=pk)
+    if request.method == 'POST':
+        obj.delete()
+        messages.success(request, "Legal record deleted successfully!")
+        return redirect('hrbudget_legal_list')
+    return redirect('hrbudget_legal_list')
+
+@login_required
+def hrbudget_legal_list(request):
+    records = HRBudgetLegal.objects.order_by('-invoice_date', '-id')
+    paginator = Paginator(records, 10)  # 10 records per page
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    return render(request, 'hrbudget/legal/legal_list.html', {
+        'page_obj': page_obj,
+        'active_link': 'hrbudget_legal',
+    })
+
+
+
+# ==========================Dashboard==================================================
 
 class PeriodFilterForm(forms.Form):
     PERIOD_CHOICES = [
@@ -827,7 +917,12 @@ def get_month_range_local(start_date, end_date):
     return months
 
 
+def sum_monthly_values(monthly_values):
+    """Helper to sum period values for total column."""
+    return sum(monthly_values.values())
 
+
+@login_required
 def monthly_hr_budget_summary(request):
     model_configs = [
         ("Contractor Wages", ContractorWages, 'contractor_name', 'contractor_wages'),
@@ -843,6 +938,7 @@ def monthly_hr_budget_summary(request):
         ("Insurance Mediclaim", InsuranceMediclaim, 'category', 'insurance_mediclaim'),
         ("AMC", HRBudgetAMC, 'amc_name', 'AMC'),
         ("Training", HRBudgetTraining, 'name', 'Training'),
+        ("Legal", HRBudgetLegal, 'name', 'Legal'),
     ]
 
     # Filter form
@@ -892,25 +988,58 @@ def monthly_hr_budget_summary(request):
         else:  # daily
             group_by = F('invoice_date')
 
-        queryset = model_class.objects.annotate(
-            period=group_by,
-            item_name_val=F(item_field_name),
-            total_amount=Coalesce(F('bill_amount'), Value(Decimal('0.00')))
-        ).values('period', 'item_name_val').annotate(
-            period_sum=Sum('total_amount')
-        ).order_by('period', 'item_name_val')
-
         item_map = {}
-        for entry in queryset:
-            period_obj = entry['period']
-            item_name = entry['item_name_val']
-            amount = entry['period_sum'] or Decimal('0.00')
-            if item_name not in item_map:
-                item_map[item_name] = {h['date_obj']: Decimal('0.00') for h in month_headers}
-            if period_obj in item_map[item_name]:
-                item_map[item_name][period_obj] = amount
-            if period_obj in current_category_totals:
-                current_category_totals[period_obj] += amount
+
+        if model_class.__name__ == "HrBudgetVehicle":
+            # --- Special logic for Vehicle: group by vehicle_name and subcategory ---
+            queryset = model_class.objects.annotate(
+                period=group_by,
+                item_name_val=F('vehicle_name'),
+                sub_category=F('category'),
+                total_amount=Coalesce(F('bill_amount'), Value(Decimal('0.00')))
+            ).values('period', 'item_name_val', 'sub_category').annotate(
+                period_sum=Sum('total_amount')
+            ).order_by('period', 'item_name_val', 'sub_category')
+
+            for entry in queryset:
+                period_obj = entry['period']
+                vehicle_name = entry['item_name_val'] or "-"
+                category = entry['sub_category'] or "-"
+                amount = entry['period_sum'] or Decimal('0.00')
+                if vehicle_name not in item_map:
+                    item_map[vehicle_name] = {
+                        'monthly': {h['date_obj']: Decimal('0.00') for h in month_headers},
+                        'sub_items': {}
+                    }
+                if category not in item_map[vehicle_name]['sub_items']:
+                    item_map[vehicle_name]['sub_items'][category] = {h['date_obj']: Decimal('0.00') for h in month_headers}
+                # Set totals
+                if period_obj in item_map[vehicle_name]['monthly']:
+                    item_map[vehicle_name]['monthly'][period_obj] += amount
+                if period_obj in item_map[vehicle_name]['sub_items'][category]:
+                    item_map[vehicle_name]['sub_items'][category][period_obj] = amount
+                if period_obj in current_category_totals:
+                    current_category_totals[period_obj] += amount
+
+        else:
+            queryset = model_class.objects.annotate(
+                period=group_by,
+                item_name_val=F(item_field_name),
+                total_amount=Coalesce(F('bill_amount'), Value(Decimal('0.00')))
+            ).values('period', 'item_name_val').annotate(
+                period_sum=Sum('total_amount')
+            ).order_by('period', 'item_name_val')
+
+            for entry in queryset:
+                period_obj = entry['period']
+                item_name = entry['item_name_val']
+                amount = entry['period_sum'] or Decimal('0.00')
+                if item_name not in item_map:
+                    item_map[item_name] = {h['date_obj']: Decimal('0.00') for h in month_headers}
+                if period_obj in item_map[item_name]:
+                    item_map[item_name][period_obj] = amount
+                if period_obj in current_category_totals:
+                    current_category_totals[period_obj] += amount
 
         # Accumulate grand totals
         for period_key, amount in current_category_totals.items():
@@ -918,27 +1047,53 @@ def monthly_hr_budget_summary(request):
 
         category_index += 1
         category_id_for_html = f"cat-{category_index}"
+        # --- ADD ROW TOTAL ---
         processed_rows.append({
             'type': 'category',
             'html_id': category_id_for_html,
             'data_category_id': category_id_for_html,
             'name': cat_display_name,
             'monthly_values': current_category_totals,
+            'total': sum_monthly_values(current_category_totals),
         })
+
         sorted_item_names = sorted(item_map.keys())
         for item_name in sorted_item_names:
-            processed_rows.append({
-                'type': 'item',
-                'parent_category_id': category_id_for_html,
-                'name': item_name,
-                'monthly_values': item_map[item_name]
-            })
+            if model_class.__name__ == "HrBudgetVehicle":
+                # Main vehicle row
+                processed_rows.append({
+                    'type': 'item',
+                    'parent_category_id': category_id_for_html,
+                    'name': item_name,
+                    'monthly_values': item_map[item_name]['monthly'],
+                    'total': sum_monthly_values(item_map[item_name]['monthly']),
+                    'is_vehicle': True,
+                })
+                # Subcategory rows (categories under vehicle)
+                for subcat, sub_monthly in item_map[item_name]['sub_items'].items():
+                    processed_rows.append({
+                        'type': 'sub_item',
+                        'parent_category_id': category_id_for_html,
+                        'name': f"↳ {subcat}",
+                        'monthly_values': sub_monthly,
+                        'total': sum_monthly_values(sub_monthly),
+                        'is_vehicle_sub': True,
+                    })
+            else:
+                processed_rows.append({
+                    'type': 'item',
+                    'parent_category_id': category_id_for_html,
+                    'name': item_name,
+                    'monthly_values': item_map[item_name],
+                    'total': sum_monthly_values(item_map[item_name]),
+                })
 
-    # Append Grand Total row
+    # Append Grand Total row --- WITH TOTAL COLUMN ---
     processed_rows.append({
         'type': 'grand_total',
         'name': 'Grand Total',
         'monthly_values': grand_totals,
+        'total': sum_monthly_values(grand_totals),
     })
 
     context = {
@@ -952,8 +1107,8 @@ def monthly_hr_budget_summary(request):
     return render(request, 'hrbudget/hr_budget_summary.html', context)
 
 
+@login_required
 def download_hr_budget_excel(request):
-    # ------- Copy filter/generation logic from monthly_hr_budget_summary -------
     model_configs = [
         ("Contractor Wages", ContractorWages, 'contractor_name', 'contractor_wages'),
         ("Security Wages", SecurityWages, 'contractor_name', 'security_wages'),
@@ -968,6 +1123,7 @@ def download_hr_budget_excel(request):
         ("Insurance Mediclaim", InsuranceMediclaim, 'category', 'insurance_mediclaim'),
         ("AMC", HRBudgetAMC, 'amc_name', 'AMC'),
         ("Training", HRBudgetTraining, 'name', 'Training'),
+        ("Legal", HRBudgetLegal, 'name', 'Legal'),
     ]
     form = PeriodFilterForm(request.GET or None)
     period_type = 'monthly'
@@ -977,7 +1133,6 @@ def download_hr_budget_excel(request):
         from_date = form.cleaned_data.get('from_date')
         to_date = form.cleaned_data.get('to_date')
 
-    # Min/max logic
     min_date, max_date = None, None
     for _, model_class, _, _ in model_configs:
         if model_class.objects.exists():
@@ -995,11 +1150,11 @@ def download_hr_budget_excel(request):
 
     month_headers = get_date_headers(period_type, min_date, max_date, from_date, to_date)
 
-    # Data processing (same as above)
+    def sum_monthly_values(monthly_values):
+        return sum(monthly_values.values())
+
     processed_rows = []
     category_index = 0
-
-    # Initialize grand totals dict
     grand_totals = {h['date_obj']: Decimal('0.00') for h in month_headers}
 
     for cat_display_name, model_class, item_field_name, _ in model_configs:
@@ -1029,7 +1184,6 @@ def download_hr_budget_excel(request):
             if period_obj in current_category_totals:
                 current_category_totals[period_obj] += amount
 
-        # Accumulate grand totals
         for period_key, amount in current_category_totals.items():
             grand_totals[period_key] += amount
 
@@ -1038,14 +1192,18 @@ def download_hr_budget_excel(request):
             'type': 'category',
             'name': cat_display_name,
             'monthly_values': current_category_totals,
+            'total': sum_monthly_values(current_category_totals),
         })
         sorted_item_names = sorted(item_map.keys())
         for item_name in sorted_item_names:
             processed_rows.append({
                 'type': 'item',
                 'name': item_name,
-                'monthly_values': item_map[item_name]
+                'monthly_values': item_map[item_name],
+                'total': sum_monthly_values(item_map[item_name]),
             })
+
+    grand_total_sum = sum_monthly_values(grand_totals)
 
     # ------- Generate Excel file in-memory -------
     output = io.BytesIO()
@@ -1056,13 +1214,13 @@ def download_hr_budget_excel(request):
     header_fmt = workbook.add_format({'bold': True, 'bg_color': '#C6E0B4', 'border': 1})
     category_fmt = workbook.add_format({'bold': True, 'bg_color': '#E2EFDA', 'border': 1})
     item_fmt = workbook.add_format({'border': 1})
-    currency_fmt = workbook.add_format({'num_format': '#,##,##0.00', 'border': 1})
-    grand_total_fmt = workbook.add_format({'bold': True, 'bg_color': '#D9E1F2', 'border': 1, 'num_format': '#,##,##0.00'})
+    grand_total_fmt = workbook.add_format({'bold': True, 'bg_color': '#D9E1F2', 'border': 1})
 
     # Write headers
     worksheet.write(0, 0, 'Name', header_fmt)
     for idx, mh in enumerate(month_headers):
         worksheet.write(0, idx+1, mh['display'], header_fmt)
+    worksheet.write(0, len(month_headers)+1, 'Total', header_fmt)
 
     row_idx = 1
     for row_data in processed_rows:
@@ -1070,25 +1228,25 @@ def download_hr_budget_excel(request):
             worksheet.write(row_idx, 0, row_data['name'], category_fmt)
             for col_idx, mh in enumerate(month_headers):
                 val = row_data['monthly_values'].get(mh['date_obj'], Decimal('0.00'))
-                worksheet.write_number(row_idx, col_idx+1, float(val), workbook.add_format({
-                    'bold': True, 'bg_color': '#E2EFDA', 'border': 1, 'num_format': '#,##,##0.00'
-                }))
+                worksheet.write(row_idx, col_idx+1, indian_currency_format(val), category_fmt)
+            worksheet.write(row_idx, len(month_headers)+1, indian_currency_format(row_data['total']), category_fmt)
         else:
             worksheet.write(row_idx, 0, row_data['name'], item_fmt)
             for col_idx, mh in enumerate(month_headers):
                 val = row_data['monthly_values'].get(mh['date_obj'], Decimal('0.00'))
-                worksheet.write_number(row_idx, col_idx+1, float(val), currency_fmt)
+                worksheet.write(row_idx, col_idx+1, indian_currency_format(val), item_fmt)
+            worksheet.write(row_idx, len(month_headers)+1, indian_currency_format(row_data['total']), item_fmt)
         row_idx += 1
 
-    # Write Grand Total row at the end
+    # Grand Total row
     worksheet.write(row_idx, 0, 'Grand Total', grand_total_fmt)
     for col_idx, mh in enumerate(month_headers):
         val = grand_totals.get(mh['date_obj'], Decimal('0.00'))
-        worksheet.write_number(row_idx, col_idx+1, float(val), grand_total_fmt)
+        worksheet.write(row_idx, col_idx+1, indian_currency_format(val), grand_total_fmt)
+    worksheet.write(row_idx, len(month_headers)+1, indian_currency_format(grand_total_sum), grand_total_fmt)
 
-    # Optional: set column widths for better appearance
-    worksheet.set_column(0, 0, 32)  # Name column wider
-    worksheet.set_column(1, len(month_headers), 18)  # Data columns
+    worksheet.set_column(0, 0, 32)
+    worksheet.set_column(1, len(month_headers)+1, 20)
 
     workbook.close()
     output.seek(0)
@@ -1099,4 +1257,3 @@ def download_hr_budget_excel(request):
     )
     response['Content-Disposition'] = f'attachment; filename={filename}'
     return response
-

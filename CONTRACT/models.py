@@ -156,3 +156,26 @@ class ContractorWorker(models.Model):
 
 
 
+#======================================Below model for cantract punch in attendance  ======================================================
+
+
+
+# Create your models here.
+class ContractEmpDepartment(models.Model):
+    name = models.CharField(max_length=100, unique=True)
+
+    class Meta:
+        db_table = 'contract_employee_dept'
+    def __str__(self):
+        return self.name
+
+class ContractEmployee(models.Model):
+    id = models.CharField(max_length=50, primary_key=True)  # Employee ID from device/excel
+    name = models.CharField(max_length=100)
+    employee_type = models.CharField(max_length=50)
+    department = models.ForeignKey(ContractEmpDepartment, on_delete=models.CASCADE, related_name='employees')
+    
+    class Meta:
+        db_table = 'contract_employee'
+    def __str__(self):
+        return self.name

@@ -2198,12 +2198,21 @@ def attendance_pivot_report(request):
         "A | A",
         "WO | WO",
         "APL | APL",
+        "COM | COM",    # Compansatry OFF
+        "CO | CO",      # Compansatry OFF
+        "P | A",
+        "A | P",
+        "P | APL",
+        "APL | P",
+        "A | APL",
+        "APL | A",
+        "P | CO",
+        "CO | P",
+        "SPL | SPL",	
+        "HO | HO",     #Holiday
         "ON DUTY",     # On Duty Approved
         "ATT REG",     # Attendance Regulation Approved
-        "SL APPROVED", # Short Leave Approved
-        "HO | HO",     #Holiday
-        "COM | COM",    # Compansatry OFF
-         "CO | CO"      # Compansatry OFF
+        "SL APPROVED", # Short Leave Approved 
     ]
     status_labels = {
         "P | P": "Present",
@@ -2216,6 +2225,10 @@ def attendance_pivot_report(request):
         "ON DUTY": "On Duty Approved",
         "ATT REG": "Attendance Regularization Approved",
         "SL APPROVED": "Short Leave Approved",
+        "P | A": "First half Present",
+        "A | P": "Second half Present",
+        "APL | A": "First half All Purpose Leave",
+        "A | APL": "Second half All Purpose Leave",
     }
     all_statuses = set(counts.keys())
     ordered_statuses = [status for status in custom_order if status in all_statuses]
@@ -2386,13 +2399,14 @@ def attendance_pivot_excel(request):
     date_labels = [f"{d.day}-{d.strftime('%b')}" for d in sorted_dates]
 
     custom_order = [
-        "P | P", "A | A", "WO | WO", "APL | APL",
-        "ON DUTY", "ATT REG", "SL APPROVED", "HO | HO", "COM | COM", "CO | CO"
+        "P | P","A | A","WO | WO","APL | APL","COM | COM","CO | CO","P | A","A | P","P | APL","APL | P","A | APL","APL | A","P | CO","CO | P",
+        "SPL | SPL","HO | HO","ON DUTY","ATT REG","SL APPROVED"
     ]
     status_labels = {
-        "P | P": "Present", "A | A": "Absent", "WO | WO": "Week Off", "APL | APL": "All Purpose Leave",
-        "COM | COM": "Comp Off", "CO | CO": "Comp Off", "HO | HO": "Holiday",
-        "ON DUTY": "On Duty Approved", "ATT REG": "Attendance Regularization Approved", "SL APPROVED": "Short Leave Approved",
+        "P | P": "Present","A | A": "Absent","WO | WO": "Week Off","APL | APL": "All Purpose Leave","COM | COM": "Comp Off",
+        "CO | CO": "Comp Off","HO | HO": "Holiday","ON DUTY": "On Duty Approved","ATT REG": "Attendance Regularization Approved",
+        "SL APPROVED": "Short Leave Approved","P | A": "First half Present","A | P": "Second half Present","APL | A": "First half All Purpose Leave",
+        "A | APL": "Second half All Purpose Leave",
     }
     all_statuses = set(counts.keys())
     ordered_statuses = [status for status in custom_order if status in all_statuses]

@@ -77,7 +77,8 @@ class HrBudgetCanteen(models.Model):
         choices=[
             ('Balaji Tea Corner', 'Balaji Tea Corner'),
             ('Dayanand Mhetre', 'Dayanand Mhetre'),
-            ('Ambika Pure Wage', 'Ambika Pure Wage')
+            ('Ambika Pure Wage', 'Ambika Pure Wage'),
+            ('Tea & Biscuit', 'Tea & Biscuit'),
         ]
     )
     bill_amount = models.DecimalField(max_digits=12, decimal_places=2,blank=True, null=True)
@@ -101,6 +102,7 @@ class HrBudgetMedical(models.Model):
             ('Dr. Ganesh Atwade(FMO)', 'Dr. Ganesh Atwade(FMO)'),
             ('Baladava Hospital', 'Baladava Hospital'),
             ('Dr. Chidgupkar Hospital', 'Dr. Chidgupkar Hospital'),
+            ('Shilpakaya Hospital', 'Shilpakaya Hospital'),
             ('Doctor Ukarande', 'Doctor Ukarande'),
             ('Medicines for OHC', 'Medicines for OHC'),
             ('New joinee health check up', 'New joinee health check up'),
@@ -209,10 +211,10 @@ class HRBudgetGeneralAdmin(models.Model):
         ('Harshada Courier Services', 'Harshada Courier Services'),
         ('Courier (Sample to Vasai)', 'Courier (Sample to Vasai)'),
         ('Pest Control', 'Pest Control'),
-        ('Sunshine Services Xerox Conon 16 Admin', 'Sunshine Services Xerox Conon 16 Admin'),
+        ('Sunshine Services Xerox Conon E-16 Admin', 'Sunshine Services Xerox Conon E-16 Admin'),
         ('Sunshine Services Xerox Conon QC Lab', 'Sunshine Services Xerox Conon QC Lab'),
-        ('Sunshine Services Xerox Conon E18 Admin', 'Sunshine Services Xerox Conon E18 Admin'),
-        ('Sunshine Services Xerox Conon 17 Admin', 'Sunshine Services Xerox Conon 17 Admin'),
+        ('Sunshine Services Xerox Conon E-18 Admin', 'Sunshine Services Xerox Conon E-18 Admin'),
+        ('Sunshine Services Xerox Conon E-17 Admin', 'Sunshine Services Xerox Conon E-17 Admin'),
         ('Fridge repairing', 'Fridge repairing'),
         ('Water bottle', 'Water bottle'),
         ('Aquaguard/RO', 'Aquaguard/RO'),
@@ -222,6 +224,8 @@ class HRBudgetGeneralAdmin(models.Model):
         ('Post Office', 'Post Office'),
         ('Night round police', 'Night round police'),
         ('Air Conditioner - Services', 'Air Conditioner - Services'),
+        ('Furniture', 'Furniture'),
+        ('Mahi Jal', 'Mahi Jal'),
         ('Other', 'Other'),
     ]
 
@@ -292,9 +296,14 @@ class InsuranceMediclaim(models.Model):
 
 
 class HRBudgetAMC(models.Model):
+    AMC_CHOICES = [
+        ('UNITY  SERVICE', 'UNITY  SERVICE'),
+        ('BADAMIKAR & SON', 'BADAMIKAR & SON'),
+        ('Other', 'Other'),
+    ]
     invoice_date = models.DateField()
     invoice_no = models.CharField(max_length=50, blank=True, null=True)
-    amc_name = models.CharField(max_length=50, blank=True, null=True)
+    amc_name = models.CharField(max_length=50, choices=AMC_CHOICES, blank=True, null=True)
     gst = models.DecimalField(max_digits=12, decimal_places=2, blank=True, null=True)
     bill_amount = models.DecimalField(max_digits=12, decimal_places=2, blank=True, null=True)
     description = models.TextField(blank=True, null=True)
@@ -313,3 +322,15 @@ class HRBudgetTraining(models.Model):
     
     class Meta:
         db_table = 'hrbudget_training'
+
+
+class HRBudgetLegal(models.Model):
+    invoice_date = models.DateField()
+    invoice_no = models.CharField(max_length=50, blank=True, null=True)
+    name = models.CharField(max_length=50, blank=True, null=True)
+    gst = models.DecimalField(max_digits=12, decimal_places=2, blank=True, null=True)
+    bill_amount = models.DecimalField(max_digits=12, decimal_places=2, blank=True, null=True)
+    description = models.TextField(blank=True, null=True)
+    
+    class Meta:
+        db_table = 'hrbudget_legal'

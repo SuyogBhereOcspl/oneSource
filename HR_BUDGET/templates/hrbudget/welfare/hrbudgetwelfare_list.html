@@ -34,6 +34,47 @@
 </div>
 {% endif %}
 
+<!-- Filter Form -->
+<form method="get" class="mb-4 flex flex-wrap gap-2 items-end bg-gray-50 p-3 rounded shadow">
+    <div>
+        <label class="block text-xs font-semibold mb-1">Invoice Date (From)</label>
+        <input type="date" name="invoice_date_from" class="border px-2 py-1 rounded"
+               value="{{ filter_params.invoice_date_from }}">
+    </div>
+    <div>
+        <label class="block text-xs font-semibold mb-1">Invoice Date (To)</label>
+        <input type="date" name="invoice_date_to" class="border px-2 py-1 rounded"
+               value="{{ filter_params.invoice_date_to }}">
+    </div>
+    <div>
+        <label class="block text-xs font-semibold mb-1">Welfare Name</label>
+        <input type="text" name="welfare_name" class="border px-2 py-1 rounded"
+               value="{{ filter_params.welfare_name }}">
+    </div>
+    <div>
+        <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-1 rounded">Filter</button>
+        <a href="{% url 'hrbudget_welfare_list' %}" class="px-4 py-1 bg-gray-500 hover:bg-gray-600 ml-2 text-white rounded">Reset</a>
+    </div>
+</form>
+
+<!-- Pagination Controls aligned to end -->
+<div class="flex justify-end items-center mb-2">
+    <div class="flex items-end space-x-2">
+        {% if page_obj.has_previous %}
+          <a href="?page=1{% if filter_query %}&{{ filter_query }}{% endif %}" class="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300">First</a>
+          <a href="?page={{ page_obj.previous_page_number }}{% if filter_query %}&{{ filter_query }}{% endif %}" class="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300">Previous</a>
+        {% endif %}
+        <span class="px-4 py-1 bg-blue-100 rounded">
+          Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+        </span>
+        {% if page_obj.has_next %}
+          <a href="?page={{ page_obj.next_page_number }}{% if filter_query %}&{{ filter_query }}{% endif %}" class="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300">Next</a>
+          <a href="?page={{ page_obj.paginator.num_pages }}{% if filter_query %}&{{ filter_query }}{% endif %}" class="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300">Last</a>
+        {% endif %}
+    </div>
+</div>
+
+
 <div class="max-w-6xl mx-auto bg-white shadow-lg rounded-lg p-4 overflow-x-auto">
     <table class="min-w-full border border-gray-300 text-sm">
         <thead class="bg-gray-100 border-b font-semibold text-gray-700">
@@ -50,13 +91,13 @@
             </tr>
         </thead>
         <tbody>
-            {% for obj in records %}
+            {% for obj in page_obj %}
             <tr class="border-b hover:bg-blue-50">
                 <td class="px-4 py-2 border whitespace-nowrap">{{ obj.invoice_date|date:"d-m-Y" }}</td>
-                <td class="px-4 py-2 border">{{ obj.invoice_no }}</td>
+                <td class="px-4 py-2 border">{{ obj.invoice_no|default:"None" }}</td>
                 <td class="px-4 py-2 border">{{ obj.welfare_name }}</td>
                 <td class="px-4 py-2 border text-right">{{ obj.bill_amount }}</td>
-                <td class="px-4 py-2 border text-right">{% if obj.gst %}{{ obj.gst }}{% endif %}</td>
+                <td class="px-4 py-2 border text-right">{% if obj.gst %}{{ obj.gst }}{% else %}-{% endif %}</td>
                 <td class="px-4 py-2 border">{{ obj.description|default:"-" }}</td>
                 {% if perms.HR_BUDGET.change_hrbudgetwelfare or perms.HR_BUDGET.delete_hrbudgetwelfare %}
                 <td class="px-4 py-2 border text-center whitespace-nowrap">

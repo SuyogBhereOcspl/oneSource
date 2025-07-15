@@ -1,7 +1,7 @@
 {% extends "hrbudget/HRBudget_base.html" %}
 {% load static %}
 {% load l10n %}
-{% load dict_utils %} {# Or hr_budget_filters or whatever your templatetag file is named #}
+{% load dict_utils %} 
 
 {% block HRbudget_title %}
 <title>{{ report_title }}</title>
@@ -42,8 +42,9 @@
             <tr>
                 <th class="px-4 py-2 border text-left">Name</th>
                 {% for month_header in month_headers %}
-                <th class="px-4 py-2 border text-right whitespace-nowrap">{{ month_header.display }}</th>
+                    <th class="px-4 py-2 border text-right whitespace-nowrap">{{ month_header.display }}</th>
                 {% endfor %}
+                <th class="px-4 py-2 border text-right whitespace-nowrap bg-blue-50">Total</th>
             </tr>
         </thead>
         <tbody>
@@ -51,32 +52,53 @@
                 {% if row_data.type == 'category' %}
                     <tr id="{{ row_data.html_id }}" class="border-b bg-blue-100 font-bold cursor-pointer toggle-category"
                         data-category-target="{{ row_data.data_category_id }}">
-                        <td class="px-4 py-2 border pl-4  whitespace-nowrap">
-                            <span class="toggle-icon mr-1 ">[+]</span>{{ row_data.name }}
+                        <td class="px-4 py-2 border pl-4 whitespace-nowrap">
+                            <span class="toggle-icon mr-1">[+]</span>{{ row_data.name }}
                         </td>
                         {% for month_h in month_headers %}
-                        <td class="px-4 py-2 border text-right">
-                            {{ row_data.monthly_values|get_item:month_h.date_obj|default:"0.00"|floatformat:2|localize }}
-                        </td>
+                            <td class="px-4 py-2 border text-right">
+                                {{ row_data.monthly_values|get_item:month_h.date_obj|default:"0.00"|indian }}
+                            </td>
                         {% endfor %}
+                        <td class="px-4 py-2 border text-right font-extrabold bg-blue-50">
+                            {{ row_data.total|default:"0.00"|floatformat:2|indian }}
+                        </td>
                     </tr>
                 {% elif row_data.type == 'item' %}
                     <tr class="border-b item-row hidden" data-parent-category="{{ row_data.parent_category_id }}">
                         <td class="px-4 py-2 border pl-10">{{ row_data.name }}</td>
                         {% for month_h in month_headers %}
-                        <td class="px-4 py-2 border text-right">
-                            {{ row_data.monthly_values|get_item:month_h.date_obj|default:"0.00"|floatformat:2|localize }}
-                        </td>
+                            <td class="px-4 py-2 border text-right">
+                                {{ row_data.monthly_values|get_item:month_h.date_obj|default:"0.00"|indian }}
+                            </td>
                         {% endfor %}
+                        <td class="px-4 py-2 border text-right bg-gray-50">
+                            {{ row_data.total|default:"0.00"|floatformat:2|indian }}
+                        </td>
+                    </tr>
+                {% elif row_data.type == 'sub_item' %}
+                    <tr class="border-b item-row hidden" data-parent-category="{{ row_data.parent_category_id }}">
+                        <td class="px-4 py-2 border pl-16 italic text-gray-600">{{ row_data.name }}</td>
+                        {% for month_h in month_headers %}
+                            <td class="px-4 py-2 border text-right">
+                                {{ row_data.monthly_values|get_item:month_h.date_obj|default:"0.00"|indian }}
+                            </td>
+                        {% endfor %}
+                        <td class="px-4 py-2 border text-right bg-gray-50">
+                            {{ row_data.total|default:"0.00"|floatformat:2|indian }}
+                        </td>
                     </tr>
                 {% elif row_data.type == 'grand_total' %}
                     <tr class="border-t-2 font-bold bg-gray-200">
                         <td class="px-4 py-2 border text-left">{{ row_data.name }}</td>
                         {% for month_h in month_headers %}
-                        <td class="px-4 py-2 border text-right whitespace-nowrap">
-                            {{ row_data.monthly_values|get_item:month_h.date_obj|default:"0.00"|floatformat:2|localize }}
-                        </td>
+                            <td class="px-4 py-2 border text-right whitespace-nowrap">
+                                {{ row_data.monthly_values|get_item:month_h.date_obj|default:"0.00"|indian }}
+                            </td>
                         {% endfor %}
+                        <td class="px-4 py-2 border text-right font-extrabold bg-gray-300">
+                            {{ row_data.total|default:"0.00"|floatformat:2|indian }}
+                        </td>
                     </tr>
                 {% endif %}
             {% endfor %}

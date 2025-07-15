@@ -1,7 +1,7 @@
 from django import forms
 from .models import ( ContractorWages,SecurityWages,HrBudgetWelfare,HrBudgetCanteen,HrBudgetMedical,HrBudgetVehicle,
     HrBudgetTravellingLodging,HRBudgetGuestHouse,HRBudgetGeneralAdmin,HRBudgetCommunication,InsuranceMediclaim,HRBudgetAMC,
-    HRBudgetTraining)
+    HRBudgetTraining,HRBudgetLegal)
 
 class DateInput(forms.DateInput):
     input_type = 'date'
@@ -351,6 +351,18 @@ class InsuranceMediclaimForm(forms.ModelForm):
 
 
 class HRBudgetAMCForm(forms.ModelForm):
+    amc_name = forms.ChoiceField(
+        choices=[('', 'Select AMC Name')] + HRBudgetAMC.AMC_CHOICES,
+        widget=forms.Select(attrs={'class': 'w-full p-2 border border-gray-300 rounded-lg'})
+    )
+    custom_amc_name = forms.CharField(
+        required=False,
+        widget=forms.TextInput(attrs={
+            'class': 'w-full p-2 border border-gray-300 rounded-lg',
+            'placeholder': 'Enter Custom AMC Name',
+        })
+    )
+
     class Meta:
         model = HRBudgetAMC
         fields = '__all__'
@@ -362,7 +374,66 @@ class HRBudgetAMCForm(forms.ModelForm):
             'invoice_no': forms.TextInput(attrs={
                 'class': 'w-full p-2 border border-gray-300 rounded-lg'
             }),
-            'amc_name': forms.TextInput(attrs={
+            'gst': forms.NumberInput(attrs={
+                'class': 'w-full p-2 border border-gray-300 rounded-lg'
+            }),
+            'bill_amount': forms.NumberInput(attrs={
+                'class': 'w-full p-2 border border-gray-300 rounded-lg'
+            }),
+            'description': forms.Textarea(attrs={
+                'class': 'w-full p-2 border border-gray-300 rounded-lg',
+                'rows': 3,
+                'placeholder': 'Enter description (optional)',
+            }),
+        }
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        if not self.is_bound:
+            amc_choices = [choice[0] for choice in HRBudgetAMC.AMC_CHOICES]
+            amc_name_value = self.instance.amc_name if self.instance and self.instance.pk else None
+            if amc_name_value and amc_name_value not in amc_choices:
+                self.initial['amc_name'] = 'Other'
+                self.initial['custom_amc_name'] = amc_name_value
+                self.fields['amc_name'].initial = 'Other'
+                self.fields['custom_amc_name'].initial = amc_name_value
+                self.instance.amc_name = 'Other'   # <<------ Important!
+            else:
+                self.initial['amc_name'] = amc_name_value
+                self.fields['amc_name'].initial = amc_name_value
+
+    def clean(self):
+        cleaned_data = super().clean()
+        amc_name = cleaned_data.get('amc_name')
+        custom_amc_name = cleaned_data.get('custom_amc_name')
+        if amc_name == "Other" and not custom_amc_name:
+            self.add_error('custom_amc_name', "Please enter AMC Name for 'Other'.")
+        return cleaned_data
+
+    def save(self, commit=True):
+        instance = super().save(commit=False)
+        if self.cleaned_data.get('amc_name') == 'Other':
+            instance.amc_name = self.cleaned_data.get('custom_amc_name')
+        else:
+            instance.amc_name = self.cleaned_data.get('amc_name')
+        if commit:
+            instance.save()
+        return instance
+
+
+class HRBudgetTrainingForm(forms.ModelForm):
+    class Meta:
+        model = HRBudgetTraining
+        fields = '__all__'
+        widgets = {
+            'invoice_date': forms.DateInput(attrs={
+                'type': 'date',
+                'class': 'w-full p-2 border border-gray-300 rounded-lg'
+            }),
+            'invoice_no': forms.TextInput(attrs={
+                'class': 'w-full p-2 border border-gray-300 rounded-lg'
+            }),
+            'name': forms.TextInput(attrs={
                 'class': 'w-full p-2 border border-gray-300 rounded-lg'
             }),
             'gst': forms.NumberInput(attrs={
@@ -379,9 +450,10 @@ class HRBudgetAMCForm(forms.ModelForm):
         }
 
 
-class HRBudgetTrainingForm(forms.ModelForm):
+
+class HRBudgetLegalForm(forms.ModelForm):
     class Meta:
-        model = HRBudgetTraining
+        model = HRBudgetLegal
         fields = '__all__'
         widgets = {
             'invoice_date': forms.DateInput(attrs={

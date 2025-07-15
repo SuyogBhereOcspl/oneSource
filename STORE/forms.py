@@ -1,5 +1,5 @@
 from django import forms
-from .models import Vehicle
+from .models import Vehicle,MaterialRequest
 from datetime import date
 from django.db import connections
 from django_select2.forms import Select2Widget, Select2MultipleWidget
@@ -38,7 +38,7 @@ class VehicleForm(forms.ModelForm):
             'vehicle_no', 'name_of_transporter', 'status', 'manufacture', 'remark'
         ]
         widgets = {
-            'record_date': forms.DateInput(attrs={'type': 'date','readonly': 'readonly', 'class': 'w-full p-2 border border-gray-300 rounded-lg bg-gray-100'}),
+            'record_date': forms.DateInput(attrs={'type': 'date','readonly':'readonly', 'class': 'w-full p-2 border border-gray-300 rounded-lg bg-gray-100'}),
             'invoice': forms.TextInput(attrs={'class': 'w-full p-2 border border-gray-300 rounded-lg'}),
             'unit': forms.TextInput(attrs={'class': 'w-full p-2 border border-gray-300 rounded-lg'}),
             'reporting_date': forms.DateInput(attrs={'type': 'date', 'class': 'w-full p-2 border border-gray-300 rounded-lg'}),
@@ -75,3 +75,67 @@ class VehicleForm(forms.ModelForm):
             # cleaned_data["status"] = "unloaded" if unloading_days >= 0 else "pending"
 
         return cleaned_data
+    
+    def clean_qty(self):
+        value = self.cleaned_data.get('qty')
+        print(f"[DEBUG] Cleaned qty value: {value} (type: {type(value)})")
+        return value
+
+from django import forms
+from .models import MaterialRequest
+
+class MaterialRequestForm(forms.ModelForm):
+    tentative_date = forms.DateField(
+        widget=forms.DateInput(attrs={
+            "type": "date",
+            "class": (
+                "w-full rounded-md border-gray-300 shadow-sm "
+                "focus:border-indigo-500 focus:ring focus:ring-indigo-200 "
+                "focus:ring-opacity-50"
+            )
+        }),
+        label="Tentative Date"
+    )
+
+    class Meta:
+        model  = MaterialRequest
+        fields = ["type", "material_name", "trade_name", "unit", "qty", "tentative_date"]
+        widgets = {
+            "type": forms.Select(attrs={
+                "class": (
+                    "w-full rounded-md border-gray-300 pr-8 shadow-sm "
+                    "focus:border-indigo-500 focus:ring focus:ring-indigo-200 "
+                    "focus:ring-opacity-50"
+                )
+            }),
+            "material_name": forms.TextInput(attrs={
+                "class": (
+                    "w-full rounded-md border-gray-300 shadow-sm "
+                    "focus:border-indigo-500 focus:ring focus:ring-indigo-200 "
+                    "focus:ring-opacity-50"
+                )
+            }),
+            "trade_name": forms.TextInput(attrs={
+                "class": (
+                    "w-full rounded-md border-gray-300 shadow-sm "
+                    "focus:border-indigo-500 focus:ring focus:ring-indigo-200 "
+                    "focus:ring-opacity-50"
+                )
+            }),
+            "unit": forms.TextInput(attrs={
+                "class": (
+                    "w-full rounded-md border-gray-300 shadow-sm "
+                    "focus:border-indigo-500 focus:ring focus:ring-indigo-200 "
+                    "focus:ring-opacity-50"
+                ),
+                "placeholder": "e.g. Kg / Litre / Nos"
+            }),
+            "qty": forms.NumberInput(attrs={
+                "step": "0.001",
+                "class": (
+                    "w-full rounded-md border-gray-300 shadow-sm "
+                    "focus:border-indigo-500 focus:ring focus:ring-indigo-200 "
+                    "focus:ring-opacity-50"
+                )
+            }),
+        }

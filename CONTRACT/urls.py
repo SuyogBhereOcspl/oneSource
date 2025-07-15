@@ -14,6 +14,11 @@ urlpatterns = [
     path('contract/entry/edit/<str:date_str>/', views.contractor_worker_entry_edit, name='contractor_worker_entry_edit'),
     path('contractor/delete/<date_str>/', views.contractor_worker_entry_delete, name='contractor_worker_entry_delete'),
     path('contractor/view/<date_str>/', views.contractor_worker_entry_detail, name='contractor_worker_entry_detail'),
+    
+    
+    
+    path('contract/employee-report/', views.contract_employee_matched_report, name='contract_employee_matched_report'),
+    path('contract_attendance_report/excel/', views.contract_employee_attend_report_excel, name='contract_employee_attend_report_excel'),
 
 ]
 

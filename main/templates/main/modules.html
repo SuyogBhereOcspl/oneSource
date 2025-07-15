@@ -101,27 +101,38 @@
         <a href="{% url 'view_general_effluent' %}" class="text-green-500 hover:underline block text-sm">View General Effluent Record</a>
       </div>
     </div>
-{% endif %}
-{% if 'UTILITY' in user_groups or is_superuser %}
-<!-- Store Module -->
-<div class="bg-white shadow-lg rounded-lg p-4 transform transition-transform duration-300 hover:scale-105">
-  <img src="{% static 'main/images/UtilityModule.png' %}" alt="Store Module" class="w-12 mx-auto mb-4">
-  <h2 class="text-xl font-semibold text-center mb-2">Utility Module</h2>
-  <div class="text-center">
-    <a href="{% url 'utility_entry' %}" class="text-blue-500 hover:underline block text-sm">Create Utility Record</a>
-    <a href="{% url 'utility_readings_report' %}" class="text-green-500 hover:underline block text-sm">Utility Reports</a>
-  </div>
-</div>
-{% endif %}
-{% if 'QC' in user_groups or is_superuser %}
-    <!-- Store Module -->
-    <div class="bg-white shadow-lg rounded-lg p-4 transform transition-transform duration-300 hover:scale-105">
-      <img src="{% static 'main/images/QC Module.png' %}" alt="Store Module" class="w-12 mx-auto mb-4">
-      <h2 class="text-xl font-semibold text-center mb-2">QC Module</h2>
-      <div class="text-center">
-        <a href="{% url 'qc_home' %}" class="text-blue-500 hover:underline block text-sm">QC Module</a>
-      </div>
-    </div>
+	{% endif %}
+	{% if 'UTILITY' in user_groups or is_superuser %}
+	<!-- Store Module -->
+	<div class="bg-white shadow-lg rounded-lg p-4 transform transition-transform duration-300 hover:scale-105">
+	  <img src="{% static 'main/images/UtilityModule.png' %}" alt="Store Module" class="w-12 mx-auto mb-4">
+	  <h2 class="text-xl font-semibold text-center mb-2">Utility Module</h2>
+	  <div class="text-center">
+		<a href="{% url 'utility_entry' %}" class="text-blue-500 hover:underline block text-sm">Create Utility Record</a>
+		<a href="{% url 'utility_readings_report' %}" class="text-green-500 hover:underline block text-sm">Utility Reports</a>
+	  </div>
+	</div>
+	{% endif %}
+	{% if 'QC' in user_groups or is_superuser %}
+		<!-- Store Module -->
+		<div class="bg-white shadow-lg rounded-lg p-4 transform transition-transform duration-300 hover:scale-105">
+		  <img src="{% static 'main/images/QC Module.png' %}" alt="Store Module" class="w-12 mx-auto mb-4">
+		  <h2 class="text-xl font-semibold text-center mb-2">QC Module</h2>
+		  <div class="text-center">
+			<a href="{% url 'qc_home' %}" class="text-blue-500 hover:underline block text-sm">QC Module</a>
+		  </div>
+		</div>
+		{% endif %}
+		{% if 'R&D' in user_groups or is_superuser %}
+		<!-- Store Module -->
+		<div class="bg-white shadow-lg rounded-lg p-4 transform transition-transform duration-300 hover:scale-105">
+		  <img src="{% static 'main/images/r&d_Module.png' %}" alt="Store Module" class="w-12 mx-auto mb-4">
+		  <h2 class="text-xl font-semibold text-center mb-2">R&D Module</h2>
+		  <div class="text-center">
+			<a href="{% url 'add_r_and_d_moisture' %}" class="text-blue-500 hover:underline block text-sm">Create R&D Moisture Record</a>
+			<a href="{% url 'r_and_d_moisture_list' %}" class="text-green-500 hover:underline block text-sm">R&D Moisture Reports</a>
+		  </div>
+		</div>
     {% endif %}
 </div>
 
@@ -157,6 +168,9 @@
         {% if 'QC' in user_groups or is_superuser %}
         <li><a href="{% url 'qc_create' %}" class="text-blue-500 hover:underline text-sm">Create QC Record</a></li>
         {% endif %}
+		{% if 'R&D' in user_groups or is_superuser %}
+        <li><a href="{% url 'add_r_and_d_moisture' %}" class="text-blue-500 hover:underline text-sm">Create R&D Moisture</a></li>
+        {% endif %}
       </ul>
     </div>
 
@@ -189,6 +203,9 @@
     {% if 'QC' in user_groups or is_superuser %}
         <li><a href="{% url 'qc_report' %}" class="text-green-500 hover:underline text-sm">View QC Reports</a></li>
     {% endif %}
+	{% if 'R&D' in user_groups or is_superuser %}
+		<li><a href="{% url 'r_and_d_moisture_list' %}" class="text-green-500 hover:underline text-sm">View R&D Moisture</a></li>
+	{% endif %}
       </ul>
     </div>
   </div>

@@ -15,10 +15,18 @@ class Department(models.Model):
     def __str__(self):
         return self.name
 
+
+EMPLOYEE_TYPE_CHOICES = (
+    ('Company', 'Company'),
+    ('Trainee', 'Trainee'),
+    ('Guest',   'Guest'),
+    ('Casual',  'Casual'),
+)
+
 class Employee(models.Model):
     id = models.CharField(primary_key=True,max_length=50)
     name = models.CharField(max_length=100)
-    employee_type = models.CharField(max_length=20,null=True, blank=True)
+    employee_type = models.CharField(max_length=20,choices=EMPLOYEE_TYPE_CHOICES,null=True, blank=True,default='company')
     department = models.ForeignKey(Department, on_delete=models.CASCADE, related_name='employees')
     location = models.CharField(max_length=100, blank=True, null=True) 
 
@@ -52,7 +60,7 @@ class Attendance(models.Model):
     )
     punched_at = models.DateTimeField(default=timezone.now)
     shift = models.ForeignKey(
-        'Shift', on_delete=models.SET_NULL, null=True, blank=True, related_name='attendances'
+        'Shift', on_delete=models.CASCADE, null=True, blank=True, related_name='attendances'
     )
     meal_type = models.CharField(max_length=50, blank=True, null=True)  # e.g., Breakfast, Lunch
     

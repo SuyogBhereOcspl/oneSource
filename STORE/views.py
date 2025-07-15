@@ -7,13 +7,20 @@ from STORE.forms import VehicleForm
 from  STORE .models import Vehicle
 from django.db import connections
 from django.contrib import messages  # Import messages framework
-from django.contrib.auth.decorators import  permission_required
 import pandas as pd
 from django.db.models import Sum, F,Count
 from calendar import monthrange
 from datetime import date
-
-
+from django.urls import reverse_lazy
+from django.views.generic import (
+    CreateView,   #  ←  this is what was missing
+    ListView,
+    DetailView,
+    UpdateView,
+    DeleteView,
+)
+from .models import MaterialRequest
+from .forms  import MaterialRequestForm
 # Initialize custom logger
 logger = logging.getLogger('custom_logger')
 
@@ -425,4 +432,98 @@ def vehicle_chart_report(request):
         # auth
         'user_groups':       user_groups,
         'is_superuser':      is_superuser,
+    })
+
+
+
+@login_required
+def material_list(request):
+    """
+    List all Dispatch Plan entries.
+    """
+    qs = MaterialRequest.objects.all().order_by('-created_at')
+    logger.info(f"{request.user} viewed material list ({qs.count()} items)")
+    return render(request, 'store/material_list.html', {
+        'requests': qs,
+    })
+
+
+@login_required
+def material_create(request):
+    
+    """
+    Create a new Dispatch Plan.
+    """
+    if request.method == 'POST':
+        form = MaterialRequestForm(request.POST)
+        if form.is_valid():
+            obj = form.save()
+            messages.success(request, "Dispatch Plan saved successfully.")
+            logger.info(f"{request.user} created MaterialRequest #{obj.pk}")
+            return redirect('material-list')
+        else:
+            messages.error(request, "Please correct the errors below.")
+    else:
+        form = MaterialRequestForm()
+
+    return render(request, 'store/material_form.html', {
+        'form': form,
+        'view': request,  # so template can do {% if view.object %} safely
+    })
+
+
+@login_required
+def material_detail(request, pk):
+    """
+    Show a single Dispatch Plan.
+    """
+    obj = get_object_or_404(MaterialRequest, pk=pk)
+    logger.info(f"{request.user} viewed MaterialRequest #{pk}")
+    return render(request, 'store/material_detail.html', {
+        'object': obj,
+    })
+
+
+@login_required
+def material_edit(request, pk):
+    """
+    Edit an existing Dispatch Plan.
+    """
+    obj = get_object_or_404(MaterialRequest, pk=pk)
+
+    if request.method == 'POST':
+        form = MaterialRequestForm(request.POST, instance=obj)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Dispatch Plan updated successfully.")
+            logger.info(f"{request.user} updated MaterialRequest #{pk}")
+            return redirect('material-list')
+        else:
+            messages.error(request, "Please correct the errors below.")
+    else:
+        form = MaterialRequestForm(instance=obj)
+
+    return render(request, 'store/material_form.html', {
+        'form': form,
+        'view': request,  # template uses view.object to know “edit” vs “new”
+    })
+
+
+@login_required
+def material_delete(request, pk):
+    """
+    Confirm & delete a Dispatch Plan.
+    GET  → show confirm page
+    POST → delete and redirect
+    """
+    obj = get_object_or_404(MaterialRequest, pk=pk)
+
+    if request.method == 'POST':
+        obj.delete()
+        messages.success(request, "Dispatch Plan deleted.")
+        logger.info(f"{request.user} deleted MaterialRequest #{pk}")
+        return redirect('material-list')
+
+    return render(request, 'store/material_confirm_delete.html', {
+        'object': obj,
     })

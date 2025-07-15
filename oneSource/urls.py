@@ -17,6 +17,7 @@ urlpatterns = [
     path('', include('CREDENTIALS.urls')),
     path('', include('CONTRACT.urls')),
     path('', include('HR_BUDGET.urls')),
+    path('', include('R_and_D.urls')),
     path("select2/", include("django_select2.urls")),
     path("__reload__/", include("django_browser_reload.urls")),
 ]

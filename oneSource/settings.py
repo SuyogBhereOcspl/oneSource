@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'CREDENTIALS',
     'CONTRACT',
     'HR_BUDGET',
+    'R_and_D',
 ]
 
 

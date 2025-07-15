@@ -205,7 +205,7 @@ class OvertimeReport(models.Model):
     request_status = models.CharField(max_length=50)
     request_by = models.CharField(max_length=100)
     request_on = models.DateTimeField(blank=True, null=True)
-    pending_with = models.CharField(max_length=100, blank=True, null=True)
+    pending_with = models.CharField(max_length=200, blank=True, null=True)
     approved_by = models.CharField(max_length=100, blank=True, null=True)
     approved_on = models.DateTimeField(blank=True, null=True)
     approver_remark = models.TextField(blank=True, null=True)

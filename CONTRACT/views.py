@@ -983,3 +983,162 @@ def contractor_worker_entry_detail(request, date_str):
         'is_superuser': is_superuser,
     }
     return render(request, 'contract1/contractorworkerentry_detail.html', context)
+    
+    
+    
+    
+    
+    
+#==========================Below code is for contract punch in punch out =========================================================
+
+
+from .models import ContractEmpDepartment,ContractEmployee
+from django.db import connection
+from django.utils.encoding import escape_uri_path
+
+
+
+def get_matched_contract_employees(start_date, end_date, dept_id=None, emp_name=None, shift=None):
+    query = """
+        SELECT 
+            hr.employee_id,
+            hr.work_date,
+            hr.in_date,
+            hr.in_time,
+            hr.out_date,
+            hr.out_time,
+            hr.shift,
+            hr.work_hhmm,
+            hr.ot_hours,
+            hr.double_ot_hours,
+            ce.name AS employee_name,
+            dept.name AS company
+        FROM hr_contract hr
+        INNER JOIN contract_employee ce ON hr.employee_id = ce.id
+        LEFT JOIN contract_employee_dept dept ON ce.department_id = dept.id
+        WHERE hr.work_date >= %s AND hr.work_date <= %s
+    """
+    params = [start_date, end_date]
+
+    # Only add filter if not 'all' and not blank
+    if dept_id and dept_id != 'all' and dept_id != '':
+        query += " AND ce.department_id = %s"
+        params.append(dept_id)
+    if emp_name:
+        query += " AND ce.name LIKE %s"
+        params.append(f"%{emp_name}%")
+    if shift and shift != 'all' and shift != '':
+        query += " AND hr.shift = %s"
+        params.append(shift)
+    query += " ORDER BY hr.employee_id"
+
+    with connection.cursor() as cursor:
+        cursor.execute(query, params)
+        columns = [col[0] for col in cursor.description]
+        return [dict(zip(columns, row)) for row in cursor.fetchall()]
+
+
+
+def contract_employee_matched_report(request):
+    SHIFT_CHOICES = [
+        "1st Shift (07:00AM-15:00PM)",
+        "General (09:00AM-18:00PM)",
+        "2nd Shift (15:00PM-23:00PM)",
+        "4th Shift (19:00PM-07:00AM)",
+        "Night (23:00PM-07:00AM)",
+        "3rd Shift (07:00AM-19:00PM)",  
+    ]
+    today_str = datetime.now().strftime('%Y-%m-%d')
+    start_date = request.GET.get('start_date', today_str)
+    end_date = request.GET.get('end_date', today_str)
+    dept_id = request.GET.get('department', '')
+    emp_name = request.GET.get('employee_name', '').strip()
+    shift = request.GET.get('shift', 'all')
+
+    records = get_matched_contract_employees(start_date, end_date, dept_id, emp_name, shift)
+
+    total = len(records)
+    total_ot = sum(int(rec['ot_hours'] or 0) for rec in records)
+    double_ot = sum(int(rec['double_ot_hours'] or 0) for rec in records)
+    total_work_minutes = 0
+    for rec in records:
+        hhmm = rec.get('work_hhmm')
+        if hhmm and ':' in hhmm:
+            h, m = [int(x) for x in hhmm.split(':')]
+            total_work_minutes += h * 60 + m
+    total_work_hhmm = f"{total_work_minutes // 60:02d}:{total_work_minutes % 60:02d}"
+
+    departments = ContractEmpDepartment.objects.order_by('name')
+
+    return render(request, 'contract1/contract_attend_report.html', {
+        'records': records,
+        'start_date': start_date,
+        'end_date': end_date,
+        'total': total,
+        'total_ot': total_ot,
+        'double_ot': double_ot,
+        'total_work_hhmm': total_work_hhmm,
+        'departments': departments,
+        'selected_dept': str(dept_id),
+        'employee_name': emp_name,
+        'shift_choices': SHIFT_CHOICES,
+        'selected_shift': shift,
+    })
+
+
+def contract_employee_attend_report_excel(request):
+    SHIFT_CHOICES = [
+        "1st Shift (07:00AM-15:00PM)",
+        "General (09:00AM-18:00PM)",
+        "2nd Shift (15:00PM-23:00PM)",
+        "4th Shift (19:00PM-07:00AM)",
+        "Night (23:00PM-07:00AM)",
+        "3rd Shift (07:00AM-19:00PM)",
+    ]
+    today_str = datetime.now().strftime('%Y-%m-%d')
+    start_date = request.GET.get('start_date', today_str)
+    end_date = request.GET.get('end_date', today_str)
+    dept_id = request.GET.get('department', '')
+    emp_name = request.GET.get('employee_name', '').strip()
+    shift = request.GET.get('shift', 'all')
+
+    # Clean up department and shift values BEFORE passing to SQL function!
+    if dept_id == 'all' or not dept_id:
+        dept_id = ''
+    if shift == 'all' or not shift:
+        shift = None
+
+    records = get_matched_contract_employees(start_date, end_date, dept_id, emp_name, shift)
+
+    output = io.BytesIO()
+    workbook = xlsxwriter.Workbook(output, {'in_memory': True})
+    ws = workbook.add_worksheet('Attendance')
+
+    headers = [
+        "Emp Code", "Name", "Company", "Work Date", "In Date", "In Time",
+        "Out Date", "Out Time", "Shift", "Work HHMM", "OT Hours", "Double OT"
+    ]
+    ws.write_row(0, 0, headers)
+    for rowidx, rec in enumerate(records, 1):
+        ws.write(rowidx, 0, rec.get('employee_id'))
+        ws.write(rowidx, 1, rec.get('employee_name'))
+        ws.write(rowidx, 2, rec.get('company'))
+        ws.write(rowidx, 3, str(rec.get('work_date')))
+        ws.write(rowidx, 4, str(rec.get('in_date')))
+        ws.write(rowidx, 5, rec.get('in_time'))
+        ws.write(rowidx, 6, str(rec.get('out_date')))
+        ws.write(rowidx, 7, rec.get('out_time'))
+        ws.write(rowidx, 8, rec.get('shift'))
+        ws.write(rowidx, 9, rec.get('work_hhmm'))
+        ws.write(rowidx, 10, rec.get('ot_hours'))
+        ws.write(rowidx, 11, rec.get('double_ot_hours'))
+    workbook.close()
+    output.seek(0)
+
+    filename = f"Contract_Attendance_{start_date}_to_{end_date}.xlsx"
+    response = HttpResponse(
+        output.read(),
+        content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+    )
+    response['Content-Disposition'] = f'attachment; filename="{escape_uri_path(filename)}"'
+    return response    

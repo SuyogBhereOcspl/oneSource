@@ -6,6 +6,8 @@ from datetime import datetime,date
 from import_export.formats.base_formats import XLSX, CSV
 from import_export import resources, fields
 from import_export.widgets import ForeignKeyWidget
+from .utils import determine_shift
+
 
 
 class DepartmentResource(resources.ModelResource):
@@ -74,5 +76,16 @@ class AttendanceAdmin(ImportExportModelAdmin):
     list_display = ('id', 'employee', 'punched_at', 'shift', 'meal_type')
     list_filter = ('shift', 'meal_type', 'punched_at')
     search_fields = ('employee__name', 'employee__id')
-    autocomplete_fields = ["employee"] 
+    autocomplete_fields = ["employee"]
     formats = [XLSX, CSV]
+
+    # HIDE both 'shift' and 'meal_type' fields from the admin form
+    exclude = ('shift', 'meal_type',)
+
+    def save_model(self, request, obj, form, change):
+        # Auto-assign shift and meal_type before saving
+        obj.shift = determine_shift(obj.punched_at)
+        if obj.shift is None:
+            raise ValidationError("Selected 'Punched at' time does not match any allowed shift time window.")
+        obj.meal_type = "Meal"
+        super().save_model(request, obj, form, change)

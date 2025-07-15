@@ -7,7 +7,7 @@ from .models import Shift
 def determine_shift(punch_datetime):
     allowed_shifts = [
         {"name": "Lunch F", "start": time(11, 30), "end": time(13, 00)},
-        {"name": "Lunch G", "start": time(13, 0), "end": time(14, 0)},
+        {"name": "Lunch G", "start": time(13, 0), "end": time(14, 30)},
         {"name": "Dinner", "start": time(19, 30), "end": time(20, 30)},
         {"name": "Evening Dinner", "start": time(20, 30), "end": time(21, 30)},
         {"name": "Morning Tea Break", "start": time(8, 30), "end": time(9, 15)},
