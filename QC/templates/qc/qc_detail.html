@@ -1,0 +1,341 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}QC Entry Details – QC Project{% endblock %}
+
+{% block head_extra %}
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+<style>
+  /* ───────────────────────────────────
+      PAGE & CARD LAYOUT
+  ─────────────────────────────────── */
+  body { background-color: #f4f9fb; }
+  .qc-detail-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    margin-bottom: 2rem;
+  }
+
+  /* ───────────────────────────────────
+      MAIN HEADER
+  ─────────────────────────────────── */
+  .detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 1rem;
+  }
+  .detail-header h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a253c;
+  }
+  .status-badge {
+    display: inline-block;
+    padding: 0.4rem 0.75rem;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+  }
+  .status-draft     { background: #6c757d; color: #fff; }
+  .status-pending   { background: #ffc107; color: #212529; }
+  .status-completed { background: #28a745; color: #fff; }
+  .status-cancelled { background: #dc3545; color: #fff; }
+
+  /* ───────────────────────────────────
+      SECTIONS & INFO GRID
+  ─────────────────────────────────── */
+  .section-title { margin-top: 2rem; margin-bottom: 1rem; font-size: 1.5rem; font-weight: 600; color: #343a40; }
+  .info-grid-container {
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+  .info-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #dee2e6;
+    font-size: 0.95rem;
+  }
+  .info-item:nth-of-type(odd) { background: #f9fafb; }
+  .info-item:last-child        { border-bottom: none; }
+  .info-label { font-weight: 600; color: #495057; }
+  .info-value { color: #212529; text-align: right; }
+  .info-value.important { font-weight: 700; }
+  .info-value.qc-decision-pass { font-weight: 700; color: #28a745; }
+  .info-value.qc-decision-fail { font-weight: 700; color: #dc3545; }
+
+  /* ───────────────────────────────────
+      SPEC TABLE
+  ─────────────────────────────────── */
+  .qc-spec-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+  .qc-spec-table thead th {
+    background: #f8f9fa;
+    padding: 0.75rem 1rem;
+    border-bottom: 2px solid #dee2e6;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    color: #343a40;
+    text-align: left;
+  }
+  .qc-spec-table tbody td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #e9ecef;
+  }
+  .qc-spec-table tbody tr:last-child td { border-bottom: none; }
+  .remark-badge {
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.25rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #fff;
+  }
+  .remark-pass { background: #28a745; }
+  .remark-fail { background: #dc3545; }
+
+  /* ───────────────────────────────────
+      ACTIONS
+  ─────────────────────────────────── */
+  .detail-actions-container {
+    margin-top: 2rem;
+    border-top: 1px solid #e9ecef;
+    padding-top: 1.25rem;
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+  .action-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 0.375rem;
+    color: #fff;
+    text-decoration: none;
+    transition: all .2s;
+  }
+  .action-link:hover { opacity: 0.85; }
+  .action-link.view        { background: #6c757d; }
+  .action-link.edit        { background: #007bff; }
+  .action-link.cancel      { background: #dc3545; }
+  .action-link.reopen-qc   { background: #28a745; }
+  .action-link.reopen-prod { background: #fd7e14; }
+</style>
+{% endblock head_extra %}
+
+{% block content %}
+<div class="qc-detail-card">
+
+  {# ——— Main Title & Status Badge ——— #}
+  <div class="detail-header">
+    <h1>QC Entry Details</h1>
+    {% if entry.status == 'draft' %}
+      <span class="status-badge status-draft">Draft</span>
+    {% elif entry.status == 'pending_qc' %}
+      <span class="status-badge status-pending">Pending QC</span>
+    {% elif entry.status == 'qc_completed' %}
+      <span class="status-badge status-completed">QC Completed</span>
+    {% else %}
+      <span class="status-badge status-cancelled">Cancelled</span>
+    {% endif %}
+  </div>
+
+  {# ——— Header Information ——— #}
+  <h2 class="section-title">Header Information</h2>
+  <div class="info-grid-container">
+    <div class="info-item">
+      <span class="info-label">Entry No.</span>
+      <span class="info-value important">#{{ entry.id }}</span>
+    </div>
+    <div class="info-item">
+      <span class="info-label">Product</span>
+      <span class="info-value important">{{ entry.product.name }}</span>
+    </div>
+    <div class="info-item">
+      <span class="info-label">Stage</span>
+      <span class="info-value">{{ entry.get_stage_display }}</span>
+    </div>
+
+    {% if entry.group %}
+      <div class="info-item">
+        <span class="info-label">Specification Group</span>
+        <span class="info-value important">{{ entry.group }}</span>
+      </div>
+    {% endif %}
+
+    <div class="info-item">
+      <span class="info-label">General Remarks</span>
+      <span class="info-value">{{ entry.general_remarks|default:"—" }}</span>
+    </div>
+
+    <div class="info-item">
+      <span class="info-label">Batch No.</span>
+      <span class="info-value important">{{ entry.batch_no|default:"—" }}</span>
+    </div>
+    <div class="info-item">
+      <span class="info-label">AR No.</span>
+      <span class="info-value">{{ entry.ar_no|default:"—" }}</span>
+    </div>
+    <div class="info-item">
+      <span class="info-label">Equipment</span>
+      <span class="info-value">{{ entry.equipment_id|default:"—" }}</span>
+    </div>
+    <div class="info-item">
+      <span class="info-label">Block</span>
+      <span class="info-value">{{ entry.block|default:"—" }}</span>
+    </div>
+    <div class="info-item">
+      <span class="info-label">Entry Date (Prod)</span>
+      <span class="info-value">{{ entry.entry_date|date:"Y-m-d H:i" }}</span>
+    </div>
+    <div class="info-item">
+      <span class="info-label">Prepared By (Prod)</span>
+      <span class="info-value">
+        {% if entry.created_by %}
+          {{ entry.created_by.get_full_name|default:entry.created_by.username }}
+        {% else %}
+          —
+        {% endif %}
+      </span>
+    </div>
+    <div class="info-item">
+      <span class="info-label">Sample Sent At</span>
+      <span class="info-value">{{ entry.sample_sent_at|date:"Y-m-d H:i"|default:"—" }}</span>
+    </div>
+    <div class="info-item">
+      <span class="info-label">Sample Description</span>
+      <span class="info-value">{{ entry.sample_description|default:"—" }}</span>
+    </div>
+    <div class="info-item">
+      <span class="info-label">Sample Received At QC</span>
+      <span class="info-value">{{ entry.sample_received_at|date:"Y-m-d H:i"|default:"—" }}</span>
+    </div>
+    <div class="info-item">
+      <span class="info-label">Released by QC At</span>
+      <span class="info-value">{{ entry.release_by_qc_at|date:"Y-m-d H:i"|default:"—" }}</span>
+    </div>
+    {% if entry.qc_completed_by %}
+      <div class="info-item">
+        <span class="info-label">Completed By (QC)</span>
+        <span class="info-value">
+          {{ entry.qc_completed_by.get_full_name|default:entry.qc_completed_by.username }}
+        </span>
+      </div>
+    {% endif %}
+    <div class="info-item">
+      <span class="info-label">Test Required For</span>
+      <span class="info-value">{{ entry.test_required_for|default:"—" }}</span>
+    </div>
+    {% if entry.decision_status %}
+      <div class="info-item">
+        <span class="info-label">Final QC Decision</span>
+        <span class="info-value
+          {% if entry.decision_status == 'approved' %}qc-decision-pass{% elif entry.decision_status == 'rejected' %}qc-decision-fail{% endif %}
+        ">
+          {{ entry.get_decision_status_display }}
+        </span>
+      </div>
+    {% endif %}
+  </div>
+
+  {# ——— Test Parameter Results ——— #}
+  <h2 class="section-title">
+    Test Parameter Results
+    {% if entry.group %}— Group: {{ entry.group }}{% endif %}
+  </h2>
+
+  {% if spec_entries %}
+    <div class="table-responsive">
+      <table class="qc-spec-table">
+        <thead>
+          <tr>
+            <th style="width:5%; text-align: center;">#</th>
+            <th>Specification</th>
+            <th>Value</th>
+            <th style="width:15%;">Remark</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for se in spec_entries %}
+            {% if not entry.group or se.spec.group == entry.group %}
+              <tr>
+                <td style="text-align: center;">{{ forloop.counter }}</td>
+                <td>{{ se.spec.name }}</td>
+                <td>{{ se.value|default:"—" }}</td>
+                <td>
+                  {% if se.remark == 'Pass' %}
+                    <span class="remark-badge remark-pass">Pass</span>
+                  {% elif se.remark == 'Fail' %}
+                    <span class="remark-badge remark-fail">Fail</span>
+                  {% else %}
+                    —
+                  {% endif %}
+                </td>
+              </tr>
+            {% endif %}
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  {% else %}
+    <p>No specifications recorded for this QC entry.</p>
+  {% endif %}
+
+  {# ——— Action Buttons ——— #}
+  <div class="detail-actions-container">
+    <a href="{% url 'qc_list' %}" class="action-link view">
+      <i class="fa-solid fa-list"></i> Back to List
+    </a>
+
+    {% if entry.status != 'cancelled' %}
+      <a href="{% url 'qc_cancel' entry.id %}" class="action-link cancel"
+         onclick="return confirm('Cancel QC entry #{{ entry.id }}?');">
+        <i class="fa-solid fa-trash"></i> Cancel
+      </a>
+    {% endif %}
+
+    {% if entry.status == 'draft' %}
+      <a href="{% url 'qc_update' entry.id %}" class="action-link edit">
+        <i class="fa-solid fa-pencil"></i> Edit (Prod)
+      </a>
+    {% endif %}
+
+    {% if entry.status == 'pending_qc' %}
+      <a href="{% url 'qc_update' entry.id %}" class="action-link edit">
+        <i class="fa-solid fa-pencil"></i> Enter QC Results
+      </a>
+      <a href="{% url 'qc_reopen_for_prod' entry.id %}" class="action-link reopen-prod">
+        <i class="fa-solid fa-arrow-rotate-left"></i> Reopen for Prod
+      </a>
+    {% endif %}
+
+    {% if entry.status == 'qc_completed' %}
+      <a href="{% url 'qc_reopen_for_qc' entry.id %}" class="action-link reopen-qc">
+        <i class="fa-solid fa-vial-circle-check"></i> Reopen for QC
+      </a>
+      <a href="{% url 'qc_reopen_for_prod' entry.id %}" class="action-link reopen-prod">
+        <i class="fa-solid fa-arrow-rotate-left"></i> Reopen for Prod
+      </a>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

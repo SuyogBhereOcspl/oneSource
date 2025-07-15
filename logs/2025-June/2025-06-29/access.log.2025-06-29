@@ -1,0 +1,1136 @@
+[2025-06-29 08:01:26,826] INFO django.server "GET /?next=/add_leading_record/ HTTP/1.1" 200 5216
+[2025-06-29 08:01:27,937] INFO django.server "GET /static/main/images/OC_white_logo.png HTTP/1.1" 304 0
+[2025-06-29 08:01:31,735] WARNING django.server "GET /favicon.ico HTTP/1.1" 404 179
+[2025-06-29 08:06:23,278] INFO custom_logger User 'prashant.g' logged in successfully.
+[2025-06-29 08:06:23,281] INFO django.server "POST /?next=/add_leading_record/ HTTP/1.1" 302 0
+[2025-06-29 08:06:23,383] INFO custom_logger User 'prashant.g' accessed index page.
+[2025-06-29 08:06:23,397] INFO django.server "GET /indexpage/ HTTP/1.1" 200 10776
+[2025-06-29 08:06:23,501] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 08:06:23,501] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 08:06:23,519] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 08:06:23,530] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 08:06:23,535] INFO django.server "GET /static/main/images/EHSModule.png HTTP/1.1" 304 0
+[2025-06-29 08:06:23,641] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 08:06:23,643] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 08:06:23,921] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 08:06:24,033] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 08:06:31,116] INFO django.server "GET /add_leading_record/ HTTP/1.1" 200 29774
+[2025-06-29 08:06:31,179] INFO django.server "GET /static/leading/css/leading.css HTTP/1.1" 304 0
+[2025-06-29 08:06:31,274] INFO django.server "GET /static/leading/js/leading.js HTTP/1.1" 304 0
+[2025-06-29 08:06:31,327] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 08:06:31,447] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 08:09:32,938] INFO custom_logger Leading record (ID: 23171) created by 'prashant.g' (2032)
+[2025-06-29 08:09:32,940] INFO django.server "POST /add_leading_record/ HTTP/1.1" 302 0
+[2025-06-29 08:09:33,135] INFO django.server "GET /add_leading_record/ HTTP/1.1" 200 30229
+[2025-06-29 08:09:33,226] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 08:09:33,226] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 08:09:33,229] INFO django.server "GET /static/leading/css/leading.css HTTP/1.1" 304 0
+[2025-06-29 08:09:33,232] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 08:09:33,232] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 08:09:33,346] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 08:09:33,346] INFO django.server "GET /static/leading/js/leading.js HTTP/1.1" 304 0
+[2025-06-29 08:09:33,387] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 08:09:33,579] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 08:09:33,674] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 08:11:11,075] INFO custom_logger Leading record (ID: 23172) created by 'prashant.g' (2032)
+[2025-06-29 08:11:11,076] INFO django.server "POST /add_leading_record/ HTTP/1.1" 302 0
+[2025-06-29 08:11:11,267] INFO django.server "GET /add_leading_record/ HTTP/1.1" 200 30229
+[2025-06-29 08:11:11,356] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 08:11:11,392] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 08:11:11,392] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 08:11:11,402] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 08:11:11,403] INFO django.server "GET /static/leading/css/leading.css HTTP/1.1" 304 0
+[2025-06-29 08:11:11,496] INFO django.server "GET /static/leading/js/leading.js HTTP/1.1" 304 0
+[2025-06-29 08:11:11,503] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 08:11:11,551] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 08:11:11,827] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 08:11:11,924] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 08:15:49,614] INFO custom_logger Leading record (ID: 23173) created by 'prashant.g' (2032)
+[2025-06-29 08:15:49,616] INFO django.server "POST /add_leading_record/ HTTP/1.1" 302 0
+[2025-06-29 08:15:49,833] INFO django.server "GET /add_leading_record/ HTTP/1.1" 200 30229
+[2025-06-29 08:15:49,930] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 08:15:49,948] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 08:15:49,950] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 08:15:49,950] INFO django.server "GET /static/leading/css/leading.css HTTP/1.1" 304 0
+[2025-06-29 08:15:49,950] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 08:15:50,085] INFO django.server "GET /static/leading/js/leading.js HTTP/1.1" 304 0
+[2025-06-29 08:15:50,150] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 08:15:50,151] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 08:15:50,404] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 08:15:50,559] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 09:02:47,015] INFO custom_logger User 'bhagavan.b' viewed leading records page: 1 (records this page: 10)
+[2025-06-29 09:02:47,080] INFO django.server "GET /view_leading/ HTTP/1.1" 200 32822
+[2025-06-29 09:02:47,116] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 09:02:47,123] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 09:02:47,138] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 09:02:47,140] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 09:02:47,142] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 09:02:47,218] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 09:02:50,503] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 09:02:50,627] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 09:02:57,601] INFO custom_logger User 'bhagavan.b' exported leading records. Filters used: {'from_date': '', 'to_date': '', 'department_filter': '', 'status_filter': '', 'physical_location_filter': '', 'risk_factor_filter': ''}. Records exported: 3253
+[2025-06-29 09:02:59,791] INFO django.server "GET /leading/export/?from_date=&to_date=&department_filter=&status_filter=&physical_location_filter=&risk_factor_filter= HTTP/1.1" 200 371755
+[2025-06-29 09:09:37,630] INFO custom_logger Leading record (ID: 23174) created by 'prashant.g' (2032)
+[2025-06-29 09:09:37,632] INFO django.server "POST /add_leading_record/ HTTP/1.1" 302 0
+[2025-06-29 09:09:37,813] INFO django.server "GET /add_leading_record/ HTTP/1.1" 200 30229
+[2025-06-29 09:09:37,914] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 09:09:37,915] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 09:09:37,933] INFO django.server "GET /static/leading/css/leading.css HTTP/1.1" 304 0
+[2025-06-29 09:09:37,935] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 09:09:37,937] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 09:09:38,033] INFO django.server "GET /static/leading/js/leading.js HTTP/1.1" 304 0
+[2025-06-29 09:09:38,043] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 09:09:38,212] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 09:09:38,432] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 09:09:38,569] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 09:09:54,687] INFO django.server "GET /leading/23173/detail/ HTTP/1.1" 200 11267
+[2025-06-29 09:09:54,724] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 09:09:54,731] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 09:09:54,745] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 09:09:54,748] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 09:09:54,750] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 09:09:54,825] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 09:09:55,130] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 09:09:55,215] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 09:16:20,881] INFO custom_logger Leading record (ID: 23175) created by 'prashant.g' (2032)
+[2025-06-29 09:16:20,886] INFO django.server "POST /add_leading_record/ HTTP/1.1" 302 0
+[2025-06-29 09:16:21,099] INFO django.server "GET /add_leading_record/ HTTP/1.1" 200 30229
+[2025-06-29 09:16:21,195] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 09:16:21,209] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 09:16:21,245] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 09:16:21,245] INFO django.server "GET /static/leading/css/leading.css HTTP/1.1" 304 0
+[2025-06-29 09:16:21,245] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 09:16:21,368] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 09:16:21,369] INFO django.server "GET /static/leading/js/leading.js HTTP/1.1" 304 0
+[2025-06-29 09:16:21,560] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 09:16:21,863] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 09:16:22,005] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 09:18:16,996] INFO django.server "GET /products/new/ HTTP/1.1" 200 78155
+[2025-06-29 09:18:17,621] WARNING django.server "GET /favicon.ico HTTP/1.1" 404 179
+[2025-06-29 09:20:17,730] INFO django.server "GET / HTTP/1.1" 200 5216
+[2025-06-29 09:20:17,824] INFO django.server "GET /static/main/images/OC_white_logo.png HTTP/1.1" 304 0
+[2025-06-29 09:20:18,883] WARNING django.server "GET /favicon.ico HTTP/1.1" 404 179
+[2025-06-29 09:20:39,105] INFO custom_logger User 'taufik.s' logged in successfully.
+[2025-06-29 09:20:39,112] INFO django.server "POST / HTTP/1.1" 302 0
+[2025-06-29 09:20:39,267] INFO custom_logger User 'taufik.s' accessed index page.
+[2025-06-29 09:20:39,279] INFO django.server "GET /indexpage/ HTTP/1.1" 200 9182
+[2025-06-29 09:20:39,377] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 09:20:39,377] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 09:20:39,406] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 09:20:39,408] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 09:20:39,418] INFO django.server "GET /static/main/images/WarehouseModule.png HTTP/1.1" 304 0
+[2025-06-29 09:20:39,526] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 09:20:39,577] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 09:20:39,740] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 09:20:39,850] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 09:20:42,659] INFO custom_logger Vehicle list viewed by taufik.s with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': ''}
+[2025-06-29 09:20:42,701] INFO django.server "GET /vehicle_list/ HTTP/1.1" 200 27267
+[2025-06-29 09:20:43,031] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 09:20:43,149] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 09:20:45,563] INFO custom_logger Vehicle list viewed by taufik.s with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': 'Pending'}
+[2025-06-29 09:20:45,601] INFO django.server "GET /vehicle_list/?reporting_date=&name_of_supplier=&material=&name_of_transporter=&status=Pending HTTP/1.1" 200 19436
+[2025-06-29 09:20:45,825] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 09:20:45,939] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 09:22:13,877] INFO django.server "GET /vehicle/edit/20248/ HTTP/1.1" 200 14319
+[2025-06-29 09:22:13,922] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 09:22:13,940] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 09:22:13,955] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 09:22:13,955] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 09:22:13,973] INFO django.server "GET /static/store/css/store.css HTTP/1.1" 304 0
+[2025-06-29 09:22:14,066] INFO django.server "GET /static/store/js/vehicle_page.js HTTP/1.1" 304 0
+[2025-06-29 09:22:14,078] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 09:22:14,079] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 09:22:14,173] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 09:22:14,320] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 09:22:29,239] INFO custom_logger Vehicle ID 20248 edited by taufik.s
+[2025-06-29 09:22:29,239] INFO django.server "POST /vehicle/edit/20248/ HTTP/1.1" 302 0
+[2025-06-29 09:22:29,369] INFO custom_logger Vehicle list viewed by taufik.s with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': ''}
+[2025-06-29 09:22:29,392] INFO django.server "GET /vehicle_list/ HTTP/1.1" 200 27850
+[2025-06-29 09:22:29,621] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 09:22:29,737] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 09:22:32,585] INFO custom_logger Vehicle list viewed by taufik.s with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': 'Pending'}
+[2025-06-29 09:22:32,616] INFO django.server "GET /vehicle_list/?reporting_date=&name_of_supplier=&material=&name_of_transporter=&status=Pending HTTP/1.1" 200 17916
+[2025-06-29 09:22:32,759] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 09:22:32,881] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 09:23:07,553] WARNING custom_logger User 'prashant.g' submitted invalid leading record data: <ul class="errorlist"><li>leading_abnormality<ul class="errorlist"><li>This field is required.</li></ul></li></ul>
+[2025-06-29 09:23:07,624] INFO django.server "POST /add_leading_record/ HTTP/1.1" 200 30439
+[2025-06-29 09:23:07,695] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 09:23:07,711] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 09:23:07,748] INFO django.server "GET /static/leading/css/leading.css HTTP/1.1" 304 0
+[2025-06-29 09:23:07,748] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 09:23:07,749] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 09:23:07,949] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 09:23:07,950] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 09:23:07,950] INFO django.server "GET /static/leading/js/leading.js HTTP/1.1" 304 0
+[2025-06-29 09:23:08,426] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 09:23:08,610] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 09:23:23,999] INFO custom_logger Leading record (ID: 23176) created by 'prashant.g' (2032)
+[2025-06-29 09:23:24,000] INFO django.server "POST /add_leading_record/ HTTP/1.1" 302 0
+[2025-06-29 09:23:24,217] INFO django.server "GET /add_leading_record/ HTTP/1.1" 200 30229
+[2025-06-29 09:23:24,598] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 09:23:24,721] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 09:23:30,335] INFO django.server "GET /vehicle/edit/20245/ HTTP/1.1" 200 14276
+[2025-06-29 09:23:30,399] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 09:23:30,399] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 09:23:30,428] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 09:23:30,433] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 09:23:30,435] INFO django.server "GET /static/store/css/store.css HTTP/1.1" 304 0
+[2025-06-29 09:23:30,549] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 09:23:30,549] INFO django.server "GET /static/store/js/vehicle_page.js HTTP/1.1" 304 0
+[2025-06-29 09:23:30,553] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 09:23:30,636] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 09:23:30,749] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 09:23:45,036] INFO custom_logger Vehicle ID 20245 edited by taufik.s
+[2025-06-29 09:23:45,038] INFO django.server "POST /vehicle/edit/20245/ HTTP/1.1" 302 0
+[2025-06-29 09:23:45,162] INFO custom_logger Vehicle list viewed by taufik.s with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': ''}
+[2025-06-29 09:23:45,200] INFO django.server "GET /vehicle_list/ HTTP/1.1" 200 27861
+[2025-06-29 09:23:45,448] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 09:23:45,569] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 09:23:47,677] INFO custom_logger Vehicle list viewed by taufik.s with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': 'Pending'}
+[2025-06-29 09:23:47,732] INFO django.server "GET /vehicle_list/?reporting_date=&name_of_supplier=&material=&name_of_transporter=&status=Pending HTTP/1.1" 200 16411
+[2025-06-29 09:23:47,865] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 09:23:47,981] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 09:23:54,499] INFO django.server "GET /vehicle/edit/20244/ HTTP/1.1" 200 14286
+[2025-06-29 09:23:54,745] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 09:23:54,863] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 09:24:06,498] INFO custom_logger Vehicle ID 20244 edited by taufik.s
+[2025-06-29 09:24:06,500] INFO django.server "POST /vehicle/edit/20244/ HTTP/1.1" 302 0
+[2025-06-29 09:24:06,633] INFO custom_logger Vehicle list viewed by taufik.s with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': ''}
+[2025-06-29 09:24:06,680] INFO django.server "GET /vehicle_list/ HTTP/1.1" 200 27872
+[2025-06-29 09:24:06,851] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 09:24:06,972] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 09:24:11,452] INFO custom_logger Vehicle list viewed by taufik.s with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': 'Pending'}
+[2025-06-29 09:24:11,483] INFO django.server "GET /vehicle_list/?reporting_date=&name_of_supplier=&material=&name_of_transporter=&status=Pending HTTP/1.1" 200 14907
+[2025-06-29 09:24:11,721] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 09:24:11,836] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 09:24:17,088] INFO django.server "GET /vehicle/edit/20234/ HTTP/1.1" 200 14290
+[2025-06-29 09:24:17,336] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 09:24:17,451] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 09:24:25,079] INFO custom_logger Vehicle ID 20234 edited by taufik.s
+[2025-06-29 09:24:25,081] INFO django.server "POST /vehicle/edit/20234/ HTTP/1.1" 302 0
+[2025-06-29 09:24:25,209] INFO custom_logger Vehicle list viewed by taufik.s with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': ''}
+[2025-06-29 09:24:25,252] INFO django.server "GET /vehicle_list/ HTTP/1.1" 200 27872
+[2025-06-29 09:24:25,515] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 09:24:25,633] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 09:24:27,812] INFO custom_logger Vehicle list viewed by taufik.s with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': 'Pending'}
+[2025-06-29 09:24:27,842] INFO django.server "GET /vehicle_list/?reporting_date=&name_of_supplier=&material=&name_of_transporter=&status=Pending HTTP/1.1" 200 13395
+[2025-06-29 09:24:28,117] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 09:24:28,238] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 10:28:29,426] INFO django.server "GET / HTTP/1.1" 200 5216
+[2025-06-29 10:28:33,490] INFO django.server "GET /static/main/images/OC_white_logo.png HTTP/1.1" 304 0
+[2025-06-29 10:28:35,329] WARNING django.server "GET /favicon.ico HTTP/1.1" 404 179
+[2025-06-29 10:28:46,356] INFO custom_logger User 'vinayak.b' logged in successfully.
+[2025-06-29 10:28:46,361] INFO django.server "POST / HTTP/1.1" 302 0
+[2025-06-29 10:28:46,708] INFO custom_logger User 'vinayak.b' accessed index page.
+[2025-06-29 10:28:46,725] INFO django.server "GET /indexpage/ HTTP/1.1" 200 12821
+[2025-06-29 10:28:46,872] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 200 73890
+[2025-06-29 10:28:46,872] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 200 0
+[2025-06-29 10:28:46,875] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 200 516
+[2025-06-29 10:28:46,876] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 200 380
+[2025-06-29 10:28:47,060] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 10:28:47,144] INFO django.server "GET /static/main/images/UtilityModule.png HTTP/1.1" 200 34526
+[2025-06-29 10:28:47,147] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 200 2701
+[2025-06-29 10:28:47,249] INFO django.server "GET /static/main/images/EHSModule.png HTTP/1.1" 200 112111
+[2025-06-29 10:28:47,418] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 10:28:47,758] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 10:28:47,874] WARNING django.server "GET /favicon.ico HTTP/1.1" 404 179
+[2025-06-29 10:28:49,635] INFO django.server "GET /utility/entry/ HTTP/1.1" 200 30120
+[2025-06-29 10:28:50,153] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 10:28:50,416] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 10:31:22,992] INFO django.server "POST /utility/entry/ HTTP/1.1" 302 0
+[2025-06-29 10:31:23,369] INFO django.server "GET /utility/records/ HTTP/1.1" 200 86792
+[2025-06-29 10:31:23,486] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 10:31:23,488] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 10:31:23,491] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 10:31:23,517] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 10:31:23,548] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 200 516
+[2025-06-29 10:31:23,796] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 200 2701
+[2025-06-29 10:31:24,010] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 10:31:24,275] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 10:31:32,900] INFO django.server "GET /utility/consumption/ HTTP/1.1" 200 68464
+[2025-06-29 10:31:33,291] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 10:31:33,446] WARNING django.server "GET /favicon.ico HTTP/1.1" 404 179
+[2025-06-29 10:31:33,562] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 10:31:59,886] INFO custom_logger User 'vinayak.b' logged out.
+[2025-06-29 10:31:59,896] INFO django.server "GET /userlogout/ HTTP/1.1" 302 0
+[2025-06-29 10:32:00,167] INFO django.server "GET / HTTP/1.1" 200 5659
+[2025-06-29 10:32:00,248] INFO django.server "GET /static/main/images/OC_white_logo.png HTTP/1.1" 304 0
+[2025-06-29 12:09:54,299] INFO django.server "GET / HTTP/1.1" 200 5216
+[2025-06-29 12:09:54,514] INFO django.server "GET /static/main/images/OC_white_logo.png HTTP/1.1" 304 0
+[2025-06-29 12:09:57,935] WARNING django.server "GET /favicon.ico HTTP/1.1" 404 179
+[2025-06-29 12:10:14,997] INFO custom_logger User 'dayanand.m' logged in successfully.
+[2025-06-29 12:10:15,001] INFO django.server "POST / HTTP/1.1" 302 0
+[2025-06-29 12:10:16,310] INFO custom_logger User 'dayanand.m' logged in successfully.
+[2025-06-29 12:10:16,316] INFO django.server "POST / HTTP/1.1" 302 0
+[2025-06-29 12:10:19,767] INFO custom_logger User 'dayanand.m' logged in successfully.
+[2025-06-29 12:10:19,774] INFO django.server "POST / HTTP/1.1" 302 0
+[2025-06-29 12:10:19,970] INFO custom_logger User 'dayanand.m' accessed index page.
+[2025-06-29 12:10:19,984] INFO django.server "GET /indexpage/ HTTP/1.1" 200 9220
+[2025-06-29 12:10:20,054] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 12:10:20,057] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 12:10:20,088] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 12:10:20,090] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 12:10:20,093] INFO django.server "GET /static/main/images/ProductionModule.png HTTP/1.1" 304 0
+[2025-06-29 12:10:20,239] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 12:10:20,510] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 12:10:20,672] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 12:10:24,446] INFO django.server - Broken pipe from ('192.168.0.137', 52502)
+[2025-06-29 12:10:24,557] INFO django.server "GET /view_downtime/ HTTP/1.1" 200 43360
+[2025-06-29 12:10:24,648] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 12:10:24,669] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 12:10:24,694] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 12:10:24,699] WARNING django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 416 0
+[2025-06-29 12:10:24,700] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 12:10:24,846] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 12:10:25,072] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 12:10:25,207] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 12:10:29,194] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 200 1530755
+[2025-06-29 12:12:07,852] INFO custom_logger User 'dayanand.m' tried to access login page but is already authenticated.
+[2025-06-29 12:12:07,854] INFO django.server "GET / HTTP/1.1" 302 0
+[2025-06-29 12:12:07,998] INFO custom_logger User 'dayanand.m' accessed index page.
+[2025-06-29 12:12:08,011] INFO django.server "GET /indexpage/ HTTP/1.1" 200 8684
+[2025-06-29 12:12:08,091] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 12:12:08,140] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 12:12:08,143] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 12:12:08,145] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 12:12:08,214] INFO django.server "GET /static/main/images/ProductionModule.png HTTP/1.1" 304 0
+[2025-06-29 12:12:08,285] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 12:12:08,285] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 12:12:08,417] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 12:12:08,548] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 12:12:11,370] INFO django.server "GET /add_downtime/ HTTP/1.1" 200 18291
+[2025-06-29 12:12:11,511] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 12:12:11,524] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 12:12:11,528] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 12:12:11,529] INFO django.server "GET /static/downtime/css/downtime.css HTTP/1.1" 304 0
+[2025-06-29 12:12:11,529] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 12:12:11,660] INFO django.server "GET /static/downtime/js/downtime.js HTTP/1.1" 304 0
+[2025-06-29 12:12:11,660] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 12:12:11,672] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 12:12:11,833] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 12:12:11,958] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 12:12:34,726] INFO django.server "GET /search_equipment/ HTTP/1.1" 200 5555
+[2025-06-29 12:12:36,553] INFO django.server "GET /search_equipment/?term=a HTTP/1.1" 200 5413
+[2025-06-29 12:12:36,977] INFO django.server "GET /search_equipment/?term=ar HTTP/1.1" 200 616
+[2025-06-29 12:12:37,597] INFO django.server "GET /search_equipment/?term=ar- HTTP/1.1" 200 616
+[2025-06-29 12:12:38,549] INFO django.server "GET /search_equipment/?term=ar-101 HTTP/1.1" 200 80
+[2025-06-29 12:12:45,651] INFO django.server "GET /search_product/?search_type=fg_name HTTP/1.1" 200 5257
+[2025-06-29 12:12:49,176] INFO django.server "GET /search_product/?term=2&search_type=fg_name HTTP/1.1" 200 3361
+[2025-06-29 12:12:49,779] INFO django.server "GET /search_product/?term=2%2C&search_type=fg_name HTTP/1.1" 200 1617
+[2025-06-29 12:12:50,046] INFO django.server "GET /search_product/?term=2%2C5&search_type=fg_name HTTP/1.1" 200 177
+[2025-06-29 12:12:53,182] INFO django.server "GET /search_product/?search_type=stage_name&fg_filter=2%2C5%20DIMETHYL%20PHENYL%20ACETYL%20CHLORIDE HTTP/1.1" 200 1345
+[2025-06-29 12:12:57,601] INFO django.server "POST /get_bom_details/ HTTP/1.1" 200 29
+[2025-06-29 12:12:58,482] INFO django.server "GET /search_batch/?stage_name=2%2C5%20DMBCN%20(STAGE-II)%20CRUDE HTTP/1.1" 200 1989
+[2025-06-29 12:13:25,821] INFO django.server "POST /add_downtime/ HTTP/1.1" 302 0
+[2025-06-29 12:13:25,995] INFO django.server "GET /add_downtime/ HTTP/1.1" 200 18801
+[2025-06-29 12:13:26,046] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 12:13:26,065] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 12:13:26,092] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 12:13:26,092] INFO django.server "GET /static/downtime/css/downtime.css HTTP/1.1" 304 0
+[2025-06-29 12:13:26,093] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 12:13:26,277] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 12:13:26,278] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 12:13:26,278] INFO django.server "GET /static/downtime/js/downtime.js HTTP/1.1" 304 0
+[2025-06-29 12:13:26,424] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 12:13:26,568] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 12:13:57,014] INFO django.server "GET /search_equipment/ HTTP/1.1" 200 5555
+[2025-06-29 12:13:58,594] INFO django.server "GET /search_equipment/?term=a HTTP/1.1" 200 5413
+[2025-06-29 12:13:59,029] INFO django.server "GET /search_equipment/?term=ar HTTP/1.1" 200 616
+[2025-06-29 12:13:59,563] INFO django.server "GET /search_equipment/?term=ar- HTTP/1.1" 200 616
+[2025-06-29 12:14:00,656] INFO django.server "GET /search_equipment/?term=ar-101 HTTP/1.1" 200 80
+[2025-06-29 12:14:03,522] INFO django.server "GET /search_product/?search_type=fg_name HTTP/1.1" 200 5257
+[2025-06-29 12:14:05,985] INFO django.server "GET /search_product/?term=2&search_type=fg_name HTTP/1.1" 200 3361
+[2025-06-29 12:14:06,279] INFO django.server "GET /search_product/?term=2%2C&search_type=fg_name HTTP/1.1" 200 1617
+[2025-06-29 12:14:06,948] INFO django.server "GET /search_product/?term=2%2C5&search_type=fg_name HTTP/1.1" 200 177
+[2025-06-29 12:14:09,891] INFO django.server "GET /search_product/?search_type=stage_name&fg_filter=2%2C5%20DIMETHYL%20PHENYL%20ACETYL%20CHLORIDE HTTP/1.1" 200 1345
+[2025-06-29 12:14:14,611] WARNING django.server "POST /get_bom_details/ HTTP/1.1" 404 38
+[2025-06-29 12:14:16,835] INFO django.server "GET /search_batch/?stage_name=2%2C5%20DMBCL%20(STAGE-I)%20CRUDE HTTP/1.1" 200 1989
+[2025-06-29 12:14:30,563] INFO django.server "GET /search_product/?search_type=stage_name&fg_filter=2%2C5%20DIMETHYL%20PHENYL%20ACETYL%20CHLORIDE HTTP/1.1" 200 1345
+[2025-06-29 12:14:34,789] WARNING django.server "POST /get_bom_details/ HTTP/1.1" 404 38
+[2025-06-29 12:14:36,338] INFO django.server "GET /search_batch/?stage_name=2%2C5%20DMBCL%20STAGE-I HTTP/1.1" 200 1937
+[2025-06-29 12:14:45,580] INFO django.server "GET /search_product/?search_type=stage_name&fg_filter=2%2C5%20DIMETHYL%20PHENYL%20ACETYL%20CHLORIDE HTTP/1.1" 200 1345
+[2025-06-29 12:14:49,005] WARNING django.server "POST /get_bom_details/ HTTP/1.1" 404 38
+[2025-06-29 12:14:52,329] INFO django.server "GET /search_batch/?stage_name=2%2C5%20DMPAA%20(STAGE-III)%20DRY%20POWDER HTTP/1.1" 200 2093
+[2025-06-29 12:15:21,491] INFO django.server "POST /add_downtime/ HTTP/1.1" 302 0
+[2025-06-29 12:15:21,662] INFO django.server "GET /add_downtime/ HTTP/1.1" 200 18801
+[2025-06-29 12:15:21,743] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 12:15:21,744] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 12:15:21,744] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 12:15:21,774] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 12:15:21,776] INFO django.server "GET /static/downtime/css/downtime.css HTTP/1.1" 304 0
+[2025-06-29 12:15:21,890] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 12:15:21,891] INFO django.server "GET /static/downtime/js/downtime.js HTTP/1.1" 304 0
+[2025-06-29 12:15:21,892] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 12:15:22,010] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 12:15:22,171] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 12:15:44,920] INFO django.server "GET /search_equipment/ HTTP/1.1" 200 5555
+[2025-06-29 12:15:46,805] INFO django.server "GET /search_equipment/?term=a HTTP/1.1" 200 5413
+[2025-06-29 12:15:47,072] INFO django.server "GET /search_equipment/?term=ar HTTP/1.1" 200 616
+[2025-06-29 12:15:47,453] INFO django.server "GET /search_equipment/?term=ar- HTTP/1.1" 200 616
+[2025-06-29 12:15:48,469] INFO django.server "GET /search_equipment/?term=ar-105 HTTP/1.1" 200 80
+[2025-06-29 12:15:51,254] INFO django.server "GET /search_product/?search_type=fg_name HTTP/1.1" 200 5257
+[2025-06-29 12:15:53,585] INFO django.server "GET /search_product/?term=c-&search_type=fg_name HTTP/1.1" 200 269
+[2025-06-29 12:15:53,819] INFO django.server "GET /search_product/?term=c-5&search_type=fg_name HTTP/1.1" 200 141
+[2025-06-29 12:15:56,394] INFO django.server "GET /search_product/?search_type=stage_name&fg_filter=C-5%20HYDROXY%20ESTER HTTP/1.1" 200 703
+[2025-06-29 12:15:58,871] INFO django.server "POST /get_bom_details/ HTTP/1.1" 200 32
+[2025-06-29 12:16:00,004] INFO django.server "GET /search_batch/?stage_name=C-5%20HYDROXY%20ESTER%20CRUDE HTTP/1.1" 200 15
+[2025-06-29 12:16:02,850] INFO django.server "GET /search_product/?search_type=stage_name&fg_filter=C-5%20HYDROXY%20ESTER HTTP/1.1" 200 703
+[2025-06-29 12:16:07,230] WARNING django.server "POST /get_bom_details/ HTTP/1.1" 404 38
+[2025-06-29 12:16:10,359] INFO django.server "GET /search_product/?search_type=stage_name&fg_filter=C-5%20HYDROXY%20ESTER HTTP/1.1" 200 703
+[2025-06-29 12:16:12,139] INFO django.server "POST /get_bom_details/ HTTP/1.1" 200 32
+[2025-06-29 12:16:13,219] INFO django.server "GET /search_batch/?stage_name=C-5%20HYDROXY%20ESTER%20ORGANIC%20LAYER HTTP/1.1" 200 169
+[2025-06-29 12:16:45,644] INFO django.server "POST /add_downtime/ HTTP/1.1" 302 0
+[2025-06-29 12:16:45,809] INFO django.server "GET /add_downtime/ HTTP/1.1" 200 18801
+[2025-06-29 12:16:45,871] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 12:16:45,879] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 12:16:45,912] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 12:16:45,915] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 12:16:45,916] INFO django.server "GET /static/downtime/css/downtime.css HTTP/1.1" 304 0
+[2025-06-29 12:16:46,036] INFO django.server "GET /static/downtime/js/downtime.js HTTP/1.1" 304 0
+[2025-06-29 12:16:46,036] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 12:16:46,037] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 12:16:46,189] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 12:16:46,326] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 12:18:00,858] INFO django.server "GET /search_equipment/ HTTP/1.1" 200 5555
+[2025-06-29 12:18:02,441] INFO django.server "GET /search_equipment/?term=a HTTP/1.1" 200 5413
+[2025-06-29 12:18:02,782] INFO django.server "GET /search_equipment/?term=ar HTTP/1.1" 200 616
+[2025-06-29 12:18:03,184] INFO django.server "GET /search_equipment/?term=ar- HTTP/1.1" 200 616
+[2025-06-29 12:18:04,138] INFO django.server "GET /search_equipment/?term=ar-101 HTTP/1.1" 200 80
+[2025-06-29 12:18:07,504] INFO django.server "GET /search_product/?search_type=fg_name HTTP/1.1" 200 5257
+[2025-06-29 12:18:10,904] INFO django.server "GET /search_product/?term=2&search_type=fg_name HTTP/1.1" 200 3361
+[2025-06-29 12:18:11,236] INFO django.server "GET /search_product/?term=2%2C&search_type=fg_name HTTP/1.1" 200 1617
+[2025-06-29 12:18:11,605] INFO django.server "GET /search_product/?term=2%2C5&search_type=fg_name HTTP/1.1" 200 177
+[2025-06-29 12:18:17,189] INFO django.server "GET /search_product/?search_type=stage_name&fg_filter=2%2C5%20DIMETHYL%20PHENYL%20ACETYL%20CHLORIDE HTTP/1.1" 200 1345
+[2025-06-29 12:18:20,336] INFO django.server "POST /get_bom_details/ HTTP/1.1" 200 29
+[2025-06-29 12:18:24,977] INFO django.server "GET /search_batch/?stage_name=2%2C5%20DMBCN%20(STAGE-II)%20CRUDE HTTP/1.1" 200 1989
+[2025-06-29 12:19:00,128] INFO django.server "POST /add_downtime/ HTTP/1.1" 302 0
+[2025-06-29 12:19:00,296] INFO django.server "GET /add_downtime/ HTTP/1.1" 200 18801
+[2025-06-29 12:19:00,366] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 12:19:00,375] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 12:19:00,408] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 12:19:00,410] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 12:19:00,411] INFO django.server "GET /static/downtime/css/downtime.css HTTP/1.1" 304 0
+[2025-06-29 12:19:00,511] INFO django.server "GET /static/downtime/js/downtime.js HTTP/1.1" 304 0
+[2025-06-29 12:19:00,531] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 12:19:00,531] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 12:19:00,674] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 12:19:00,794] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 12:20:40,572] INFO django.server "GET /search_equipment/ HTTP/1.1" 200 5555
+[2025-06-29 12:20:42,425] INFO django.server "GET /search_equipment/?term=a HTTP/1.1" 200 5413
+[2025-06-29 12:20:42,732] INFO django.server "GET /search_equipment/?term=ar HTTP/1.1" 200 616
+[2025-06-29 12:20:43,198] INFO django.server "GET /search_equipment/?term=ar- HTTP/1.1" 200 616
+[2025-06-29 12:20:44,111] INFO django.server "GET /search_equipment/?term=ar-103 HTTP/1.1" 200 80
+[2025-06-29 12:20:46,879] INFO django.server "GET /search_product/?search_type=fg_name HTTP/1.1" 200 5257
+[2025-06-29 12:20:48,843] INFO django.server "GET /search_product/?term=c&search_type=fg_name HTTP/1.1" 200 3891
+[2025-06-29 12:20:49,186] INFO django.server "GET /search_product/?term=c-&search_type=fg_name HTTP/1.1" 200 269
+[2025-06-29 12:20:49,403] INFO django.server "GET /search_product/?term=c-5&search_type=fg_name HTTP/1.1" 200 141
+[2025-06-29 12:20:51,834] INFO django.server "GET /search_product/?search_type=stage_name&fg_filter=C-5%20HYDROXY%20ESTER HTTP/1.1" 200 703
+[2025-06-29 12:20:54,093] WARNING django.server "POST /get_bom_details/ HTTP/1.1" 404 38
+[2025-06-29 12:20:54,726] INFO django.server "GET /search_batch/?stage_name=C-5%20HYDROXY%20ESTER%20ORGANIC%20LAYER HTTP/1.1" 200 169
+[2025-06-29 12:21:32,309] INFO django.server "POST /add_downtime/ HTTP/1.1" 302 0
+[2025-06-29 12:21:32,474] INFO django.server "GET /add_downtime/ HTTP/1.1" 200 18801
+[2025-06-29 12:21:32,567] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 12:21:32,568] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 12:21:32,601] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 12:21:32,601] INFO django.server "GET /static/downtime/css/downtime.css HTTP/1.1" 304 0
+[2025-06-29 12:21:32,601] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 12:21:32,722] INFO django.server "GET /static/downtime/js/downtime.js HTTP/1.1" 304 0
+[2025-06-29 12:21:32,762] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 12:21:32,762] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 12:21:32,883] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 12:21:33,010] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 12:22:01,325] INFO django.server "GET /search_equipment/ HTTP/1.1" 200 5555
+[2025-06-29 12:22:03,812] INFO django.server "GET /search_equipment/?term=a HTTP/1.1" 200 5413
+[2025-06-29 12:22:04,160] INFO django.server "GET /search_equipment/?term=ar HTTP/1.1" 200 616
+[2025-06-29 12:22:04,666] INFO django.server "GET /search_equipment/?term=ar- HTTP/1.1" 200 616
+[2025-06-29 12:22:05,683] INFO django.server "GET /search_equipment/?term=ar-110 HTTP/1.1" 200 80
+[2025-06-29 12:22:09,124] INFO django.server "GET /search_product/?search_type=fg_name HTTP/1.1" 200 5257
+[2025-06-29 12:22:11,095] INFO django.server "GET /search_product/?term=2&search_type=fg_name HTTP/1.1" 200 3361
+[2025-06-29 12:22:11,516] INFO django.server "GET /search_product/?term=2%2C&search_type=fg_name HTTP/1.1" 200 1617
+[2025-06-29 12:22:12,096] INFO django.server "GET /search_product/?term=2%2C5&search_type=fg_name HTTP/1.1" 200 177
+[2025-06-29 12:22:14,884] INFO django.server "GET /search_product/?search_type=stage_name&fg_filter=2%2C5%20DIMETHYL%20PHENYL%20ACETYL%20CHLORIDE HTTP/1.1" 200 1345
+[2025-06-29 12:22:17,598] INFO django.server "POST /get_bom_details/ HTTP/1.1" 200 29
+[2025-06-29 12:22:23,271] INFO django.server "GET /search_batch/?stage_name=2%2C5%20DMPAC%20SFG HTTP/1.1" 200 1313
+[2025-06-29 12:22:45,763] INFO django.server "POST /add_downtime/ HTTP/1.1" 302 0
+[2025-06-29 12:22:46,125] INFO django.server "GET /add_downtime/ HTTP/1.1" 200 18801
+[2025-06-29 12:22:46,310] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 12:22:46,310] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 12:22:46,414] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 12:22:46,487] INFO django.server "GET /static/downtime/css/downtime.css HTTP/1.1" 304 0
+[2025-06-29 12:22:46,487] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 12:22:46,752] INFO django.server "GET /static/downtime/js/downtime.js HTTP/1.1" 304 0
+[2025-06-29 12:22:46,753] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 12:22:46,753] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 12:22:46,885] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 12:22:47,209] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 12:23:04,068] INFO django.server "GET /search_equipment/ HTTP/1.1" 200 5555
+[2025-06-29 12:23:31,445] INFO django.server "GET /search_product/?search_type=fg_name HTTP/1.1" 200 5257
+[2025-06-29 12:23:41,768] INFO django.server "GET /search_product/?search_type=fg_name HTTP/1.1" 200 5257
+[2025-06-29 12:23:44,256] INFO django.server "GET /search_product/?term=2&search_type=fg_name HTTP/1.1" 200 3361
+[2025-06-29 12:23:44,482] INFO django.server "GET /search_product/?term=2-&search_type=fg_name HTTP/1.1" 200 1837
+[2025-06-29 12:23:47,762] INFO django.server "GET /search_product/?term=2-me&search_type=fg_name HTTP/1.1" 200 299
+[2025-06-29 12:23:55,098] INFO django.server "GET /search_product/?search_type=stage_name&fg_filter=2-METHOXY%20BENZOIC%20ACID HTTP/1.1" 200 237
+[2025-06-29 12:23:56,366] WARNING django.server "POST /get_bom_details/ HTTP/1.1" 404 38
+[2025-06-29 12:23:57,948] INFO django.server "GET /search_batch/?stage_name=2-MBA%20SFG HTTP/1.1" 200 1313
+[2025-06-29 12:24:36,434] INFO django.server "POST /add_downtime/ HTTP/1.1" 302 0
+[2025-06-29 12:24:36,610] INFO django.server "GET /add_downtime/ HTTP/1.1" 200 18801
+[2025-06-29 12:24:36,736] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 12:24:36,737] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 12:24:36,739] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 12:24:36,776] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 12:24:36,861] INFO django.server "GET /static/downtime/css/downtime.css HTTP/1.1" 304 0
+[2025-06-29 12:24:37,017] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 12:24:37,147] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 12:24:37,214] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 12:24:37,214] INFO django.server "GET /static/downtime/js/downtime.js HTTP/1.1" 304 0
+[2025-06-29 12:24:37,272] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 12:25:00,630] INFO django.server "GET /search_equipment/ HTTP/1.1" 200 5555
+[2025-06-29 12:25:02,465] INFO django.server "GET /search_equipment/?term=ar HTTP/1.1" 200 616
+[2025-06-29 12:25:02,836] INFO django.server "GET /search_equipment/?term=ar- HTTP/1.1" 200 616
+[2025-06-29 12:25:03,746] INFO django.server "GET /search_equipment/?term=ar-101 HTTP/1.1" 200 80
+[2025-06-29 12:25:06,288] INFO django.server "GET /search_product/?search_type=fg_name HTTP/1.1" 200 5257
+[2025-06-29 12:25:08,675] INFO django.server "GET /search_product/?term=2&search_type=fg_name HTTP/1.1" 200 3361
+[2025-06-29 12:25:09,198] INFO django.server "GET /search_product/?term=2%2C&search_type=fg_name HTTP/1.1" 200 1617
+[2025-06-29 12:25:09,739] INFO django.server "GET /search_product/?term=2%2C5&search_type=fg_name HTTP/1.1" 200 177
+[2025-06-29 12:25:12,791] INFO django.server "GET /search_product/?search_type=stage_name&fg_filter=2%2C5%20DIMETHYL%20PHENYL%20ACETYL%20CHLORIDE HTTP/1.1" 200 1345
+[2025-06-29 12:25:15,068] INFO django.server "POST /get_bom_details/ HTTP/1.1" 200 29
+[2025-06-29 12:25:15,911] INFO django.server "GET /search_batch/?stage_name=2%2C5%20DMBCN%20(STAGE-II)%20CRUDE HTTP/1.1" 200 1989
+[2025-06-29 12:25:52,191] INFO django.server "POST /add_downtime/ HTTP/1.1" 302 0
+[2025-06-29 12:25:52,404] INFO django.server "GET /add_downtime/ HTTP/1.1" 200 18801
+[2025-06-29 12:25:52,500] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 12:25:52,556] INFO django.server "GET /static/downtime/css/downtime.css HTTP/1.1" 304 0
+[2025-06-29 12:25:52,556] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 12:25:52,557] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 12:25:52,560] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 12:25:52,714] INFO django.server "GET /static/downtime/js/downtime.js HTTP/1.1" 304 0
+[2025-06-29 12:25:52,722] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 12:25:52,754] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 12:25:52,870] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 12:25:53,536] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 12:26:24,977] INFO django.server "GET /search_equipment/ HTTP/1.1" 200 5555
+[2025-06-29 12:26:26,687] INFO django.server "GET /search_equipment/?term=a HTTP/1.1" 200 5413
+[2025-06-29 12:26:27,029] INFO django.server "GET /search_equipment/?term=ar HTTP/1.1" 200 616
+[2025-06-29 12:26:27,509] INFO django.server "GET /search_equipment/?term=ar- HTTP/1.1" 200 616
+[2025-06-29 12:26:28,389] INFO django.server "GET /search_equipment/?term=ar-102 HTTP/1.1" 200 80
+[2025-06-29 12:26:30,995] INFO django.server "GET /search_product/?search_type=fg_name HTTP/1.1" 200 5257
+[2025-06-29 12:26:33,143] INFO django.server "GET /search_product/?term=2&search_type=fg_name HTTP/1.1" 200 3361
+[2025-06-29 12:26:33,552] INFO django.server "GET /search_product/?term=2%2C&search_type=fg_name HTTP/1.1" 200 1617
+[2025-06-29 12:26:34,107] INFO django.server "GET /search_product/?term=2%2C5&search_type=fg_name HTTP/1.1" 200 177
+[2025-06-29 12:26:36,103] INFO django.server "GET /search_product/?search_type=stage_name&fg_filter=2%2C5%20DIMETHYL%20PHENYL%20ACETYL%20CHLORIDE HTTP/1.1" 200 1345
+[2025-06-29 12:26:38,380] WARNING django.server "POST /get_bom_details/ HTTP/1.1" 404 38
+[2025-06-29 12:26:39,216] INFO django.server "GET /search_batch/?stage_name=2%2C5%20DMPAC%20(STAGE-IV)%20CRUDE HTTP/1.1" 200 2717
+[2025-06-29 12:27:37,269] INFO django.server "POST /add_downtime/ HTTP/1.1" 302 0
+[2025-06-29 12:27:37,435] INFO django.server "GET /add_downtime/ HTTP/1.1" 200 18801
+[2025-06-29 12:27:37,510] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 12:27:37,544] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 12:27:37,546] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 12:27:37,556] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 12:27:37,561] INFO django.server "GET /static/downtime/css/downtime.css HTTP/1.1" 304 0
+[2025-06-29 12:27:37,713] INFO django.server "GET /static/downtime/js/downtime.js HTTP/1.1" 304 0
+[2025-06-29 12:27:37,713] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 12:27:37,717] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 12:27:37,850] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 12:27:37,979] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 12:28:03,687] INFO django.server "GET /search_equipment/ HTTP/1.1" 200 5555
+[2025-06-29 12:28:05,912] INFO django.server "GET /search_equipment/?term=a HTTP/1.1" 200 5413
+[2025-06-29 12:28:06,237] INFO django.server "GET /search_equipment/?term=ar HTTP/1.1" 200 616
+[2025-06-29 12:28:06,653] INFO django.server "GET /search_equipment/?term=ar- HTTP/1.1" 200 616
+[2025-06-29 12:28:07,728] INFO django.server "GET /search_equipment/?term=ar-103 HTTP/1.1" 200 80
+[2025-06-29 12:28:10,158] INFO django.server "GET /search_product/?search_type=fg_name HTTP/1.1" 200 5257
+[2025-06-29 12:28:13,384] INFO django.server "GET /search_product/?term=c&search_type=fg_name HTTP/1.1" 200 3891
+[2025-06-29 12:28:13,606] INFO django.server "GET /search_product/?term=c-&search_type=fg_name HTTP/1.1" 200 269
+[2025-06-29 12:28:14,068] INFO django.server "GET /search_product/?term=c-5&search_type=fg_name HTTP/1.1" 200 141
+[2025-06-29 12:28:17,082] INFO django.server "GET /search_product/?search_type=stage_name&fg_filter=C-5%20HYDROXY%20ESTER HTTP/1.1" 200 703
+[2025-06-29 12:28:18,982] WARNING django.server "POST /get_bom_details/ HTTP/1.1" 404 38
+[2025-06-29 12:28:20,546] INFO django.server "GET /search_batch/?stage_name=C-5%20HYDROXY%20ESTER%20ORGANIC%20LAYER HTTP/1.1" 200 169
+[2025-06-29 12:28:42,144] INFO django.server "POST /add_downtime/ HTTP/1.1" 302 0
+[2025-06-29 12:28:42,340] INFO django.server "GET /add_downtime/ HTTP/1.1" 200 18801
+[2025-06-29 12:28:42,430] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 12:28:42,504] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 12:28:42,507] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 12:28:42,509] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 12:28:42,521] INFO django.server "GET /static/downtime/css/downtime.css HTTP/1.1" 304 0
+[2025-06-29 12:28:42,809] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 12:28:42,985] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 12:28:42,995] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 12:28:42,997] INFO django.server "GET /static/downtime/js/downtime.js HTTP/1.1" 304 0
+[2025-06-29 12:28:42,999] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 12:29:57,225] INFO django.server "GET /search_equipment/ HTTP/1.1" 200 5555
+[2025-06-29 12:29:58,947] INFO django.server "GET /search_equipment/?term=a HTTP/1.1" 200 5413
+[2025-06-29 12:29:59,233] INFO django.server "GET /search_equipment/?term=ar HTTP/1.1" 200 616
+[2025-06-29 12:29:59,564] INFO django.server "GET /search_equipment/?term=ar- HTTP/1.1" 200 616
+[2025-06-29 12:30:00,517] INFO django.server "GET /search_equipment/?term=ar-110 HTTP/1.1" 200 80
+[2025-06-29 12:30:03,701] INFO django.server "GET /search_product/?search_type=fg_name HTTP/1.1" 200 5257
+[2025-06-29 12:30:04,905] INFO django.server "GET /search_product/?search_type=fg_name HTTP/1.1" 200 5257
+[2025-06-29 12:30:07,959] INFO django.server "GET /search_product/?term=c&search_type=fg_name HTTP/1.1" 200 3891
+[2025-06-29 12:30:08,793] INFO django.server "GET /search_product/?term=c%3D&search_type=fg_name HTTP/1.1" 200 15
+[2025-06-29 12:30:10,574] INFO django.server "GET /search_product/?term=&search_type=fg_name HTTP/1.1" 200 5257
+[2025-06-29 12:30:11,567] INFO django.server "GET /search_product/?term=2&search_type=fg_name HTTP/1.1" 200 3361
+[2025-06-29 12:30:13,176] INFO django.server "GET /search_product/?term=2%2C&search_type=fg_name HTTP/1.1" 200 1617
+[2025-06-29 12:30:13,389] INFO django.server "GET /search_product/?term=2%2C5&search_type=fg_name HTTP/1.1" 200 177
+[2025-06-29 12:30:15,725] INFO django.server "GET /search_product/?search_type=stage_name&fg_filter=2%2C5%20DIMETHYL%20PHENYL%20ACETYL%20CHLORIDE HTTP/1.1" 200 1345
+[2025-06-29 12:30:19,041] INFO django.server "POST /get_bom_details/ HTTP/1.1" 200 29
+[2025-06-29 12:30:19,933] INFO django.server "GET /search_batch/?stage_name=2%2C5%20DMPAC%20SFG HTTP/1.1" 200 1313
+[2025-06-29 12:30:53,856] INFO django.server "POST /add_downtime/ HTTP/1.1" 302 0
+[2025-06-29 12:30:54,036] INFO django.server "GET /add_downtime/ HTTP/1.1" 200 18801
+[2025-06-29 12:30:54,102] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 12:30:54,116] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 12:30:54,156] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 12:30:54,158] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 12:30:54,173] INFO django.server "GET /static/downtime/css/downtime.css HTTP/1.1" 304 0
+[2025-06-29 12:30:54,346] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 12:30:54,346] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 12:30:54,347] INFO django.server "GET /static/downtime/js/downtime.js HTTP/1.1" 304 0
+[2025-06-29 12:30:54,459] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 12:30:54,725] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 12:52:34,829] INFO django.server "GET /add_vehicle/ HTTP/1.1" 200 14160
+[2025-06-29 12:52:34,898] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 12:52:34,898] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 12:52:34,911] INFO django.server "GET /static/store/css/store.css HTTP/1.1" 304 0
+[2025-06-29 12:52:34,917] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 12:52:34,919] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 12:52:34,994] INFO django.server "GET /static/store/js/vehicle_page.js HTTP/1.1" 304 0
+[2025-06-29 12:52:34,994] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 12:52:35,023] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 12:52:35,118] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 12:52:35,232] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 12:52:45,632] INFO custom_logger Found 1433 suppliers for search ''
+[2025-06-29 12:52:45,634] INFO django.server "GET /search_supplier/ HTTP/1.1" 200 116856
+[2025-06-29 12:52:47,008] INFO custom_logger Found 1433 suppliers for search ''
+[2025-06-29 12:52:47,010] INFO django.server "GET /search_supplier/ HTTP/1.1" 200 116856
+[2025-06-29 12:52:48,470] INFO custom_logger Found 1097 suppliers for search 'S'
+[2025-06-29 12:52:48,472] INFO django.server "GET /search_supplier/?term=S HTTP/1.1" 200 91154
+[2025-06-29 12:52:48,719] INFO custom_logger Found 195 suppliers for search 'SH'
+[2025-06-29 12:52:48,720] INFO django.server "GET /search_supplier/?term=SH HTTP/1.1" 200 16152
+[2025-06-29 12:52:49,644] INFO custom_logger Found 1 suppliers for search 'SHRI V'
+[2025-06-29 12:52:49,645] INFO django.server "GET /search_supplier/?term=SHRI%20V HTTP/1.1" 200 104
+[2025-06-29 12:52:51,314] INFO custom_logger Found 1 suppliers for search 'SHRI VISHNU'
+[2025-06-29 12:52:51,315] INFO django.server "GET /search_supplier/?term=SHRI%20VISHNU HTTP/1.1" 200 104
+[2025-06-29 12:52:52,653] INFO custom_logger Found 221 items for search ''
+[2025-06-29 12:52:52,654] INFO django.server "GET /search_item/ HTTP/1.1" 200 17234
+[2025-06-29 12:52:54,291] INFO custom_logger Found 139 items for search 'H'
+[2025-06-29 12:52:54,292] INFO django.server "GET /search_item/?term=H HTTP/1.1" 200 11542
+[2025-06-29 12:52:55,448] INFO custom_logger Found 10 items for search 'HDPE '
+[2025-06-29 12:52:55,449] INFO django.server "GET /search_item/?term=HDPE%20 HTTP/1.1" 200 1032
+[2025-06-29 12:52:55,972] INFO custom_logger Found 3 items for search 'HDPE DR'
+[2025-06-29 12:52:55,972] INFO django.server "GET /search_item/?term=HDPE%20DR HTTP/1.1" 200 336
+[2025-06-29 12:52:56,871] INFO custom_logger Found 3 items for search 'HDPE DRUMS'
+[2025-06-29 12:52:56,872] INFO django.server "GET /search_item/?term=HDPE%20DRUMS HTTP/1.1" 200 336
+[2025-06-29 12:53:32,652] INFO custom_logger Vehicle added by user: taufik.s
+[2025-06-29 12:53:32,654] INFO django.server "POST /add_vehicle/ HTTP/1.1" 302 0
+[2025-06-29 12:53:32,772] INFO django.server "GET /add_vehicle/ HTTP/1.1" 200 14745
+[2025-06-29 12:53:33,093] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 12:53:33,168] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 12:53:41,943] INFO custom_logger Found 1433 suppliers for search ''
+[2025-06-29 12:53:41,946] INFO django.server "GET /search_supplier/ HTTP/1.1" 200 116856
+[2025-06-29 12:53:44,256] INFO custom_logger Found 108 suppliers for search 'INDUS'
+[2025-06-29 12:53:44,258] INFO django.server "GET /search_supplier/?term=INDUS HTTP/1.1" 200 9264
+[2025-06-29 12:53:48,304] INFO custom_logger Found 15 suppliers for search 'INDUSTRIAL'
+[2025-06-29 12:53:48,305] INFO django.server "GET /search_supplier/?term=INDUSTRIAL HTTP/1.1" 200 1362
+[2025-06-29 12:53:50,201] INFO custom_logger Found 221 items for search ''
+[2025-06-29 12:53:50,202] INFO django.server "GET /search_item/ HTTP/1.1" 200 17234
+[2025-06-29 12:53:52,537] INFO custom_logger Found 142 items for search 'D'
+[2025-06-29 12:53:52,538] INFO django.server "GET /search_item/?term=D HTTP/1.1" 200 11668
+[2025-06-29 12:53:54,004] INFO custom_logger Found 2 items for search 'DI ETHYL'
+[2025-06-29 12:53:54,005] INFO django.server "GET /search_item/?term=DI%20ETHYL HTTP/1.1" 200 130
+[2025-06-29 12:54:19,167] INFO custom_logger Vehicle added by user: taufik.s
+[2025-06-29 12:54:19,169] INFO django.server "POST /add_vehicle/ HTTP/1.1" 302 0
+[2025-06-29 12:54:19,301] INFO django.server "GET /add_vehicle/ HTTP/1.1" 200 14745
+[2025-06-29 12:54:19,328] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 12:54:19,334] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 12:54:19,351] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 12:54:19,353] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 12:54:19,355] INFO django.server "GET /static/store/css/store.css HTTP/1.1" 304 0
+[2025-06-29 12:54:19,444] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 12:54:19,444] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 12:54:19,445] INFO django.server "GET /static/store/js/vehicle_page.js HTTP/1.1" 304 0
+[2025-06-29 12:54:19,523] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 12:54:19,623] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 12:54:29,702] INFO custom_logger Found 1433 suppliers for search ''
+[2025-06-29 12:54:29,705] INFO django.server "GET /search_supplier/ HTTP/1.1" 200 116856
+[2025-06-29 12:54:31,859] INFO custom_logger Found 1433 suppliers for search ''
+[2025-06-29 12:54:31,862] INFO django.server "GET /search_supplier/?term= HTTP/1.1" 200 116856
+[2025-06-29 12:54:33,424] INFO custom_logger Found 3 suppliers for search 'NAVIN'
+[2025-06-29 12:54:33,425] INFO django.server "GET /search_supplier/?term=NAVIN HTTP/1.1" 200 268
+[2025-06-29 12:54:35,624] INFO custom_logger Found 221 items for search ''
+[2025-06-29 12:54:35,626] INFO django.server "GET /search_item/ HTTP/1.1" 200 17234
+[2025-06-29 12:54:37,604] INFO custom_logger Found 0 items for search 'TPA'
+[2025-06-29 12:54:37,605] INFO django.server "GET /search_item/?term=TPA HTTP/1.1" 200 2
+[2025-06-29 12:54:39,548] INFO custom_logger Vehicle list viewed by taufik.s with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': ''}
+[2025-06-29 12:54:39,591] INFO django.server "GET /vehicle_list/ HTTP/1.1" 200 27329
+[2025-06-29 12:54:39,842] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 12:54:39,918] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 12:54:41,758] INFO custom_logger Vehicle list viewed by taufik.s with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': 'Pending'}
+[2025-06-29 12:54:41,791] INFO django.server "GET /vehicle_list/?reporting_date=&name_of_supplier=&material=&name_of_transporter=&status=Pending HTTP/1.1" 200 14933
+[2025-06-29 12:54:42,005] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 12:54:42,096] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 13:29:50,630] INFO custom_logger User 'bhagavan.b' tried to access login page but is already authenticated.
+[2025-06-29 13:29:50,631] INFO django.server "GET / HTTP/1.1" 302 0
+[2025-06-29 13:29:50,935] INFO custom_logger User 'bhagavan.b' accessed index page.
+[2025-06-29 13:29:50,948] INFO django.server "GET /indexpage/ HTTP/1.1" 200 10240
+[2025-06-29 13:29:51,106] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 13:29:51,129] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 13:29:51,255] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 13:29:51,257] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 13:29:51,261] INFO django.server "GET /static/main/images/EHSModule.png HTTP/1.1" 304 0
+[2025-06-29 13:29:51,551] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 13:29:51,554] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 13:29:55,623] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 13:29:55,951] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 13:29:56,296] WARNING django.server "GET /favicon.ico HTTP/1.1" 404 179
+[2025-06-29 13:30:04,838] INFO custom_logger User 'bhagavan.b' viewed leading records page: 1 (records this page: 10)
+[2025-06-29 13:30:04,892] INFO django.server "GET /view_leading/ HTTP/1.1" 200 32855
+[2025-06-29 13:30:05,250] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 13:30:05,510] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 13:30:09,208] INFO django.server "GET /leading/23176/detail/ HTTP/1.1" 200 11203
+[2025-06-29 13:30:09,513] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 13:30:09,811] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 13:30:15,629] INFO custom_logger User 'bhagavan.b' viewed leading records page: 1 (records this page: 10)
+[2025-06-29 13:30:15,692] INFO django.server "GET /view_leading/ HTTP/1.1" 200 32855
+[2025-06-29 13:30:16,088] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 13:30:16,430] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 13:30:24,300] INFO django.server "GET /leading/23175/detail/ HTTP/1.1" 200 11141
+[2025-06-29 13:30:24,624] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 13:30:24,938] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 13:30:37,491] INFO custom_logger User 'bhagavan.b' viewed leading records page: 1 (records this page: 10)
+[2025-06-29 13:30:37,547] INFO django.server "GET /view_leading/ HTTP/1.1" 200 32855
+[2025-06-29 13:30:37,886] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 13:30:38,176] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 13:30:39,423] INFO django.server "GET /leading/23174/detail/ HTTP/1.1" 200 11188
+[2025-06-29 13:30:39,717] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 13:30:40,017] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 13:30:55,287] INFO custom_logger User 'bhagavan.b' viewed leading records page: 1 (records this page: 10)
+[2025-06-29 13:30:55,341] INFO django.server "GET /view_leading/ HTTP/1.1" 200 32855
+[2025-06-29 13:30:55,496] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 13:30:55,506] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 13:30:55,509] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 13:30:55,506] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 13:30:55,510] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 13:30:55,790] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 13:30:55,952] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 13:30:56,183] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 13:30:58,308] INFO django.server "GET /leading/23173/detail/ HTTP/1.1" 200 11267
+[2025-06-29 13:30:58,612] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 13:30:58,877] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 13:31:25,915] INFO custom_logger User 'bhagavan.b' viewed leading records page: 1 (records this page: 10)
+[2025-06-29 13:31:25,974] INFO django.server "GET /view_leading/ HTTP/1.1" 200 32855
+[2025-06-29 13:31:26,313] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 13:31:26,607] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 13:31:29,057] INFO django.server "GET /leading/23173/detail/ HTTP/1.1" 200 11267
+[2025-06-29 13:31:29,378] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 13:31:29,719] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 13:31:31,576] INFO custom_logger User 'bhagavan.b' viewed leading records page: 1 (records this page: 10)
+[2025-06-29 13:31:31,631] INFO django.server "GET /view_leading/ HTTP/1.1" 200 32855
+[2025-06-29 13:31:31,964] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 13:31:32,269] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 13:31:33,886] INFO django.server "GET /leading/23172/detail/ HTTP/1.1" 200 11216
+[2025-06-29 13:31:34,209] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 13:31:34,542] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 13:32:04,062] INFO custom_logger User 'bhagavan.b' viewed leading records page: 1 (records this page: 10)
+[2025-06-29 13:32:04,119] INFO django.server "GET /view_leading/ HTTP/1.1" 200 32855
+[2025-06-29 13:32:04,268] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 13:32:04,270] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 13:32:04,271] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 13:32:04,273] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 13:32:04,274] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 13:32:04,531] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 13:32:04,715] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 13:32:04,993] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 13:32:07,544] INFO django.server "GET /add_leading_record/ HTTP/1.1" 200 30060
+[2025-06-29 13:32:07,709] INFO django.server "GET /static/leading/css/leading.css HTTP/1.1" 304 0
+[2025-06-29 13:32:07,854] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 13:32:07,855] INFO django.server "GET /static/leading/js/leading.js HTTP/1.1" 304 0
+[2025-06-29 13:32:08,192] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 14:21:55,939] INFO custom_logger User 'raju.r' tried to access login page but is already authenticated.
+[2025-06-29 14:21:55,940] INFO django.server "GET / HTTP/1.1" 302 0
+[2025-06-29 14:21:56,126] INFO custom_logger User 'raju.r' accessed index page.
+[2025-06-29 14:21:56,141] INFO django.server "GET /indexpage/ HTTP/1.1" 200 13125
+[2025-06-29 14:21:56,240] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 14:21:56,244] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 14:21:56,305] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 14:21:56,310] INFO django.server "GET /static/main/images/HRModule.png HTTP/1.1" 304 0
+[2025-06-29 14:21:56,311] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 14:21:56,488] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 14:21:56,488] INFO django.server "GET /static/main/images/EHSModule.png HTTP/1.1" 304 0
+[2025-06-29 14:21:56,671] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 14:21:59,454] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 14:21:59,673] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 14:21:59,876] WARNING django.server "GET /favicon.ico HTTP/1.1" 404 179
+[2025-06-29 14:22:01,733] INFO django.server "GET /add_leading_record/ HTTP/1.1" 200 31350
+[2025-06-29 14:22:01,835] INFO django.server "GET /static/leading/css/leading.css HTTP/1.1" 304 0
+[2025-06-29 14:22:01,942] INFO django.server "GET /static/leading/js/leading.js HTTP/1.1" 304 0
+[2025-06-29 14:22:01,946] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 14:22:02,175] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 14:22:03,170] INFO custom_logger User 'raju.r' viewed leading records page: 1 (records this page: 10)
+[2025-06-29 14:22:03,223] INFO django.server "GET /view_leading/ HTTP/1.1" 200 34431
+[2025-06-29 14:22:03,415] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 14:22:03,582] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 14:22:05,118] INFO django.server "GET /add_leading_record/ HTTP/1.1" 200 31350
+[2025-06-29 14:22:05,317] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 14:22:05,481] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 14:25:15,267] INFO custom_logger Leading record (ID: 23177) created by 'raju.r' (6)
+[2025-06-29 14:25:15,269] INFO django.server "POST /add_leading_record/ HTTP/1.1" 302 0
+[2025-06-29 14:25:15,501] INFO django.server "GET /add_leading_record/ HTTP/1.1" 200 31805
+[2025-06-29 14:25:15,580] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 14:25:15,583] INFO django.server "GET /static/leading/css/leading.css HTTP/1.1" 304 0
+[2025-06-29 14:25:15,583] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 14:25:15,584] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 14:25:15,584] INFO django.server "GET /static/leading/js/leading.js HTTP/1.1" 304 0
+[2025-06-29 14:25:15,728] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 14:25:15,733] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 14:25:15,737] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 14:25:15,811] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 14:25:15,955] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 14:37:10,057] INFO custom_logger User 'savala.k' accessed index page.
+[2025-06-29 14:37:10,068] INFO django.server "GET /indexpage/ HTTP/1.1" 200 10238
+[2025-06-29 14:37:10,141] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 14:37:10,144] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 14:37:10,194] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 14:37:10,197] INFO django.server "GET /static/main/images/EHSModule.png HTTP/1.1" 304 0
+[2025-06-29 14:37:10,201] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 14:37:10,339] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 14:37:10,346] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 14:37:13,666] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 14:37:13,819] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 14:37:13,966] WARNING django.server "GET /favicon.ico HTTP/1.1" 404 179
+[2025-06-29 14:37:16,231] INFO django.server "GET /add_leading_record/ HTTP/1.1" 200 29772
+[2025-06-29 14:37:16,305] INFO django.server "GET /static/leading/css/leading.css HTTP/1.1" 304 0
+[2025-06-29 14:37:16,456] INFO django.server "GET /static/leading/js/leading.js HTTP/1.1" 304 0
+[2025-06-29 14:37:16,457] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 14:37:16,625] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 16:36:02,153] INFO custom_logger User 'bhagavan.b' tried to access login page but is already authenticated.
+[2025-06-29 16:36:02,154] INFO django.server "GET / HTTP/1.1" 302 0
+[2025-06-29 16:36:02,246] INFO custom_logger User 'bhagavan.b' accessed index page.
+[2025-06-29 16:36:02,260] INFO django.server "GET /indexpage/ HTTP/1.1" 200 10240
+[2025-06-29 16:36:02,306] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 16:36:02,317] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 16:36:02,330] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 16:36:02,333] INFO django.server "GET /static/main/images/EHSModule.png HTTP/1.1" 304 0
+[2025-06-29 16:36:02,337] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 16:36:02,405] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 16:36:02,476] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 16:36:02,736] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 16:36:02,857] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 16:36:09,123] INFO custom_logger Filters: from_incident_date=, to_incident_date=, hse_lag_filter=All, risk_factor_filter=All, complience_status_filter=All
+[2025-06-29 16:36:09,136] WARNING custom_logger PageNotAnInteger: set to page 1
+[2025-06-29 16:36:09,153] INFO custom_logger Returning page 1 of 12 with 10 records
+[2025-06-29 16:36:09,211] INFO django.server "GET /lagging-records/ HTTP/1.1" 200 32735
+[2025-06-29 16:36:09,495] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 16:36:09,595] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 16:36:25,611] INFO custom_logger Filters: from_incident_date=, to_incident_date=, hse_lag_filter=All, risk_factor_filter=All, complience_status_filter=All
+[2025-06-29 16:36:25,625] WARNING custom_logger PageNotAnInteger: set to page 1
+[2025-06-29 16:36:25,631] INFO custom_logger Returning page 1 of 12 with 10 records
+[2025-06-29 16:36:25,673] INFO django.server "GET /lagging-records/ HTTP/1.1" 200 32735
+[2025-06-29 16:36:25,906] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 16:36:26,004] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 16:37:07,724] INFO custom_logger Filters: from_incident_date=, to_incident_date=, hse_lag_filter=All, risk_factor_filter=All, complience_status_filter=All
+[2025-06-29 16:37:07,755] INFO custom_logger Returning page 2 of 12 with 10 records
+[2025-06-29 16:37:07,805] INFO django.server "GET /lagging-records/?page=2&hse_lag_filter=All&risk_factor_filter=All&complience_status_filter=All HTTP/1.1" 200 33128
+[2025-06-29 16:37:07,849] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 16:37:07,862] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 16:37:07,863] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 16:37:07,863] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 16:37:08,133] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 16:37:08,226] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 16:37:08,253] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 16:37:08,254] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 16:37:32,620] INFO custom_logger Filters: from_incident_date=, to_incident_date=, hse_lag_filter=All, risk_factor_filter=All, complience_status_filter=All
+[2025-06-29 16:37:32,645] INFO custom_logger Returning page 3 of 12 with 10 records
+[2025-06-29 16:37:32,693] INFO django.server "GET /lagging-records/?page=3&hse_lag_filter=All&risk_factor_filter=All&complience_status_filter=All HTTP/1.1" 200 33120
+[2025-06-29 16:37:33,013] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 16:37:33,109] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 16:37:40,544] INFO custom_logger Filters: from_incident_date=, to_incident_date=, hse_lag_filter=All, risk_factor_filter=All, complience_status_filter=All
+[2025-06-29 16:37:40,567] INFO custom_logger Returning page 4 of 12 with 10 records
+[2025-06-29 16:37:40,613] INFO django.server "GET /lagging-records/?page=4&hse_lag_filter=All&risk_factor_filter=All&complience_status_filter=All HTTP/1.1" 200 33205
+[2025-06-29 16:37:40,840] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 16:37:40,932] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 16:37:44,109] INFO custom_logger Filters: from_incident_date=, to_incident_date=, hse_lag_filter=All, risk_factor_filter=All, complience_status_filter=All
+[2025-06-29 16:37:44,130] INFO custom_logger Returning page 5 of 12 with 10 records
+[2025-06-29 16:37:44,177] INFO django.server "GET /lagging-records/?page=5&hse_lag_filter=All&risk_factor_filter=All&complience_status_filter=All HTTP/1.1" 200 33154
+[2025-06-29 16:37:44,393] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 16:37:44,485] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 16:37:53,027] INFO custom_logger Filters: from_incident_date=, to_incident_date=, hse_lag_filter=All, risk_factor_filter=All, complience_status_filter=All
+[2025-06-29 16:37:53,046] INFO custom_logger Returning page 4 of 12 with 10 records
+[2025-06-29 16:37:53,094] INFO django.server "GET /lagging-records/?page=4&hse_lag_filter=All&risk_factor_filter=All&complience_status_filter=All HTTP/1.1" 200 33205
+[2025-06-29 16:37:53,316] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 16:37:53,417] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 16:37:54,438] INFO custom_logger Filters: from_incident_date=, to_incident_date=, hse_lag_filter=All, risk_factor_filter=All, complience_status_filter=All
+[2025-06-29 16:37:54,460] INFO custom_logger Returning page 3 of 12 with 10 records
+[2025-06-29 16:37:54,508] INFO django.server "GET /lagging-records/?page=3&hse_lag_filter=All&risk_factor_filter=All&complience_status_filter=All HTTP/1.1" 200 33120
+[2025-06-29 16:37:54,741] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 16:37:54,837] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 16:37:58,254] INFO custom_logger Filters: from_incident_date=, to_incident_date=, hse_lag_filter=All, risk_factor_filter=All, complience_status_filter=All
+[2025-06-29 16:37:58,274] INFO custom_logger Returning page 2 of 12 with 10 records
+[2025-06-29 16:37:58,320] INFO django.server "GET /lagging-records/?page=2&hse_lag_filter=All&risk_factor_filter=All&complience_status_filter=All HTTP/1.1" 200 33128
+[2025-06-29 16:37:58,538] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 16:37:58,633] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 16:38:01,399] INFO custom_logger Filters: from_incident_date=, to_incident_date=, hse_lag_filter=All, risk_factor_filter=All, complience_status_filter=All
+[2025-06-29 16:38:01,429] INFO custom_logger Returning page 1 of 12 with 10 records
+[2025-06-29 16:38:01,476] INFO django.server "GET /lagging-records/?page=1&hse_lag_filter=All&risk_factor_filter=All&complience_status_filter=All HTTP/1.1" 200 32735
+[2025-06-29 16:38:01,711] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 16:38:01,814] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 16:38:04,670] INFO custom_logger Filters: from_incident_date=, to_incident_date=, hse_lag_filter=All, risk_factor_filter=All, complience_status_filter=All
+[2025-06-29 16:38:04,689] INFO custom_logger Returning page 2 of 12 with 10 records
+[2025-06-29 16:38:04,732] INFO django.server "GET /lagging-records/?page=2&hse_lag_filter=All&risk_factor_filter=All&complience_status_filter=All HTTP/1.1" 200 33128
+[2025-06-29 16:38:04,955] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 16:38:05,051] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 17:13:07,239] INFO django.server "GET / HTTP/1.1" 200 5216
+[2025-06-29 17:13:08,319] INFO django.server "GET /static/main/images/OC_white_logo.png HTTP/1.1" 200 1045138
+[2025-06-29 17:13:08,495] WARNING django.server "GET /favicon.ico HTTP/1.1" 404 179
+[2025-06-29 17:13:19,962] INFO custom_logger User 'bhagavan.b' logged in successfully.
+[2025-06-29 17:13:19,968] INFO django.server "POST / HTTP/1.1" 302 0
+[2025-06-29 17:13:20,271] INFO custom_logger User 'bhagavan.b' accessed index page.
+[2025-06-29 17:13:20,282] INFO django.server "GET /indexpage/ HTTP/1.1" 200 10776
+[2025-06-29 17:13:20,423] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 17:13:20,539] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 17:13:20,543] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 17:13:20,543] INFO django.server "GET /static/main/images/EHSModule.png HTTP/1.1" 304 0
+[2025-06-29 17:13:20,546] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 17:13:20,829] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 17:13:20,837] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 17:13:20,970] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 17:13:21,278] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 17:13:32,179] INFO custom_logger Filters: from_incident_date=, to_incident_date=, hse_lag_filter=All, risk_factor_filter=All, complience_status_filter=All
+[2025-06-29 17:13:32,194] WARNING custom_logger PageNotAnInteger: set to page 1
+[2025-06-29 17:13:32,200] INFO custom_logger Returning page 1 of 12 with 10 records
+[2025-06-29 17:13:32,247] INFO django.server "GET /lagging-records/ HTTP/1.1" 200 32735
+[2025-06-29 17:13:32,506] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 17:13:32,822] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 17:13:37,817] INFO custom_logger Filters: from_incident_date=, to_incident_date=, hse_lag_filter=All, risk_factor_filter=All, complience_status_filter=All
+[2025-06-29 17:13:37,837] INFO custom_logger Returning page 2 of 12 with 10 records
+[2025-06-29 17:13:37,892] INFO django.server "GET /lagging-records/?page=2&hse_lag_filter=All&risk_factor_filter=All&complience_status_filter=All HTTP/1.1" 200 33128
+[2025-06-29 17:13:38,130] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 17:13:38,317] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 17:14:33,649] INFO custom_logger Filters: from_incident_date=, to_incident_date=, hse_lag_filter=All, risk_factor_filter=All, complience_status_filter=All
+[2025-06-29 17:14:33,670] INFO custom_logger Returning page 3 of 12 with 10 records
+[2025-06-29 17:14:33,722] INFO django.server "GET /lagging-records/?page=3&hse_lag_filter=All&risk_factor_filter=All&complience_status_filter=All HTTP/1.1" 200 33120
+[2025-06-29 17:14:33,863] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 17:14:33,865] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 17:14:33,865] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 17:14:33,865] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 17:14:33,867] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 17:14:34,150] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 17:14:34,261] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 17:14:34,550] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 17:14:42,314] INFO custom_logger Filters: from_incident_date=, to_incident_date=, hse_lag_filter=All, risk_factor_filter=All, complience_status_filter=All
+[2025-06-29 17:14:42,333] INFO custom_logger Returning page 2 of 12 with 10 records
+[2025-06-29 17:14:42,380] INFO django.server "GET /lagging-records/?page=2&hse_lag_filter=All&risk_factor_filter=All&complience_status_filter=All HTTP/1.1" 200 33128
+[2025-06-29 17:14:42,620] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 17:14:42,917] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 17:15:51,944] INFO custom_logger Filters: from_incident_date=, to_incident_date=, hse_lag_filter=All, risk_factor_filter=All, complience_status_filter=All
+[2025-06-29 17:15:51,965] INFO custom_logger Returning page 1 of 12 with 10 records
+[2025-06-29 17:15:52,012] INFO django.server "GET /lagging-records/?page=1&hse_lag_filter=All&risk_factor_filter=All&complience_status_filter=All HTTP/1.1" 200 32735
+[2025-06-29 17:15:52,421] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 17:15:52,422] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 17:15:52,425] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 17:15:52,425] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 17:15:52,730] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 17:15:53,101] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 17:15:53,501] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 17:15:54,052] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 17:16:18,467] INFO django.server "GET /lagging-records/107/ HTTP/1.1" 200 13257
+[2025-06-29 17:16:18,846] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 17:16:18,870] INFO django.server "GET /lagging-records/107/ HTTP/1.1" 200 13257
+[2025-06-29 17:16:19,141] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 17:17:21,519] INFO django.server "GET /lagging-records/107/ HTTP/1.1" 200 13257
+[2025-06-29 17:17:21,688] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 17:17:21,815] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 17:17:21,828] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 17:17:21,832] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 17:17:21,834] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 17:17:22,187] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 17:17:22,229] INFO django.server "GET /lagging-records/107/ HTTP/1.1" 200 13257
+[2025-06-29 17:17:22,284] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 17:17:22,698] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 17:18:38,724] INFO custom_logger Filters: from_incident_date=, to_incident_date=, hse_lag_filter=All, risk_factor_filter=All, complience_status_filter=All
+[2025-06-29 17:18:38,738] WARNING custom_logger PageNotAnInteger: set to page 1
+[2025-06-29 17:18:38,744] INFO custom_logger Returning page 1 of 12 with 10 records
+[2025-06-29 17:18:38,795] INFO django.server "GET /lagging-records/ HTTP/1.1" 200 32735
+[2025-06-29 17:18:38,855] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 17:18:38,855] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 17:18:38,859] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 17:18:38,872] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 17:18:38,888] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 17:18:38,985] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 17:18:39,067] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 17:18:39,203] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 17:18:47,168] INFO django.server "GET /lagging-records/109/ HTTP/1.1" 200 13075
+[2025-06-29 17:18:47,358] INFO django.server "GET /lagging-records/109/ HTTP/1.1" 200 13075
+[2025-06-29 17:18:47,363] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 17:18:47,483] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 17:19:01,343] INFO custom_logger Filters: from_incident_date=, to_incident_date=, hse_lag_filter=All, risk_factor_filter=All, complience_status_filter=All
+[2025-06-29 17:19:01,354] WARNING custom_logger PageNotAnInteger: set to page 1
+[2025-06-29 17:19:01,359] INFO custom_logger Returning page 1 of 12 with 10 records
+[2025-06-29 17:19:01,405] INFO django.server "GET /lagging-records/ HTTP/1.1" 200 32735
+[2025-06-29 17:19:01,578] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 17:19:01,706] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 17:19:03,933] INFO django.server "GET /lagging-records/110/ HTTP/1.1" 200 12378
+[2025-06-29 17:19:04,022] INFO django.server "GET /lagging-records/110/ HTTP/1.1" 200 12378
+[2025-06-29 17:19:04,085] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 17:19:04,198] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 17:19:10,421] INFO custom_logger Filters: from_incident_date=, to_incident_date=, hse_lag_filter=All, risk_factor_filter=All, complience_status_filter=All
+[2025-06-29 17:19:10,432] WARNING custom_logger PageNotAnInteger: set to page 1
+[2025-06-29 17:19:10,436] INFO custom_logger Returning page 1 of 12 with 10 records
+[2025-06-29 17:19:10,470] INFO django.server "GET /lagging-records/ HTTP/1.1" 200 32735
+[2025-06-29 17:19:10,687] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 17:19:10,805] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 17:19:51,777] INFO django.server "GET /lagging-records/109/ HTTP/1.1" 200 13075
+[2025-06-29 17:19:51,825] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 17:19:51,831] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 17:19:51,832] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 17:19:51,832] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 17:19:51,833] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 17:19:51,960] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 17:19:52,011] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 17:19:52,011] INFO django.server "GET /lagging-records/109/ HTTP/1.1" 200 13075
+[2025-06-29 17:19:52,132] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 17:20:21,457] INFO custom_logger Filters: from_incident_date=, to_incident_date=, hse_lag_filter=All, risk_factor_filter=All, complience_status_filter=All
+[2025-06-29 17:20:21,474] WARNING custom_logger PageNotAnInteger: set to page 1
+[2025-06-29 17:20:21,483] INFO custom_logger Returning page 1 of 12 with 10 records
+[2025-06-29 17:20:21,530] INFO django.server "GET /lagging-records/ HTTP/1.1" 200 32735
+[2025-06-29 17:20:21,724] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 17:20:21,842] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 17:20:36,105] INFO django.server "GET /lagging-records/110/ HTTP/1.1" 200 12378
+[2025-06-29 17:20:36,203] INFO django.server "GET /lagging-records/110/ HTTP/1.1" 200 12378
+[2025-06-29 17:20:36,269] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 17:20:36,384] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 17:20:41,058] INFO custom_logger Filters: from_incident_date=, to_incident_date=, hse_lag_filter=All, risk_factor_filter=All, complience_status_filter=All
+[2025-06-29 17:20:41,090] WARNING custom_logger PageNotAnInteger: set to page 1
+[2025-06-29 17:20:41,098] INFO custom_logger Returning page 1 of 12 with 10 records
+[2025-06-29 17:20:41,157] INFO django.server "GET /lagging-records/ HTTP/1.1" 200 32735
+[2025-06-29 17:20:41,327] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 17:20:41,443] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 17:20:50,420] INFO django.server "GET /lagging-records/109/ HTTP/1.1" 200 13075
+[2025-06-29 17:20:50,523] INFO django.server "GET /lagging-records/109/ HTTP/1.1" 200 13075
+[2025-06-29 17:20:50,584] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 17:20:50,760] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 17:23:51,807] INFO custom_logger Filters: from_incident_date=, to_incident_date=, hse_lag_filter=All, risk_factor_filter=All, complience_status_filter=All
+[2025-06-29 17:23:51,826] WARNING custom_logger PageNotAnInteger: set to page 1
+[2025-06-29 17:23:51,831] INFO custom_logger Returning page 1 of 12 with 10 records
+[2025-06-29 17:23:51,884] INFO django.server "GET /lagging-records/ HTTP/1.1" 200 32735
+[2025-06-29 17:23:51,980] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 17:23:51,984] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 17:23:51,987] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 17:23:52,054] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 17:23:52,054] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 17:23:52,193] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 17:23:52,279] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 17:23:52,460] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 17:24:01,021] INFO custom_logger Filters: from_incident_date=, to_incident_date=, hse_lag_filter=All, risk_factor_filter=All, complience_status_filter=All
+[2025-06-29 17:24:01,037] INFO custom_logger Returning page 2 of 12 with 10 records
+[2025-06-29 17:24:01,067] INFO django.server "GET /lagging-records/?page=2&hse_lag_filter=All&risk_factor_filter=All&complience_status_filter=All HTTP/1.1" 200 33128
+[2025-06-29 17:24:01,247] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 17:24:01,380] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 17:24:02,845] INFO custom_logger Filters: from_incident_date=, to_incident_date=, hse_lag_filter=All, risk_factor_filter=All, complience_status_filter=All
+[2025-06-29 17:24:02,864] INFO custom_logger Returning page 1 of 12 with 10 records
+[2025-06-29 17:24:02,910] INFO django.server "GET /lagging-records/?page=1&hse_lag_filter=All&risk_factor_filter=All&complience_status_filter=All HTTP/1.1" 200 32735
+[2025-06-29 17:24:03,136] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 17:24:03,295] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 17:24:12,179] INFO django.server "GET /lagging-records/114/ HTTP/1.1" 200 10864
+[2025-06-29 17:24:12,316] INFO django.server "GET /lagging-records/114/ HTTP/1.1" 200 10864
+[2025-06-29 17:24:12,354] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 17:24:12,498] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 17:24:15,586] INFO custom_logger Filters: from_incident_date=, to_incident_date=, hse_lag_filter=All, risk_factor_filter=All, complience_status_filter=All
+[2025-06-29 17:24:15,599] WARNING custom_logger PageNotAnInteger: set to page 1
+[2025-06-29 17:24:15,605] INFO custom_logger Returning page 1 of 12 with 10 records
+[2025-06-29 17:24:15,650] INFO django.server "GET /lagging-records/ HTTP/1.1" 200 32735
+[2025-06-29 17:24:15,854] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 17:24:15,999] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 17:24:18,312] INFO django.server "GET /lagging-records/115/ HTTP/1.1" 200 10939
+[2025-06-29 17:24:18,452] INFO django.server "GET /lagging-records/115/ HTTP/1.1" 200 10939
+[2025-06-29 17:24:18,507] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 17:24:18,674] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 17:24:27,850] INFO custom_logger Filters: from_incident_date=, to_incident_date=, hse_lag_filter=All, risk_factor_filter=All, complience_status_filter=All
+[2025-06-29 17:24:27,865] WARNING custom_logger PageNotAnInteger: set to page 1
+[2025-06-29 17:24:27,870] INFO custom_logger Returning page 1 of 12 with 10 records
+[2025-06-29 17:24:27,914] INFO django.server "GET /lagging-records/ HTTP/1.1" 200 32735
+[2025-06-29 17:24:28,103] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 17:24:28,249] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 17:25:18,475] INFO django.server "GET /lagging-records/114/ HTTP/1.1" 200 10864
+[2025-06-29 17:25:18,530] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 17:25:18,532] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 17:25:18,533] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 17:25:18,533] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 17:25:18,563] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 17:25:18,651] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 17:25:18,704] INFO django.server "GET /lagging-records/114/ HTTP/1.1" 200 10864
+[2025-06-29 17:25:18,718] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 17:25:18,838] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 17:26:46,709] INFO custom_logger Filters: from_incident_date=, to_incident_date=, hse_lag_filter=All, risk_factor_filter=All, complience_status_filter=All
+[2025-06-29 17:26:46,724] WARNING custom_logger PageNotAnInteger: set to page 1
+[2025-06-29 17:26:46,729] INFO custom_logger Returning page 1 of 12 with 10 records
+[2025-06-29 17:26:46,774] INFO django.server "GET /lagging-records/ HTTP/1.1" 200 32735
+[2025-06-29 17:26:46,816] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 17:26:46,816] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 17:26:46,817] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 17:26:46,818] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 17:26:46,831] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 17:26:46,894] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 17:26:46,961] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 17:26:47,043] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 17:26:50,964] INFO django.server "GET /lagging-records/115/ HTTP/1.1" 200 10939
+[2025-06-29 17:26:51,095] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 17:26:51,117] INFO django.server "GET /lagging-records/115/ HTTP/1.1" 200 10939
+[2025-06-29 17:26:51,179] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 17:28:29,149] INFO custom_logger Filters: from_incident_date=, to_incident_date=, hse_lag_filter=All, risk_factor_filter=All, complience_status_filter=All
+[2025-06-29 17:28:29,163] WARNING custom_logger PageNotAnInteger: set to page 1
+[2025-06-29 17:28:29,171] INFO custom_logger Returning page 1 of 12 with 10 records
+[2025-06-29 17:28:29,220] INFO django.server "GET /lagging-records/ HTTP/1.1" 200 32735
+[2025-06-29 17:28:29,259] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 17:28:29,261] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 17:28:29,263] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 17:28:29,265] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 17:28:29,266] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 17:28:29,353] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 17:28:29,451] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 17:28:29,530] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 18:02:03,497] INFO custom_logger User 'taufik.s' logged out.
+[2025-06-29 18:02:03,503] INFO django.server "GET /userlogout/ HTTP/1.1" 302 0
+[2025-06-29 18:02:03,624] INFO django.server "GET / HTTP/1.1" 200 5659
+[2025-06-29 18:02:03,790] INFO django.server "GET /static/main/images/OC_white_logo.png HTTP/1.1" 304 0
+[2025-06-29 18:24:16,394] INFO custom_logger User 'bhagavan.b' tried to access login page but is already authenticated.
+[2025-06-29 18:24:16,395] INFO django.server "GET / HTTP/1.1" 302 0
+[2025-06-29 18:24:16,476] INFO custom_logger User 'bhagavan.b' accessed index page.
+[2025-06-29 18:24:16,491] INFO django.server "GET /indexpage/ HTTP/1.1" 200 10240
+[2025-06-29 18:24:16,549] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 18:24:16,551] INFO django.server "GET /static/main/images/EHSModule.png HTTP/1.1" 304 0
+[2025-06-29 18:24:16,566] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 18:24:16,572] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 18:24:16,573] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 18:24:16,636] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 18:24:16,661] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 18:24:20,127] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 18:24:20,218] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 18:24:20,316] WARNING django.server "GET /favicon.ico HTTP/1.1" 404 179
+[2025-06-29 19:01:36,274] INFO custom_logger Filters: from_incident_date=, to_incident_date=, hse_lag_filter=All, risk_factor_filter=All, complience_status_filter=All
+[2025-06-29 19:01:36,288] WARNING custom_logger PageNotAnInteger: set to page 1
+[2025-06-29 19:01:36,293] INFO custom_logger Returning page 1 of 12 with 10 records
+[2025-06-29 19:01:36,339] INFO django.server "GET /lagging-records/ HTTP/1.1" 200 32735
+[2025-06-29 19:01:36,416] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 19:01:36,428] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 19:01:36,444] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 19:01:36,447] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 19:01:36,449] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 19:01:36,650] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 19:01:36,931] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 19:01:37,068] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 19:01:59,183] INFO django.server "GET /lagging-records/114/ HTTP/1.1" 200 10864
+[2025-06-29 19:01:59,361] INFO django.server "GET /lagging-records/114/ HTTP/1.1" 200 10864
+[2025-06-29 19:01:59,407] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 19:01:59,550] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-29 22:43:05,822] INFO django.server "GET / HTTP/1.1" 200 5216
+[2025-06-29 22:43:05,879] INFO django.server "GET /static/main/images/OC_white_logo.png HTTP/1.1" 304 0
+[2025-06-29 22:43:09,548] WARNING django.server "GET /favicon.ico HTTP/1.1" 404 179
+[2025-06-29 22:57:17,488] INFO custom_logger User 'bhagavan.b' tried to access login page but is already authenticated.
+[2025-06-29 22:57:17,488] INFO django.server "GET / HTTP/1.1" 302 0
+[2025-06-29 22:57:17,693] INFO custom_logger User 'bhagavan.b' accessed index page.
+[2025-06-29 22:57:17,707] INFO django.server "GET /indexpage/ HTTP/1.1" 200 10240
+[2025-06-29 22:57:17,779] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-29 22:57:17,804] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-29 22:57:17,806] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-29 22:57:17,810] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-29 22:57:17,811] INFO django.server "GET /static/main/images/EHSModule.png HTTP/1.1" 304 0
+[2025-06-29 22:57:17,919] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-29 22:57:17,921] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-29 22:57:21,110] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-29 22:57:21,233] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179

@@ -1,0 +1,158 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}QC Project Dashboard{% endblock %}
+
+{% block head_extra %}
+<style>
+  /* Dashboard specific styles */
+  .dashboard-welcome {
+    text-align: center;
+    margin-bottom: 40px; /* Increased space below welcome */
+  }
+  .dashboard-welcome h1 {
+    font-size: 2.4em; /* Slightly adjusted from original home for dashboard feel */
+    color: #2c3e50; /* Consistent with previous designs */
+    margin-bottom: 10px;
+  }
+  .dashboard-welcome p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6;
+    max-width: 700px; /* Keep descriptive text from getting too wide */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Action Tiles Container */
+  .dashboard-actions {
+    display: flex;
+    flex-wrap: wrap; /* Allow tiles to wrap on smaller screens */
+    gap: 25px; /* Space between tiles */
+    justify-content: center; /* Center tiles if they don't fill the row */
+    margin-top: 20px;
+  }
+
+  /* Individual Action Tile Style */
+  .action-tile {
+    display: flex;
+    flex-direction: column; /* Stack icon and text vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    min-height: 160px; /* Give tiles some height */
+    width: calc(50% - 12.5px); /* Two tiles per row, accounting for gap */
+    max-width: 280px; /* Max width for a tile */
+    
+    background-color: #ffffff;
+    color: #34495e; /* Default text color for tile */
+    text-decoration: none;
+    padding: 25px;
+    border-radius: 10px; /* Softer radius */
+    border: 1px solid #e0e6ed; /* Subtle border */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Softer shadow */
+    text-align: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  }
+
+  .action-tile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-color: #007bff; /* Highlight border on hover */
+  }
+
+  .action-tile .tile-icon {
+    font-size: 2.8em; /* Larger icon */
+    margin-bottom: 15px;
+    line-height: 1; /* Ensure icon vertical alignment is good */
+  }
+  
+  /* Specific icon colors if needed */
+  .action-tile.primary .tile-icon {
+    color: #007bff; /* Primary action icon color */
+  }
+  .action-tile.secondary .tile-icon {
+    color: #28a745; /* Secondary action icon color */
+  }
+  .action-tile.reports .tile-icon { /* For View Reports tile */
+    color: #ffc107; /* Amber/Yellow for reports */
+  }
+  .action-tile.settings .tile-icon { /* For Settings tile */
+    color: #6f42c1; /* Purple for settings */
+  }
+
+  .action-tile .tile-title {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #2c3e50; /* Darker title text */
+  }
+  .action-tile .tile-description {
+    font-size: 0.9em;
+    color: #6c757d;
+    margin-top: 5px;
+  }
+
+  /* Responsive Adjustments for Tiles */
+  @media (max-width: 768px) {
+    .action-tile {
+      width: calc(50% - 12.5px); /* Still aim for two on tablets */
+      min-height: 150px;
+    }
+  }
+  @media (max-width: 576px) {
+    .dashboard-welcome h1 {
+      font-size: 2em;
+    }
+    .action-tile {
+      width: 100%; /* Full width on small mobile */
+      max-width: none; /* Allow full width */
+      min-height: 120px; /* Slightly smaller on mobile */
+    }
+    .action-tile .tile-icon {
+      font-size: 2.2em;
+      margin-bottom: 10px;
+    }
+    .action-tile .tile-title {
+      font-size: 1.1em;
+    }
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+  <div class="dashboard-container">
+    
+    <div class="dashboard-welcome">
+      <h1>Welcome to QC Project</h1>
+      <p>Streamline your quality control processes. Select an action below to get started.</p>
+    </div>
+
+    <div class="dashboard-actions">
+      <a href="{% url 'product_create' %}" class="action-tile primary">
+        <div class="tile-icon">➕</div>
+        <div class="tile-title">Add Product</div>
+        {# <div class="tile-description">Define new products for tracking.</div> #}
+      </a>
+      
+      <a href="{% url 'qc:qc_create' %}" class="action-tile secondary">
+        <div class="tile-icon">📋</div>
+        <div class="tile-title">New QC Entry</div>
+        {# <div class="tile-description">Create a new quality control report.</div> #}
+      </a>
+      
+      {# “View Reports” now points to qc_report in qc/urls.py #}
+      <a href="{% url 'qc:qc_report' %}" class="action-tile reports">
+        <div class="tile-icon">📊</div>
+        <div class="tile-title">View Reports</div>
+        <div class="tile-description">Analyze quality trends and data.</div>
+      </a>
+      
+      {# Leave Settings tile as a placeholder for future use #}
+      <a href="#" class="action-tile settings">
+        <div class="tile-icon">⚙️</div>
+        <div class="tile-title">Settings</div>
+        <div class="tile-description">Configure application preferences.</div>
+      </a>
+    </div>
+
+  </div>
+{% endblock %}

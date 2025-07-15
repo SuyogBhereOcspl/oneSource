@@ -1,0 +1,307 @@
+{% extends 'main/index.html' %}
+{% load static %}
+
+{% block maincontent %}
+<div class="container mx-auto p-6">
+    <div class="container mx-auto px-6">
+        <div class="flex items-center justify-between mb-4">
+            <!-- Back to Main Page Button -->
+            <a href="/" class="bg-blue-500 hover:bg-blue-600 text-xs text-white font-bold py-2 px-4 rounded shadow-md">
+                Back to Main Page
+            </a>
+            <!-- Heading -->
+            <h2 class="text-2xl font-bold text-center flex-1 text-gray-700">Downtime Analysis</h2>
+            <!-- View Records Button -->
+            <a href="{% url 'view_downtime' %}" class="text-xs bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded shadow-md">
+                View Records
+            </a>
+        </div>
+    </div>
+
+  <form method="get" action="{% url 'downtime_chart' %}"
+      class="flex flex-nowrap gap-2 mb-6 items-end overflow-x-auto text-xs justify-center">
+  <!-- Department -->
+  <div class="w-40 flex-shrink-0">
+    <label for="downtime_dept" class="block mb-1">Dept</label>
+    <select name="downtime_dept" id="downtime_dept"
+            class="border p-1 rounded w-full">
+      <option value="" {% if not selected_dept %}selected{% endif %}>All</option>
+      {% for dept in downtime_depts %}
+        <option value="{{ dept }}" {% if selected_dept == dept %}selected{% endif %}>
+          {{ dept }}
+        </option>
+      {% endfor %}
+    </select>
+  </div>
+
+  <!-- Block -->
+  <div class="w-32 flex-shrink-0">
+    <label for="block" class="block mb-1">Block</label>
+    <select name="block" id="block" class="border p-1 rounded w-full">
+      <option value="" {% if not selected_block %}selected{% endif %}>All</option>
+      {% for b in blocks %}
+        <option value="{{ b }}" {% if selected_block == b %}selected{% endif %}>{{ b }}</option>
+      {% endfor %}
+    </select>
+  </div>
+
+  <!-- Product -->
+  <div class="w-64 flex-shrink-0">
+    <label for="product_name" class="block mb-1">Product</label>
+    <select name="product_name" id="product_name" class="border p-1 rounded w-full">
+      <option value="" {% if not selected_product %}selected{% endif %}>All</option>
+      {% for p in products %}
+        <option value="{{ p }}" {% if selected_product == p %}selected{% endif %}>{{ p }}</option>
+      {% endfor %}
+    </select>
+  </div>
+
+  <!-- Idle -->
+  <div class="w-20 flex-shrink-0">
+    <label for="idle" class="block mb-1">Idle</label>
+    <select name="idle" id="idle" class="border p-1 rounded w-full">
+      <option value="" {% if not selected_idle %}selected{% endif %}>All</option>
+      {% for o in idle_options %}
+        <option value="{{ o }}" {% if selected_idle == o %}selected{% endif %}>{{ o }}</option>
+      {% endfor %}
+    </select>
+  </div>
+
+  <!-- Period -->
+  <div class="w-28 flex-shrink-0">
+    <label for="period" class="block mb-1">Period</label>
+    <select name="period" id="period" class="border p-1 rounded w-full">
+        <option value="MTD"    {% if period == 'MTD'    %}selected{% endif %}>MTD</option>
+        <option value="Weekly" {% if period == 'Weekly' %}selected{% endif %}>Weekly</option>
+        <option value="Custom" {% if period == 'Custom' %}selected{% endif %}>Custom</option>
+    </select>
+  </div>
+
+  <!-- Custom Dates -->
+  <div id="custom-dates" class="flex gap-2 items-end flex-shrink-0"
+       style="{% if period != 'Custom' %}display:none{% endif %}">
+    <div class="w-32">
+      <label for="start_date" class="block mb-1">From</label>
+      <input type="date" name="start_date" value="{{ start_date }}"
+             class="border p-1 rounded w-full">
+    </div>
+    <div class="w-32">
+      <label for="end_date" class="block mb-1">To</label>
+      <input type="date" name="end_date" value="{{ end_date }}"
+             class="border p-1 rounded w-full">
+    </div>
+  </div>
+
+  <!-- Apply & Clear -->
+  <div class="flex-shrink-0 flex gap-1">
+    <button type="submit" class="bg-blue-600 text-white px-2 py-1 rounded">Apply</button>
+    <a href="{% url 'downtime_chart' %}"
+       class="bg-gray-300 text-gray-800 px-2 py-1 rounded hover:bg-gray-400">
+      Clear
+    </a>
+  </div>
+</form>
+
+
+  <!-- Two-column charts -->
+  <div class="flex gap-6 mt-2">
+    <div class="w-1/2 ">
+      <canvas id="blockChart" class="w-full h-64"></canvas>
+    </div>
+    <div class="w-1/2">
+      <canvas id="idlePieChart" class="w-full h-64"></canvas>
+    </div>
+  </div>
+
+  <hr class="my-3">
+  <!-- Dept-wise Downtime Bar Chart -->
+<div class="mt-8">
+    <h3 class="text-xl font-semibold mb-2">Department-wise Downtime</h3>
+    <div class="w-full">
+      <canvas id="deptChart" class="w-full h-64"></canvas>
+    </div>
+  </div>
+</div>
+
+<hr class="my-3">
+<!-- Product-wise Downtime Bar Chart -->
+<div class="mt-8">
+    <h3 class="text-xl font-semibold mb-2">Product-wise Downtime</h3>
+    <div class="w-full">
+        <canvas id="productChart" class="w-full h-64"></canvas>
+    </div>
+</div>
+
+
+<hr class="my-3">
+<!-- Category-wise Downtime Bar Chart -->
+<div class="mt-8">
+    <h3 class="text-xl font-semibold mb-2">Category-wise Downtime</h3>
+    <div class="w-full">
+        <canvas id="categoryChart" class="w-full h-64"></canvas>
+      </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  // Toggle custom-date inputs
+  document.getElementById('period').addEventListener('change', function() {
+    document.getElementById('custom-dates').style.display =
+      (this.value === 'Custom' ? 'flex' : 'none');
+  });
+
+  // Bar chart
+  const barLabels = {{ bar_labels|safe }};
+  const barData   = {{ bar_data  |safe }};
+  const minVal = Math.min(...barData), maxVal = Math.max(...barData);
+  const bg = barData.map(v => {
+    const r = maxVal===minVal?0.5:(v-minVal)/(maxVal-minVal);
+    return `hsl(210,50%,${90 - r*40}%)`;
+  });
+  const bd = barData.map(v => {
+    const r = maxVal===minVal?0.5:(v-minVal)/(maxVal-minVal);
+    return `hsl(210,50%,${70 - r*30}%)`;
+  });
+  new Chart(document.getElementById('blockChart').getContext('2d'), {
+    type: 'bar',
+    data: { labels: barLabels, datasets:[{
+      label: 'Total Downtime (hrs)',
+      data: barData,
+      backgroundColor: bg,
+      borderColor: bd,
+      borderWidth: 1
+    }]},
+    options: { maintainAspectRatio: false, scales:{ x:{ title:{ display:true, text:'Block' }}, y:{ beginAtZero:true, title:{ display:true, text:'Duration (hrs)' } } } }
+  });
+
+  // Pie chart
+  const pieLabels = {{ pie_labels|safe }};
+  const pieData   = {{ pie_data  |safe }};
+  new Chart(document.getElementById('idlePieChart').getContext('2d'), {
+    type: 'pie',
+    data: { labels: pieLabels, datasets:[{ data: pieData }] },
+    options: { maintainAspectRatio: false }
+  });
+
+
+
+   // Dept-wise Bar chart
+   const deptLabels = {{ dept_labels|safe }};
+  const deptData   = {{ dept_data  |safe }};
+
+  // solid teal bars
+  const deptBg = deptData.map(_ => 'rgba(75,192,192,0.6)');
+  const deptBd = deptData.map(_ => 'rgba(75,192,192,1)');
+
+  new Chart(
+    document.getElementById('deptChart').getContext('2d'),
+    {
+      type: 'bar',
+      data: {
+        labels: deptLabels,
+        datasets: [{
+          label: 'Total Downtime (hrs)',
+          data: deptData,
+          backgroundColor: deptBg,
+          borderColor:     deptBd,
+          borderWidth: 1
+        }]
+      },
+      options: {
+        maintainAspectRatio: false,
+        scales: {
+          x: {
+            title: { display: true, text: 'Department' }
+          },
+          y: {
+            beginAtZero: true,
+            title: { display: true, text: 'Total Duration (hrs)' }
+          }
+        }
+      }
+    }
+  );
+
+  
+// Category-wise Bar chart
+const catLabels = {{ category_labels|safe }};
+const catData   = {{ category_data  |safe }};
+
+// uniform purple bars
+const catBg = catData.map(_ => 'rgba(153,102,255,0.6)');
+const catBd = catData.map(_ => 'rgba(153,102,255,1)');
+
+new Chart(
+  document.getElementById('categoryChart').getContext('2d'),
+  {
+    type: 'bar',
+    data: {
+      labels: catLabels,
+      datasets: [{
+        label: 'Total Downtime (hrs)',
+        data: catData,
+        backgroundColor: catBg,
+        borderColor:     catBd,
+        borderWidth: 1
+      }]
+    },
+    options: {
+      maintainAspectRatio: false,
+      scales: {
+        x: {
+          title: { display: true, text: 'Downtime Category' }
+        },
+        y: {
+          beginAtZero: true,      // start at zero
+          ticks: {
+            stepSize: 200         // tick every 200
+          },
+          title: {
+            display: true,
+            text: 'Total Duration (hrs)'
+          }
+        }
+      }
+    }
+  }
+);
+
+// Product-wise Bar chart
+const productLabels = {{ product_labels|safe }};
+const productData   = {{ product_data  |safe }};
+
+const productBg = productData.map(_ => 'rgba(255,159,64,0.6)');
+const productBd = productData.map(_ => 'rgba(255,159,64,1)');
+
+new Chart(
+  document.getElementById('productChart').getContext('2d'),
+  {
+    type: 'bar',
+    data: {
+      labels: productLabels,
+      datasets: [{
+        label: 'Total Downtime (hrs)',
+        data: productData,
+        backgroundColor: productBg,
+        borderColor:     productBd,
+        borderWidth: 1
+      }]
+    },
+    options: {
+      maintainAspectRatio: false,
+      scales: {
+        x: {
+          title: { display: true, text: 'Product' }
+        },
+        y: {
+          beginAtZero: true,
+          title: { display: true, text: 'Total Duration (hrs)' }
+        }
+      }
+    }
+  }
+);
+
+</script>
+
+{% endblock maincontent %}

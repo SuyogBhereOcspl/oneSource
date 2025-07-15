@@ -1,0 +1,2964 @@
+[2025-05-03 12:37:50,836] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-03 12:37:50,855] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-03 12:37:55,072] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-03 12:37:55,080] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-03 12:38:13,049] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-03 12:38:13,061] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-03 12:38:19,926] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-03 12:38:19,937] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-03 12:38:26,641] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-03 12:38:26,651] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-03 12:38:33,817] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-03 12:38:33,828] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-03 12:38:49,172] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-03 12:38:49,182] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-03 12:38:56,296] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-03 12:38:56,306] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-03 12:38:58,352] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-03 12:38:58,362] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-03 12:39:07,167] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-03 12:39:07,180] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-03 12:39:29,241] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-03 12:39:29,248] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-03 12:39:57,824] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-03 12:39:57,832] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-03 12:40:04,261] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-03 12:40:04,270] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-03 12:40:16,762] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-03 12:40:16,767] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-03 12:40:18,574] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-03 12:40:18,583] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-03 12:40:23,407] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-03 12:40:23,416] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-03 12:40:31,540] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-03 12:40:31,546] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-03 12:40:39,781] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-03 12:40:39,786] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-03 12:40:46,802] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-03 12:40:46,807] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-03 12:40:53,013] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-03 12:40:53,022] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-03 12:41:17,630] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-03 12:41:17,632] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-03 12:56:38,661] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-03 12:56:38,666] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-03 12:56:43,667] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-03 12:56:43,676] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-03 12:57:24,845] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-03 12:57:24,856] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-03 12:57:48,072] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-03 12:57:48,088] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-03 12:58:24,695] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-03 12:58:24,704] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-03 12:58:34,002] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-03 12:58:34,012] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-03 12:58:40,831] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-03 12:58:40,844] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-03 13:15:03,726] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-03 13:15:03,739] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-03 13:15:17,371] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-03 13:15:17,380] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-05 15:59:55,368] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-05 15:59:55,375] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-05 16:00:04,860] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-05 16:00:04,869] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 12:15:45,900] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 12:15:45,910] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 12:15:53,599] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 12:15:53,606] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 12:16:07,804] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 12:16:07,812] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 12:16:14,489] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 12:16:14,499] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 12:16:22,374] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 12:16:22,383] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 12:16:30,034] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 12:16:30,045] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 12:16:40,432] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 12:16:40,441] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 12:16:54,822] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 12:16:54,831] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 12:17:02,519] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 12:17:02,532] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 12:17:09,502] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 12:17:09,512] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 12:17:23,229] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 12:17:23,238] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 12:17:31,409] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 12:17:31,415] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 12:17:44,989] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 12:17:45,006] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 12:17:45,282] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 12:17:45,291] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 12:18:08,462] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 12:18:08,467] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 12:18:13,616] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 12:18:13,625] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 12:18:16,399] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 12:18:16,408] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 12:18:27,697] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 12:18:27,710] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 12:18:37,837] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 12:18:37,847] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 12:18:52,426] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 12:18:52,435] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 12:18:56,991] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 12:18:57,000] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 12:19:04,150] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 12:19:04,157] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 12:19:10,291] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 12:19:10,297] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 12:19:23,252] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 12:19:23,256] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 12:19:31,056] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 12:19:31,058] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 12:19:38,187] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 12:19:38,191] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 12:19:43,286] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 12:19:43,290] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 12:20:09,995] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 12:20:10,004] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 12:20:21,236] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 12:20:21,246] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 12:20:22,372] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 12:20:22,377] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 12:20:31,084] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 12:20:31,093] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 12:20:36,392] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 12:20:36,401] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 12:21:18,395] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 12:21:18,404] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 12:21:28,019] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 12:21:28,028] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 12:21:32,817] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 12:21:32,826] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 12:21:37,800] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 12:21:37,807] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 12:21:47,035] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 12:21:47,044] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 12:21:52,007] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 12:21:52,015] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 12:22:10,806] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 12:22:10,810] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 12:22:19,051] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 12:22:19,061] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 12:22:27,825] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 12:22:27,831] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:05:58,060] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:05:58,067] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:06:04,884] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:06:04,893] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:06:13,369] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:06:13,380] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:06:21,454] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:06:21,464] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:06:28,737] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:06:28,745] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:06:35,885] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:06:35,895] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:07:01,867] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:07:01,874] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:07:12,338] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:07:12,342] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:07:19,843] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:07:19,852] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:07:51,884] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:07:51,894] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:08:09,836] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:08:09,847] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:08:27,560] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:08:27,570] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:08:45,912] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:08:45,921] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:09:43,632] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:09:43,641] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:09:53,832] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:09:53,844] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:10:11,096] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:10:11,106] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:10:37,926] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:10:37,935] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:10:42,856] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:10:42,865] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:10:53,887] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:10:53,896] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:10:59,242] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:10:59,255] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:11:10,383] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:11:10,392] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:11:18,763] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:11:18,780] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:11:48,886] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:11:48,896] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:11:53,963] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:11:53,972] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:12:11,861] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:12:11,871] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:12:29,826] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:12:29,838] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:13:13,093] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:13:13,099] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:13:20,690] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:13:20,699] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:13:43,077] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:13:43,086] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:13:50,685] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:13:50,694] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:14:35,883] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:14:35,889] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:15:37,813] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:15:37,822] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:15:45,873] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:15:45,881] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:16:07,773] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:16:07,783] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:16:15,452] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:16:15,461] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:16:39,128] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:16:39,136] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:16:48,832] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:16:48,838] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:17:00,061] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:17:00,072] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:17:06,882] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:17:06,890] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:17:46,854] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:17:46,864] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:18:08,843] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:18:08,852] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:18:19,841] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:18:19,848] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:18:35,865] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:18:35,874] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:18:43,916] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:18:43,925] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:18:58,884] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:18:58,890] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:19:14,177] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:19:14,182] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:19:36,853] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:19:36,859] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:19:42,800] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:19:42,809] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:19:51,143] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:19:51,152] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:20:54,723] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:20:54,734] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:21:02,965] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:21:02,976] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:21:16,895] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:21:16,901] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:21:42,948] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:21:42,953] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:21:57,073] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:21:57,082] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:22:20,245] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:22:20,255] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:22:29,290] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:22:29,300] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:22:37,140] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:22:37,147] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:22:42,205] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:22:42,218] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:23:08,188] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:23:08,198] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:23:32,908] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:23:32,914] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:23:40,232] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:23:40,241] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:23:48,876] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:23:48,885] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:23:56,684] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:23:56,691] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:24:11,581] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:24:11,585] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:24:18,827] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:24:18,833] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:24:24,112] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:24:24,120] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:24:37,387] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:24:37,396] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:24:52,903] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:24:52,909] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:25:02,876] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:25:02,888] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:25:16,630] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:25:16,640] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:25:21,983] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:25:21,988] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:25:26,833] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:25:26,840] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:25:32,378] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:25:32,389] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:26:11,829] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:26:11,835] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:26:26,759] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:26:26,764] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:26:45,905] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:26:45,918] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:26:53,569] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:26:53,577] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:27:01,597] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:27:01,603] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:27:11,145] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:27:11,149] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:27:19,429] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:27:19,435] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:27:28,954] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:27:28,964] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:27:36,466] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:27:36,476] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:27:45,125] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:27:45,133] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:28:02,624] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:28:02,633] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:28:24,978] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:28:24,987] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:28:35,015] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:28:35,023] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:28:59,993] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:28:59,995] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:29:10,779] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:29:10,782] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:29:18,960] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:29:18,964] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:29:29,094] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:29:29,102] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:29:38,737] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:29:38,744] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:30:12,083] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:30:12,092] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:30:56,767] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:30:56,777] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:31:36,081] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:31:36,091] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:32:01,600] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:32:01,609] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:32:10,089] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:32:10,099] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:32:35,999] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:32:36,010] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:32:57,693] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:32:57,702] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:33:13,027] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:33:13,035] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:33:23,380] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:33:23,389] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:33:34,169] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:33:34,178] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:34:06,740] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:34:06,742] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:34:17,591] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:34:17,600] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:34:26,284] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:34:26,296] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:34:36,100] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:34:36,109] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:35:02,417] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:35:02,426] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:35:10,899] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:35:10,906] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:35:48,709] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:35:48,717] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:35:56,566] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:35:56,577] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:36:20,799] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:36:20,812] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:36:28,903] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:36:28,906] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:36:51,890] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:36:51,911] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:37:22,718] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:37:22,724] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:37:39,776] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:37:39,783] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:38:09,330] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:38:09,336] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:38:19,547] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:38:19,556] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:38:42,406] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:38:42,416] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:38:53,114] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:38:53,119] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:39:08,429] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:39:08,432] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:39:25,228] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:39:25,238] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:39:30,034] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:39:30,042] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:39:37,934] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:39:37,943] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:39:45,993] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:39:46,002] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:39:51,004] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:39:51,007] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:40:24,787] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:40:24,797] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:40:47,842] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:40:47,851] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:40:56,911] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:40:56,920] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:41:19,577] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:41:19,586] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:41:36,689] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:41:36,698] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:41:44,558] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:41:44,567] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:41:53,835] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:41:53,843] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:42:29,867] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:42:29,879] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:42:38,670] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:42:38,677] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:42:43,088] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:42:43,096] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:42:52,781] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:42:52,790] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:43:04,073] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:43:04,080] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:43:14,025] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:43:14,033] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:43:30,962] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:43:30,973] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:43:54,907] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:43:54,915] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:44:03,362] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:44:03,368] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:44:27,635] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:44:27,643] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:44:37,855] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:44:37,866] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:44:46,139] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:44:46,144] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:44:51,143] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:44:51,150] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:45:09,529] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:45:09,538] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:45:25,169] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:45:25,176] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:45:34,019] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:45:34,028] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:46:04,179] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:46:04,190] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:46:36,643] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:46:36,652] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:46:44,919] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:46:44,929] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 14:47:01,044] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 14:47:01,060] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 15:50:59,721] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 15:50:59,730] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 15:51:05,737] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 15:51:05,746] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-06 15:51:12,902] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-06 15:51:12,911] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145
+[2025-05-07 12:07:35,506] ERROR django.request Internal Server Error: /api/dashboard-data/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\CANTEEN\views.py", line 389, in dashboard_data_api
+    if is_naive(start_of_today):
+       ^^^^^^^^
+NameError: name 'is_naive' is not defined
+[2025-05-07 12:07:35,515] ERROR django.server "GET /api/dashboard-data/ HTTP/1.1" 500 145

@@ -1,0 +1,424 @@
+{% extends "base.html" %}
+{% load static dict_utils_qc %}
+
+{% block title %}MIS Report – QC Project{% endblock %}
+
+{% block head_extra %}
+{# -- Fonts & Icons -- #}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+  :root {
+    /* --- Core Palette & Fonts --- */
+    --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-mono: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    
+    --color-bg: #f8f9fa;            /* A slightly warmer gray */
+    --color-surface: #ffffff;
+    --color-border: #dee2e6;        /* Softer border */
+    --color-border-subtle: #e9ecef;
+
+    --text-heading: #212529;        /* Darker for more contrast */
+    --text-body: #495057;           /* Main body text */
+    --text-muted: #6c757d;          /* Lighter for secondary info */
+    --text-on-primary: #ffffff;
+
+    --color-primary: #0d6efd;         /* Bootstrap Blue */
+    --color-primary-hover: #0b5ed7;
+
+    /* --- Sizing & Effects --- */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 10px rgba(0, 0, 0, 0.07);
+  }
+  
+  body {
+    background-color: var(--color-bg);
+    font-family: var(--font-sans);
+    color: var(--text-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .page-container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  /* --- Page Header --- */
+  .page-header {
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--color-border-subtle);
+  }
+  .page-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-heading);
+    margin: 0 0 4px;
+  }
+  .page-header p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin: 0;
+    max-width: 700px;
+  }
+  
+  /* --- Generic Panel Style --- */
+  .panel {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  /* --- Filter Panel --- */
+  .filter-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    cursor: pointer;
+    border-bottom: 1px solid var(--color-border-subtle);
+  }
+  .filter-panel-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-heading);
+  }
+  .filter-panel-title h2 { margin: 0; font-size: inherit; }
+  .filter-toggle-icon {
+    color: var(--text-muted);
+    transition: transform 0.3s ease;
+  }
+  .filter-panel.is-collapsed .filter-toggle-icon {
+    transform: rotate(-90deg);
+  }
+  
+  .filter-body {
+    padding: 24px;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out, opacity 0.3s 0.1s ease-out;
+    max-height: 1000px;
+    opacity: 1;
+  }
+  .filter-panel.is-collapsed .filter-body {
+    max-height: 0;
+    padding: 0 24px;
+    opacity: 0;
+    transition: max-height 0.4s ease-in, padding 0.4s ease-in, opacity 0.2s ease-in;
+  }
+  
+  .filter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px 24px;
+  }
+  .filter-group label {
+    font-size: 0.9em;
+    font-weight: 500;
+    color: var(--text-body);
+    display: block;
+    margin-bottom: 8px;
+  }
+  .filter-group input, .filter-group select {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 0.95em;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background-color: #fff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .filter-group input:focus, .filter-group select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.15);
+  }
+  
+  .filter-actions {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid var(--color-border-subtle);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+  }
+
+  /* --- Data Panel & Table --- */
+  .data-panel { overflow: hidden; }
+  
+  .panel-header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--color-border);
+  }
+  .panel-header h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-heading);
+    margin: 0;
+  }
+  
+  .table-wrapper { overflow-x: auto; }
+  
+  .report-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+  .report-table thead th {
+    padding: 12px 20px;
+    text-align: left;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+    background-color: var(--color-bg);
+    border-bottom: 2px solid var(--color-border);
+  }
+  .report-table tbody tr {
+    border-bottom: 1px solid var(--color-border-subtle);
+  }
+  .report-table tbody tr:last-child {
+    border-bottom: none;
+  }
+  .report-table tbody tr:nth-child(even) {
+    background-color: var(--color-bg);
+  }
+  .report-table tbody tr:hover {
+    background-color: #e9ecef;
+  }
+  .report-table td {
+    padding: 16px 20px;
+    vertical-align: middle;
+    color: var(--text-body);
+    white-space: nowrap;
+  }
+  .report-table td.cell-wrap {
+    white-space: normal;
+    min-width: 250px;
+  }
+  .report-table .cell-numeric {
+    font-family: var(--font-mono);
+  }
+
+  /* --- Components: Buttons & Empty State --- */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: 0.9em;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+  }
+  .btn-primary {
+    background-color: var(--color-primary);
+    color: var(--text-on-primary);
+    box-shadow: var(--shadow-sm);
+  }
+  .btn-primary:hover { background-color: var(--color-primary-hover); }
+  .btn-secondary {
+    background-color: var(--color-surface);
+    color: var(--text-body);
+    border-color: var(--color-border);
+    box-shadow: var(--shadow-sm);
+  }
+  .btn-secondary:hover { border-color: #adb5bd; background-color: #f8f9fa; }
+  .btn-link {
+    color: var(--text-muted);
+    background: none;
+    text-decoration: none;
+  }
+  .btn-link:hover { color: var(--text-heading); text-decoration: underline; }
+
+  .empty-state {
+    text-align: center;
+    padding: 80px 40px;
+  }
+  .empty-state .icon {
+    font-size: 3.5rem;
+    color: #ced4da;
+    margin-bottom: 24px;
+  }
+  .empty-state h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-heading);
+    margin: 0 0 8px;
+  }
+  .empty-state p {
+    color: var(--text-muted);
+    max-width: 400px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="page-container">
+  <!-- Page Header -->
+  <header class="page-header">
+    <h1>MIS Report</h1>
+    <p>Analyze quality control data across different products, stages, and batches.</p>
+  </header>
+
+  <!-- Filter Panel -->
+  <div class="panel filter-panel {% if not rows and request.GET %}is-collapsed{% endif %}" id="filterPanel">
+    <div class="filter-panel-header" id="filterHeader">
+      <div class="filter-panel-title">
+        <i class="fas fa-filter fa-fw"></i>
+        <h2>Filter Options</h2>
+      </div>
+      <i class="fas fa-chevron-down filter-toggle-icon"></i>
+    </div>
+    <div class="filter-body">
+      <form method="get" id="filterForm" action="{% url 'mis_report' %}">
+        <div class="filter-grid">
+          <div class="filter-group">
+            <label for="start_date">From Date</label>
+            <input type="date" id="start_date" name="start_date" value="{{ start_date }}">
+          </div>
+          <div class="filter-group">
+            <label for="end_date">To Date</label>
+            <input type="date" id="end_date" name="end_date" value="{{ end_date }}">
+          </div>
+          <div class="filter-group">
+            <label for="product">Product</label>
+            <select name="product" id="product">
+              <option value="">All Products</option>
+              {% for p in products %}
+                <option value="{{ p.product__id }}" {% if p.product__id|stringformat:"s" == sel_product %}selected{% endif %}>
+                  {{ p.product__name }}
+                </option>
+              {% endfor %}
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="batch_no">Batch Number</label>
+            <select name="batch_no" id="batch_no">
+              <option value="">All Batches</option>
+              {% for bn in batches %}
+                <option value="{{ bn }}" {% if bn == sel_batch %}selected{% endif %}>{{ bn }}</option>
+              {% endfor %}
+            </select>
+          </div>
+          <div class="filter-group">
+            <label for="stage">Stage</label>
+            <select name="stage" id="stage">
+              <option value="">All Stages</option>
+              {% for st in stages %}
+                <option value="{{ st }}" {% if st == sel_stage %}selected{% endif %}>{{ st }}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
+        <div class="filter-actions">
+          <a href="{% url 'mis_report' %}" class="btn btn-link">Reset Filters</a>
+          <button type="submit" class="btn btn-primary">
+            <i class="fas fa-search"></i> Apply Filters
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Data Panel -->
+  <div class="panel data-panel">
+    <div class="panel-header">
+      <h3>{{ rows|length }} Result{{ rows|length|pluralize }} Found</h3>
+      <button type="button" id="exportButton" class="btn btn-secondary">
+        <i class="fas fa-file-export"></i> Export as CSV
+      </button>
+    </div>
+    <div class="table-wrapper">
+      {% if rows %}
+        <table class="report-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Product</th>
+              <th>Stage</th>
+              <th>Batch No.</th>
+              <th>Reactor No.</th>
+              <th class="cell-wrap">Sample Desc.</th>
+              {% for name in spec_names %}
+                <th class="cell-numeric">{{ name }}</th>
+              {% endfor %}
+            </tr>
+          </thead>
+          <tbody>
+            {% for row in rows %}
+              <tr>
+                <td class="cell-numeric">{{ row.date }}</td>
+                <td>{{ row.product_name|default:"—" }}</td>
+                <td>{{ row.stage|default:"—" }}</td>
+                <td class="cell-numeric">{{ row.batch_no|default:"—" }}</td>
+                <td class="cell-numeric">{{ row.reactor_no|default:"—" }}</td>
+                <td class="cell-wrap">{{ row.sample_description|default:"—" }}</td>
+                {% for name in spec_names %}
+                  <td class="cell-numeric">{{ row|get_item:name|default:"—" }}</td>
+                {% endfor %}
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      {% else %}
+        <div class="empty-state">
+          <div class="icon"><i class="fas fa-inbox"></i></div>
+          <h3>No Data to Display</h3>
+          <p>Your filter selection returned no results. Try adjusting the filters or click Reset to see all data.</p>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const filterPanel = document.getElementById('filterPanel');
+  const filterHeader = document.getElementById('filterHeader');
+  if (filterPanel && filterHeader) {
+    filterHeader.addEventListener('click', () => {
+      filterPanel.classList.toggle('is-collapsed');
+    });
+  }
+
+  const exportBtn = document.getElementById('exportButton');
+  const filterForm = document.getElementById('filterForm');
+  if (exportBtn && filterForm) {
+    exportBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const params = new URLSearchParams(new FormData(filterForm));
+      params.append('export', 'csv');
+      window.location.href = `${filterForm.action}?${params.toString()}`;
+    });
+  }
+});
+</script>
+{% endblock %}

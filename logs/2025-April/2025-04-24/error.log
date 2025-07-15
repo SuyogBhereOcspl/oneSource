@@ -1,0 +1,30 @@
+[2025-04-25 10:06:11,389] ERROR django.request Internal Server Error: /search_item/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 98, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 725, in fetchall
+    return self.format_rows(self.cursor.fetchall())
+                            ~~~~~~~~~~~~~~~~~~~~^^
+pyodbc.Error: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Unspecified error occurred on SQL Server. Connection may have been terminated by the server. (0) (SQLFetch); [HY000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot continue the execution because the session is in the kill state. (596)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\oneSource\STORE\views.py", line 60, in search_item
+    results = cursor.fetchall()
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 97, in inner
+    with self:
+         ^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 98, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 725, in fetchall
+    return self.format_rows(self.cursor.fetchall())
+                            ~~~~~~~~~~~~~~~~~~~~^^
+django.db.utils.Error: ('HY000', '[HY000] [Microsoft][ODBC Driver 17 for SQL Server]Unspecified error occurred on SQL Server. Connection may have been terminated by the server. (0) (SQLFetch); [HY000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot continue the execution because the session is in the kill state. (596)')
+[2025-04-25 10:06:11,395] ERROR django.server "GET /search_item/?term=ME HTTP/1.1" 500 145

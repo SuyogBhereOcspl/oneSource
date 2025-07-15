@@ -1,0 +1,1316 @@
+[2025-06-18 11:17:04,674] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 11:17:04,745] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 11:17:23,143] ERROR custom_logger [MIS Report] User=ocadmin error: 'dict_utils' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_urls
+cache
+dict_utils_qc
+django_browser_reload
+i18n
+import_export_tags
+l10n
+log
+static
+tz
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\template\defaulttags.py", line 1034, in find_library
+    return parser.libraries[name]
+           ~~~~~~~~~~~~~~~~^^^^^^
+KeyError: 'dict_utils'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\oneSource\QC\views.py", line 945, in mis_report
+    return render(request, 'qc/mis_report.html', {
+        'rows':         rows,
+    ...<9 lines>...
+        'generated_at': datetime.now().strftime('%Y-%m-%d %H:%M'),
+    })
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\template\loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\template\defaulttags.py", line 1096, in load
+    lib = find_library(parser, name)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\template\defaulttags.py", line 1036, in find_library
+    raise TemplateSyntaxError(
+    ...<5 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: 'dict_utils' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_urls
+cache
+dict_utils_qc
+django_browser_reload
+i18n
+import_export_tags
+l10n
+log
+static
+tz
+[2025-06-18 11:17:23,187] ERROR django.server "GET /qc/mis-report/ HTTP/1.1" 500 145
+[2025-06-18 11:17:36,504] ERROR custom_logger [MIS Report] User=ocadmin error: 'dict_utils' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_urls
+cache
+dict_utils_qc
+django_browser_reload
+i18n
+import_export_tags
+l10n
+log
+static
+tz
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\template\defaulttags.py", line 1034, in find_library
+    return parser.libraries[name]
+           ~~~~~~~~~~~~~~~~^^^^^^
+KeyError: 'dict_utils'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\oneSource\QC\views.py", line 945, in mis_report
+    return render(request, 'qc/mis_report.html', {
+        'rows':         rows,
+    ...<9 lines>...
+        'generated_at': datetime.now().strftime('%Y-%m-%d %H:%M'),
+    })
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+        contents,
+    ...<2 lines>...
+        self.engine,
+    )
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\template\loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\template\defaulttags.py", line 1096, in load
+    lib = find_library(parser, name)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\template\defaulttags.py", line 1036, in find_library
+    raise TemplateSyntaxError(
+    ...<5 lines>...
+    )
+django.template.exceptions.TemplateSyntaxError: 'dict_utils' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_urls
+cache
+dict_utils_qc
+django_browser_reload
+i18n
+import_export_tags
+l10n
+log
+static
+tz
+[2025-06-18 11:17:36,533] ERROR django.server "GET /qc/mis-report/ HTTP/1.1" 500 145
+[2025-06-18 11:19:44,312] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 11:19:44,399] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 11:26:07,203] WARNING django.server "GET /favicon.ico HTTP/1.1" 404 179
+[2025-06-18 11:26:19,918] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 11:26:20,083] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 11:26:41,599] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 11:26:41,737] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 11:28:25,594] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 11:28:25,748] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 11:29:44,345] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 11:29:44,523] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 11:30:25,351] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 11:30:25,474] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 11:31:19,835] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 11:31:19,995] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 11:32:31,584] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 11:32:31,740] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 11:33:08,113] WARNING django.server "POST /get_bom_details/ HTTP/1.1" 404 38
+[2025-06-18 11:33:36,605] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 11:33:36,725] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 11:34:17,694] WARNING django.server "POST /get_bom_details/ HTTP/1.1" 404 38
+[2025-06-18 11:34:58,208] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 11:34:58,393] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 11:37:47,136] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 11:37:47,326] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 11:39:04,282] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 11:39:04,487] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 11:40:08,867] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 11:40:09,073] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 11:41:13,255] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 11:41:13,410] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 11:55:18,025] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 11:55:18,107] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 11:56:26,142] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 11:56:26,285] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 11:56:30,016] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 11:56:30,051] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 11:56:43,811] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 11:56:43,950] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 11:56:51,703] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 11:56:51,772] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 11:57:58,269] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 11:57:58,324] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 11:58:18,960] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 11:58:19,059] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 11:59:40,971] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 11:59:41,133] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:01:02,610] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:01:02,765] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:01:53,824] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:01:53,965] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:02:24,142] WARNING django.server "POST /get_bom_details/ HTTP/1.1" 404 38
+[2025-06-18 12:03:35,213] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:03:35,361] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:03:55,835] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:03:55,964] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:04:32,484] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:04:32,623] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:08:54,759] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:08:54,843] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:09:15,380] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:09:15,466] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:09:34,707] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:09:34,790] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:09:51,198] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:09:51,273] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:10:06,928] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:10:07,063] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:10:22,425] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:10:22,515] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:10:38,163] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:10:38,246] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:10:53,152] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:10:53,254] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:11:07,644] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:11:07,777] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:11:19,774] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:11:19,859] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:11:33,394] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:11:33,484] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:11:48,347] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:11:48,440] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:12:02,628] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:12:02,715] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:12:14,730] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:12:14,842] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:12:32,388] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:12:32,470] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:12:44,654] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:12:44,742] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:12:55,999] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:12:56,115] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:13:07,518] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:13:07,624] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:13:18,660] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:13:18,776] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:13:30,220] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:13:30,305] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:13:42,649] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:13:42,732] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:13:54,191] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:13:54,282] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:14:12,069] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:14:12,156] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:14:30,611] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:14:30,724] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:14:48,428] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:14:48,519] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:15:02,495] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:15:02,582] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:15:15,272] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:15:15,372] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:15:27,617] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:15:27,704] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:15:43,590] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:15:43,678] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:15:55,308] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:15:55,425] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:16:12,633] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:16:12,723] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:16:28,900] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:16:29,015] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:16:45,746] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:16:45,867] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:16:57,004] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:16:57,119] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:17:10,121] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:17:10,236] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:17:29,745] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:17:29,856] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:17:43,901] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:17:44,016] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:17:56,120] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:17:56,273] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:18:08,662] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:18:08,780] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:18:19,403] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:18:19,521] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:18:30,300] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:18:30,408] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:18:43,693] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:18:43,802] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:19:07,612] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:19:07,717] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:19:29,079] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:19:29,191] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:19:48,676] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:19:48,786] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:20:08,742] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:20:08,859] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:20:23,490] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:20:23,608] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:20:35,664] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:20:35,777] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:20:46,304] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:20:46,433] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:20:56,411] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:20:56,529] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:21:07,867] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:21:07,970] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:21:19,808] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:21:19,916] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:21:30,655] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:21:30,768] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:21:43,432] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:21:43,534] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:21:58,718] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:21:58,835] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:22:21,745] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:22:21,869] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:22:45,922] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:22:46,035] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:23:03,957] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:23:04,067] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:23:23,861] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:23:23,991] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:23:45,924] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:23:46,034] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:24:09,659] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:24:09,777] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:24:33,805] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:24:33,940] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:24:58,585] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:24:58,703] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:25:10,206] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:25:10,311] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:25:34,247] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:25:34,360] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:25:53,584] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:25:53,709] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:26:12,949] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:26:13,073] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:26:33,140] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:26:33,249] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:26:55,745] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:26:55,868] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:27:15,498] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:27:15,617] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:27:27,144] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:27:27,264] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:27:40,706] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:27:40,813] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:27:52,725] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:27:52,837] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:28:09,455] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:28:09,581] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:28:30,982] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:28:31,095] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:28:45,215] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:28:45,344] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:29:06,710] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:29:06,817] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:29:18,465] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:29:18,581] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:29:30,440] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:29:30,549] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:29:41,449] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:29:41,560] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:29:53,181] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:29:53,286] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:30:04,921] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:30:05,037] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:30:29,523] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:30:29,658] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:30:52,341] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:30:52,458] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:30:55,094] WARNING django.server "POST /get_bom_details/ HTTP/1.1" 404 38
+[2025-06-18 12:31:14,179] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:31:14,295] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:31:24,009] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:31:24,070] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:31:26,523] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:31:26,729] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:31:27,404] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:31:27,712] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:31:36,221] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:31:36,348] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:31:54,032] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:31:54,146] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:32:15,555] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:32:15,695] WARNING django.server "POST /get_bom_details/ HTTP/1.1" 404 38
+[2025-06-18 12:32:16,151] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:32:31,270] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:32:31,386] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:32:49,178] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:32:49,299] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:32:50,774] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:32:50,986] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:33:05,256] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:33:05,360] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:33:27,732] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:33:27,913] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:33:52,377] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:33:52,540] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:34:16,281] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:34:16,388] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:34:20,844] WARNING django.server "POST /get_bom_details/ HTTP/1.1" 404 38
+[2025-06-18 12:34:38,591] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:34:38,709] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:34:53,390] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:34:53,600] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:34:54,098] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:34:54,208] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:35:10,617] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:35:10,729] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:35:22,382] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:35:22,496] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:35:33,745] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:35:33,861] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:35:45,941] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:35:46,061] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:35:58,393] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:35:58,499] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:36:14,371] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:36:14,479] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:36:26,610] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:36:26,731] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:36:52,003] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:36:52,118] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:37:10,363] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:37:10,478] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:37:29,032] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:37:29,142] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:37:43,993] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:37:44,104] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:38:03,956] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:38:04,067] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:38:26,653] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:38:26,775] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:38:45,184] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:38:45,294] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:38:57,534] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:38:57,638] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:39:13,526] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:39:13,650] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:39:26,032] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:39:26,313] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:39:37,720] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:39:37,839] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:39:52,801] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:39:52,933] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:40:04,485] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:40:04,601] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:40:18,255] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:40:18,378] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:40:35,783] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:40:35,895] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:40:54,531] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:40:54,923] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:41:15,828] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:41:15,946] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:41:36,040] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:41:36,161] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:41:56,843] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:41:56,993] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:42:14,618] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:42:14,741] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:42:36,582] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:42:36,689] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:43:01,116] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:43:01,231] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:43:22,764] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:43:22,876] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:43:26,214] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:43:26,669] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:43:43,103] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:43:43,229] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:44:06,575] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:44:06,779] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:44:07,360] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:44:07,754] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:44:28,008] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:44:28,115] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:44:53,261] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:44:53,401] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:45:11,302] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:45:11,415] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:45:29,145] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:45:29,255] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:45:50,473] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:45:50,612] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:46:09,839] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:46:09,969] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:46:28,225] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:46:28,342] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:46:48,758] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:46:48,851] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:47:06,884] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:47:07,249] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:47:30,698] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:47:31,017] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:47:40,791] WARNING django.server "GET /favicon.ico HTTP/1.1" 404 179
+[2025-06-18 12:47:48,102] WARNING django.server "GET /favicon.ico HTTP/1.1" 404 179
+[2025-06-18 12:47:54,146] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:47:54,237] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:48:00,044] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:48:00,135] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:48:02,701] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:48:02,775] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:48:04,810] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:48:04,896] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:48:10,805] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:48:10,986] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:48:14,915] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:48:15,010] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:48:18,089] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:48:18,190] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:48:31,790] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:48:31,899] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:48:36,409] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:48:36,509] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:48:42,621] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:48:42,740] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:49:00,515] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:49:00,603] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:49:22,786] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:49:22,886] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:49:37,306] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:49:37,443] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:49:39,935] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:49:40,003] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:49:41,696] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:49:41,778] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:49:41,800] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:49:41,867] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:50:04,900] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:50:05,000] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:50:29,916] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:50:30,017] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:50:43,422] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:50:43,501] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:50:54,794] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:50:54,970] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:51:00,337] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:51:00,421] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:51:18,879] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:51:19,218] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:51:47,725] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:51:47,825] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:51:48,088] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:51:48,195] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:52:13,923] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:52:14,016] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:52:34,069] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:52:34,155] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:52:58,519] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:52:58,600] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:52:59,733] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:52:59,800] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:53:00,106] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:53:00,359] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:53:20,312] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:53:20,408] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:53:38,056] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:53:38,153] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:53:52,223] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:53:52,336] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:53:55,083] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:53:55,191] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:53:58,046] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:53:58,079] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:54:04,843] ERROR django.server "GET /overtime-report-detail/all/?from_date=2025-06-01&to_date=2025-06-18&company=&branch=&shift_code= HTTP/1.1" 500 145
+[2025-06-18 12:54:08,694] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:54:08,804] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:54:11,828] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:54:11,930] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:54:22,943] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:54:23,023] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:54:30,984] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:54:31,074] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:54:33,054] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:54:33,271] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:54:47,262] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:54:47,355] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:55:09,523] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:55:09,608] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:55:33,097] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:55:33,210] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:55:48,827] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:55:48,927] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:55:55,478] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:55:55,591] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:56:05,569] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:56:05,665] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:56:17,136] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:56:17,231] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:56:30,845] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:56:30,945] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:56:36,261] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:56:36,345] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:56:53,558] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:56:53,682] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:57:01,609] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:57:01,773] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:57:10,044] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:57:10,147] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:57:23,840] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:57:23,923] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:57:38,216] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:57:38,316] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:57:52,639] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:57:52,739] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:58:06,328] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:58:06,435] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:58:23,716] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:58:23,825] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:58:26,846] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:58:27,005] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:58:40,256] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:58:40,361] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:58:55,816] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:58:55,917] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:59:14,112] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:59:14,208] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:59:36,175] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:59:36,277] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:59:51,908] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:59:51,995] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:59:57,561] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:59:57,673] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 12:59:57,948] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 12:59:58,097] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:00:17,991] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:00:18,086] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:00:40,011] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:00:40,111] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:00:52,858] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:00:53,024] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:01:03,490] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:01:03,568] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:01:06,342] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:01:06,426] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:01:22,227] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:01:22,326] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:01:47,187] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:01:47,297] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:02:01,786] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:02:01,856] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:02:10,197] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:02:10,298] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:02:22,229] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:02:22,371] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:02:30,496] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:02:30,597] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:02:55,055] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:02:55,155] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:03:17,938] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:03:18,045] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:03:38,375] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:03:38,484] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:04:04,638] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:04:04,742] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:04:27,743] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:04:27,881] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:04:44,071] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:04:44,168] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:05:05,334] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:05:05,443] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:05:23,484] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:05:23,585] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:05:39,844] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:05:39,958] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:05:53,674] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:05:53,779] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:06:05,683] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:06:05,782] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:06:26,708] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:06:26,812] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:06:43,827] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:06:43,907] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:07:06,468] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:07:06,565] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:07:28,831] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:07:28,930] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:07:48,807] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:07:48,913] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:08:12,053] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:08:12,157] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:08:36,054] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:08:36,164] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:08:57,793] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:08:57,877] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:09:19,682] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:09:19,781] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:09:42,648] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:09:42,746] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:10:00,472] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:10:00,575] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:10:24,321] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:10:24,401] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:10:51,232] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:10:51,339] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:11:10,086] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:11:10,230] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:11:33,196] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:11:33,338] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:11:59,701] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:11:59,808] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:12:25,417] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:12:25,525] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:12:51,119] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:12:51,236] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:13:07,266] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:13:07,344] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:13:26,031] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:13:26,145] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:13:47,273] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:13:47,376] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:14:08,807] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:14:08,954] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:14:23,585] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:14:23,666] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:14:26,215] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:14:26,332] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:14:27,122] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:14:27,264] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:14:35,238] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:14:35,357] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:14:43,078] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:14:43,239] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:14:47,515] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:14:47,628] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:14:50,246] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:14:50,346] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:15:11,525] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:15:11,674] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:15:35,552] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:15:35,680] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:15:58,235] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:15:58,352] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:16:21,324] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:16:21,441] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:16:43,054] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:16:43,173] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:17:05,867] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:17:05,984] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:17:29,257] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:17:29,408] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:17:52,184] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:17:52,302] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:18:16,628] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:18:16,755] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:18:40,040] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:18:40,182] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:19:04,983] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:19:05,114] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:19:30,103] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:19:30,218] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:19:50,568] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:19:50,712] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:20:17,097] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:20:17,219] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:20:41,814] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:20:41,933] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:21:03,664] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:21:03,816] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:21:28,442] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:21:28,578] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:21:52,344] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:21:52,458] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:22:13,011] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:22:13,132] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:22:17,328] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:22:17,414] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:22:38,610] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:22:38,740] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:23:01,877] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:23:01,996] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:23:23,862] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:23:24,009] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:23:46,013] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:23:46,129] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:24:12,049] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:24:12,167] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:24:34,094] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:24:34,219] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:24:58,810] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:24:58,942] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:25:22,248] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:25:22,372] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:25:45,392] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:25:45,519] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:26:09,431] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:26:09,555] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:26:33,879] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:26:33,996] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:26:57,520] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:26:57,685] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:27:22,365] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:27:22,497] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:27:44,987] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:27:45,099] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:28:08,819] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:28:08,979] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:28:34,154] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:28:34,277] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:28:55,979] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:28:56,101] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:29:19,922] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:29:20,035] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:29:43,897] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:29:44,017] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:30:05,186] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:30:05,304] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:30:29,540] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:30:29,694] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:30:53,891] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:30:54,030] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:31:13,316] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:31:13,445] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:31:37,359] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:31:37,483] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:32:02,024] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:32:02,168] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:32:26,372] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:32:26,504] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:32:50,570] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:32:50,720] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:33:15,521] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:33:15,650] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:33:36,344] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:33:36,475] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:34:04,165] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:34:04,294] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:34:28,899] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:34:29,035] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:34:53,220] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:34:53,344] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:35:17,288] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:35:17,412] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:35:42,390] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:35:42,513] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:36:06,962] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:36:07,079] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:36:33,003] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:36:33,159] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:36:56,769] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:36:56,898] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:37:18,556] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:37:18,676] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:37:45,619] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:37:45,757] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:38:10,489] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:38:10,618] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:38:36,189] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:38:36,307] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:39:02,910] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:39:03,048] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:39:25,549] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:39:25,661] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:39:50,434] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:39:50,617] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:40:17,072] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:40:17,223] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:40:42,790] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:40:42,927] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:41:08,921] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:41:09,044] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:41:30,994] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:41:31,125] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:41:55,805] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:41:55,961] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:42:21,735] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:42:21,861] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:42:45,954] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:42:46,074] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:43:10,773] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:43:10,912] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:43:36,424] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:43:36,539] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:44:00,437] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:44:00,513] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:44:21,728] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:44:21,807] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:44:46,260] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:44:46,377] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:45:11,617] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:45:11,726] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:45:35,745] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:45:35,869] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:46:02,914] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:46:03,042] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:46:27,116] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:46:27,230] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:46:52,656] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:46:52,781] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:47:18,674] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:47:18,783] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:47:42,066] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:47:42,192] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:48:05,827] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:48:05,947] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:48:31,719] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:48:31,829] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:48:57,226] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:48:57,337] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:49:22,585] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:49:22,732] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:49:36,065] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:49:36,182] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:49:38,030] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:49:38,111] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:49:40,957] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:49:41,037] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:49:45,209] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:49:45,309] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:49:46,816] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:49:46,925] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:50:12,713] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:50:13,019] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:50:33,650] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:50:33,756] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:50:34,856] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:50:34,949] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:50:37,109] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:50:37,195] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:50:40,716] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:50:40,813] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:51:08,967] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:51:09,129] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:51:34,662] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:51:34,760] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:52:00,921] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:52:01,001] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:52:27,022] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:52:27,152] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:52:53,364] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:52:53,482] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:53:16,870] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:53:16,997] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:53:42,304] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:53:42,421] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:54:06,908] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:54:07,022] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:54:31,934] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:54:32,089] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:54:58,643] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:54:58,755] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:55:22,784] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:55:22,904] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:55:49,589] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:55:49,725] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:56:14,630] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:56:14,742] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:56:39,957] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:56:40,115] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:57:04,602] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:57:04,727] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:57:30,669] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:57:30,784] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:57:56,859] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:57:56,985] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:58:20,188] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:58:20,312] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:58:45,857] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:58:45,972] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:59:12,429] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:59:12,552] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 13:59:39,151] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 13:59:39,277] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 14:00:05,502] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 14:00:05,632] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 14:00:32,787] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 14:00:32,901] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 14:00:34,645] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 14:00:34,759] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 14:01:58,456] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 14:01:58,512] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 14:02:02,148] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 14:02:02,257] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 14:03:01,520] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 14:03:01,587] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 14:03:05,262] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 14:03:05,366] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 14:03:22,195] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 14:03:22,328] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 14:05:40,251] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 14:05:40,362] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 14:13:30,502] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 14:13:30,630] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 14:13:39,149] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 14:13:39,327] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 14:14:26,564] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 14:14:26,819] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 14:14:33,478] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 14:14:33,575] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 14:18:15,007] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 14:18:15,098] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 14:28:58,343] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 14:28:58,385] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 14:35:21,919] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 14:35:22,035] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 14:35:25,980] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 14:35:26,105] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 14:35:30,846] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 14:35:30,956] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 14:35:39,733] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 14:35:39,844] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 14:35:43,857] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 14:35:43,975] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 14:35:46,005] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 14:35:46,124] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 14:35:47,291] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 14:35:47,408] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 14:35:48,121] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 14:35:48,244] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 14:35:52,719] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 14:35:52,841] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 14:35:57,271] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 14:35:57,376] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 14:36:01,050] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 14:36:01,167] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 14:36:17,604] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 14:36:17,720] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 14:36:21,686] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 14:36:21,807] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 14:36:41,132] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 14:36:41,261] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 14:50:58,711] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 14:50:58,834] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 14:51:14,828] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 14:51:14,914] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 14:52:02,752] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 14:52:02,846] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 14:52:36,335] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 14:52:36,469] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 14:52:39,925] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 14:52:40,011] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 14:53:13,246] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 14:53:13,452] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 14:54:54,542] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 14:54:54,593] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 15:51:27,481] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 15:51:27,673] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 15:51:30,077] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 15:51:30,175] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 15:51:32,256] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 15:51:32,350] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 15:52:30,231] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 15:52:30,330] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 15:53:25,954] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 15:53:26,059] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 15:53:27,664] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 15:53:27,750] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 15:53:34,493] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 15:53:34,587] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 16:07:25,054] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 16:07:25,166] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 16:13:33,806] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 16:13:33,920] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 16:13:54,146] WARNING custom_logger QCEntry form validation failed by sahil.c. Errors: <ul class="errorlist"><li>product<ul class="errorlist"><li>This field is required.</li><li>This field cannot be null.</li></ul></li></ul>
+[2025-06-18 16:17:15,446] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 16:17:15,543] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 16:17:18,370] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 16:17:18,494] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 16:38:01,900] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 16:38:02,032] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 16:38:04,745] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 16:38:04,825] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 16:51:14,264] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 16:51:14,350] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 16:51:27,430] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 16:51:27,512] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 16:51:37,232] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 16:51:37,319] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 16:52:15,634] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 16:52:15,723] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 16:52:25,924] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 16:52:26,009] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 16:52:28,744] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 16:52:28,833] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 16:52:40,971] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 16:52:41,055] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 16:52:43,937] WARNING custom_logger User 'yogesh.a' tried to edit Leading record (ID: 23061) without permission.
+[2025-06-18 16:52:44,567] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 16:52:44,651] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 16:52:50,075] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 16:52:50,428] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 16:52:52,639] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 16:52:52,724] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 16:52:55,591] WARNING custom_logger User 'yogesh.a' tried to edit Leading record (ID: 23060) without permission.
+[2025-06-18 16:52:55,942] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 16:52:56,022] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:01:37,547] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:01:37,597] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:03:33,127] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:03:33,245] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:03:44,038] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:03:44,170] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:03:48,445] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:03:48,563] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:03:51,042] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:03:51,153] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:04:00,496] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:04:00,599] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:04:03,204] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:04:03,313] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:04:41,579] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:04:41,756] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:04:41,905] WARNING django.server "GET /favicon.ico HTTP/1.1" 404 179
+[2025-06-18 17:04:46,894] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:04:47,054] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:06:11,474] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:06:11,585] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:06:16,496] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:06:16,626] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:08:24,277] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:08:24,381] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:10:16,006] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:10:16,116] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:12:46,845] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:12:46,977] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:21:01,209] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:21:01,369] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:21:01,493] WARNING django.server "GET /favicon.ico HTTP/1.1" 404 179
+[2025-06-18 17:21:04,627] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:21:04,765] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:21:10,538] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:21:10,689] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:21:18,587] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:21:19,088] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:21:19,859] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:21:20,148] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:21:20,669] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:21:21,340] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:21:22,131] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:21:22,773] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:21:23,362] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:21:24,026] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:21:24,954] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:21:25,745] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:21:26,736] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:21:27,387] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:21:28,003] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:21:28,618] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:21:29,649] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:21:30,249] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:21:30,528] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:21:31,078] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:21:31,228] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:21:31,708] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:21:32,335] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:21:32,736] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:21:33,691] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:21:33,835] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:21:41,603] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:21:42,232] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:21:47,400] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:21:48,000] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:21:55,678] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:21:55,997] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:22:00,537] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:22:00,690] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:22:14,190] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:22:14,809] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:22:33,921] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:22:34,726] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:22:51,716] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:22:52,125] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:25:53,523] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:25:53,850] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:25:55,280] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:25:55,721] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:26:23,846] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:26:24,018] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:26:25,866] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:26:26,410] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:26:26,622] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:26:27,114] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:26:28,820] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:26:29,074] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:26:31,284] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:26:31,419] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:26:32,946] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:26:33,076] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:26:42,781] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:26:43,027] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:26:44,643] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:26:44,887] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:26:47,572] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:26:48,037] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:26:48,835] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:26:49,189] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:27:18,104] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:27:18,314] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:27:34,432] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:27:34,697] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:27:44,216] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:27:44,385] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:28:37,658] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:28:37,785] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:28:40,740] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:28:41,070] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:28:41,528] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:28:41,662] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:28:42,606] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:28:42,821] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:28:43,925] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:28:44,357] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:28:45,398] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:28:46,007] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:28:47,510] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:28:48,155] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:28:49,012] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:28:49,405] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:29:27,017] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:29:27,259] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:29:31,404] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:29:31,649] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:29:37,437] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:29:37,938] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:30:22,740] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:30:22,856] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:30:23,787] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:30:23,968] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:32:05,243] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:32:05,334] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:32:14,214] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:32:14,699] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:32:23,259] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:32:23,899] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:42:08,790] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:42:09,096] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:42:09,408] WARNING django.server "GET /favicon.ico HTTP/1.1" 404 179
+[2025-06-18 17:42:11,432] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:42:11,504] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:42:35,818] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:42:35,898] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:42:47,106] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:42:47,192] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:42:51,763] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:42:51,832] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:42:55,690] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:42:55,769] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:43:02,664] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:43:02,739] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:43:09,889] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:43:09,967] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:43:13,040] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:43:13,111] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:43:15,477] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:43:15,550] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:43:17,899] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:43:17,980] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:43:19,718] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:43:19,803] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:43:24,723] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:43:24,799] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:43:26,960] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:43:27,041] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:43:28,517] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:43:28,846] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:43:29,682] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:43:29,758] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:43:37,328] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:43:37,396] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:43:44,087] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:43:44,168] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:43:45,710] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:43:45,796] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:45:06,615] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:45:06,713] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:57:29,659] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 17:57:29,788] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 17:57:29,926] WARNING django.server "GET /favicon.ico HTTP/1.1" 404 179
+[2025-06-18 18:00:47,086] WARNING custom_logger PageNotAnInteger: set to page 1
+[2025-06-18 18:00:47,607] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 18:00:47,718] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 18:00:50,509] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 18:00:50,609] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 18:00:53,458] WARNING custom_logger PageNotAnInteger: set to page 1
+[2025-06-18 18:00:53,690] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 18:00:53,806] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 18:01:47,800] WARNING custom_logger PageNotAnInteger: set to page 1
+[2025-06-18 18:01:48,140] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 18:01:48,249] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 18:01:52,862] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 18:01:52,966] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-18 18:01:55,589] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-18 18:01:55,695] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179

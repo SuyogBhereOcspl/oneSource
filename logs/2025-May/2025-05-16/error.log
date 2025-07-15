@@ -1,0 +1,1024 @@
+[2025-05-16 15:07:03,417] ERROR django.request Internal Server Error: /attendance/summary/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 677, in execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+pyodbc.Error: ('40001', '[40001] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Transaction (Process ID 85) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction. (1205) (SQLExecDirectW)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\HR\views.py", line 209, in attendance_summary
+    for stat in stats:
+                ^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\query.py", line 210, in __iter__
+    for row in compiler.results_iter(
+               ~~~~~~~~~~~~~~~~~~~~~^
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1513, in results_iter
+    results = self.execute_sql(
+        MULTI, chunked_fetch=chunked_fetch, chunk_size=chunk_size
+    )
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 677, in execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+django.db.utils.Error: ('40001', '[40001] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Transaction (Process ID 85) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction. (1205) (SQLExecDirectW)')
+[2025-05-16 15:07:03,423] ERROR django.request Internal Server Error: /attendance/summary/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 677, in execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+pyodbc.Error: ('40001', '[40001] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Transaction (Process ID 102) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction. (1205) (SQLExecDirectW)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\HR\views.py", line 209, in attendance_summary
+    for stat in stats:
+                ^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\query.py", line 210, in __iter__
+    for row in compiler.results_iter(
+               ~~~~~~~~~~~~~~~~~~~~~^
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1513, in results_iter
+    results = self.execute_sql(
+        MULTI, chunked_fetch=chunked_fetch, chunk_size=chunk_size
+    )
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 677, in execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+django.db.utils.Error: ('40001', '[40001] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Transaction (Process ID 102) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction. (1205) (SQLExecDirectW)')
+[2025-05-16 15:07:03,428] ERROR django.request Internal Server Error: /attendance/summary/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 677, in execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+pyodbc.Error: ('40001', '[40001] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Transaction (Process ID 77) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction. (1205) (SQLExecDirectW)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\HR\views.py", line 209, in attendance_summary
+    for stat in stats:
+                ^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\query.py", line 210, in __iter__
+    for row in compiler.results_iter(
+               ~~~~~~~~~~~~~~~~~~~~~^
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1513, in results_iter
+    results = self.execute_sql(
+        MULTI, chunked_fetch=chunked_fetch, chunk_size=chunk_size
+    )
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 677, in execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+django.db.utils.Error: ('40001', '[40001] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Transaction (Process ID 77) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction. (1205) (SQLExecDirectW)')
+[2025-05-16 15:07:03,482] ERROR django.server "GET /attendance/summary/?start_date=2025-05-08&end_date=2025-05-08&company=&branch=Solapur&department=&shift_code= HTTP/1.1" 500 145
+[2025-05-16 15:07:03,506] ERROR django.server "GET /attendance/summary/?start_date=2025-05-08&end_date=2025-05-08&company=&branch=Solapur&department=&shift_code= HTTP/1.1" 500 145
+[2025-05-16 15:07:03,521] ERROR django.server "GET /attendance/summary/?start_date=2025-05-08&end_date=2025-05-08&company=&branch=Solapur&department=&shift_code= HTTP/1.1" 500 145
+[2025-05-16 15:08:26,267] ERROR django.request Internal Server Error: /attendance/summary/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 677, in execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+pyodbc.Error: ('40001', '[40001] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Transaction (Process ID 103) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction. (1205) (SQLExecDirectW)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\HR\views.py", line 209, in attendance_summary
+    for stat in stats:
+                ^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\query.py", line 210, in __iter__
+    for row in compiler.results_iter(
+               ~~~~~~~~~~~~~~~~~~~~~^
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1513, in results_iter
+    results = self.execute_sql(
+        MULTI, chunked_fetch=chunked_fetch, chunk_size=chunk_size
+    )
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 677, in execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+django.db.utils.Error: ('40001', '[40001] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Transaction (Process ID 103) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction. (1205) (SQLExecDirectW)')
+[2025-05-16 15:08:26,276] ERROR django.request Internal Server Error: /attendance/summary/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 677, in execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+pyodbc.Error: ('40001', '[40001] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Transaction (Process ID 92) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction. (1205) (SQLExecDirectW)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\HR\views.py", line 209, in attendance_summary
+    for stat in stats:
+                ^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\query.py", line 210, in __iter__
+    for row in compiler.results_iter(
+               ~~~~~~~~~~~~~~~~~~~~~^
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1513, in results_iter
+    results = self.execute_sql(
+        MULTI, chunked_fetch=chunked_fetch, chunk_size=chunk_size
+    )
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 677, in execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+django.db.utils.Error: ('40001', '[40001] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Transaction (Process ID 92) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction. (1205) (SQLExecDirectW)')
+[2025-05-16 15:08:26,293] ERROR django.server "GET /attendance/summary/?start_date=2025-05-08&end_date=2025-05-08&company=&branch=Solapur&department=&shift_code= HTTP/1.1" 500 145
+[2025-05-16 15:08:26,313] ERROR django.server "GET /attendance/summary/?start_date=2025-05-08&end_date=2025-05-08&company=&branch=Solapur&department=&shift_code= HTTP/1.1" 500 145
+[2025-05-16 15:18:54,393] ERROR django.request Internal Server Error: /attendance/summary/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 677, in execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+pyodbc.Error: ('40001', '[40001] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Transaction (Process ID 109) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction. (1205) (SQLExecDirectW)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\HR\views.py", line 209, in attendance_summary
+    for stat in stats:
+                ^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\query.py", line 210, in __iter__
+    for row in compiler.results_iter(
+               ~~~~~~~~~~~~~~~~~~~~~^
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1513, in results_iter
+    results = self.execute_sql(
+        MULTI, chunked_fetch=chunked_fetch, chunk_size=chunk_size
+    )
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 677, in execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+django.db.utils.Error: ('40001', '[40001] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Transaction (Process ID 109) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction. (1205) (SQLExecDirectW)')
+[2025-05-16 15:18:54,394] ERROR django.request Internal Server Error: /attendance/summary/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 677, in execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+pyodbc.Error: ('40001', '[40001] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Transaction (Process ID 112) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction. (1205) (SQLExecDirectW)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\HR\views.py", line 209, in attendance_summary
+    for stat in stats:
+                ^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\query.py", line 210, in __iter__
+    for row in compiler.results_iter(
+               ~~~~~~~~~~~~~~~~~~~~~^
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1513, in results_iter
+    results = self.execute_sql(
+        MULTI, chunked_fetch=chunked_fetch, chunk_size=chunk_size
+    )
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 677, in execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+django.db.utils.Error: ('40001', '[40001] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Transaction (Process ID 112) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction. (1205) (SQLExecDirectW)')
+[2025-05-16 15:18:54,395] ERROR django.request Internal Server Error: /attendance/summary/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 677, in execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+pyodbc.Error: ('40001', '[40001] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Transaction (Process ID 85) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction. (1205) (SQLExecDirectW)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\HR\views.py", line 209, in attendance_summary
+    for stat in stats:
+                ^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\query.py", line 210, in __iter__
+    for row in compiler.results_iter(
+               ~~~~~~~~~~~~~~~~~~~~~^
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1513, in results_iter
+    results = self.execute_sql(
+        MULTI, chunked_fetch=chunked_fetch, chunk_size=chunk_size
+    )
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 677, in execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+django.db.utils.Error: ('40001', '[40001] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Transaction (Process ID 85) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction. (1205) (SQLExecDirectW)')
+[2025-05-16 15:18:54,409] ERROR django.server "GET /attendance/summary/?start_date=2025-05-07&end_date=2025-05-07&company=&branch=Solapur&department=&shift_code= HTTP/1.1" 500 145
+[2025-05-16 15:18:54,422] ERROR django.server "GET /attendance/summary/?start_date=2025-05-07&end_date=2025-05-07&company=&branch=Solapur&department=&shift_code= HTTP/1.1" 500 145
+[2025-05-16 15:18:54,438] ERROR django.server "GET /attendance/summary/?start_date=2025-05-07&end_date=2025-05-07&company=&branch=Solapur&department=&shift_code= HTTP/1.1" 500 145
+[2025-05-16 15:20:02,207] ERROR django.request Internal Server Error: /attendance/summary/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 677, in execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+pyodbc.Error: ('40001', '[40001] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Transaction (Process ID 101) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction. (1205) (SQLExecDirectW)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\HR\views.py", line 209, in attendance_summary
+    for stat in stats:
+                ^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\query.py", line 210, in __iter__
+    for row in compiler.results_iter(
+               ~~~~~~~~~~~~~~~~~~~~~^
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1513, in results_iter
+    results = self.execute_sql(
+        MULTI, chunked_fetch=chunked_fetch, chunk_size=chunk_size
+    )
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 677, in execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+django.db.utils.Error: ('40001', '[40001] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Transaction (Process ID 101) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction. (1205) (SQLExecDirectW)')
+[2025-05-16 15:20:02,216] ERROR django.server "GET /attendance/summary/?start_date=2025-05-07&end_date=2025-05-07&company=&branch=Solapur&department=&shift_code= HTTP/1.1" 500 145
+[2025-05-16 15:23:00,075] ERROR django.request Internal Server Error: /attendance/summary/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 677, in execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+pyodbc.Error: ('40001', '[40001] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Transaction (Process ID 95) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction. (1205) (SQLExecDirectW)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\HR\views.py", line 209, in attendance_summary
+    for stat in stats:
+                ^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\query.py", line 210, in __iter__
+    for row in compiler.results_iter(
+               ~~~~~~~~~~~~~~~~~~~~~^
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1513, in results_iter
+    results = self.execute_sql(
+        MULTI, chunked_fetch=chunked_fetch, chunk_size=chunk_size
+    )
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 677, in execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+django.db.utils.Error: ('40001', '[40001] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Transaction (Process ID 95) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction. (1205) (SQLExecDirectW)')
+[2025-05-16 15:23:00,092] ERROR django.server "GET /attendance/summary/ HTTP/1.1" 500 145
+[2025-05-16 15:27:48,108] ERROR django.request Internal Server Error: /attendance/summary/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 677, in execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+pyodbc.Error: ('40001', '[40001] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Transaction (Process ID 109) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction. (1205) (SQLExecDirectW)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\HR\views.py", line 209, in attendance_summary
+    for stat in stats:
+                ^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\query.py", line 210, in __iter__
+    for row in compiler.results_iter(
+               ~~~~~~~~~~~~~~~~~~~~~^
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1513, in results_iter
+    results = self.execute_sql(
+        MULTI, chunked_fetch=chunked_fetch, chunk_size=chunk_size
+    )
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 677, in execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+django.db.utils.Error: ('40001', '[40001] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Transaction (Process ID 109) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction. (1205) (SQLExecDirectW)')
+[2025-05-16 15:27:48,119] ERROR django.server "GET /attendance/summary/ HTTP/1.1" 500 145
+[2025-05-16 15:27:53,251] ERROR django.request Internal Server Error: /attendance/summary/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 677, in execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+pyodbc.Error: ('40001', '[40001] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Transaction (Process ID 88) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction. (1205) (SQLExecDirectW)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\HR\views.py", line 209, in attendance_summary
+    for stat in stats:
+                ^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\query.py", line 210, in __iter__
+    for row in compiler.results_iter(
+               ~~~~~~~~~~~~~~~~~~~~~^
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1513, in results_iter
+    results = self.execute_sql(
+        MULTI, chunked_fetch=chunked_fetch, chunk_size=chunk_size
+    )
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 677, in execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+django.db.utils.Error: ('40001', '[40001] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Transaction (Process ID 88) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction. (1205) (SQLExecDirectW)')
+[2025-05-16 15:27:53,264] ERROR django.server "GET /attendance/summary/ HTTP/1.1" 500 145
+[2025-05-16 15:27:53,252] ERROR django.request Internal Server Error: /attendance/summary/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 677, in execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+pyodbc.Error: ('40001', '[40001] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Transaction (Process ID 67) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction. (1205) (SQLExecDirectW)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\HR\views.py", line 209, in attendance_summary
+    for stat in stats:
+                ^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\query.py", line 210, in __iter__
+    for row in compiler.results_iter(
+               ~~~~~~~~~~~~~~~~~~~~~^
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1513, in results_iter
+    results = self.execute_sql(
+        MULTI, chunked_fetch=chunked_fetch, chunk_size=chunk_size
+    )
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 677, in execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+django.db.utils.Error: ('40001', '[40001] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Transaction (Process ID 67) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction. (1205) (SQLExecDirectW)')
+[2025-05-16 15:27:53,313] ERROR django.server "GET /attendance/summary/ HTTP/1.1" 500 145
+[2025-05-16 15:29:29,749] ERROR django.request Internal Server Error: /attendance/summary/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 677, in execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+pyodbc.Error: ('40001', '[40001] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Transaction (Process ID 85) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction. (1205) (SQLExecDirectW)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\HR\views.py", line 209, in attendance_summary
+    for stat in stats:
+                ^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\query.py", line 210, in __iter__
+    for row in compiler.results_iter(
+               ~~~~~~~~~~~~~~~~~~~~~^
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1513, in results_iter
+    results = self.execute_sql(
+        MULTI, chunked_fetch=chunked_fetch, chunk_size=chunk_size
+    )
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 677, in execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+django.db.utils.Error: ('40001', '[40001] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Transaction (Process ID 85) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction. (1205) (SQLExecDirectW)')
+[2025-05-16 15:29:29,756] ERROR django.server "GET /attendance/summary/?start_date=2025-05-01&end_date=2025-05-15&company=&branch=Solapur&department=&shift_code= HTTP/1.1" 500 145
+[2025-05-16 15:36:32,915] ERROR django.request Internal Server Error: /attendance/summary/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 677, in execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+pyodbc.Error: ('40001', '[40001] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Transaction (Process ID 67) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction. (1205) (SQLExecDirectW)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\HR\views.py", line 209, in attendance_summary
+    for stat in stats:
+                ^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\query.py", line 210, in __iter__
+    for row in compiler.results_iter(
+               ~~~~~~~~~~~~~~~~~~~~~^
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1513, in results_iter
+    results = self.execute_sql(
+        MULTI, chunked_fetch=chunked_fetch, chunk_size=chunk_size
+    )
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 677, in execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+django.db.utils.Error: ('40001', '[40001] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Transaction (Process ID 67) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction. (1205) (SQLExecDirectW)')
+[2025-05-16 15:36:32,929] ERROR django.server "GET /attendance/summary/ HTTP/1.1" 500 145
+[2025-05-16 15:38:45,548] ERROR django.request Internal Server Error: /attendance/summary/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 677, in execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+pyodbc.Error: ('40001', '[40001] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Transaction (Process ID 95) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction. (1205) (SQLExecDirectW)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\HR\views.py", line 209, in attendance_summary
+    for stat in stats:
+                ^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\query.py", line 400, in __iter__
+    self._fetch_all()
+    ~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\query.py", line 1928, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\query.py", line 210, in __iter__
+    for row in compiler.results_iter(
+               ~~~~~~~~~~~~~~~~~~~~~^
+        chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1513, in results_iter
+    results = self.execute_sql(
+        MULTI, chunked_fetch=chunked_fetch, chunk_size=chunk_size
+    )
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 677, in execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+django.db.utils.Error: ('40001', '[40001] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Transaction (Process ID 95) was deadlocked on lock resources with another process and has been chosen as the deadlock victim. Rerun the transaction. (1205) (SQLExecDirectW)')
+[2025-05-16 15:38:45,563] ERROR django.server "GET /attendance/summary/ HTTP/1.1" 500 145

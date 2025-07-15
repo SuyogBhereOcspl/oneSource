@@ -1,0 +1,77 @@
+from django import forms
+from .models import Vehicle
+from datetime import date
+from django.db import connections
+from django_select2.forms import Select2Widget, Select2MultipleWidget
+from STORE import urls
+
+class VehicleForm(forms.ModelForm):
+    name_of_supplier = forms.CharField(
+        widget=Select2Widget(
+            attrs={'data-url': '/search_supplier/', 'class': 'w-full p-2 border border-gray-300 rounded-lg'}
+        )
+    )
+    
+    material = forms.CharField(
+        widget=Select2Widget(
+            attrs={'data-url': '/search_item/', 'class': 'w-full p-2 border border-gray-300 rounded-lg'}
+        )
+    )
+    unloading_days = forms.IntegerField(
+        required=False,
+        widget=forms.HiddenInput()  # Makes it hidden but still part of form submission
+    )
+    qty = forms.FloatField(
+        required=False,
+        widget=forms.NumberInput(attrs={
+            'class': 'w-full p-2 border border-gray-300 rounded-lg',
+            'step': 'any',
+            'inputmode': 'decimal'
+        })  
+    )
+
+    class Meta:
+        model = Vehicle
+        fields = [
+            'record_date', 'invoice', 'name_of_supplier', 'material', 'unit', 'qty',
+            'reporting_date', 'report_time', 'unloading_date', 'unloading_time','unloading_days',
+            'vehicle_no', 'name_of_transporter', 'status', 'manufacture', 'remark'
+        ]
+        widgets = {
+            'record_date': forms.DateInput(attrs={'type': 'date','readonly': 'readonly', 'class': 'w-full p-2 border border-gray-300 rounded-lg bg-gray-100'}),
+            'invoice': forms.TextInput(attrs={'class': 'w-full p-2 border border-gray-300 rounded-lg'}),
+            'unit': forms.TextInput(attrs={'class': 'w-full p-2 border border-gray-300 rounded-lg'}),
+            'reporting_date': forms.DateInput(attrs={'type': 'date', 'class': 'w-full p-2 border border-gray-300 rounded-lg'}),
+            'report_time': forms.TimeInput(attrs={'type': 'time', 'class': 'w-full p-2 border border-gray-300 rounded-lg'}),
+            'unloading_date': forms.DateInput(attrs={'type': 'date', 'class': 'w-full p-2 border border-gray-300 rounded-lg'}),
+            'unloading_time': forms.TimeInput(attrs={'type': 'time', 'class': 'w-full p-2 border border-gray-300 rounded-lg'}),
+            'vehicle_no': forms.TextInput(attrs={'class': 'w-full p-2 border border-gray-300 rounded-lg'}),
+            'name_of_transporter': forms.TextInput(attrs={'class': 'w-full p-2 border border-gray-300 rounded-lg'}),
+            'status': forms.Select(choices=[('Pending', 'Pending'), ('Unloaded', 'Unloaded')], attrs={'class': 'w-full p-2 border border-gray-300 rounded-lg'}),
+            'manufacture': forms.TextInput(attrs={'class': 'w-full p-2 border border-gray-300 rounded-lg'}),
+            'remark': forms.Textarea(attrs={'rows': 3, 'class': 'w-full p-2 border border-gray-300 rounded-lg'}),
+        }
+    
+    def __init__(self, *args, **kwargs):
+        super(VehicleForm, self).__init__(*args, **kwargs)
+
+        # Set every field to not required
+        for field_name, field in self.fields.items():
+            field.required = False
+        
+        if self.instance and self.instance.pk:
+            # Pre-populating the Supplier and Material Select2 fields
+            self.fields['name_of_supplier'].initial = self.instance.name_of_supplier
+            self.fields['material'].initial = self.instance.material
+
+    def clean(self):
+        cleaned_data = super().clean()
+        reporting_date = cleaned_data.get("reporting_date")
+        unloading_date = cleaned_data.get("unloading_date")
+
+        if reporting_date and unloading_date:
+            unloading_days = (unloading_date - reporting_date).days
+            cleaned_data["unloading_days"] = unloading_days
+            # cleaned_data["status"] = "unloaded" if unloading_days >= 0 else "pending"
+
+        return cleaned_data

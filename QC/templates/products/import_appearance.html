@@ -1,0 +1,87 @@
+{# products/templates/products/import_appearance.html #}
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Import Appearance Options – Products{% endblock %}
+
+{% block head_extra %}
+<style>
+  /* Simple card‐style for this import form */
+  .import-card {
+    background-color: #ffffff;
+    padding: 24px 28px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    max-width: 500px;
+    margin: 40px auto;
+  }
+  .import-card h2 {
+    margin-bottom: 16px;
+    font-size: 1.4em;
+    color: #333;
+  }
+  .import-card .form-group {
+    margin-bottom: 16px;
+  }
+  .import-card label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+  .import-card input[type="file"] {
+    display: block;
+    width: 100%;
+  }
+  .btn-import {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.95em;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  .btn-import:hover {
+    background-color: #0056b3;
+  }
+  .note {
+    font-size: 0.85em;
+    color: #555;
+    margin-top: 8px;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+  <div class="import-card">
+    <h2>Import Appearance Options</h2>
+
+    {% if messages %}
+      {% for msg in messages %}
+        <div class="alert alert-{{ msg.tags }}">{{ msg }}</div>
+      {% endfor %}
+    {% endif %}
+
+    <form method="post" enctype="multipart/form-data" novalidate>
+      {% csrf_token %}
+
+      <div class="form-group">
+        {{ form.file.label_tag }}
+        {{ form.file }}
+        {% if form.file.help_text %}
+          <p class="note">{{ form.file.help_text }}</p>
+        {% endif %}
+        {% if form.file.errors %}
+          <ul class="errorlist">
+            {% for e in form.file.errors %}
+              <li>{{ e }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+
+      <button type="submit" class="btn-import">Upload &amp; Import</button>
+    </form>
+  </div>
+{% endblock %}

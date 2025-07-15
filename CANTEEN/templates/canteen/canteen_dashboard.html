@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canteen Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="{% static 'main/css/fontawesome.css' %}">
+</head>
+<body>
+  <header class="bg-gray-200 shadow p-4 relative">
+    <div class="relative">
+      <!-- Centered H2 -->
+      <h2 class="text-2xl md:text-3xl font-semibold text-gray-700 text-center">Canteen Dashboard</h2>
+      {% if request.user.is_authenticated %}
+      <!-- Right-aligned Report button -->
+      <a href="{% url 'canteen_attendance_summary_report' %}"
+         class="absolute right-0 top-1/2 -translate-y-1/2 bg-indigo-500 hover:bg-indigo-700 text-white font-semibold px-4 py-2 rounded shadow-md">
+         Report
+      </a>
+      {% endif %}
+    </div>
+  </header>
+
+  <main class="p-6 grid grid-cols-1 md:grid-cols-[1fr_1.6fr] gap-6">
+      
+    <!-- Left Column: All Charts -->
+    <div class="space-y-6">
+      <!-- Summary Cards -->
+      {% if shift_card_data %}
+      <div class="grid grid-cols-3 sm:grid-cols-3 sm:grid-cols-3  gap-2">
+        {% for shift_obj in shift_card_data %}
+        <div class="bg-white rounded-lg shadow p-4 border-l-4 border-blue-500">
+            <div class="flex items-center justify-between space-x-2">
+              <!-- Clock Icon -->
+              <div class="text-blue-500 text-3xl">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-8 h-8">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 6v6h4.5m4.5 3A9 9 0 1112 3a9 9 0 019 9z" />
+                </svg>
+              </div>
+              <!-- Shift count -->
+              <div class="text-2xl font-bold text-gray-800">
+                  {{ shift_obj.count }}
+              </div>
+            </div>
+
+            <!-- Shift name and times -->
+            <div class="flex justify-end items-right mt-2 text-right">
+              <div>
+                <div class="text-gray-600 text-sm font-semibold">
+                  {{ shift_obj.name }}
+                </div>
+                <div class="text-sm text-gray-500">
+                  {{ shift_obj.start_time|time:"g:i A" }} - {{ shift_obj.end_time|time:"g:i A" }}
+                </div>
+              </div>
+            </div>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+  
+      <!-- Bar Chart -->
+      <div class="bg-white rounded-lg shadow p-4">
+        <h2 class="text-lg font-semibold text-gray-700 mb-2">Today: Meal Distribution</h2>
+        <canvas id="shiftChart" class="w-full h-40"></canvas>
+      </div>
+  
+      <!-- Weekly Chart -->
+      <div class="bg-white rounded-lg shadow p-4">
+        <h2 class="text-lg font-semibold text-gray-700 mb-2">Weekly Trends</h2>
+        <canvas id="weeklyShiftChart" class="w-full h-40"></canvas>
+      </div>
+  
+      <!-- Monthly Chart -->
+      <div class="bg-white rounded-lg shadow p-4">
+        <h2 class="text-lg font-semibold text-gray-700 mb-2">Monthly Trends</h2>
+        <canvas id="monthlyShiftChart" class="w-full h-40"></canvas>
+      </div>
+    </div>
+  
+    <!-- Right Column: Attendance Table -->
+    <div class="bg-white rounded-lg shadow p-4 h-full overflow-auto"> 
+      <div class="flex items-center justify-between mb-4">
+        <!-- title takes up remaining space -->
+        <h2 class="text-lg font-semibold text-gray-700">
+          Today's Attendance
+        </h2>
+      
+        <form method="get" class="flex items-center space-x-4">
+          <label class="flex items-center text-sm space-x-1">
+            <span>From:</span>
+            <input type="date" name="from_date" value="{{ from_date }}" class="border rounded px-2 py-1" >
+          </label>
+      
+          <label class="flex items-center text-sm space-x-1">
+            <span>To:</span>
+            <input type="date" name="to_date" value="{{ to_date }}" class="border rounded px-2 py-1">
+          </label>
+      
+          <button type="submit"  class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-1 rounded text-sm">
+          <i class="fa-solid fa-filter"></i>
+          </button>
+          <a href="{% url 'canteen_dashboard' %}"
+            class="bg-gray-400 hover:bg-gray-500 text-white px-4 py-1 rounded text-sm" title="Clear filters" >
+          <i class="fa-solid fa-eraser"></i> </a>
+        </form>
+      </div>
+      
+
+      <div class="overflow-x-auto">
+        <table class="min-w-full table-auto text-sm">
+          <thead>
+            <tr class="bg-gray-100 text-left"> 
+              <th class="px-4 py-2">Employee ID</th>
+              <th class="px-4 py-2">Employee</th>
+              <th class="px-4 py-2">Department</th>
+              <th class="px-4 py-2">Shift</th>
+              <th class="px-4 py-2">Punched At</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for a in attendances %}
+            <tr class="border-b hover:bg-gray-50 {% if forloop.counter <= 3 %}text-lg font-bold{% endif %}">
+              <td class="px-4 py-2">{% if a.employee.id|stringformat:"s"|first in "Tt" %}
+                {{ a.employee.id }}
+                {% else %}
+                {{ "00000"|add:a.employee.id|stringformat:"05d" }}
+                {% endif %}
+              </td>
+              <td class="px-4 py-2 ">{{ a.employee.name }}</td>
+              <td class="px-4 py-2">{{ a.employee.department.name }}</td>
+              <td class="px-4 py-2 whitespace-nowrap">{% if a.shift %}{{ a.shift.name }}{% else %}Unknown{% endif %}</td>
+              <td class="px-4 py-2 whitespace-nowrap">{{ a.punched_at_local|date:"d M Y, h:i A" }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+              <td colspan="5" class="text-center text-gray-500 py-4">No attendance records found.</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+<!-- Chart.js Integration -->
+<script>
+    const shiftChartCtx = document.getElementById('shiftChart');
+const shiftData = {{ shift_chart_data|safe }};
+
+// Define a list of colors you want to cycle through
+const colorPalette = [
+  'rgba(255, 99, 132, 0.7)',   // Red
+  'rgba(54, 162, 235, 0.7)',   // Blue
+  'rgba(255, 206, 86, 0.7)',   // Yellow
+  'rgba(75, 192, 192, 0.7)',   // Teal
+  'rgba(153, 102, 255, 0.7)',  // Purple
+  'rgba(255, 159, 64, 0.7)',   // Orange
+];
+
+// Map each data point to a color in our palette
+// If we have more bars than colors, cycle through the palette with modulo (%)
+const barColors = shiftData.data.map((_, idx) => {
+  return colorPalette[idx % colorPalette.length];
+});
+
+const borderColors = shiftData.data.map((_, idx) => {
+  // Optional: make border a slightly darker version, or just reuse the same color
+  return colorPalette[idx % colorPalette.length].replace('0.7', '1');
+});
+
+new Chart(shiftChartCtx, {
+    type: 'bar',
+    data: {
+        labels: shiftData.labels,
+        datasets: [{
+            label: 'Meals Availed',
+            data: shiftData.data,
+            backgroundColor: barColors,
+            borderColor: borderColors,
+            borderWidth: 1
+        }]
+    },
+    options: {
+        responsive: true,
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+
+    const weeklyChartCtx = document.getElementById('weeklyShiftChart');
+    const weeklyData = {{ shift_weekly_chart_data|safe }};
+
+    new Chart(weeklyChartCtx, {
+        type: 'line',
+        data: {
+            labels: weeklyData.labels,
+            datasets: [{
+                label: 'Weekly Meals',
+                data: weeklyData.data,
+                borderColor: 'rgba(34, 197, 94, 1)',
+                backgroundColor: 'rgba(34, 197, 94, 0.2)',
+                tension: 0.4
+            }]
+        }
+    });
+
+    const monthlyChartCtx = document.getElementById('monthlyShiftChart');
+    const monthlyData = {{ shift_monthly_chart_data|safe }};
+
+    new Chart(monthlyChartCtx, {
+        type: 'line',
+        data: {
+            labels: monthlyData.labels,
+            datasets: [{
+                label: 'Monthly Meals',
+                data: monthlyData.data,
+                borderColor: 'rgba(234, 179, 8, 1)',
+                backgroundColor: 'rgba(234, 179, 8, 0.2)',
+                tension: 0.4
+            }]
+        }
+    });
+   
+
+</script>
+<script>
+  function updateDashboard() {
+    // Step 1: Call device fetch API
+    fetch("{% url 'fetch_attendance' %}")
+      .then(() => {
+        // Step 2: Now call dashboard API
+        return fetch("{% url 'dashboard_data_api' %}");
+      })
+      .then(res => res.json())
+      .then(data => {
+        // Update chart
+        shiftChart.data.labels = data.shift_chart_data.labels;
+        shiftChart.data.datasets[0].data = data.shift_chart_data.data;
+        shiftChart.update();
+
+        // Update table
+        const tableBody = document.querySelector("table tbody");
+        tableBody.innerHTML = '';
+
+        if (data.attendances.length === 0) {
+          tableBody.innerHTML = `<tr><td colspan="5" class="text-center text-gray-500 py-4">No attendance records found.</td></tr>`;
+        } else {
+          data.attendances.forEach(row => {
+            tableBody.innerHTML += `
+              <tr class="border-b hover:bg-gray-50">
+                <td class="px-4 py-2">${row.employee}</td>
+                <td class="px-4 py-2">${row.department}</td>
+                <td class="px-4 py-2">${row.shift}</td>
+                <td class="px-4 py-2">${row.punched_at}</td>
+                <td class="px-4 py-2">${row.location}</td>
+              </tr>
+            `;
+          });
+        }
+      })
+      .catch(err => console.error("Dashboard refresh failed:", err));
+  }
+
+  // Refresh every 5 seconds
+  setInterval(updateDashboard, 5000);
+  
+  
+  
+ // Define your time windows: 11:30-14:00, 19:30-21:30
+ const timeWindows = [
+	{ start: {h:11, m:30}, end: {h:14, m:0} },
+	{ start: {h:19, m:30}, end: {h:21, m:30} }
+  ];
+  const RELOAD_INTERVAL = 10000; // 5 seconds
+
+  function isWithinAnyWindow(now, windows) {
+	for (let win of windows) {
+	  let start = new Date(now);
+	  start.setHours(win.start.h, win.start.m, 0, 0);
+	  let end = new Date(now);
+	  end.setHours(win.end.h, win.end.m, 0, 0);
+	  if (now >= start && now <= end) return true;
+	}
+	return false;
+  }
+
+  function scheduleRefresh() {
+	const now = new Date();
+	if (isWithinAnyWindow(now, timeWindows)) {
+	  // Bypass cache
+	  let url = window.location.href.split('?')[0];
+	  let params = new URLSearchParams(window.location.search);
+	  params.set('refresh', Date.now());
+	  window.location.href = url + '?' + params.toString();
+	} else {
+	  setTimeout(scheduleRefresh, RELOAD_INTERVAL);
+	}
+  }
+
+  window.addEventListener('DOMContentLoaded', scheduleRefresh);
+  </script>
+  <script src="{% static 'main/js/fontawesome.js' %}"></script>
+</body>
+</html>
+
+
+
+
+

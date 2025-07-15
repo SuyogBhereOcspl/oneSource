@@ -1,0 +1,901 @@
+[2025-06-19 12:06:38,069] ERROR django.request Internal Server Error: /get_products/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+pyodbc.OperationalError: ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure (0) (SQLSetConnectAttr(SQL_ATTR_AUTOCOMMIT)); [08S01] [Microsoft][ODBC Driver 17 for SQL Server]The connection is broken and recovery is not possible. The client driver attempted to recover the connection one or more times and all attempts failed. Increase the value of ConnectRetryCount to increase the number of recovery attempts. (0)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\oneSource\ETP\views.py", line 65, in get_products
+    with connections['readonly_db'].cursor() as cursor:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 316, in cursor
+    return self._cursor()
+           ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 261, in _cursor
+    conn = super()._cursor()
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 292, in _cursor
+    self.ensure_connection()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 274, in ensure_connection
+    with self.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+django.db.utils.OperationalError: ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure (0) (SQLSetConnectAttr(SQL_ATTR_AUTOCOMMIT)); [08S01] [Microsoft][ODBC Driver 17 for SQL Server]The connection is broken and recovery is not possible. The client driver attempted to recover the connection one or more times and all attempts failed. Increase the value of ConnectRetryCount to increase the number of recovery attempts. (0)')
+[2025-06-19 12:06:38,095] ERROR django.server "GET /get_products/ HTTP/1.1" 500 145
+[2025-06-19 12:06:39,717] ERROR django.request Internal Server Error: /get_products/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+pyodbc.OperationalError: ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure (0) (SQLSetConnectAttr(SQL_ATTR_AUTOCOMMIT)); [08S01] [Microsoft][ODBC Driver 17 for SQL Server]The connection is broken and recovery is not possible. The client driver attempted to recover the connection one or more times and all attempts failed. Increase the value of ConnectRetryCount to increase the number of recovery attempts. (0)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\oneSource\ETP\views.py", line 65, in get_products
+    with connections['readonly_db'].cursor() as cursor:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 316, in cursor
+    return self._cursor()
+           ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 261, in _cursor
+    conn = super()._cursor()
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 292, in _cursor
+    self.ensure_connection()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 274, in ensure_connection
+    with self.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+django.db.utils.OperationalError: ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure (0) (SQLSetConnectAttr(SQL_ATTR_AUTOCOMMIT)); [08S01] [Microsoft][ODBC Driver 17 for SQL Server]The connection is broken and recovery is not possible. The client driver attempted to recover the connection one or more times and all attempts failed. Increase the value of ConnectRetryCount to increase the number of recovery attempts. (0)')
+[2025-06-19 12:06:39,722] ERROR django.server "GET /get_products/?term=2 HTTP/1.1" 500 145
+[2025-06-19 12:06:40,075] ERROR django.request Internal Server Error: /get_products/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+pyodbc.OperationalError: ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure (0) (SQLSetConnectAttr(SQL_ATTR_AUTOCOMMIT)); [08S01] [Microsoft][ODBC Driver 17 for SQL Server]The connection is broken and recovery is not possible. The client driver attempted to recover the connection one or more times and all attempts failed. Increase the value of ConnectRetryCount to increase the number of recovery attempts. (0)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\oneSource\ETP\views.py", line 65, in get_products
+    with connections['readonly_db'].cursor() as cursor:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 316, in cursor
+    return self._cursor()
+           ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 261, in _cursor
+    conn = super()._cursor()
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 292, in _cursor
+    self.ensure_connection()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 274, in ensure_connection
+    with self.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+django.db.utils.OperationalError: ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure (0) (SQLSetConnectAttr(SQL_ATTR_AUTOCOMMIT)); [08S01] [Microsoft][ODBC Driver 17 for SQL Server]The connection is broken and recovery is not possible. The client driver attempted to recover the connection one or more times and all attempts failed. Increase the value of ConnectRetryCount to increase the number of recovery attempts. (0)')
+[2025-06-19 12:06:40,078] ERROR django.server "GET /get_products/?term=2- HTTP/1.1" 500 145
+[2025-06-19 12:06:43,579] ERROR django.request Internal Server Error: /get_products/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+pyodbc.OperationalError: ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure (0) (SQLSetConnectAttr(SQL_ATTR_AUTOCOMMIT)); [08S01] [Microsoft][ODBC Driver 17 for SQL Server]The connection is broken and recovery is not possible. The client driver attempted to recover the connection one or more times and all attempts failed. Increase the value of ConnectRetryCount to increase the number of recovery attempts. (0)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\oneSource\ETP\views.py", line 65, in get_products
+    with connections['readonly_db'].cursor() as cursor:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 316, in cursor
+    return self._cursor()
+           ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 261, in _cursor
+    conn = super()._cursor()
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 292, in _cursor
+    self.ensure_connection()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 274, in ensure_connection
+    with self.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+django.db.utils.OperationalError: ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure (0) (SQLSetConnectAttr(SQL_ATTR_AUTOCOMMIT)); [08S01] [Microsoft][ODBC Driver 17 for SQL Server]The connection is broken and recovery is not possible. The client driver attempted to recover the connection one or more times and all attempts failed. Increase the value of ConnectRetryCount to increase the number of recovery attempts. (0)')
+[2025-06-19 12:06:43,588] ERROR django.server "GET /get_products/ HTTP/1.1" 500 145
+[2025-06-19 12:06:46,273] ERROR django.request Internal Server Error: /get_products/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+pyodbc.OperationalError: ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure (0) (SQLSetConnectAttr(SQL_ATTR_AUTOCOMMIT)); [08S01] [Microsoft][ODBC Driver 17 for SQL Server]The connection is broken and recovery is not possible. The client driver attempted to recover the connection one or more times and all attempts failed. Increase the value of ConnectRetryCount to increase the number of recovery attempts. (0)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\oneSource\ETP\views.py", line 65, in get_products
+    with connections['readonly_db'].cursor() as cursor:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 316, in cursor
+    return self._cursor()
+           ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 261, in _cursor
+    conn = super()._cursor()
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 292, in _cursor
+    self.ensure_connection()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 274, in ensure_connection
+    with self.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+django.db.utils.OperationalError: ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure (0) (SQLSetConnectAttr(SQL_ATTR_AUTOCOMMIT)); [08S01] [Microsoft][ODBC Driver 17 for SQL Server]The connection is broken and recovery is not possible. The client driver attempted to recover the connection one or more times and all attempts failed. Increase the value of ConnectRetryCount to increase the number of recovery attempts. (0)')
+[2025-06-19 12:06:46,281] ERROR django.server "GET /get_products/ HTTP/1.1" 500 145
+[2025-06-19 12:06:47,179] ERROR django.request Internal Server Error: /get_products/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+pyodbc.OperationalError: ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure (0) (SQLSetConnectAttr(SQL_ATTR_AUTOCOMMIT)); [08S01] [Microsoft][ODBC Driver 17 for SQL Server]The connection is broken and recovery is not possible. The client driver attempted to recover the connection one or more times and all attempts failed. Increase the value of ConnectRetryCount to increase the number of recovery attempts. (0)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\oneSource\ETP\views.py", line 65, in get_products
+    with connections['readonly_db'].cursor() as cursor:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 316, in cursor
+    return self._cursor()
+           ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 261, in _cursor
+    conn = super()._cursor()
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 292, in _cursor
+    self.ensure_connection()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 274, in ensure_connection
+    with self.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+django.db.utils.OperationalError: ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure (0) (SQLSetConnectAttr(SQL_ATTR_AUTOCOMMIT)); [08S01] [Microsoft][ODBC Driver 17 for SQL Server]The connection is broken and recovery is not possible. The client driver attempted to recover the connection one or more times and all attempts failed. Increase the value of ConnectRetryCount to increase the number of recovery attempts. (0)')
+[2025-06-19 12:06:47,185] ERROR django.server "GET /get_products/ HTTP/1.1" 500 145
+[2025-06-19 12:06:52,975] ERROR django.request Internal Server Error: /get_products/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+pyodbc.OperationalError: ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure (0) (SQLSetConnectAttr(SQL_ATTR_AUTOCOMMIT)); [08S01] [Microsoft][ODBC Driver 17 for SQL Server]The connection is broken and recovery is not possible. The client driver attempted to recover the connection one or more times and all attempts failed. Increase the value of ConnectRetryCount to increase the number of recovery attempts. (0)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\oneSource\ETP\views.py", line 65, in get_products
+    with connections['readonly_db'].cursor() as cursor:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 316, in cursor
+    return self._cursor()
+           ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 261, in _cursor
+    conn = super()._cursor()
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 292, in _cursor
+    self.ensure_connection()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 274, in ensure_connection
+    with self.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+django.db.utils.OperationalError: ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure (0) (SQLSetConnectAttr(SQL_ATTR_AUTOCOMMIT)); [08S01] [Microsoft][ODBC Driver 17 for SQL Server]The connection is broken and recovery is not possible. The client driver attempted to recover the connection one or more times and all attempts failed. Increase the value of ConnectRetryCount to increase the number of recovery attempts. (0)')
+[2025-06-19 12:06:52,979] ERROR django.server "GET /get_products/ HTTP/1.1" 500 145
+[2025-06-19 12:06:56,269] ERROR django.request Internal Server Error: /get_products/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+pyodbc.OperationalError: ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure (0) (SQLSetConnectAttr(SQL_ATTR_AUTOCOMMIT)); [08S01] [Microsoft][ODBC Driver 17 for SQL Server]The connection is broken and recovery is not possible. The client driver attempted to recover the connection one or more times and all attempts failed. Increase the value of ConnectRetryCount to increase the number of recovery attempts. (0)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\oneSource\ETP\views.py", line 65, in get_products
+    with connections['readonly_db'].cursor() as cursor:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 316, in cursor
+    return self._cursor()
+           ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 261, in _cursor
+    conn = super()._cursor()
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 292, in _cursor
+    self.ensure_connection()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 274, in ensure_connection
+    with self.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+django.db.utils.OperationalError: ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure (0) (SQLSetConnectAttr(SQL_ATTR_AUTOCOMMIT)); [08S01] [Microsoft][ODBC Driver 17 for SQL Server]The connection is broken and recovery is not possible. The client driver attempted to recover the connection one or more times and all attempts failed. Increase the value of ConnectRetryCount to increase the number of recovery attempts. (0)')
+[2025-06-19 12:06:56,273] ERROR django.server "GET /get_products/ HTTP/1.1" 500 145
+[2025-06-19 12:06:59,124] ERROR django.request Internal Server Error: /get_products/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+pyodbc.OperationalError: ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure (0) (SQLSetConnectAttr(SQL_ATTR_AUTOCOMMIT)); [08S01] [Microsoft][ODBC Driver 17 for SQL Server]The connection is broken and recovery is not possible. The client driver attempted to recover the connection one or more times and all attempts failed. Increase the value of ConnectRetryCount to increase the number of recovery attempts. (0)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\oneSource\ETP\views.py", line 65, in get_products
+    with connections['readonly_db'].cursor() as cursor:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 316, in cursor
+    return self._cursor()
+           ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 261, in _cursor
+    conn = super()._cursor()
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 292, in _cursor
+    self.ensure_connection()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 274, in ensure_connection
+    with self.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+django.db.utils.OperationalError: ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure (0) (SQLSetConnectAttr(SQL_ATTR_AUTOCOMMIT)); [08S01] [Microsoft][ODBC Driver 17 for SQL Server]The connection is broken and recovery is not possible. The client driver attempted to recover the connection one or more times and all attempts failed. Increase the value of ConnectRetryCount to increase the number of recovery attempts. (0)')
+[2025-06-19 12:06:59,131] ERROR django.server "GET /get_products/ HTTP/1.1" 500 145
+[2025-06-19 12:07:09,813] ERROR django.request Internal Server Error: /get_products/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+pyodbc.OperationalError: ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure (0) (SQLSetConnectAttr(SQL_ATTR_AUTOCOMMIT)); [08S01] [Microsoft][ODBC Driver 17 for SQL Server]The connection is broken and recovery is not possible. The client driver attempted to recover the connection one or more times and all attempts failed. Increase the value of ConnectRetryCount to increase the number of recovery attempts. (0)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\oneSource\ETP\views.py", line 65, in get_products
+    with connections['readonly_db'].cursor() as cursor:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 316, in cursor
+    return self._cursor()
+           ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 261, in _cursor
+    conn = super()._cursor()
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 292, in _cursor
+    self.ensure_connection()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 274, in ensure_connection
+    with self.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+django.db.utils.OperationalError: ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure (0) (SQLSetConnectAttr(SQL_ATTR_AUTOCOMMIT)); [08S01] [Microsoft][ODBC Driver 17 for SQL Server]The connection is broken and recovery is not possible. The client driver attempted to recover the connection one or more times and all attempts failed. Increase the value of ConnectRetryCount to increase the number of recovery attempts. (0)')
+[2025-06-19 12:07:09,823] ERROR django.server "GET /get_products/ HTTP/1.1" 500 145
+[2025-06-19 12:07:23,148] ERROR django.request Internal Server Error: /get_products/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+pyodbc.OperationalError: ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure (0) (SQLSetConnectAttr(SQL_ATTR_AUTOCOMMIT)); [08S01] [Microsoft][ODBC Driver 17 for SQL Server]The connection is broken and recovery is not possible. The client driver attempted to recover the connection one or more times and all attempts failed. Increase the value of ConnectRetryCount to increase the number of recovery attempts. (0)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\oneSource\ETP\views.py", line 65, in get_products
+    with connections['readonly_db'].cursor() as cursor:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 316, in cursor
+    return self._cursor()
+           ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 261, in _cursor
+    conn = super()._cursor()
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 292, in _cursor
+    self.ensure_connection()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 274, in ensure_connection
+    with self.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+django.db.utils.OperationalError: ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure (0) (SQLSetConnectAttr(SQL_ATTR_AUTOCOMMIT)); [08S01] [Microsoft][ODBC Driver 17 for SQL Server]The connection is broken and recovery is not possible. The client driver attempted to recover the connection one or more times and all attempts failed. Increase the value of ConnectRetryCount to increase the number of recovery attempts. (0)')
+[2025-06-19 12:07:23,158] ERROR django.server "GET /get_products/ HTTP/1.1" 500 145
+[2025-06-19 12:07:29,072] ERROR django.request Internal Server Error: /get_products/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+pyodbc.OperationalError: ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure (0) (SQLSetConnectAttr(SQL_ATTR_AUTOCOMMIT)); [08S01] [Microsoft][ODBC Driver 17 for SQL Server]The connection is broken and recovery is not possible. The client driver attempted to recover the connection one or more times and all attempts failed. Increase the value of ConnectRetryCount to increase the number of recovery attempts. (0)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\oneSource\ETP\views.py", line 65, in get_products
+    with connections['readonly_db'].cursor() as cursor:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 316, in cursor
+    return self._cursor()
+           ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 261, in _cursor
+    conn = super()._cursor()
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 292, in _cursor
+    self.ensure_connection()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 274, in ensure_connection
+    with self.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+django.db.utils.OperationalError: ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure (0) (SQLSetConnectAttr(SQL_ATTR_AUTOCOMMIT)); [08S01] [Microsoft][ODBC Driver 17 for SQL Server]The connection is broken and recovery is not possible. The client driver attempted to recover the connection one or more times and all attempts failed. Increase the value of ConnectRetryCount to increase the number of recovery attempts. (0)')
+[2025-06-19 12:07:29,077] ERROR django.server "GET /get_products/ HTTP/1.1" 500 145
+[2025-06-19 12:07:30,538] ERROR django.request Internal Server Error: /get_products/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+pyodbc.OperationalError: ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure (0) (SQLSetConnectAttr(SQL_ATTR_AUTOCOMMIT)); [08S01] [Microsoft][ODBC Driver 17 for SQL Server]The connection is broken and recovery is not possible. The client driver attempted to recover the connection one or more times and all attempts failed. Increase the value of ConnectRetryCount to increase the number of recovery attempts. (0)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\oneSource\ETP\views.py", line 65, in get_products
+    with connections['readonly_db'].cursor() as cursor:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 316, in cursor
+    return self._cursor()
+           ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 261, in _cursor
+    conn = super()._cursor()
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 292, in _cursor
+    self.ensure_connection()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 274, in ensure_connection
+    with self.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+django.db.utils.OperationalError: ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure (0) (SQLSetConnectAttr(SQL_ATTR_AUTOCOMMIT)); [08S01] [Microsoft][ODBC Driver 17 for SQL Server]The connection is broken and recovery is not possible. The client driver attempted to recover the connection one or more times and all attempts failed. Increase the value of ConnectRetryCount to increase the number of recovery attempts. (0)')
+[2025-06-19 12:07:30,548] ERROR django.server "GET /get_products/ HTTP/1.1" 500 145
+[2025-06-19 12:07:31,295] ERROR django.request Internal Server Error: /get_products/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+pyodbc.OperationalError: ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure (0) (SQLSetConnectAttr(SQL_ATTR_AUTOCOMMIT)); [08S01] [Microsoft][ODBC Driver 17 for SQL Server]The connection is broken and recovery is not possible. The client driver attempted to recover the connection one or more times and all attempts failed. Increase the value of ConnectRetryCount to increase the number of recovery attempts. (0)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\oneSource\ETP\views.py", line 65, in get_products
+    with connections['readonly_db'].cursor() as cursor:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 316, in cursor
+    return self._cursor()
+           ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 261, in _cursor
+    conn = super()._cursor()
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 292, in _cursor
+    self.ensure_connection()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 274, in ensure_connection
+    with self.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+django.db.utils.OperationalError: ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure (0) (SQLSetConnectAttr(SQL_ATTR_AUTOCOMMIT)); [08S01] [Microsoft][ODBC Driver 17 for SQL Server]The connection is broken and recovery is not possible. The client driver attempted to recover the connection one or more times and all attempts failed. Increase the value of ConnectRetryCount to increase the number of recovery attempts. (0)')
+[2025-06-19 12:07:31,301] ERROR django.server "GET /get_products/ HTTP/1.1" 500 145
+[2025-06-19 12:07:32,132] ERROR django.request Internal Server Error: /get_products/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+pyodbc.OperationalError: ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure (0) (SQLSetConnectAttr(SQL_ATTR_AUTOCOMMIT)); [08S01] [Microsoft][ODBC Driver 17 for SQL Server]The connection is broken and recovery is not possible. The client driver attempted to recover the connection one or more times and all attempts failed. Increase the value of ConnectRetryCount to increase the number of recovery attempts. (0)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\oneSource\ETP\views.py", line 65, in get_products
+    with connections['readonly_db'].cursor() as cursor:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 316, in cursor
+    return self._cursor()
+           ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 261, in _cursor
+    conn = super()._cursor()
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 292, in _cursor
+    self.ensure_connection()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 274, in ensure_connection
+    with self.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+django.db.utils.OperationalError: ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure (0) (SQLSetConnectAttr(SQL_ATTR_AUTOCOMMIT)); [08S01] [Microsoft][ODBC Driver 17 for SQL Server]The connection is broken and recovery is not possible. The client driver attempted to recover the connection one or more times and all attempts failed. Increase the value of ConnectRetryCount to increase the number of recovery attempts. (0)')
+[2025-06-19 12:07:32,141] ERROR django.server "GET /get_products/ HTTP/1.1" 500 145
+[2025-06-19 12:07:51,671] ERROR django.request Internal Server Error: /get_products/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+pyodbc.OperationalError: ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure (0) (SQLSetConnectAttr(SQL_ATTR_AUTOCOMMIT)); [08S01] [Microsoft][ODBC Driver 17 for SQL Server]The connection is broken and recovery is not possible. The client driver attempted to recover the connection one or more times and all attempts failed. Increase the value of ConnectRetryCount to increase the number of recovery attempts. (0)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\oneSource\ETP\views.py", line 65, in get_products
+    with connections['readonly_db'].cursor() as cursor:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 316, in cursor
+    return self._cursor()
+           ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 261, in _cursor
+    conn = super()._cursor()
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 292, in _cursor
+    self.ensure_connection()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 274, in ensure_connection
+    with self.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+django.db.utils.OperationalError: ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure (0) (SQLSetConnectAttr(SQL_ATTR_AUTOCOMMIT)); [08S01] [Microsoft][ODBC Driver 17 for SQL Server]The connection is broken and recovery is not possible. The client driver attempted to recover the connection one or more times and all attempts failed. Increase the value of ConnectRetryCount to increase the number of recovery attempts. (0)')
+[2025-06-19 12:07:51,675] ERROR django.server "GET /get_products/ HTTP/1.1" 500 145
+[2025-06-19 12:07:57,421] ERROR django.request Internal Server Error: /get_products/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+pyodbc.OperationalError: ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure (0) (SQLSetConnectAttr(SQL_ATTR_AUTOCOMMIT)); [08S01] [Microsoft][ODBC Driver 17 for SQL Server]The connection is broken and recovery is not possible. The client driver attempted to recover the connection one or more times and all attempts failed. Increase the value of ConnectRetryCount to increase the number of recovery attempts. (0)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\oneSource\ETP\views.py", line 65, in get_products
+    with connections['readonly_db'].cursor() as cursor:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 316, in cursor
+    return self._cursor()
+           ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 261, in _cursor
+    conn = super()._cursor()
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 292, in _cursor
+    self.ensure_connection()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 274, in ensure_connection
+    with self.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+django.db.utils.OperationalError: ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure (0) (SQLSetConnectAttr(SQL_ATTR_AUTOCOMMIT)); [08S01] [Microsoft][ODBC Driver 17 for SQL Server]The connection is broken and recovery is not possible. The client driver attempted to recover the connection one or more times and all attempts failed. Increase the value of ConnectRetryCount to increase the number of recovery attempts. (0)')
+[2025-06-19 12:07:57,427] ERROR django.server "GET /get_products/ HTTP/1.1" 500 145

@@ -1,0 +1,171 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}QC Entries – QC Project{% endblock %}
+
+{% block head_extra %}
+<style>
+  .qc-list-card {
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    margin-bottom: 30px;
+  }
+  .qc-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .qc-list-header h1 {
+    font-size: 1.8em;
+    color: #333;
+    margin: 0;
+  }
+  .btn-add-new {
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+  }
+  .btn-add-new:hover {
+    background-color: #0056b3;
+  }
+  .qc-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 0.95em;
+  }
+  .qc-table th,
+  .qc-table td {
+    padding: 10px 12px;
+    border: 1px solid #e0e0e0;
+    vertical-align: middle;
+  }
+  .qc-table th {
+    background-color: #f5f5f5;
+    color: #222;
+    font-weight: 600;
+    text-align: left;
+  }
+  .qc-table tbody tr:hover {
+    background-color: #fafafa;
+  }
+  .action-link {
+    margin-right: 6px;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 0.9em;
+  }
+  .action-link:hover {
+    text-decoration: underline;
+  }
+  .no-entries {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+  }
+
+  /* Status badges */
+  .status-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.85em;
+    font-weight: 600;
+    color: white;
+  }
+  .status-draft     { background-color: #6c757d; }
+  .status-pending   { background-color: #ffc107; color: #212529; }
+  .status-completed { background-color: #28a745; }
+  .status-cancelled { background-color: #dc3545; }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="qc-list-card">
+  <div class="qc-list-header">
+    <h1>QC Entries</h1>
+    <a href="{% url 'qc_create' %}" class="btn-add-new">+ New QC Entry</a>
+  </div>
+
+  {% if entries %}
+    <table class="qc-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Product</th>
+          <th>Stage</th>
+          <th>Batch No.</th>
+          <th>Entry Date</th>
+          <th>Status</th>
+          {% if perms.QC.view_qcentry or perms.QC.change_qcentry or perms.QC.delete_qcentry %}
+          <th>Actions</th>
+          {% endif %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for entry in entries %}
+        <tr>
+          <td>{{ entry.id }}</td>
+          <td>{{ entry.product.name }}</td>
+          <td>{{ entry.get_stage_display }}</td>
+          <td>{{ entry.batch_no|default:"—" }}</td>
+          <td>
+            {{ entry.entry_date|date:"Y-m-d"|default:"—" }}
+          </td>
+          <td>
+            {% if entry.status == 'draft' %}
+              <span class="status-badge status-draft">Draft</span>
+            {% elif entry.status == 'pending_qc' %}
+              <span class="status-badge status-pending">Pending QC</span>
+            {% elif entry.status == 'qc_completed' %}
+              <span class="status-badge status-completed">QC Completed</span>
+            {% elif entry.status == 'cancelled' %}
+              <span class="status-badge status-cancelled">Cancelled</span>
+            {% else %}
+              <span class="text-muted">Unknown</span>
+            {% endif %}
+          </td>
+          {% if perms.QC.view_qcentry or perms.QC.change_qcentry or perms.QC.delete_qcentry %}
+          <td>
+            {% if perms.QC.view_qcentry %}
+            <a href="{% url 'qc_detail' entry.id %}" class="action-link">View</a>
+            {% endif %}
+            {% if perms.QC.delete_qcentry %}
+            {% if entry.status != 'cancelled' %}
+              <a href="{% url 'qc_cancel' entry.id %}" class="action-link" style="color:#dc3545;"
+                 onclick="return confirm('Are you sure you want to cancel QC entry #{{ entry.id }}?');">
+                Cancel
+              </a>
+            {% endif %}
+            {% endif %}    
+            {% if perms.QC.change_qcentry %}
+            {% if entry.status == 'draft' %}
+              <a href="{% url 'qc_update' entry.id %}" class="action-link">Edit (Prod)</a>
+            {% elif entry.status == 'pending_qc' %}
+              <a href="{% url 'qc_update' entry.id %}" class="action-link">Edit (QC)</a>
+            {% elif entry.status == 'qc_completed' %}
+              <a href="{% url 'qc_update' entry.id %}?reopen=prod" class="action-link">Reopen (Prod)</a>
+              <a href="{% url 'qc_update' entry.id %}?reopen=qc" class="action-link">Reopen (QC)</a>
+            {% endif %}
+            {% endif %}
+          </td>
+          {% endif %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <div class="no-entries">
+      <p>No QC entries found.</p>
+      <p><a href="{% url 'qc_create' %}">Add your first QC entry.</a></p>
+    </div>
+  {% endif %}
+</div>
+{% endblock %}

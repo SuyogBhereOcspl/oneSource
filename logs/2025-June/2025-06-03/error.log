@@ -1,0 +1,78 @@
+[2025-06-03 11:41:33,624] ERROR django.request Internal Server Error: /lagging-records/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\EHS\views.py", line 525, in view_lagging_records
+    records = records.filter(incident_date__gte=parse_date(from_incident_date))
+                                                ^^^^^^^^^^
+NameError: name 'parse_date' is not defined
+[2025-06-03 11:41:33,644] ERROR django.server "GET /lagging-records/?from_incident_date=2024-12-01&to_incident_date=2024-12-31&hse_lag_filter=All&risk_factor_filter=All&complience_status_filter=All HTTP/1.1" 500 145
+[2025-06-03 11:42:33,619] ERROR django.request Internal Server Error: /lagging-records/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\EHS\views.py", line 525, in view_lagging_records
+    records = records.filter(incident_date__gte=parse_date(from_incident_date))
+                                                ^^^^^^^^^^
+NameError: name 'parse_date' is not defined
+[2025-06-03 11:42:33,629] ERROR django.server "GET /lagging-records/?from_incident_date=2025-06-01&to_incident_date=2025-03-01&hse_lag_filter=All&risk_factor_filter=All&complience_status_filter=All HTTP/1.1" 500 145
+[2025-06-03 11:44:06,096] ERROR django.request Internal Server Error: /lagging-records/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\EHS\views.py", line 526, in view_lagging_records
+    records = records.filter(incident_date__gte=parse_date(from_incident_date))
+                                                ^^^^^^^^^^
+NameError: name 'parse_date' is not defined
+[2025-06-03 11:44:06,118] ERROR django.server "GET /lagging-records/?from_incident_date=2025-01-01&to_incident_date=2025-01-31&hse_lag_filter=All&risk_factor_filter=All&complience_status_filter=All HTTP/1.1" 500 145
+[2025-06-03 11:44:45,190] ERROR django.request Internal Server Error: /lagging-records/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\EHS\views.py", line 526, in view_lagging_records
+    records = records.filter(incident_date__gte=parse_date(from_incident_date))
+                                                ^^^^^^^^^^
+NameError: name 'parse_date' is not defined
+[2025-06-03 11:44:45,198] ERROR django.server "GET /lagging-records/?from_incident_date=2025-01-01&to_incident_date=2025-01-31&hse_lag_filter=All&risk_factor_filter=All&complience_status_filter=All HTTP/1.1" 500 145
+[2025-06-03 11:46:51,903] ERROR django.request Internal Server Error: /lagging-records/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\EHS\views.py", line 526, in view_lagging_records
+    records = records.filter(incident_date__gte=parse_date(from_incident_date))
+                                                ^^^^^^^^^^
+NameError: name 'parse_date' is not defined
+[2025-06-03 11:46:51,919] ERROR django.server "GET /lagging-records/?from_incident_date=2025-06-01&to_incident_date=2025-06-04&hse_lag_filter=All&risk_factor_filter=All&complience_status_filter=All HTTP/1.1" 500 145
+[2025-06-03 11:52:19,038] ERROR django.request Internal Server Error: /lagging-records/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\EHS\views.py", line 540, in view_lagging_records
+    records = records.filter(incident_date__gte=parse_date(from_incident_date))
+                                                ^^^^^^^^^^
+NameError: name 'parse_date' is not defined
+[2025-06-03 11:52:19,050] ERROR django.server "GET /lagging-records/?from_incident_date=2025-06-01&to_incident_date=2025-06-05&hse_lag_filter=All&risk_factor_filter=All&complience_status_filter=All HTTP/1.1" 500 145

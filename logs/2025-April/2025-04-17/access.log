@@ -1,0 +1,1163 @@
+INFO: Watching for file changes with StatReloader
+INFO: "GET / HTTP/1.1" 200 5406
+INFO: "GET /static/main/images/OC_white_logo.png HTTP/1.1" 200 1045138
+WARNING: "GET /favicon.ico HTTP/1.1" 404 13781
+INFO: User 'vikas' accessed index page.
+INFO: "GET /indexpage/ HTTP/1.1" 200 23893
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: User 'ocadmin' tried to access login page but is already authenticated.
+INFO: "GET / HTTP/1.1" 302 0
+INFO: User 'ocadmin' accessed index page.
+INFO: "GET /indexpage/ HTTP/1.1" 200 23895
+INFO: "GET /static/main/images/ETP%20Module.png HTTP/1.1" 304 0
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+WARNING: "GET /favicon.ico HTTP/1.1" 404 13781
+INFO: "GET /admin/ HTTP/1.1" 200 15735
+INFO: User 'ocadmin' tried to access login page but is already authenticated.
+INFO: "GET / HTTP/1.1" 302 0
+INFO: User 'ocadmin' accessed index page.
+INFO: "GET /indexpage/ HTTP/1.1" 200 23895
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /attendance/summary/ HTTP/1.1" 200 26443
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /attendance/summary/ HTTP/1.1" 200 26443
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /attendance/summary/?start_date=2025-04-07&end_date=2025-04-17&company=&branch=&department=&shift_code= HTTP/1.1" 200 31056
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /attendance/summary/APL%20%7C%20APL/?start_date=2025-04-07&end_date=2025-04-17&company=&branch=&department=&shift_code= HTTP/1.1" 200 115668
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /attendance/summary/ HTTP/1.1" 200 26443
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /attendance/regulation/summary/ HTTP/1.1" 200 6647
+INFO: "GET /daily-check-in-summary/ HTTP/1.1" 200 6705
+INFO: "GET /daily-check-in-summary/ HTTP/1.1" 200 6705
+INFO: "GET /attendance/summary/ HTTP/1.1" 200 26443
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /admin/ HTTP/1.1" 200 15735
+INFO: User 'ocadmin' tried to access login page but is already authenticated.
+INFO: "GET / HTTP/1.1" 302 0
+INFO: User 'ocadmin' accessed index page.
+INFO: "GET /indexpage/ HTTP/1.1" 200 23895
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET / HTTP/1.1" 200 5406
+INFO: "GET /dashboard HTTP/1.1" 200 21276
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /attendance/summary/ HTTP/1.1" 200 26443
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: Vehicle list viewed by ocadmin with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': ''}
+INFO: "GET /vehicle_list/ HTTP/1.1" 200 40869
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /attendance/summary/ HTTP/1.1" 200 26443
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /attendance/regulation/summary/ HTTP/1.1" 200 6647
+INFO: "GET /daily-check-in-summary/ HTTP/1.1" 200 6705
+INFO: "GET / HTTP/1.1" 200 5406
+INFO: "GET /static/main/images/OC_white_logo.png HTTP/1.1" 304 0
+WARNING: "GET /favicon.ico HTTP/1.1" 404 13781
+INFO: User 'taufik.s' logged in successfully.
+INFO: "POST / HTTP/1.1" 302 0
+INFO: User 'taufik.s' accessed index page.
+INFO: "GET /indexpage/ HTTP/1.1" 200 9263
+INFO: "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+INFO: "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: Vehicle list viewed by taufik.s with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': ''}
+INFO: "GET /vehicle_list/ HTTP/1.1" 200 26097
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: Vehicle list viewed by taufik.s with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': 'Pending'}
+INFO: "GET /vehicle_list/?reporting_date=&name_of_supplier=&material=&name_of_transporter=&status=Pending HTTP/1.1" 200 21595
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /vehicle/edit/2728/ HTTP/1.1" 200 14471
+INFO: "GET /static/store/css/store.css HTTP/1.1" 304 0
+INFO: "GET /static/store/js/vehicle_page.js HTTP/1.1" 304 0
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: Vehicle ID 2728 edited by taufik.s
+INFO: "POST /vehicle/edit/2728/ HTTP/1.1" 302 0
+INFO: Vehicle list viewed by taufik.s with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': ''}
+INFO: "GET /vehicle_list/ HTTP/1.1" 200 26669
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: Vehicle list viewed by taufik.s with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': 'Pending'}
+INFO: "GET /vehicle_list/?reporting_date=&name_of_supplier=&material=&name_of_transporter=&status=Pending HTTP/1.1" 200 20168
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /attendance/summary/ HTTP/1.1" 200 26443
+INFO: "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+INFO: "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /admin/ HTTP/1.1" 200 15735
+INFO: "GET /add_vehicle/ HTTP/1.1" 200 14306
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: Found 1376 suppliers for search ''
+INFO: "GET /search_supplier/ HTTP/1.1" 200 112196
+INFO: Found 0 suppliers for search 'a 1'
+INFO: "GET /search_supplier/?term=a%201 HTTP/1.1" 200 2
+INFO: Found 1376 suppliers for search ''
+INFO: "GET /search_supplier/?term= HTTP/1.1" 200 112196
+INFO: Found 1154 suppliers for search 'A'
+INFO: "GET /search_supplier/?term=A HTTP/1.1" 200 95192
+INFO: Found 1 suppliers for search 'A1 '
+INFO: "GET /search_supplier/?term=A1%20 HTTP/1.1" 200 58
+INFO: Vehicle added by user: taufik.s
+INFO: "POST /add_vehicle/ HTTP/1.1" 302 0
+INFO: "GET /add_vehicle/ HTTP/1.1" 200 14891
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: Vehicle list viewed by taufik.s with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': ''}
+INFO: "GET /vehicle_list/ HTTP/1.1" 200 26075
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: Vehicle list viewed by taufik.s with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': 'Pending'}
+INFO: "GET /vehicle_list/?reporting_date=&name_of_supplier=&material=&name_of_transporter=&status=Pending HTTP/1.1" 200 21544
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /vehicle/edit/10001/ HTTP/1.1" 200 14290
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: Found 4 items for search 'SULPHU'
+INFO: "GET /search_item/?term=SULPHU HTTP/1.1" 200 324
+INFO: Found 37 items for search 'SULP'
+INFO: "GET /search_item/?term=SULP HTTP/1.1" 200 2832
+INFO: Vehicle ID 10001 edited by taufik.s
+INFO: "POST /vehicle/edit/10001/ HTTP/1.1" 302 0
+INFO: Vehicle list viewed by taufik.s with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': ''}
+INFO: "GET /vehicle_list/ HTTP/1.1" 200 26665
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: Vehicle list viewed by taufik.s with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': ''}
+INFO: "GET /vehicle_list/ HTTP/1.1" 200 26093
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: Vehicle list viewed by taufik.s with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': 'Pending'}
+INFO: "GET /vehicle_list/?reporting_date=&name_of_supplier=&material=&name_of_transporter=&status=Pending HTTP/1.1" 200 21562
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: L:\oneSource_Live\oneSource\CANTEEN\admin.py changed, reloading.
+INFO: Watching for file changes with StatReloader
+INFO: User 'ocadmin' tried to access login page but is already authenticated.
+INFO: "GET / HTTP/1.1" 302 0
+INFO: User 'ocadmin' accessed index page.
+INFO: "GET /indexpage/ HTTP/1.1" 200 23895
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /admin/ HTTP/1.1" 200 16178
+INFO: Vehicle list viewed by taufik.s with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': 'Pending'}
+INFO: "GET /vehicle_list/?reporting_date=&name_of_supplier=&material=&name_of_transporter=&status=Pending HTTP/1.1" 200 21562
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /admin/CANTEEN/attendance/ HTTP/1.1" 200 14506
+INFO: "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO: "GET /admin/CANTEEN/attendance/add/ HTTP/1.1" 200 31526
+INFO: "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO: "GET /admin/CANTEEN/attendance/ HTTP/1.1" 200 14506
+INFO: "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO: "GET /admin/auth/user/ HTTP/1.1" 200 23690
+INFO: "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO: "GET / HTTP/1.1" 200 5406
+INFO: "GET /static/main/images/OC_white_logo.png HTTP/1.1" 200 1045138
+INFO: "GET /static/django-browser-reload/reload-listener.js HTTP/1.1" 200 623
+INFO: "GET /static/django-browser-reload/reload-worker.js HTTP/1.1" 200 2711
+WARNING: "GET /favicon.ico HTTP/1.1" 404 13781
+INFO: User 'ocadmin' tried to access login page but is already authenticated.
+INFO: "GET / HTTP/1.1" 302 0
+INFO: User 'ocadmin' accessed index page.
+INFO: "GET /indexpage/ HTTP/1.1" 200 23895
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /admin/ HTTP/1.1" 200 16178
+INFO: "GET /admin/auth/user/ HTTP/1.1" 200 23690
+INFO: "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO: "GET /admin/auth/user/ HTTP/1.1" 200 23690
+INFO: "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO: "GET /admin/auth/user/add/ HTTP/1.1" 200 15485
+INFO: "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO: "POST /admin/auth/user/add/ HTTP/1.1" 302 0
+INFO: "GET /admin/auth/user/1013/change/ HTTP/1.1" 200 31744
+INFO: "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO: "POST /admin/auth/user/1013/change/ HTTP/1.1" 302 0
+INFO: "GET /admin/auth/user/ HTTP/1.1" 200 24368
+INFO: "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO: "POST /admin/logout/ HTTP/1.1" 302 0
+INFO: "GET / HTTP/1.1" 200 5406
+INFO: "GET /static/main/images/OC_white_logo.png HTTP/1.1" 304 0
+INFO: User 'smruti.s' logged in successfully.
+INFO: "POST / HTTP/1.1" 302 0
+INFO: User 'smruti.s' accessed index page.
+INFO: "GET /indexpage/ HTTP/1.1" 200 9823
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /attendance/summary/ HTTP/1.1" 200 17579
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /view_hr_records/ HTTP/1.1" 200 16251
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /attendance/summary/ HTTP/1.1" 200 17579
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /attendance/summary/?start_date=2025-04-01&end_date=2025-04-17&company=&branch=&department=&shift_code= HTTP/1.1" 200 22192
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /attendance/summary/A%20%7C%20A/?start_date=2025-04-01&end_date=2025-04-17&company=&branch=&department=&shift_code= HTTP/1.1" 200 1127209
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /attendance/summary/ HTTP/1.1" 200 17579
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /daily-check-in-summary/ HTTP/1.1" 200 6705
+INFO: User 'vikas.m' logged in successfully.
+INFO: "POST / HTTP/1.1" 302 0
+INFO: User 'vikas.m' accessed index page.
+INFO: "GET /indexpage/ HTTP/1.1" 200 24304
+INFO: "GET /static/main/css/fontawesome.css HTTP/1.1" 200 73890
+INFO: "GET /static/main/images/OC.png HTTP/1.1" 200 2701
+INFO: "GET /static/main/css/main.css HTTP/1.1" 200 0
+INFO: "GET /static/main/images/HRModule.png HTTP/1.1" 200 31588
+INFO: "GET /static/main/css/navbar.css HTTP/1.1" 200 380
+INFO: "GET /static/main/images/WarehouseModule.png HTTP/1.1" 200 3306
+INFO: "GET /static/main/images/QualityControlModule.png HTTP/1.1" 200 18411
+INFO: "GET /static/main/images/ProductionModule.png HTTP/1.1" 200 24454
+INFO: "GET /static/main/js/navbar.js HTTP/1.1" 200 516
+INFO: "GET /static/main/images/ETP%20Module.png HTTP/1.1" 200 610
+INFO: "GET /static/main/js/fontawesome.js HTTP/1.1" 200 1530755
+INFO: "GET /static/main/images/EHSModule.png HTTP/1.1" 200 112111
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /dashboard HTTP/1.1" 200 21276
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: User 'vikas.m' accessed index page.
+INFO: "GET /indexpage/ HTTP/1.1" 200 23895
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /add_vehicle/ HTTP/1.1" 200 14306
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: Found 1376 suppliers for search ''
+INFO: "GET /search_supplier/ HTTP/1.1" 200 112196
+INFO: Found 1 suppliers for search 'JAI LA'
+INFO: "GET /search_supplier/?term=JAI%20LA HTTP/1.1" 200 106
+INFO: Found 0 suppliers for search 'JAI LAXMI'
+INFO: "GET /search_supplier/?term=JAI%20LAXMI HTTP/1.1" 200 2
+INFO: Found 3 suppliers for search 'JAI'
+INFO: "GET /search_supplier/?term=JAI HTTP/1.1" 200 284
+INFO: Found 52 suppliers for search 'JA'
+INFO: "GET /search_supplier/?term=JA HTTP/1.1" 200 4158
+INFO: Found 7898 items for search ''
+INFO: "GET /search_item/ HTTP/1.1" 200 876560
+INFO: Found 6 items for search 'FORMAL'
+INFO: "GET /search_item/?term=FORMAL HTTP/1.1" 200 438
+INFO: Vehicle added by user: taufik.s
+INFO: "POST /add_vehicle/ HTTP/1.1" 302 0
+INFO: "GET /add_vehicle/ HTTP/1.1" 200 14891
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: Vehicle list viewed by taufik.s with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': ''}
+INFO: "GET /vehicle_list/ HTTP/1.1" 200 26091
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: Vehicle list viewed by taufik.s with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': 'Pending'}
+INFO: "GET /vehicle_list/?reporting_date=&name_of_supplier=&material=&name_of_transporter=&status=Pending HTTP/1.1" 200 22996
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: User 'smruti.s' tried to access login page but is already authenticated.
+INFO: "GET / HTTP/1.1" 302 0
+INFO: User 'smruti.s' accessed index page.
+INFO: "GET /indexpage/ HTTP/1.1" 200 9414
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /admin/ HTTP/1.1" 200 7389
+INFO: "GET /admin/HR/dailyattendance/ HTTP/1.1" 200 158701
+INFO: "GET /admin/HR/dailyattendance/import/ HTTP/1.1" 200 9191
+INFO: "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO: User 'smruti.s' tried to access login page but is already authenticated.
+INFO: "GET / HTTP/1.1" 302 0
+INFO: User 'smruti.s' accessed index page.
+INFO: "GET /indexpage/ HTTP/1.1" 200 9414
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /attendance/summary/ HTTP/1.1" 200 17579
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /attendance/summary/?start_date=2025-04-07&end_date=2025-04-17&company=&branch=&department=&shift_code= HTTP/1.1" 200 22192
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: User 'smruti.s' accessed index page.
+INFO: "GET /indexpage/ HTTP/1.1" 200 9414
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /view_hr_records/ HTTP/1.1" 200 16251
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /create_hr/ HTTP/1.1" 200 12698
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /view_hr_records/ HTTP/1.1" 200 16251
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /create_hr/ HTTP/1.1" 200 12698
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /view_hr_records/ HTTP/1.1" 200 16251
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /attendance/summary/ HTTP/1.1" 200 17579
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /add_vehicle/ HTTP/1.1" 200 14306
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: Found 1376 suppliers for search ''
+INFO: "GET /search_supplier/ HTTP/1.1" 200 112196
+INFO: Found 3 suppliers for search 'NAVIN'
+INFO: "GET /search_supplier/?term=NAVIN HTTP/1.1" 200 268
+INFO: Found 7898 items for search ''
+INFO: "GET /search_item/ HTTP/1.1" 200 876560
+INFO: Found 2 items for search '4-FLUORO'
+INFO: "GET /search_item/?term=4-FLUORO HTTP/1.1" 200 204
+INFO: Vehicle added by user: taufik.s
+INFO: "POST /add_vehicle/ HTTP/1.1" 302 0
+INFO: "GET /add_vehicle/ HTTP/1.1" 200 14891
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: Vehicle list viewed by taufik.s with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': ''}
+INFO: "GET /vehicle_list/ HTTP/1.1" 200 26126
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: Vehicle list viewed by taufik.s with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': 'Pending'}
+INFO: "GET /vehicle_list/?reporting_date=&name_of_supplier=&material=&name_of_transporter=&status=Pending HTTP/1.1" 200 24442
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /vehicle/edit/2743/ HTTP/1.1" 200 14406
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: Vehicle ID 2743 edited by taufik.s
+INFO: "POST /vehicle/edit/2743/ HTTP/1.1" 302 0
+INFO: Vehicle list viewed by taufik.s with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': ''}
+INFO: "GET /vehicle_list/ HTTP/1.1" 200 26709
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: Found 68 items for search '4-'
+INFO: "GET /search_item/?term=4- HTTP/1.1" 200 11620
+INFO: "GET /vehicle/edit/2744/ HTTP/1.1" 200 14421
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: Vehicle ID 2744 edited by taufik.s
+INFO: "POST /vehicle/edit/2744/ HTTP/1.1" 302 0
+INFO: Vehicle list viewed by taufik.s with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': ''}
+INFO: "GET /vehicle_list/ HTTP/1.1" 200 26720
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: Vehicle list viewed by taufik.s with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': 'Pending'}
+INFO: "GET /vehicle_list/?reporting_date=&name_of_supplier=&material=&name_of_transporter=&status=Pending HTTP/1.1" 200 21661
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET / HTTP/1.1" 200 5406
+WARNING: Invalid login form submitted.
+INFO: "POST / HTTP/1.1" 200 5912
+WARNING: Invalid login form submitted.
+INFO: "POST / HTTP/1.1" 200 5912
+INFO: User 'sahil.c' logged in successfully.
+INFO: "POST / HTTP/1.1" 302 0
+INFO: User 'sahil.c' accessed index page.
+INFO: "GET /indexpage/ HTTP/1.1" 200 24304
+INFO: "GET /static/main/css/main.css HTTP/1.1" 304 0
+INFO: "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+INFO: "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /dashboard HTTP/1.1" 200 21276
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /admin/ HTTP/1.1" 200 13348
+INFO: "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO: "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO: "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO: "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO: "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO: "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO: "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO: "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO: "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO: "GET /admin/ HTTP/1.1" 200 13348
+INFO: "GET /admin/CANTEEN/employee/ HTTP/1.1" 200 63281
+INFO: "GET /static/admin/css/changelists.css HTTP/1.1" 200 6811
+INFO: "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+INFO: "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO: "GET /static/admin/js/actions.js HTTP/1.1" 200 8067
+INFO: "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9042
+INFO: "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO: "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO: "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO: "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+INFO: "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+INFO: "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+INFO: "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+INFO: "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO: "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+INFO: "GET /admin/CANTEEN/employee/?_facets=True HTTP/1.1" 200 67558
+INFO: "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO: "GET /static/admin/img/icon-hidelink.svg HTTP/1.1" 200 784
+INFO: User 'sahil.c' tried to access login page but is already authenticated.
+INFO: "GET / HTTP/1.1" 302 0
+INFO: User 'sahil.c' accessed index page.
+INFO: "GET /indexpage/ HTTP/1.1" 200 23895
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /dashboard HTTP/1.1" 200 21276
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /dashboard HTTP/1.1" 200 21276
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /admin/ HTTP/1.1" 200 13348
+INFO: "GET /admin/CANTEEN/attendance/ HTTP/1.1" 200 14504
+INFO: "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO: "POST /admin/logout/ HTTP/1.1" 302 0
+INFO: "GET / HTTP/1.1" 200 5406
+INFO: User 'vikas.m' logged out.
+INFO: "GET /userlogout/ HTTP/1.1" 302 0
+INFO: "GET / HTTP/1.1" 200 5849
+INFO: User 'vikas' accessed index page.
+INFO: "GET /indexpage/ HTTP/1.1" 200 23893
+INFO: "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+INFO: "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: Vehicle list viewed by taufik.s with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': 'Pending'}
+INFO: "GET /vehicle_list/?reporting_date=&name_of_supplier=&material=&name_of_transporter=&status=Pending HTTP/1.1" 200 21661
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: User 'smruti.s' tried to access login page but is already authenticated.
+INFO: "GET / HTTP/1.1" 302 0
+INFO: User 'smruti.s' accessed index page.
+INFO: "GET /indexpage/ HTTP/1.1" 200 9414
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: User 'smruti.s' logged out.
+INFO: "GET /userlogout/ HTTP/1.1" 302 0
+INFO: "GET / HTTP/1.1" 200 5849
+INFO: User 'ocadmin' logged in successfully.
+INFO: "POST / HTTP/1.1" 302 0
+INFO: User 'ocadmin' accessed index page.
+INFO: "GET /indexpage/ HTTP/1.1" 200 24304
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /admin/ HTTP/1.1" 200 16099
+INFO: "GET /admin/CANTEEN/attendance/ HTTP/1.1" 200 14506
+INFO: "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO: "GET /admin/CANTEEN/ HTTP/1.1" 200 6557
+INFO: "GET /admin/CANTEEN/employee/ HTTP/1.1" 200 63283
+INFO: "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO: "GET /admin/HR/dailyattendance/ HTTP/1.1" 200 183153
+INFO: "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO: "GET /admin/HR/dailyattendance/import/ HTTP/1.1" 200 13199
+INFO: "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO: "POST /admin/HR/dailyattendance/import/ HTTP/1.1" 200 858194
+INFO: "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO: "POST /admin/HR/dailyattendance/process_import/ HTTP/1.1" 302 0
+INFO: "GET /admin/HR/dailyattendance/ HTTP/1.1" 200 182509
+INFO: "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO: User 'ocadmin' tried to access login page but is already authenticated.
+INFO: "GET / HTTP/1.1" 302 0
+INFO: User 'ocadmin' accessed index page.
+INFO: "GET /indexpage/ HTTP/1.1" 200 23895
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: Vehicle list viewed by ocadmin with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': ''}
+INFO: "GET /vehicle_list/ HTTP/1.1" 200 40923
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: Vehicle ID 10003 viewed by ocadmin
+INFO: "GET /vehicle/view/10003/ HTTP/1.1" 200 18068
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: Vehicle list viewed by ocadmin with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': ''}
+INFO: "GET /vehicle_list/ HTTP/1.1" 200 40923
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /add_vehicle/ HTTP/1.1" 200 23788
+INFO: "GET /static/store/js/vehicle_page.js HTTP/1.1" 304 0
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: Found 1376 suppliers for search ''
+INFO: "GET /search_supplier/ HTTP/1.1" 200 112196
+INFO: Found 7898 items for search ''
+INFO: "GET /search_item/ HTTP/1.1" 200 876560
+INFO: Found 7898 items for search ''
+INFO: "GET /search_item/ HTTP/1.1" 200 876560
+INFO: Vehicle list viewed by ocadmin with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': ''}
+INFO: "GET /vehicle_list/ HTTP/1.1" 200 40923
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /admin/ HTTP/1.1" 200 16531
+INFO: "GET /admin/HR/dailyattendance/ HTTP/1.1" 200 182324
+INFO: "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO: User 'ocadmin' tried to access login page but is already authenticated.
+INFO: "GET / HTTP/1.1" 302 0
+INFO: User 'ocadmin' accessed index page.
+INFO: "GET /indexpage/ HTTP/1.1" 200 23895
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: L:\oneSource_Live\oneSource\STORE\views.py changed, reloading.
+INFO: Watching for file changes with StatReloader
+INFO: User 'ocadmin' accessed index page.
+INFO: "GET /indexpage/ HTTP/1.1" 200 23895
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: Vehicle list viewed by taufik.s with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': 'Pending'}
+INFO: "GET /vehicle_list/?reporting_date=&name_of_supplier=&material=&name_of_transporter=&status=Pending HTTP/1.1" 200 21661
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: User 'ocadmin' accessed index page.
+INFO: "GET /indexpage/ HTTP/1.1" 200 23895
+INFO: Vehicle list viewed by taufik.s with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': 'Pending'}
+INFO: "GET /vehicle_list/?reporting_date=&name_of_supplier=&material=&name_of_transporter=&status=Pending HTTP/1.1" 200 21232
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: Vehicle list viewed by ocadmin with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': ''}
+INFO: "GET /vehicle_list/ HTTP/1.1" 200 40374
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /attendance/summary/ HTTP/1.1" 200 26436
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /daily-check-in-summary/ HTTP/1.1" 200 6705
+INFO: L:\oneSource_Live\oneSource\CANTEEN\views.py changed, reloading.
+INFO: Watching for file changes with StatReloader
+INFO: Vehicle list viewed by taufik.s with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': 'Pending'}
+INFO: "GET /vehicle_list/?reporting_date=&name_of_supplier=&material=&name_of_transporter=&status=Pending HTTP/1.1" 200 21232
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: L:\oneSource_Live\oneSource\CANTEEN\views.py changed, reloading.
+INFO: Watching for file changes with StatReloader
+INFO: Vehicle list viewed by taufik.s with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': 'Pending'}
+INFO: "GET /vehicle_list/?reporting_date=&name_of_supplier=&material=&name_of_transporter=&status=Pending HTTP/1.1" 200 21232
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: L:\oneSource_Live\oneSource\CANTEEN\urls.py changed, reloading.
+INFO: Watching for file changes with StatReloader
+INFO: Vehicle list viewed by taufik.s with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': 'Pending'}
+INFO: "GET /vehicle_list/?reporting_date=&name_of_supplier=&material=&name_of_transporter=&status=Pending HTTP/1.1" 200 21232
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: Vehicle list viewed by taufik.s with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': 'Pending'}
+INFO: "GET /vehicle_list/?reporting_date=&name_of_supplier=&material=&name_of_transporter=&status=Pending HTTP/1.1" 200 21232
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: User 'ocadmin' tried to access login page but is already authenticated.
+INFO: "GET / HTTP/1.1" 302 0
+INFO: User 'ocadmin' accessed index page.
+INFO: "GET /indexpage/ HTTP/1.1" 200 23895
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /dashboard HTTP/1.1" 200 6194
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /dashboard HTTP/1.1" 200 6194
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: User 'ocadmin' tried to access login page but is already authenticated.
+INFO: "GET / HTTP/1.1" 302 0
+INFO: User 'ocadmin' accessed index page.
+INFO: "GET /indexpage/ HTTP/1.1" 200 23895
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /admin/ HTTP/1.1" 200 16531
+INFO: "GET /admin/CANTEEN/attendance/ HTTP/1.1" 200 14506
+INFO: "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO: L:\oneSource_Live\oneSource\CANTEEN\admin.py changed, reloading.
+INFO: Watching for file changes with StatReloader
+INFO: "GET /admin/CANTEEN/attendance/ HTTP/1.1" 200 14701
+INFO: "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO: Vehicle list viewed by taufik.s with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': 'Pending'}
+INFO: "GET /vehicle_list/?reporting_date=&name_of_supplier=&material=&name_of_transporter=&status=Pending HTTP/1.1" 200 21232
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /admin/CANTEEN/attendance/import/ HTTP/1.1" 200 12749
+INFO: "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO: "GET /admin/CANTEEN/attendance/ HTTP/1.1" 200 14701
+INFO: "GET /admin/CANTEEN/attendance/export/? HTTP/1.1" 200 14344
+INFO: "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO: "GET /admin/CANTEEN/attendance/ HTTP/1.1" 200 14701
+INFO: "GET /vehicle/edit/10003/ HTTP/1.1" 200 14537
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: Vehicle ID 10003 edited by taufik.s
+INFO: "POST /vehicle/edit/10003/ HTTP/1.1" 302 0
+INFO: Vehicle list viewed by taufik.s with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': ''}
+INFO: "GET /vehicle_list/ HTTP/1.1" 200 26182
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: Vehicle list viewed by taufik.s with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': 'Pending'}
+INFO: "GET /vehicle_list/?reporting_date=&name_of_supplier=&material=&name_of_transporter=&status=Pending HTTP/1.1" 200 19839
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: User 'ocadmin' tried to access login page but is already authenticated.
+INFO: "GET / HTTP/1.1" 302 0
+INFO: User 'ocadmin' accessed index page.
+INFO: "GET /indexpage/ HTTP/1.1" 200 23895
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /admin/ HTTP/1.1" 200 16531
+INFO: L:\oneSource_Live\oneSource\HR\views.py changed, reloading.
+INFO: Watching for file changes with StatReloader
+INFO: Watching for file changes with StatReloader
+INFO: Vehicle list viewed by taufik.s with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': 'Pending'}
+INFO: "GET /vehicle_list/?reporting_date=&name_of_supplier=&material=&name_of_transporter=&status=Pending HTTP/1.1" 200 19839
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /admin/ HTTP/1.1" 200 16531
+INFO: User 'ocadmin' tried to access login page but is already authenticated.
+INFO: "GET / HTTP/1.1" 302 0
+INFO: User 'ocadmin' accessed index page.
+INFO: "GET /indexpage/ HTTP/1.1" 200 23895
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /vehicle/edit/10002/ HTTP/1.1" 200 14493
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: Vehicle ID 10002 edited by taufik.s
+INFO: "POST /vehicle/edit/10002/ HTTP/1.1" 302 0
+INFO: Vehicle list viewed by taufik.s with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': ''}
+INFO: "GET /vehicle_list/ HTTP/1.1" 200 26193
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: Vehicle list viewed by taufik.s with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': 'Pending'}
+INFO: "GET /vehicle_list/?reporting_date=&name_of_supplier=&material=&name_of_transporter=&status=Pending HTTP/1.1" 200 18458
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: User 'ocadmin' tried to access login page but is already authenticated.
+INFO: "GET / HTTP/1.1" 302 0
+INFO: User 'ocadmin' accessed index page.
+INFO: "GET /indexpage/ HTTP/1.1" 200 23895
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: Vehicle list viewed by ocadmin with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': ''}
+INFO: "GET /vehicle_list/ HTTP/1.1" 200 40396
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /view_leading/ HTTP/1.1" 200 46213
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /view_downtime/ HTTP/1.1" 200 51628
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /attendance/summary/ HTTP/1.1" 200 26436
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /daily-check-in-summary/ HTTP/1.1" 200 6705
+INFO: "GET /late-early-go-summary/ HTTP/1.1" 200 7493
+INFO: "GET /late-early-go-summary/ HTTP/1.1" 200 7493
+INFO: "GET /late-early-go-summary/ HTTP/1.1" 200 7493
+INFO: "GET /late-early-go-summary/ HTTP/1.1" 200 7493
+INFO: "GET /daily-check-in-summary/ HTTP/1.1" 200 6705
+INFO: "GET /vehicle/edit/2734/ HTTP/1.1" 200 14432
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: Vehicle ID 2734 edited by taufik.s
+INFO: "POST /vehicle/edit/2734/ HTTP/1.1" 302 0
+INFO: Vehicle list viewed by taufik.s with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': ''}
+INFO: "GET /vehicle_list/ HTTP/1.1" 200 26193
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: Vehicle list viewed by taufik.s with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': 'Pending'}
+INFO: "GET /vehicle_list/?reporting_date=&name_of_supplier=&material=&name_of_transporter=&status=Pending HTTP/1.1" 200 17111
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET / HTTP/1.1" 200 5406
+INFO: "GET /static/main/images/OC_white_logo.png HTTP/1.1" 304 0
+INFO: User 'sahil.c' logged in successfully.
+INFO: "POST / HTTP/1.1" 302 0
+INFO: User 'sahil.c' accessed index page.
+INFO: "GET /indexpage/ HTTP/1.1" 200 24304
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: Vehicle list viewed by sahil.c with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': ''}
+INFO: "GET /vehicle_list/ HTTP/1.1" 200 40396
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: Vehicle ID 10001 viewed by sahil.c
+INFO: "GET /vehicle/view/10001/ HTTP/1.1" 200 17991
+INFO: "GET /static/store/css/store.css HTTP/1.1" 200 82
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: Vehicle list viewed by sahil.c with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': ''}
+INFO: "GET /vehicle_list/ HTTP/1.1" 200 40396
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: Vehicle ID 2736 viewed by sahil.c
+INFO: "GET /vehicle/view/2736/ HTTP/1.1" 200 18048
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: User 'taufik.s' logged out.
+INFO: "GET /userlogout/ HTTP/1.1" 302 0
+INFO: "GET / HTTP/1.1" 200 5849
+INFO: "GET /static/main/images/OC_white_logo.png HTTP/1.1" 304 0
+INFO: User 'ocadmin' tried to access login page but is already authenticated.
+INFO: "GET / HTTP/1.1" 302 0
+INFO: User 'ocadmin' accessed index page.
+INFO: "GET /indexpage/ HTTP/1.1" 200 23895
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: Vehicle list viewed by ocadmin with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': ''}
+INFO: "GET /vehicle_list/ HTTP/1.1" 200 40396
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: L:\oneSource_Live\oneSource\HR\models.py changed, reloading.
+INFO: Watching for file changes with StatReloader
+INFO: L:\oneSource_Live\oneSource\HR\views.py changed, reloading.
+INFO: Watching for file changes with StatReloader
+INFO: User 'ocadmin' tried to access login page but is already authenticated.
+INFO: "GET / HTTP/1.1" 302 0
+INFO: User 'ocadmin' accessed index page.
+INFO: "GET /indexpage/ HTTP/1.1" 200 23895
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: User 'ocadmin' accessed index page.
+INFO: "GET /indexpage/ HTTP/1.1" 200 23895
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /admin/ HTTP/1.1" 200 17871
+INFO: "GET /admin/ HTTP/1.1" 200 17871
+INFO: L:\oneSource_Live\oneSource\CANTEEN\views.py changed, reloading.
+INFO: Watching for file changes with StatReloader
+INFO: L:\oneSource_Live\oneSource\CANTEEN\views.py changed, reloading.
+INFO: Watching for file changes with StatReloader
+INFO: L:\oneSource_Live\oneSource\CANTEEN\urls.py changed, reloading.
+INFO: Watching for file changes with StatReloader
+INFO: "GET /admin/ HTTP/1.1" 200 17871
+INFO: "GET /admin/ HTTP/1.1" 200 17871
+INFO: User 'ocadmin' tried to access login page but is already authenticated.
+INFO: "GET / HTTP/1.1" 302 0
+INFO: User 'ocadmin' accessed index page.
+INFO: "GET /indexpage/ HTTP/1.1" 200 23903
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: "GET /canteen_dashboard HTTP/1.1" 200 6194
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /admin/ HTTP/1.1" 200 17871
+INFO: "GET /admin/CANTEEN/attendance/ HTTP/1.1" 200 15641
+INFO: "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO: "GET /admin/HR/on_duty_request/ HTTP/1.1" 200 15443
+INFO: "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO: "GET /admin/HR/dailycheckin/ HTTP/1.1" 200 13745
+INFO: "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO: "GET /admin/ HTTP/1.1" 200 17871
+INFO: "GET /admin/HR/dailycheckin/ HTTP/1.1" 200 13745
+INFO: "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO: "GET /admin/HR/dailycheckin/import/ HTTP/1.1" 200 13955
+INFO: "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO: "POST /admin/HR/dailycheckin/import/ HTTP/1.1" 200 469565
+INFO: "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO: "POST /admin/HR/dailycheckin/process_import/ HTTP/1.1" 302 0
+INFO: "GET /admin/HR/dailycheckin/ HTTP/1.1" 200 111649
+INFO: "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO: "GET /admin/HR/late_early_go/ HTTP/1.1" 200 13754
+INFO: "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO: "GET /admin/HR/late_early_go/import/ HTTP/1.1" 200 13946
+INFO: "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO: "POST /admin/HR/late_early_go/import/ HTTP/1.1" 200 137177
+INFO: "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO: "GET /admin/HR/on_duty_request/ HTTP/1.1" 200 15443
+INFO: "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO: "GET /admin/HR/on_duty_request/import/ HTTP/1.1" 200 14174
+INFO: "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO: "POST /admin/HR/on_duty_request/import/ HTTP/1.1" 200 146798
+INFO: "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO: "POST /admin/HR/on_duty_request/process_import/ HTTP/1.1" 302 0
+INFO: "GET /admin/HR/on_duty_request/ HTTP/1.1" 200 60140
+INFO: "GET /admin/jsi18n/ HTTP/1.1" 200 3342
+INFO: "GET / HTTP/1.1" 200 5406
+INFO: "GET /static/main/images/OC_white_logo.png HTTP/1.1" 304 0
+INFO: "GET /static/django-browser-reload/reload-listener.js HTTP/1.1" 304 0
+INFO: "GET /static/django-browser-reload/reload-worker.js HTTP/1.1" 304 0
+WARNING: "GET /favicon.ico HTTP/1.1" 404 14193
+INFO: User 'ocadmin' logged in successfully.
+INFO: "POST / HTTP/1.1" 302 0
+INFO: User 'ocadmin' accessed index page.
+INFO: "GET /indexpage/ HTTP/1.1" 200 24312
+INFO: "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+INFO: "GET /static/main/images/ETP%20Module.png HTTP/1.1" 304 0
+INFO: "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 1857
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 1851
+INFO: Watching for file changes with StatReloader
+INFO: Watching for file changes with StatReloader
+INFO: L:\oneSource_Live\oneSource\oneSource\settings.py changed, reloading.
+INFO: Watching for file changes with StatReloader
+INFO: L:\oneSource_Live\oneSource\oneSource\settings.py changed, reloading.
+INFO: Watching for file changes with StatReloader
+INFO: L:\oneSource_Live\oneSource\oneSource\settings.py changed, reloading.
+INFO: Watching for file changes with StatReloader
+INFO: User 'ocadmin' tried to access login page but is already authenticated.
+INFO: "GET / HTTP/1.1" 302 0
+INFO: User 'ocadmin' accessed index page.
+INFO: "GET /indexpage/ HTTP/1.1" 200 23713
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+WARNING: "GET /favicon.ico HTTP/1.1" 404 179
+WARNING: "GET /abc HTTP/1.1" 404 179
+INFO: "GET /admin/ HTTP/1.1" 200 17634
+INFO: User 'ocadmin' tried to access login page but is already authenticated.
+INFO: "GET / HTTP/1.1" 302 0
+INFO: User 'ocadmin' accessed index page.
+INFO: "GET /indexpage/ HTTP/1.1" 200 23713
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+INFO: User 'ocadmin' logged out.
+INFO: "GET /userlogout/ HTTP/1.1" 302 0
+INFO: "GET / HTTP/1.1" 200 5659
+WARNING: "GET /abc HTTP/1.1" 404 179
+INFO: "GET / HTTP/1.1" 200 5216
+WARNING: "GET /favicon.ico HTTP/1.1" 404 179
+INFO: User 'ocadmin' logged in successfully.
+INFO: "POST / HTTP/1.1" 302 0
+INFO: User 'ocadmin' accessed index page.
+INFO: "GET /indexpage/ HTTP/1.1" 200 24122
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+INFO: "GET /view_downtime/ HTTP/1.1" 200 51446
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+INFO: "GET /add_downtime/ HTTP/1.1" 200 27781
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+INFO: "GET /static/downtime/js/downtime.js HTTP/1.1" 200 7167
+INFO: "GET /static/downtime/css/downtime.css HTTP/1.1" 200 119
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+INFO: "GET /search_equipment/ HTTP/1.1" 200 5555
+INFO: "GET /add_vehicle/ HTTP/1.1" 200 23606
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+INFO: "GET /static/store/js/vehicle_page.js HTTP/1.1" 200 2047
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+INFO: Found 1376 suppliers for search ''
+INFO: "GET /search_supplier/ HTTP/1.1" 200 112196
+INFO: Found 1376 suppliers for search ''
+INFO: "GET /search_supplier/ HTTP/1.1" 200 112196
+INFO: Found 1376 suppliers for search ''
+INFO: "GET /search_supplier/ HTTP/1.1" 200 112196
+INFO: Found 1376 suppliers for search ''
+INFO: "GET /search_supplier/ HTTP/1.1" 200 112196
+INFO: Found 7898 items for search ''
+INFO: "GET /search_item/ HTTP/1.1" 200 876560
+INFO: Found 7898 items for search ''
+INFO: "GET /search_item/ HTTP/1.1" 200 876560
+INFO: Found 6574 items for search 'a'
+INFO: "GET /search_item/?term=a HTTP/1.1" 200 761804
+INFO: Found 7898 items for search ''
+INFO: "GET /search_item/?term= HTTP/1.1" 200 876560
+INFO: Found 7898 items for search ''
+INFO: "GET /search_item/ HTTP/1.1" 200 876560
+INFO: Found 7898 items for search ''
+INFO: "GET /search_item/?term= HTTP/1.1" 200 876560
+INFO: Found 14 items for search 'jd'
+INFO: "GET /search_item/?term=jd HTTP/1.1" 200 1156
+INFO: Found 1834 items for search 'as'
+INFO: "GET /search_item/?term=as HTTP/1.1" 200 243138
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+INFO: "GET / HTTP/1.1" 200 5216
+INFO: "GET /static/main/images/OC_white_logo.png HTTP/1.1" 200 1045138
+WARNING: "GET /favicon.ico HTTP/1.1" 404 179
+INFO: User 'sudarshan.j' logged in successfully.
+INFO: "POST / HTTP/1.1" 302 0
+INFO: User 'sudarshan.j' accessed index page.
+INFO: "GET /indexpage/ HTTP/1.1" 200 9076
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+INFO: Vehicle list viewed by sudarshan.j with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': ''}
+INFO: "GET /vehicle_list/ HTTP/1.1" 200 25434
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+INFO: "GET /vehicle/edit/2739/ HTTP/1.1" 200 14299
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+INFO: Vehicle ID 2739 edited by sudarshan.j
+INFO: "POST /vehicle/edit/2739/ HTTP/1.1" 302 0
+INFO: Vehicle list viewed by sudarshan.j with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': ''}
+INFO: "GET /vehicle_list/ HTTP/1.1" 200 26017
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+INFO: Vehicle list viewed by sudarshan.j with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': 'Pending'}
+INFO: "GET /vehicle_list/?reporting_date=&name_of_supplier=&material=&name_of_transporter=&status=Pending HTTP/1.1" 200 15543
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+WARNING: "GET /__reload__/events/ HTTP/1.1" 404 179
+INFO: User 'sahil.c' tried to access login page but is already authenticated.
+INFO: "GET / HTTP/1.1" 302 0
+INFO: User 'sahil.c' accessed index page.
+INFO: "GET /indexpage/ HTTP/1.1" 200 23713
+INFO: "GET /static/main/images/ETP%20Module.png HTTP/1.1" 200 610
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+WARNING: "GET /favicon.ico HTTP/1.1" 404 179
+INFO: "GET /create_hr/ HTTP/1.1" 200 21664
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+INFO: "GET /view_hr_records/ HTTP/1.1" 200 34163
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+INFO: "GET /canteen_dashboard HTTP/1.1" 200 6004
+INFO: "GET /api/dashboard-data/ HTTP/1.1" 200 67
+INFO: "GET /add_downtime/ HTTP/1.1" 200 27781
+INFO: "GET /static/downtime/css/downtime.css HTTP/1.1" 200 119
+INFO: "GET /static/downtime/js/downtime.js HTTP/1.1" 200 7167
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+INFO: "GET /view_downtime/ HTTP/1.1" 200 51446
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+WARNING: "GET /view_downtime/abc HTTP/1.1" 404 179
+INFO: User 'sahil.c' accessed index page.
+INFO: "GET /indexpage/ HTTP/1.1" 200 23713
+INFO: "GET /static/main/images/ETP%20Module.png HTTP/1.1" 304 0
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+INFO: "GET /view_downtime/ HTTP/1.1" 200 51446
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+INFO: User 'sahil.c' accessed index page.
+INFO: "GET /indexpage/ HTTP/1.1" 200 23713
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+INFO: "GET /add_leading_record/ HTTP/1.1" 200 30656
+INFO: "GET /static/leading/css/leading.css HTTP/1.1" 200 0
+INFO: "GET /static/leading/js/leading.js HTTP/1.1" 200 994
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+INFO: "GET /view_leading/ HTTP/1.1" 200 46031
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+INFO: "GET /add_vehicle/ HTTP/1.1" 200 23606
+INFO: "GET /static/store/js/vehicle_page.js HTTP/1.1" 200 2047
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+INFO: Vehicle list viewed by sahil.c with filters: {'reporting_date': '', 'name_of_supplier': '', 'material': '', 'name_of_transporter': '', 'status': ''}
+INFO: "GET /vehicle_list/ HTTP/1.1" 200 40225
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+INFO: User 'sahil.c' logged out.
+INFO: "GET /userlogout/ HTTP/1.1" 302 0
+INFO: "GET / HTTP/1.1" 200 5659
+INFO: "GET /static/main/images/OC_white_logo.png HTTP/1.1" 200 1045138
+INFO: User 'ocadmin' tried to access login page but is already authenticated.
+INFO: "GET / HTTP/1.1" 302 0
+INFO: User 'ocadmin' accessed index page.
+INFO: "GET /indexpage/ HTTP/1.1" 200 23713
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+INFO: "GET /view_hr_records/ HTTP/1.1" 200 34163
+WARNING: "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+WARNING: "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+INFO: L:\oneSource_Live\oneSource\oneSource\settings.py changed, reloading.

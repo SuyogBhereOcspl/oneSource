@@ -1,0 +1,136 @@
+{% extends 'main/index.html' %}
+{% load static %}
+
+{% block maincontent %}
+<div class="container mx-auto py-6 px-4">
+    <!-- Header & Navigation -->
+    <header class="relative mb-6">
+        <div class="relative">
+            <h2 class="text-2xl md:text-3xl font-semibold text-center">Attendance Pivot Report</h2>
+            <a href="{% url 'attendance_summary' %}"
+               class="absolute right-0 top-1/2 -translate-y-1/2 bg-indigo-500 hover:bg-indigo-700 text-white font-semibold px-4 py-2 rounded shadow-md">
+               All Reports
+            </a>
+        </div>
+    </header>
+
+    <!-- Filter Section -->
+    <div class="flex flex-wrap justify-between items-start mb-6 gap-4">
+        <div class="flex-grow flex justify-center w-full sm:w-auto">
+            <form method="get" class="bg-white shadow-md rounded-lg p-4 flex flex-wrap gap-4 items-end justify-center">
+                <!-- Start Date -->
+                <div>
+                    <label for="from_date" class="block text-sm text-gray-700 font-medium">Start Date</label>
+                    <input type="date" name="from_date" id="from_date" value="{{ from_date }}"
+                        class="text-xs border border-gray-300 rounded px-3 py-2 w-full">
+                </div>
+                <!-- End Date -->
+                <div>
+                    <label for="to_date" class="block text-sm text-gray-700 font-medium">End Date</label>
+                    <input type="date" name="to_date" id="to_date" value="{{ to_date }}"
+                        class="text-xs border border-gray-300 rounded px-3 py-2 w-full">
+                </div>
+                <!-- Company -->
+                <div>
+                    <label for="company" class="block text-sm text-gray-700 font-medium">Company</label>
+                    <select name="company" id="company" class="text-xs border border-gray-300 rounded pr-3 py-2 w-full">
+                        <option value="">All</option>
+                        {% for company in companies %}
+                        <option value="{{ company }}" {% if company == selected_company %}selected{% endif %}>{{ company }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <!-- Branch -->
+                <div>
+                    <label for="branch" class="block text-sm text-gray-700 font-medium">Branch</label>
+                    <select name="branch" id="branch" class="text-xs border border-gray-300 rounded pr-5 py-2 w-full">
+                        <option value="">All</option>
+                        {% for branch in branches %}
+                        <option value="{{ branch }}" {% if branch == selected_branch %}selected{% endif %}>{{ branch }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <!-- Department -->
+                <div>
+                    <label for="department" class="block text-sm text-gray-700 font-medium">Department</label>
+                    <select name="department" id="department" class="text-xs border border-gray-300 rounded pr-2 py-2 w-full">
+                        <option value="">All</option>
+                        {% for department in departments %}
+                        <option value="{{ department }}" {% if department == selected_department %}selected{% endif %}>{{ department }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <!-- Shift Code -->
+                <div>
+                    <label for="shift_code" class="block text-sm text-gray-700 font-medium">Shift Code</label>
+                    <select name="shift_code" id="shift_code" class="text-xs border border-gray-300 rounded pr-5 py-2 w-full">
+                        <option value="">All</option>
+                        {% for shift_code in shift_codes %}
+                        <option value="{{ shift_code }}" {% if shift_code == selected_shift_code %}selected{% endif %}>{{ shift_code }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <!-- Buttons -->
+                <div class="flex gap-2 pt-5">
+                    <button type="submit" class="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700 transition">
+                        <i class="fa-solid fa-filter"></i>
+                    </button>
+                    <a href="{% url 'attendance_pivot_report' %}"
+                       class="bg-gray-400 text-white px-3 py-1 rounded hover:bg-gray-500 transition">
+                       <i class="fa-solid fa-eraser"></i> </a>
+                    </a>
+                    <a href="{% url 'attendance_pivot_excel' %}?from_date={{ from_date }}&to_date={{ to_date }}&company={{ selected_company }}&branch={{ selected_branch }}&department={{ selected_department }}&shift_code={{ selected_shift_code }}"
+                        class="text-green-700 hover:text-green-900"
+                        style="text-decoration:none;"
+                        download>
+                        <i class="fa-solid fa-file-excel fa-2xl"></i>
+             </a>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+    
+    
+
+    <!-- Table Section -->
+    <div class="overflow-x-auto bg-white shadow-md rounded-lg relative">
+        <h4 class="text-lg font-semibold text-center py-2 border-b sticky left-0">{{ date_label }}</h4>
+        <table class="min-w-full border border-gray-300 text-sm text-left">
+            <thead class="bg-gray-100 border-b text-gray-700 font-semibold text-sm">
+                <tr>
+                    <th class="sticky left-0 top-0 z-20 bg-gray-100 py-2 px-4 border whitespace-nowrap">Status in Out</th>
+                    {% for day in days %}
+                        <th class="sticky top-0 z-10 bg-gray-100 py-2 px-4 border text-center whitespace-nowrap">{{ day }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in table_data %}
+                <tr class="hover:bg-gray-50 border-b">
+                    <td class="sticky left-0 bg-white border z-10 py-2 px-4 font-semibold whitespace-nowrap">
+                        {{ row.status }}{% if row.status_label %} 
+                        <span class="text-gray-500 text-xs">({{ row.status_label }})</span>{% endif %}
+                    </td>
+                    {% for count in row.counts %}
+                        <td class="py-2 px-4 border text-center">{{ count }}</td>
+                    {% endfor %}
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="{{ days|length|add:1 }}" class="py-4 text-center text-gray-500">
+                        No records found for selected period.
+                    </td>
+                </tr>
+                {% endfor %}
+                <tr class="font-bold bg-green-100 border-t-2">
+                    <td class="sticky left-0 bg-green-100 border z-10 py-2 px-4 font-bold whitespace-nowrap">Grand Total</td>
+                    {% for total in grand_total %}
+                        <td class="py-2 px-4 border text-center">{{ total }}</td>
+                    {% endfor %}
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

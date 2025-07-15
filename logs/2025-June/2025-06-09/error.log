@@ -1,0 +1,825 @@
+[2025-06-10 10:29:31,063] ERROR django.request Internal Server Error: /search_equipment/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+pyodbc.OperationalError: ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]Shared Memory Provider: No process is on the other end of the pipe.\r\n (233) (SQLDriverConnect); [08S01] [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure (233); [08S01] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\PRODUCTION\views.py", line 87, in search_equipment
+    with connections['readonly_db'].cursor() as cursor:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 316, in cursor
+    return self._cursor()
+           ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 261, in _cursor
+    conn = super()._cursor()
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 292, in _cursor
+    self.ensure_connection()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 274, in ensure_connection
+    with self.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+django.db.utils.OperationalError: ('08S01', '[08S01] [Microsoft][ODBC Driver 17 for SQL Server]Shared Memory Provider: No process is on the other end of the pipe.\r\n (233) (SQLDriverConnect); [08S01] [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure (233); [08S01] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0)')
+[2025-06-10 10:29:31,083] ERROR django.server "GET /search_equipment/ HTTP/1.1" 500 145
+[2025-06-10 10:29:43,903] ERROR django.request Internal Server Error: /search_equipment/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+pyodbc.InterfaceError: ('28000', '[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\PRODUCTION\views.py", line 87, in search_equipment
+    with connections['readonly_db'].cursor() as cursor:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 316, in cursor
+    return self._cursor()
+           ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 261, in _cursor
+    conn = super()._cursor()
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 292, in _cursor
+    self.ensure_connection()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 274, in ensure_connection
+    with self.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+django.db.utils.InterfaceError: ('28000', '[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0)')
+[2025-06-10 10:29:43,910] ERROR django.server "GET /search_equipment/ HTTP/1.1" 500 145
+[2025-06-10 10:29:47,583] ERROR django.request Internal Server Error: /search_equipment/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+pyodbc.InterfaceError: ('28000', '[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\PRODUCTION\views.py", line 87, in search_equipment
+    with connections['readonly_db'].cursor() as cursor:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 316, in cursor
+    return self._cursor()
+           ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 261, in _cursor
+    conn = super()._cursor()
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 292, in _cursor
+    self.ensure_connection()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 274, in ensure_connection
+    with self.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+django.db.utils.InterfaceError: ('28000', '[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0)')
+[2025-06-10 10:29:47,589] ERROR django.server "GET /search_equipment/?term=re HTTP/1.1" 500 145
+[2025-06-10 10:29:48,310] ERROR django.request Internal Server Error: /search_equipment/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+pyodbc.InterfaceError: ('28000', '[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\PRODUCTION\views.py", line 87, in search_equipment
+    with connections['readonly_db'].cursor() as cursor:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 316, in cursor
+    return self._cursor()
+           ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 261, in _cursor
+    conn = super()._cursor()
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 292, in _cursor
+    self.ensure_connection()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 274, in ensure_connection
+    with self.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+django.db.utils.InterfaceError: ('28000', '[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0)')
+[2025-06-10 10:29:48,323] ERROR django.server "GET /search_equipment/?term=re- HTTP/1.1" 500 145
+[2025-06-10 10:29:50,402] ERROR django.request Internal Server Error: /search_equipment/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+pyodbc.InterfaceError: ('28000', '[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\PRODUCTION\views.py", line 87, in search_equipment
+    with connections['readonly_db'].cursor() as cursor:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 316, in cursor
+    return self._cursor()
+           ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 261, in _cursor
+    conn = super()._cursor()
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 292, in _cursor
+    self.ensure_connection()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 274, in ensure_connection
+    with self.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+django.db.utils.InterfaceError: ('28000', '[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0)')
+[2025-06-10 10:29:50,412] ERROR django.server "GET /search_equipment/?term= HTTP/1.1" 500 145
+[2025-06-10 10:29:55,245] ERROR django.request Internal Server Error: /search_equipment/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+pyodbc.InterfaceError: ('28000', '[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\PRODUCTION\views.py", line 87, in search_equipment
+    with connections['readonly_db'].cursor() as cursor:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 316, in cursor
+    return self._cursor()
+           ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 261, in _cursor
+    conn = super()._cursor()
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 292, in _cursor
+    self.ensure_connection()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 274, in ensure_connection
+    with self.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+django.db.utils.InterfaceError: ('28000', '[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0)')
+[2025-06-10 10:29:55,249] ERROR django.server "GET /search_equipment/ HTTP/1.1" 500 145
+[2025-06-10 10:30:00,835] ERROR django.request Internal Server Error: /search_equipment/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+pyodbc.InterfaceError: ('28000', '[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\PRODUCTION\views.py", line 87, in search_equipment
+    with connections['readonly_db'].cursor() as cursor:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 316, in cursor
+    return self._cursor()
+           ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 261, in _cursor
+    conn = super()._cursor()
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 292, in _cursor
+    self.ensure_connection()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 274, in ensure_connection
+    with self.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+django.db.utils.InterfaceError: ('28000', '[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0)')
+[2025-06-10 10:30:00,842] ERROR django.server "GET /search_equipment/ HTTP/1.1" 500 145
+[2025-06-10 10:30:06,009] ERROR django.request Internal Server Error: /search_equipment/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+pyodbc.InterfaceError: ('28000', '[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\PRODUCTION\views.py", line 87, in search_equipment
+    with connections['readonly_db'].cursor() as cursor:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 316, in cursor
+    return self._cursor()
+           ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 261, in _cursor
+    conn = super()._cursor()
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 292, in _cursor
+    self.ensure_connection()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 274, in ensure_connection
+    with self.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+django.db.utils.InterfaceError: ('28000', '[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0)')
+[2025-06-10 10:30:06,017] ERROR django.server "GET /search_equipment/?term=RE HTTP/1.1" 500 145
+[2025-06-10 10:30:07,051] ERROR django.request Internal Server Error: /search_equipment/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+pyodbc.InterfaceError: ('28000', '[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\PRODUCTION\views.py", line 87, in search_equipment
+    with connections['readonly_db'].cursor() as cursor:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 316, in cursor
+    return self._cursor()
+           ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 261, in _cursor
+    conn = super()._cursor()
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 292, in _cursor
+    self.ensure_connection()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 274, in ensure_connection
+    with self.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+django.db.utils.InterfaceError: ('28000', '[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0)')
+[2025-06-10 10:30:07,060] ERROR django.server "GET /search_equipment/?term=RE- HTTP/1.1" 500 145
+[2025-06-10 10:30:08,778] ERROR django.request Internal Server Error: /search_equipment/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+pyodbc.InterfaceError: ('28000', '[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\PRODUCTION\views.py", line 87, in search_equipment
+    with connections['readonly_db'].cursor() as cursor:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 316, in cursor
+    return self._cursor()
+           ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 261, in _cursor
+    conn = super()._cursor()
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 292, in _cursor
+    self.ensure_connection()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 274, in ensure_connection
+    with self.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+django.db.utils.InterfaceError: ('28000', '[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0)')
+[2025-06-10 10:30:08,787] ERROR django.server "GET /search_equipment/?term=RE-150 HTTP/1.1" 500 145
+[2025-06-10 10:30:08,934] ERROR django.request Internal Server Error: /search_equipment/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+pyodbc.InterfaceError: ('28000', '[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\PRODUCTION\views.py", line 87, in search_equipment
+    with connections['readonly_db'].cursor() as cursor:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 316, in cursor
+    return self._cursor()
+           ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 261, in _cursor
+    conn = super()._cursor()
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 292, in _cursor
+    self.ensure_connection()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 274, in ensure_connection
+    with self.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+django.db.utils.InterfaceError: ('28000', '[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0)')
+[2025-06-10 10:30:08,941] ERROR django.server "GET /search_equipment/?term=RE-1508 HTTP/1.1" 500 145
+[2025-06-10 10:30:12,832] ERROR django.request Internal Server Error: /search_equipment/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+pyodbc.InterfaceError: ('28000', '[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\PRODUCTION\views.py", line 87, in search_equipment
+    with connections['readonly_db'].cursor() as cursor:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 316, in cursor
+    return self._cursor()
+           ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 261, in _cursor
+    conn = super()._cursor()
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 292, in _cursor
+    self.ensure_connection()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 274, in ensure_connection
+    with self.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+django.db.utils.InterfaceError: ('28000', '[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0)')
+[2025-06-10 10:30:12,852] ERROR django.server "GET /search_equipment/?term=1508RE- HTTP/1.1" 500 145
+[2025-06-10 10:30:15,444] ERROR django.request Internal Server Error: /search_equipment/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+pyodbc.InterfaceError: ('28000', '[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\PRODUCTION\views.py", line 87, in search_equipment
+    with connections['readonly_db'].cursor() as cursor:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 316, in cursor
+    return self._cursor()
+           ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 261, in _cursor
+    conn = super()._cursor()
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 292, in _cursor
+    self.ensure_connection()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 274, in ensure_connection
+    with self.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+django.db.utils.InterfaceError: ('28000', '[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0)')
+[2025-06-10 10:30:15,451] ERROR django.server "GET /search_equipment/?term= HTTP/1.1" 500 145
+[2025-06-10 10:30:20,712] ERROR django.request Internal Server Error: /search_equipment/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+pyodbc.InterfaceError: ('28000', '[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\PRODUCTION\views.py", line 87, in search_equipment
+    with connections['readonly_db'].cursor() as cursor:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 316, in cursor
+    return self._cursor()
+           ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 261, in _cursor
+    conn = super()._cursor()
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 292, in _cursor
+    self.ensure_connection()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 274, in ensure_connection
+    with self.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+django.db.utils.InterfaceError: ('28000', '[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0)')
+[2025-06-10 10:30:20,719] ERROR django.server "GET /search_equipment/ HTTP/1.1" 500 145
+[2025-06-10 10:30:23,553] ERROR django.request Internal Server Error: /search_equipment/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+pyodbc.InterfaceError: ('28000', '[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\PRODUCTION\views.py", line 87, in search_equipment
+    with connections['readonly_db'].cursor() as cursor:
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 316, in cursor
+    return self._cursor()
+           ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 261, in _cursor
+    conn = super()._cursor()
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 292, in _cursor
+    self.ensure_connection()
+    ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 274, in ensure_connection
+    with self.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 275, in ensure_connection
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\db\backends\base\base.py", line 256, in connect
+    self.connection = self.get_new_connection(conn_params)
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\mssql\base.py", line 368, in get_new_connection
+    conn = Database.connect(connstr, **args)
+django.db.utils.InterfaceError: ('28000', '[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user \'TEST-SERVER\\Administrator\'. (18456); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot open database "eresOCSPL" requested by the login. The login failed. (4060); [28000] [Microsoft][ODBC Driver 17 for SQL Server]Invalid connection string attribute (0)')
+[2025-06-10 10:30:23,560] ERROR django.server "GET /search_equipment/?term=re HTTP/1.1" 500 145

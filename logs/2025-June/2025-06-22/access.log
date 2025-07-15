@@ -1,0 +1,69 @@
+[2025-06-22 22:05:44,629] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-06-22 22:06:01,379] INFO django.server "GET / HTTP/1.1" 200 5216
+[2025-06-22 22:06:01,707] INFO django.server "GET /static/main/images/OC_white_logo.png HTTP/1.1" 304 0
+[2025-06-22 22:06:02,418] WARNING django.server "GET /favicon.ico HTTP/1.1" 404 179
+[2025-06-22 22:06:10,060] INFO custom_logger User 'ocadmin' logged in successfully.
+[2025-06-22 22:06:10,068] INFO django.server "POST / HTTP/1.1" 302 0
+[2025-06-22 22:06:11,243] INFO custom_logger User 'ocadmin' accessed index page.
+[2025-06-22 22:06:11,288] INFO django.server "GET /indexpage/ HTTP/1.1" 200 25092
+[2025-06-22 22:06:12,035] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-22 22:06:12,872] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-22 22:06:12,872] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-22 22:06:12,874] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-22 22:06:12,895] INFO django.server "GET /static/main/images/HRModule.png HTTP/1.1" 304 0
+[2025-06-22 22:06:15,080] INFO django.server "GET /static/main/images/ProductionModule.png HTTP/1.1" 304 0
+[2025-06-22 22:06:15,080] INFO django.server "GET /static/main/images/EHSModule.png HTTP/1.1" 304 0
+[2025-06-22 22:06:15,126] INFO django.server "GET /static/main/images/WarehouseModule.png HTTP/1.1" 304 0
+[2025-06-22 22:06:15,151] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-22 22:06:15,152] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-22 22:06:15,192] INFO django.server "GET /static/main/images/ETP%20Logo.png HTTP/1.1" 304 0
+[2025-06-22 22:06:16,567] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-22 22:06:16,586] INFO django.server "GET /static/main/images/UtilityModule.png HTTP/1.1" 304 0
+[2025-06-22 22:06:16,587] INFO django.server "GET /static/main/images/QC%20Module.png HTTP/1.1" 304 0
+[2025-06-22 22:06:18,113] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-22 22:06:18,968] INFO custom_logger User 'ocadmin' logged out.
+[2025-06-22 22:06:18,977] INFO django.server "GET /userlogout/ HTTP/1.1" 302 0
+[2025-06-22 22:09:58,849] INFO django.utils.autoreload L:\oneSource_Live\oneSource\oneSource\settings.py changed, reloading.
+[2025-06-22 22:11:59,735] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-06-22 22:12:45,098] INFO django.utils.autoreload Watching for file changes with StatReloader
+[2025-06-22 22:12:56,219] INFO django.server "GET / HTTP/1.1" 200 5216
+[2025-06-22 22:12:56,654] INFO django.server "GET /static/main/images/OC_white_logo.png HTTP/1.1" 304 0
+[2025-06-22 22:12:58,766] WARNING django.server "GET /favicon.ico HTTP/1.1" 404 179
+[2025-06-22 22:13:10,152] INFO custom_logger User 'ocadmin' logged in successfully.
+[2025-06-22 22:13:10,158] INFO django.server "POST / HTTP/1.1" 302 0
+[2025-06-22 22:13:10,560] INFO custom_logger User 'ocadmin' accessed index page.
+[2025-06-22 22:13:10,604] INFO django.server "GET /indexpage/ HTTP/1.1" 200 25092
+[2025-06-22 22:13:10,834] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-22 22:13:11,119] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-22 22:13:11,121] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-22 22:13:11,390] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-22 22:13:11,414] INFO django.server "GET /static/main/images/HRModule.png HTTP/1.1" 304 0
+[2025-06-22 22:13:11,610] INFO django.server "GET /static/main/images/ProductionModule.png HTTP/1.1" 304 0
+[2025-06-22 22:13:11,674] INFO django.server "GET /static/main/images/EHSModule.png HTTP/1.1" 304 0
+[2025-06-22 22:13:11,812] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-22 22:13:11,839] INFO django.server "GET /static/main/images/QC%20Module.png HTTP/1.1" 304 0
+[2025-06-22 22:13:11,894] INFO django.server "GET /static/main/images/ETP%20Logo.png HTTP/1.1" 304 0
+[2025-06-22 22:13:11,929] INFO django.server "GET /static/main/images/UtilityModule.png HTTP/1.1" 304 0
+[2025-06-22 22:13:12,230] INFO django.server "GET /static/main/images/WarehouseModule.png HTTP/1.1" 304 0
+[2025-06-22 22:13:12,278] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-22 22:13:12,412] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179
+[2025-06-22 22:13:12,869] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-22 22:13:18,723] INFO custom_logger User 'ocadmin' logged out.
+[2025-06-22 22:13:18,734] INFO django.server "GET /userlogout/ HTTP/1.1" 302 0
+[2025-06-22 22:13:19,392] INFO django.server "GET / HTTP/1.1" 200 5659
+[2025-06-22 22:50:10,179] INFO django.server "GET / HTTP/1.1" 200 5216
+[2025-06-22 22:50:11,422] INFO django.server "GET /static/main/images/OC_white_logo.png HTTP/1.1" 200 1045138
+[2025-06-22 22:50:11,598] WARNING django.server "GET /favicon.ico HTTP/1.1" 404 179
+[2025-06-22 22:50:31,094] INFO custom_logger User 'bhagavan.b' logged in successfully.
+[2025-06-22 22:50:31,113] INFO django.server "POST / HTTP/1.1" 302 0
+[2025-06-22 22:50:31,228] INFO custom_logger User 'bhagavan.b' accessed index page.
+[2025-06-22 22:50:31,236] INFO django.server "GET /indexpage/ HTTP/1.1" 200 10776
+[2025-06-22 22:50:31,380] INFO django.server "GET /static/main/css/fontawesome.css HTTP/1.1" 304 0
+[2025-06-22 22:50:31,383] INFO django.server "GET /static/main/css/main.css HTTP/1.1" 304 0
+[2025-06-22 22:50:31,414] INFO django.server "GET /static/main/images/OC.png HTTP/1.1" 304 0
+[2025-06-22 22:50:31,415] INFO django.server "GET /static/main/css/navbar.css HTTP/1.1" 304 0
+[2025-06-22 22:50:31,417] INFO django.server "GET /static/main/images/EHSModule.png HTTP/1.1" 304 0
+[2025-06-22 22:50:31,514] INFO django.server "GET /static/main/js/fontawesome.js HTTP/1.1" 304 0
+[2025-06-22 22:50:31,522] INFO django.server "GET /static/main/js/navbar.js HTTP/1.1" 304 0
+[2025-06-22 22:50:32,199] WARNING django.server "GET /static/main/webfonts/fa-solid-900.woff2 HTTP/1.1" 404 179
+[2025-06-22 22:50:32,286] WARNING django.server "GET /static/main/webfonts/fa-solid-900.ttf HTTP/1.1" 404 179

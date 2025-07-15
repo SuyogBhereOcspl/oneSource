@@ -1,0 +1,39 @@
+[2025-05-23 09:20:21,240] ERROR django.request Internal Server Error: /download-effluent-excel/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\ETP\views.py", line 615, in download_effluent_excel
+    response = HttpResponse(
+               ^^^^^^^^^^^^
+NameError: name 'HttpResponse' is not defined. Did you mean: 'JsonResponse'?
+[2025-05-23 09:20:21,253] ERROR django.server "GET /download-effluent-excel/?from_date=2025-05-01&to_date=2025-05-31&product_name=&stage_name=&block=&category= HTTP/1.1" 500 145
+[2025-05-23 09:21:44,403] ERROR django.request Internal Server Error: /download-effluent-excel/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\ETP\views.py", line 615, in download_effluent_excel
+    response = HttpResponse(
+               ^^^^^^^^^^^^
+NameError: name 'HttpResponse' is not defined. Did you mean: 'JsonResponse'?
+[2025-05-23 09:21:44,417] ERROR django.server "GET /download-effluent-excel/?from_date=2025-05-01&to_date=2025-05-31&product_name=&stage_name=&block=&category= HTTP/1.1" 500 145
+[2025-05-23 09:22:10,383] ERROR django.request Internal Server Error: /download-effluent-excel/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\ETP\views.py", line 615, in download_effluent_excel
+    response = HttpResponse(
+               ^^^^^^^^^^^^
+NameError: name 'HttpResponse' is not defined. Did you mean: 'JsonResponse'?
+[2025-05-23 09:22:10,403] ERROR django.server "GET /download-effluent-excel/?from_date=2025-05-01&to_date=2025-05-31&product_name=&stage_name=&block=&category= HTTP/1.1" 500 88851

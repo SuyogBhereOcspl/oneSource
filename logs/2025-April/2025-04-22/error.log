@@ -1,0 +1,107 @@
+[2025-04-22 22:30:23,027] ERROR django.request Internal Server Error: /view-general-effluent/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\oneSource\ETP\views.py", line 354, in view_general_effluent_records
+    record_list = GeneralEffluent.objects.all().order_by('-record_date')
+                  ^^^^^^^^^^^^^^^
+NameError: name 'GeneralEffluent' is not defined. Did you mean: 'add_general_effluent'?
+[2025-04-22 22:30:23,042] ERROR django.server "GET /view-general-effluent/ HTTP/1.1" 500 145
+[2025-04-22 22:30:28,498] ERROR django.request Internal Server Error: /add-general-effluent/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\ETP\views.py", line 332, in add_general_effluent
+    form = GeneralEffluentForm()
+           ^^^^^^^^^^^^^^^^^^^
+NameError: name 'GeneralEffluentForm' is not defined
+[2025-04-22 22:30:28,517] ERROR django.server "GET /add-general-effluent/ HTTP/1.1" 500 145
+[2025-04-22 22:30:36,598] ERROR django.request Internal Server Error: /view-general-effluent/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\oneSource\ETP\views.py", line 354, in view_general_effluent_records
+    record_list = GeneralEffluent.objects.all().order_by('-record_date')
+                  ^^^^^^^^^^^^^^^
+NameError: name 'GeneralEffluent' is not defined. Did you mean: 'add_general_effluent'?
+[2025-04-22 22:30:36,613] ERROR django.server "GET /view-general-effluent/ HTTP/1.1" 500 145
+[2025-04-22 22:34:43,621] ERROR django.request Internal Server Error: /view-general-effluent/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\oneSource\ETP\views.py", line 354, in view_general_effluent_records
+    record_list = GeneralEffluent.objects.all().order_by('-record_date')
+                  ^^^^^^^^^^^^^^^
+NameError: name 'GeneralEffluent' is not defined. Did you mean: 'add_general_effluent'?
+[2025-04-22 22:34:43,635] ERROR django.server "GET /view-general-effluent/ HTTP/1.1" 500 145
+[2025-04-22 22:36:09,397] ERROR django.request Internal Server Error: /view-general-effluent/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\oneSource\ETP\views.py", line 354, in view_general_effluent_records
+    record_list = GeneralEffluent.objects.all().order_by('-record_date')
+                  ^^^^^^^^^^^^^^^
+NameError: name 'GeneralEffluent' is not defined. Did you mean: 'add_general_effluent'?
+[2025-04-22 22:36:09,409] ERROR django.server "GET /view-general-effluent/ HTTP/1.1" 500 145
+[2025-04-22 22:37:22,813] ERROR django.request Internal Server Error: /view-general-effluent/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\oneSource\ETP\views.py", line 354, in view_general_effluent_records
+    record_list = GeneralEffluent.objects.all().order_by('-record_date')
+                  ^^^^^^^^^^^^^^^
+NameError: name 'GeneralEffluent' is not defined. Did you mean: 'add_general_effluent'?
+[2025-04-22 22:37:22,828] ERROR django.server "GET /view-general-effluent/ HTTP/1.1" 500 145
+[2025-04-22 22:40:17,984] ERROR django.request Internal Server Error: /add-general-effluent/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\ETP\views.py", line 332, in add_general_effluent
+    form = GeneralEffluentForm()
+           ^^^^^^^^^^^^^^^^^^^
+NameError: name 'GeneralEffluentForm' is not defined
+[2025-04-22 22:40:18,001] ERROR django.server "GET /add-general-effluent/ HTTP/1.1" 500 82268
+[2025-04-22 22:41:01,387] ERROR django.request Internal Server Error: /add-general-effluent/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\ETP\views.py", line 332, in add_general_effluent
+    form = GeneralEffluentForm()
+           ^^^^^^^^^^^^^^^^^^^
+NameError: name 'GeneralEffluentForm' is not defined
+[2025-04-22 22:41:01,473] ERROR django.server "GET /add-general-effluent/ HTTP/1.1" 500 82416
+[2025-04-22 22:59:14,110] ERROR django.request Internal Server Error: /edit-general-effluent/45/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "L:\oneSource_Live\oneSource\ETP\views.py", line 382, in edit_general_effluent
+    instance = get_object_or_404(GeneralEffluent, pk=pk)
+               ^^^^^^^^^^^^^^^^^
+NameError: name 'get_object_or_404' is not defined
+[2025-04-22 22:59:14,129] ERROR django.server "GET /edit-general-effluent/45/ HTTP/1.1" 500 82421

@@ -1,0 +1,242 @@
+{% extends 'main/index.html' %}
+{% load static %}
+
+{% block maincontent %}
+
+<div class="container mx-auto py-2 px-4">
+
+    <!-- Messages Section -->
+    {% if messages %}
+    <div class="mt-3 sm:mx-auto sm:w-full sm:max-w-sm">
+        {% for message in messages %}
+        <div class="relative flex justify-between items-center px-4 py-3 rounded-lg shadow-md text-white
+                        {% if message.tags == 'debug' %}bg-gray-500
+                        {% elif message.tags == 'info' %}bg-blue-500
+                        {% elif message.tags == 'success' %}bg-green-500
+                        {% elif message.tags == 'warning' %}bg-yellow-500
+                        {% elif message.tags == 'error' %}bg-red-500
+                        {% endif %}">
+            <span class="flex-1">{{ message }}</span>
+            <!-- Close Button -->
+            <button type="button" class="ml-3 text-white hover:text-gray-200 focus:outline-none"
+                onclick="this.parentElement.remove()">
+                ✖
+            </button>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- If there are any form-wide errors -->
+    {% if form and form.non_field_errors %}
+    <div class="mt-2 sm:mx-auto sm:w-full sm:max-w-sm">
+        {% for error in form.non_field_errors %}
+        <div class="relative p-4 border-l-4 rounded-md bg-red-50 border-red-500">
+            <span class="text-red-700">{{ error }}</span>
+            <button type="button" class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 p-1"
+                onclick="this.parentElement.remove()">
+                X
+            </button>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <div class="container mx-auto px-6 mt-6">
+        <div class="flex items-center justify-between mb-4">
+            <!-- Back to Main Page Button -->
+            <a href="/" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded shadow-md">
+                Back to Main Page
+            </a>
+            <!-- Heading -->
+            <h2 class="text-2xl font-bold text-center flex-1 text-gray-700">Downtime Records</h2>
+            <!-- Go to Create Button -->
+            <a href="{% url 'add_downtime' %}"
+                class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded shadow-md">
+                <i class="fa-solid fa-square-plus"></i>
+            </a>
+            <a href="{% url 'downtime_chart' %}"
+                class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-3 mx-1 rounded shadow-md">
+                <i class="fa-solid fa-chart-simple fa-xl "></i>
+            </a>
+        </div>
+    </div>
+
+    <form method="GET" class="mb-6 bg-white shadow-md rounded-lg p-4">
+        <div class="flex flex-wrap items-end gap-4">
+    
+            <!-- Date -->
+            <div class="w-[170px]">
+                <label class="block text-sm font-medium text-gray-700">Date</label>
+                <input type="date" name="date_filter" value="{{ date_filter }}"
+                    class="w-full p-2 border border-gray-300 rounded-lg text-xs">
+            </div>
+    
+            <!-- Equipment ID -->
+            <div class="w-[170px]">
+                <label class="block text-sm font-medium text-gray-700">Equipment ID</label>
+                <input type="text" name="eqpt_id_filter" value="{{ eqpt_id_filter }}"
+                    placeholder="Enter Equipment ID"
+                    class="w-full p-2 border border-gray-300 rounded-lg text-xs">
+            </div>
+    
+            <!-- Product Name -->
+            <div class="w-[170px]">
+                <label class="block text-sm font-medium text-gray-700">Product Name</label>
+                <input type="text" name="product_name_filter" value="{{ product_name_filter }}"
+                    placeholder="Enter Product Name"
+                    class="w-full p-2 border border-gray-300 rounded-lg text-xs">
+            </div>
+    
+            <!-- Downtime Dept (Dropdown) -->
+            <div class="w-[170px]">
+                <label class="block text-sm font-medium text-gray-700">Downtime Dept</label>
+                <select name="downtime_dept_filter"
+                    class="w-full p-2 border border-gray-300 rounded-lg text-xs">
+                    <option value="">All</option>
+                    {% for code, label in DEPARTMENT_CHOICES %}
+                        <option value="{{ code }}" {% if downtime_dept_filter == code %}selected{% endif %}>{{ label }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+    
+            <!-- Block (Dropdown) -->
+            <div class="w-[170px]">
+                <label class="block text-sm font-medium text-gray-700">Block</label>
+                <select name="block_filter"
+                    class="w-full p-2 border border-gray-300 rounded-lg text-xs">
+                    <option value="">All</option>
+                    {% for code, label in select_block %}
+                        <option value="{{ code }}" {% if block_filter == code %}selected{% endif %}>{{ label }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+    
+            <!-- Buttons -->
+            <div class="flex items-end space-x-2">
+                <button type="submit"
+                    class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-xs">
+                    Apply Filters
+                </button>
+                <a href="{% url 'view_downtime' %}"
+                    class="bg-gray-400 text-white px-4 py-2 rounded-lg hover:bg-gray-500 transition text-xs">
+                    Clear Filters
+                </a>
+                <a href="{% url 'export_downtime_excel' %}?date_filter={{ date_filter }}&eqpt_id_filter={{ eqpt_id_filter }}&block_filter={{ block_filter }}&downtime_dept_filter={{ downtime_dept_filter }}&product_name_filter={{ product_name_filter }}"
+                    class="text-green-700 hover:text-green-900 font-semibold flex items-center">
+                    <i class="fa-solid fa-file-excel fa-xl py-1 px-2"></i>
+                </a>
+            </div>
+    
+            <!-- Pagination -->
+            <div class="ml-auto mt-2 flex items-end space-x-2 text-xs">
+                {% if downtimes.has_previous %}
+                <a href="?page={{ downtimes.previous_page_number }}&date_filter={{ date_filter }}&eqpt_id_filter={{ eqpt_id_filter }}&block_filter={{ block_filter }}&downtime_dept_filter={{ downtime_dept_filter }}&product_name_filter={{ product_name_filter }}"
+                    class="px-3 py-2 bg-gray-200 rounded hover:bg-gray-300">Previous</a>
+                {% endif %}
+    
+                <span class="px-3 py-2 border rounded">
+                    Page {{ downtimes.number }} of {{ downtimes.paginator.num_pages }}
+                </span>
+    
+                {% if downtimes.has_next %}
+                <a href="?page={{ downtimes.next_page_number }}&date_filter={{ date_filter }}&eqpt_id_filter={{ eqpt_id_filter }}&block_filter={{ block_filter }}&downtime_dept_filter={{ downtime_dept_filter }}&product_name_filter={{ product_name_filter }}"
+                    class="px-3 py-2 bg-gray-200 rounded hover:bg-gray-300">Next</a>
+                {% endif %}
+            </div>
+        </div>
+    </form>
+    
+
+    <!-- Responsive Table Wrapper -->
+    <div class="overflow-x-auto bg-white shadow-md rounded-lg">
+        <table class="min-w-full border border-gray-300 rounded-lg">
+            <thead class="bg-gray-100 border-b text-left">
+                <tr>
+                    <th class="py-2 px-4 border-b whitespace-nowrap">ID</th>
+                    <th class="py-2 px-4 border-b whitespace-nowrap whitespace-nowrap">Date</th>
+                    <th class="py-2 px-4 border-b whitespace-nowrap whitespace-nowrap">Idle</th>
+                    <th class="py-2 px-4 border-b whitespace-nowrap">Eqpt ID</th>
+                    <th class="py-2 px-4 border-b whitespace-nowrap">Product Name</th>
+                    <th class="py-2 px-4 border-b whitespace-nowrap">Stage Name</th>
+                    <th class="py-2 px-4 border-b hidden md:table-cell">Block</th>
+                    <th class="py-2 px-4 border-b hidden md:table-cell whitespace-nowrap">Dept</th>
+                    <th class="py-2 px-4 border-b hidden md:table-cell whitespace-nowrap">Duration (hrs)</th>
+                    <th class="py-2 px-4 border-b hidden md:table-cell whitespace-nowrap">Category</th>
+                    {% if can_edit_downtime or can_delete_downtime or can_view_downtime %}
+                    <th class="py-2 px-4 border-b whitespace-nowrap">Actions</th>
+                    {% endif %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for record in downtimes %}
+                <tr class="border-b hover:bg-gray-100 transition duration-300">
+                    <td class="py-2 px-4 whitespace-nowrap">
+                        {{ forloop.counter0|add:downtimes.start_index }}
+                    </td>
+                    <td class="py-2 px-4 whitespace-nowrap">
+                        {{ record.date|date:"d/m/Y" }}
+                    </td>
+                    <td class="py-2 px-4 whitespace-nowrap">
+                        {{ record.idle }}
+                    </td>
+                    <td class="py-2 px-4 whitespace-nowrap">
+                        {{ record.eqpt_id }}
+                    </td>
+                    <td class="py-2 px-4 whitespace-nowrap">
+                        {{ record.product_name }}
+                    </td>
+                    <td class="py-2 px-4 whitespace-nowrap">
+                        {{ record.stage_name }}
+                    </td>
+                    <td class="py-2 px-4 hidden md:table-cell whitespace-nowrap">
+                        {{ record.block }}
+                    </td>
+                    <td class="py-2 px-4 hidden md:table-cell">
+                        {{ record.downtime_dept }}
+                    </td>
+                    <td class="py-2 px-4 hidden md:table-cell">
+                        {{ record.total_duration }}
+                    </td>
+                    <td class="py-2 px-4 hidden md:table-cell">
+                        {{ record.downtime_category }}
+                    </td>
+                    <!-- Actions -->
+                    <td class="py-2 px-4 flex space-x-2 whitespace-nowrap">
+                        {% if can_view_downtime %}
+                        <!-- View button -->
+                        <a href="{% url 'view_downtime_detail' record.id %}"
+                            class="bg-blue-500 text-white px-2 py-1 rounded hover:bg-blue-600">
+                            <i class="fa fa-eye" aria-hidden="true"></i>
+                        </a>
+                        {% endif %}
+                        {% if can_edit_downtime %}
+                        <!-- Edit button -->
+                        <a href="{% url 'edit_downtime' record.id %}"
+                            class="bg-yellow-500 text-white px-2 py-1 rounded hover:bg-yellow-600">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                        {% endif %}
+                        {% if can_delete_downtime %}
+                        <!-- Delete button (uses POST form for safety) -->
+                        <form action="{% url 'delete_downtime' record.id %}" method="POST"
+                            onsubmit="return confirm('Are you sure you want to delete this vehicle record?');">
+                            {% csrf_token %}
+                            <button type="submit" class="bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600">
+                                <i class="fa fa-trash" aria-hidden="true"></i>
+                            </button>
+                        </form>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="14" class="py-4 text-center text-gray-500">No downtime records found</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock maincontent %}

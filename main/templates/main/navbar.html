@@ -1,0 +1,208 @@
+{% load static %}
+
+
+
+<nav class="bg-blue-950">  <!-- Removed x-data -->
+  <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+    <div class="relative flex h-16 items-center justify-between">
+      
+      <!-- Mobile menu button (STRUCTURE ONLY - REQUIRES JS) -->
+      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+        <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+          <span class="absolute -inset-0.5"></span>
+          <span class="sr-only">Open main menu</span>
+          <!-- Icon when menu is closed (Default) -->
+          <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+          <!-- Icon when menu is open (Requires JS to switch) -->
+          <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Logo and Desktop Links -->
+      <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+        <!-- Logo -->
+        <div class="flex shrink-0 items-center">
+          <a href="{% url 'indexpage' %}" class="flex items-center space-x-3 rtl:space-x-reverse">
+              <img class="h-8 w-auto" src="{% static 'main/images/OC.png' %}" alt="OC Logo" />
+              <span class="self-center text-xl font-semibold whitespace-nowrap text-white">oneSource</span>
+          </a>
+        </div>
+
+        <!-- Desktop Links (Hover Dropdowns using group-hover) -->
+        <div class="hidden sm:ml-6 sm:block">
+          <div class="flex space-x-4">
+            
+            {% if 'HR' in user_groups or is_superuser %}
+            <div class="relative group pb-2"> <!-- Added 'group' class -->
+              <button type="button" class="inline-flex items-center gap-x-1 rounded-md px-3 py-3 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-expanded="false" aria-haspopup="true">
+                HR Module
+              </button>
+              <!-- Dropdown Panel -->
+              <div class="absolute left-0 z-10 mt-2 w-56 origin-top-left rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none
+                          invisible opacity-0 scale-95 group-hover:visible group-hover:opacity-100 group-hover:scale-100  
+                          transition ease-in-out duration-300 ">
+                  
+                <a href="{% url 'attendance_pivot_report' %}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-950 hover:text-white" role="menuitem" tabindex="-2">Attendance Summary</a>
+                <a href="{% url 'canteen_dashboard' %}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-950 hover:text-white" role="menuitem" tabindex="-2">Canteen Dashboard</a>
+                <a href="{% url 'contractor_worker_entry_add' %}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-950 hover:text-white" role="menuitem" tabindex="-2">Create Contract Worker Record</a>
+				<a href="{% url 'monthly_hr_budget_summary' %}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-950 hover:text-white" role="menuitem" tabindex="-2">HR Budget</a>
+              </div>
+            </div>
+            {% endif %}
+
+             {% if 'PRODUCTION' in user_groups or is_superuser %}
+            <div class="relative group pb-2"> <!-- Added 'group' class -->
+              <button type="button" class="inline-flex items-center gap-x-1 rounded-md px-3 py-3 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-expanded="false" aria-haspopup="true">
+                Production Module
+              </button>
+              <div class="absolute left-0 z-10 mt-2 w-56 origin-top-left rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none
+                          invisible opacity-0 scale-95 group-hover:visible group-hover:opacity-100 group-hover:scale-100  
+                          transition ease-out duration-100"
+                   role="menu" aria-orientation="vertical" tabindex="-1">
+                  <a href="{% url 'add_downtime' %}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-950 hover:text-white" role="menuitem" tabindex="-1">Create Downtime Record</a>
+                  <a href="{% url 'view_downtime' %}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-950 hover:text-white" role="menuitem" tabindex="-1">Downtime Reports</a>
+              </div>
+            </div>
+            {% endif %}
+
+            {% if 'EHS' in user_groups or is_superuser %}
+             <div class="relative group pb-2"> <!-- Added 'group' class -->
+              <button type="button" class="inline-flex items-center gap-x-1 rounded-md px-3 py-3 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-expanded="false" aria-haspopup="true">
+                EHS Module
+              </button>
+              <div class="absolute left-0 z-10 mt-2 w-56 origin-top-left rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none
+                          invisible opacity-0 scale-95 group-hover:visible group-hover:opacity-100 group-hover:scale-100  
+                          transition ease-out duration-100"
+                   role="menu" aria-orientation="vertical" tabindex="-1">
+                 <a href="{% url 'add_lagging_indicator' %}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-950 hover:text-white" role="menuitem" tabindex="-1">Create Lagging Record</a>
+                 <a href="{% url 'view_lagging' %}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-950 hover:text-white" role="menuitem" tabindex="-1">View Lagging Records</a>
+                 <a href="{% url 'add_leading_record' %}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-950 hover:text-white" role="menuitem" tabindex="-1">Create Leading Record</a>
+                 <a href="{% url 'view_leading' %}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-950 hover:text-white" role="menuitem" tabindex="-1">View Leading Records</a>
+				 <a href="{% url 'add_pssr_record' %}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-950 hover:text-white" role="menuitem" tabindex="-1">Add PSSR Records</a>
+                 <a href="{% url 'pssr_record_list' %}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-950 hover:text-white" role="menuitem" tabindex="-1">View PSSR Records</a>
+              </div>
+            </div>
+            {% endif %}
+
+            {% if 'STORE' in user_groups or is_superuser %}
+             <div class="relative group pb-2"> <!-- Added 'group' class -->
+              <button type="button" class="inline-flex items-center gap-x-1 rounded-md px-3 py-3 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-expanded="false" aria-haspopup="true">
+                Store Module
+              </button>
+              <div class="absolute left-0 z-10 mt-2 w-56 origin-top-left rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none
+                          invisible opacity-0 scale-95 group-hover:visible group-hover:opacity-100 group-hover:scale-100  
+                          transition ease-out duration-100"
+                   role="menu" aria-orientation="vertical" tabindex="-1">
+                  <a href="{% url 'add_vehicle' %}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-950 hover:text-white" role="menuitem" tabindex="-1">Create Vehicle Record</a>
+                  <a href="{% url 'vehicle_list' %}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-950 hover:text-white" role="menuitem" tabindex="-1">Store Reports</a>
+              </div>
+            </div>
+            {% endif %}
+            
+            {% if 'ETP' in user_groups or is_superuser %} {# Assuming ETP is the correct group name #}
+             <div class="relative group pb-2"> <!-- Added 'group' class -->
+                <button type="button" class="inline-flex items-center gap-x-1 rounded-md px-3 py-3 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-expanded="false" aria-haspopup="true">
+                    ETP Module
+                </button>
+                <div class="absolute left-0 z-10 mt-2 w-56 origin-top-left rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none
+                            invisible opacity-0 scale-95 group-hover:visible group-hover:opacity-100 group-hover:scale-100  
+                            transition ease-out duration-100"
+                     role="menu" aria-orientation="vertical" tabindex="-1">
+                    <a href="{% url 'add_effluent_record' %}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-950 hover:text-white" role="menuitem" tabindex="-1">Add Effluent Record</a>
+                    <a href="{% url 'view_effluent_records' %}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-950 hover:text-white" role="menuitem" tabindex="-1">View Effluent Reports</a>
+                    <a href="{% url 'add_general_effluent' %}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-950 hover:text-white" role="menuitem" tabindex="-1">Add General Effluent Record</a>
+                    <a href="{% url 'view_general_effluent' %}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-950 hover:text-white" role="menuitem" tabindex="-1">View General Effluent Record</a>
+                </div>
+            </div>
+            {% endif %}
+            {% if 'UTILITY' in user_groups or is_superuser %}
+            <div class="relative group pb-2"> <!-- Added 'group' class -->
+              <button type="button" class="inline-flex items-center gap-x-1 rounded-md px-3 py-3 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-expanded="false" aria-haspopup="true">
+                Utility Module
+              </button>
+              <div class="absolute left-0 z-10 mt-2 w-56 origin-top-left rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none
+                          invisible opacity-0 scale-95 group-hover:visible group-hover:opacity-100 group-hover:scale-100  
+                          transition ease-out duration-100"
+                   role="menu" aria-orientation="vertical" tabindex="-1">
+				      <a href="{% url 'utility_entry' %}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-950 hover:text-white" role="menuitem" tabindex="-1">Create Utility Record</a>
+                <a href="{% url 'utility_readings_report' %}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-950 hover:text-white" role="menuitem" tabindex="-1">Utility Record</a>
+              </div>
+            </div>
+            {% endif %}
+            {% if 'QC' in user_groups or is_superuser %} 
+             <div class="relative group pb-2"> <!-- Added 'group' class -->
+                <button type="button" class="inline-flex items-center gap-x-1 rounded-md px-3 py-3 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white whitespace-nowrap focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-expanded="false" aria-haspopup="true">
+                    QC Module
+                </button>
+                <div class="absolute left-0 z-10 mt-2 w-56 origin-top-left rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none
+                            invisible opacity-0 scale-95 group-hover:visible group-hover:opacity-100 group-hover:scale-100  
+                            transition ease-out duration-100"
+                     role="menu" aria-orientation="vertical" tabindex="-1">
+                    <a href="{% url 'qc_home' %}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-950 hover:text-white" role="menuitem" tabindex="-1">QC Module</a>
+                </div>
+            </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Side Items -->
+      <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+        
+
+        <!-- Profile dropdown (Hover using group-hover) -->
+        <div class="relative ml-3 group"> <!-- Added 'group' class -->
+          <button type="button" class="relative flex items-center rounded-full bg-gray-800 p-3 text-sm text-gray-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+            <span class="absolute -inset-1.5"></span>
+            <span class="sr-only">Open user menu</span>
+            <i class="fa-solid fa-user fa-lg mr-2"></i> 
+            <strong>{{ user.username }}</strong>
+          </button>
+
+          <!-- Dropdown Panel -->
+          <div class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none
+                      invisible opacity-0 scale-95 group-hover:visible group-hover:opacity-100 group-hover:scale-100  
+                      transition ease-out duration-100" >
+             {% if is_superuser or show_admin_panel %}
+             <a href="/admin/" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-blue-950 hover:text-white" role="menuitem" tabindex="-1" id="user-menu-item-admin">
+               <i class="fa-solid fa-user-shield fa-sm mr-3"></i> Admin Panel
+             </a>
+             {% endif %}
+             <a href="{% url 'userlogout' %}" class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-blue-950 hover:text-white" role="menuitem" tabindex="-1" id="user-menu-item-logout">
+               <i class="fa-solid fa-right-from-bracket fa-sm mr-3"></i> Logout
+             </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu (STRUCTURE ONLY - REQUIRES JS) -->
+  <div class="sm:hidden hidden" id="mobile-menu"> <!-- Add 'hidden' class by default -->
+    <div class="space-y-1 px-2 pb-3 pt-2">
+       {% if 'HR' in user_groups or is_superuser %}
+         <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">HR Module</a>
+       {% endif %}
+       {% if 'PRODUCTION' in user_groups or is_superuser %}
+          <a href="{% url 'view_downtime' %}" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Production Module</a>
+       {% endif %}
+       {% if 'EHS' in user_groups or is_superuser %}
+         <a href="{% url 'view_leading' %}" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">EHS Module</a>
+       {% endif %}
+       {% if 'STORE' in user_groups or is_superuser %}
+         <a href="{% url 'vehicle_list' %}" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Store Module</a>
+       {% endif %}
+       {% if 'ETP' in user_groups or is_superuser %}
+         <a href="{% url 'view_effluent_records' %}" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Effluent Module</a>
+         <a href="{% url 'view_general_effluent' %}" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Genaral Effluent Module</a>
+       {% endif %}
+    </div>
+  </div>
+</nav>
+
+<!-- NO JavaScript needed for the hover effect -->
+<!-- BUT JavaScript IS required to make the mobile menu button functional -->

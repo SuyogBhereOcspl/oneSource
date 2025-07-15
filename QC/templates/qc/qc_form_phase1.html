@@ -1,0 +1,323 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+  {% if form.instance and form.instance.pk %}
+    Production: Edit QC Header – QC Project
+  {% else %}
+    Fill QC Header – QC Project
+  {% endif %}
+{% endblock %}
+
+{% block head_extra %}
+{# Libraries for searchable dropdowns & icons #}
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2-bootstrap-5-theme@1.3.0/dist/select2-bootstrap-5-theme.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+  /* ───────────────────────────────────
+      PAGE & CARD LAYOUT
+  ─────────────────────────────────── */
+  body {
+    background-color: #f4f6f8; /* A cool, professional gray */
+  }
+  .qc-header-card {
+    background-color: #fff;
+    padding: 2rem 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(20, 22, 36, 0.06);
+    margin-bottom: 2rem;
+    max-width: 900px; /* Constrain width for better readability on large screens */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .qc-header-card h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    color: #111827;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .qc-header-card h1 .fa-solid {
+    color: #3b82f6; /* A nice blue */
+  }
+
+  /* ───────────────────────────────────
+      FORM STRUCTURE & STYLING
+  ─────────────────────────────────── */
+  .form-section-header {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #f3f4f6;
+  }
+  .form-section-header:first-of-type {
+    margin-top: 0;
+  }
+
+  .form-fields-container {
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .form-field-row {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e5e7eb;
+    background-color: #fff;
+    transition: background-color 0.2s ease-in-out;
+  }
+  .form-field-row:last-child {
+    border-bottom: none;
+  }
+  .form-field-row:hover {
+    background-color: #f9fafb;
+  }
+
+  .form-field-row .field-label {
+    flex: 0 0 220px; /* Fixed width for labels */
+    padding: 1rem 1.5rem;
+    font-weight: 500;
+    color: #374151;
+    font-size: 0.95rem;
+  }
+
+  .form-field-row .field-control {
+    flex-grow: 1;
+    padding: 0.75rem 1.5rem 0.75rem 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Universal styling for form controls */
+  .field-control .form-control,
+  .field-control .form-select,
+  .field-control .select2-container {
+    width: 100% !important;
+  }
+
+  /* Read-only text styling */
+  .field-control .static-value {
+    font-size: 0.95rem;
+    color: #111827;
+    padding: 0.375rem 0; /* Align with input text */
+    min-height: calc(1.5em + .75rem + 2px);
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Error message styling */
+  .invalid-feedback.d-block {
+    font-size: .875em;
+    margin-top: 0.25rem;
+    padding-left: 0.25rem;
+  }
+
+  /* ───────────────────────────────────
+      BUTTON & ACTION AREA
+  ─────────────────────────────────── */
+  .action-area {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e5e7eb;
+    text-align: right;
+  }
+  .btn-submit-qc {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.75rem 1.75rem;
+    border-radius: 6px;
+  }
+
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="qc-header-card">
+  <h1>
+    {% if form.instance and form.instance.pk %}
+      <i class="fa-solid fa-pen-to-square"></i>
+      <span>Edit Quality Control Header</span>
+    {% else %}
+      <i class="fa-solid fa-flask-vial"></i>
+      <span>New Quality Control Header</span>
+    {% endif %}
+  </h1>
+
+  {% if messages %}
+    {% for msg in messages %}
+      <div class="alert alert-{{ msg.tags }} alert-dismissible fade show" role="alert">
+        {{ msg }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    {% endfor %}
+  {% endif %}
+
+  <form method="post" novalidate>
+    {% csrf_token %}
+
+    <h3 class="form-section-header">Core Information</h3>
+    <div class="form-fields-container">
+      <div class="form-field-row">
+        <label class="field-label">Entry No.</label>
+        <div class="field-control">
+          <p class="static-value">{{ form.instance.id|default:"(New record)" }}</p>
+        </div>
+      </div>
+      <div class="form-field-row">
+        <label class="field-label">Prepared By</label>
+        <div class="field-control">
+          <p class="static-value">
+            {% if form.instance and form.instance.pk %}{{ form.instance.created_by.get_full_name }}{% else %}{{ request.user.get_full_name }}{% endif %}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="form-section-header">Batch & Equipment</h3>
+    <div class="form-fields-container">
+      <div class="form-field-row">
+        <label for="id_stage" class="field-label">Stage</label>
+        <div class="field-control">
+          <select id="id_stage" name="stage" class="form-select">
+            <option value="">— Select Stage —</option>
+            {% for s in stage_options %}
+              <option value="{{ s.stages }}" data-product="{{ s.id }}" {% if form.stage.value == s.stages %}selected{% endif %}>
+                {{ s.stages }}
+              </option>
+            {% endfor %}
+          </select>
+          {% for err in form.stage.errors %}<div class="invalid-feedback d-block">{{ err }}</div>{% endfor %}
+        </div>
+      </div>
+      <div class="form-field-row">
+        <label class="field-label">Product Name</label>
+        <div class="field-control">
+          <p id="product-name-display" class="static-value">—</p>
+          <input type="hidden" id="id_product" name="product" value="{{ form.product.value|default:'' }}">
+          {% for err in form.product.errors %}<div class="invalid-feedback d-block">{{ err }}</div>{% endfor %}
+        </div>
+      </div>
+      <div class="form-field-row">
+        <label for="id_equipment_id" class="field-label">Equipment</label>
+        <div class="field-control">
+          <select id="id_equipment_id" name="equipment_id" class="form-select">
+            <option value="">— Select Equipment —</option>
+            {% for eq in equipment_list %}
+              <option value="{{ eq.eqp_code }}" data-block="{{ eq.block_name|default:'' }}" {% if form.equipment_id.value|stringformat:"s" == eq.eqp_code|stringformat:"s" %}selected{% endif %}>
+                {{ eq.eqp_name }} ({{ eq.eqp_code }})
+              </option>
+            {% endfor %}
+          </select>
+          {% for err in form.equipment_id.errors %}<div class="invalid-feedback d-block">{{ err }}</div>{% endfor %}
+        </div>
+      </div>
+      <div class="form-field-row">
+        <label class="field-label">Block</label>
+        <div class="field-control">
+           <input type="text" id="id_block" name="block" class="form-control-plaintext ps-0" value="{{ form.block.value|default_if_none:'' }}" readonly>
+          {% for err in form.block.errors %}<div class="invalid-feedback d-block">{{ err }}</div>{% endfor %}
+        </div>
+      </div>
+      <div class="form-field-row">
+        <label for="id_batch_no" class="field-label">Batch No</label>
+        <div class="field-control">
+          <select id="id_batch_no" name="batch_no" class="form-select">
+            <option value="">— Select Batch No —</option>
+            {% for bn in distinct_batch_nos %}
+              <option value="{{ bn }}" {% if form.batch_no.value|stringformat:"s" == bn|stringformat:"s" %}selected{% endif %}>{{ bn }}</option>
+            {% endfor %}
+          </select>
+          {% for err in form.batch_no.errors %}<div class="invalid-feedback d-block">{{ err }}</div>{% endfor %}
+        </div>
+      </div>
+    </div>
+    
+    <h3 class="form-section-header">Timestamps</h3>
+    <div class="form-fields-container">
+        <div class="form-field-row">
+            <label for="{{ form.entry_date.id_for_label }}" class="field-label">Entry Date & Time</label>
+            <div class="field-control">{{ form.entry_date }}{% for err in form.entry_date.errors %}<div class="invalid-feedback d-block">{{ err }}</div>{% endfor %}</div>
+        </div>
+        <div class="form-field-row">
+            <label for="{{ form.sample_sent_at.id_for_label }}" class="field-label">Sample Sent Date & Time</label>
+            <div class="field-control">{{ form.sample_sent_at }}{% for err in form.sample_sent_at.errors %}<div class="invalid-feedback d-block">{{ err }}</div>{% endfor %}</div>
+        </div>
+    </div>
+
+    <h3 class="form-section-header">Details</h3>
+    <div class="form-fields-container">
+      <div class="form-field-row">
+        <label for="{{ form.sample_description.id_for_label }}" class="field-label">Sample Description</label>
+        <div class="field-control">{{ form.sample_description }}{% for err in form.sample_description.errors %}<div class="invalid-feedback d-block">{{ err }}</div>{% endfor %}</div>
+      </div>
+      <div class="form-field-row">
+        <label for="{{ form.test_required_for.id_for_label }}" class="field-label">Test Required For</label>
+        <div class="field-control">{{ form.test_required_for }}{% for err in form.test_required_for.errors %}<div class="invalid-feedback d-block">{{ err }}</div>{% endfor %}</div>
+      </div>
+    </div>
+
+    <div class="action-area">
+      <button type="submit" class="btn btn-primary btn-submit-qc">
+        {% if form.instance and form.instance.pk %}
+          <i class="fa-solid fa-save me-2"></i> Update Header
+        {% else %}
+          <i class="fa-solid fa-paper-plane me-2"></i> Submit for QC
+        {% endif %}
+      </button>
+    </div>
+  </form>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{# Same scripts as before - no changes needed #}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+<script>
+$(document).ready(function() {
+    // --- Data Setup ---
+    const productMap = {
+        {% for prod in product_list %}
+            "{{ prod.id }}": "{{ prod.name|escapejs }}",
+        {% endfor %}
+    };
+
+    // --- Initialize Select2 Dropdowns ---
+    $('#id_stage, #id_equipment_id, #id_batch_no').select2({
+        theme: 'bootstrap-5'
+    });
+
+    // --- Dynamic Form Logic (Unchanged) ---
+    $('#id_stage').on('change', function () {
+        const selectedOption = $(this).find('option:selected');
+        const productId = selectedOption.data('product') || '';
+        const productName = productMap[productId] || '—';
+
+        $('#id_product').val(productId);
+        $('#product-name-display').text(productName);
+    });
+
+    $('#id_equipment_id').on('change', function () {
+        const blockName = $(this).find('option:selected').data('block') || '';
+        $('#id_block').val(blockName);
+    });
+
+    // --- Initial State on Page Load ---
+    $('#id_stage').trigger('change');
+    $('#id_equipment_id').trigger('change');
+});
+</script>
+{% endblock %}

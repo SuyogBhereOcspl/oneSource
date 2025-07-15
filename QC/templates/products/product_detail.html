@@ -1,0 +1,228 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}{{ product.name }} – Product Details{% endblock %}
+
+{% block head_extra %}
+<style>
+  .detail-container {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    margin-bottom: 30px;
+  }
+
+  /* --- Header Section --- */
+  .detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #e9ecef;
+    margin-bottom: 30px;
+  }
+  .header-info h1 {
+    font-size: 2.3em;
+    color: #2c3e50;
+    margin: 0 0 5px 0;
+  }
+  .header-info .subtitle {
+    font-size: 1em;
+    color: #6c757d;
+    font-weight: 500;
+  }
+  .header-actions {
+    display: flex;
+    gap: 10px;
+  }
+
+  /* --- Main Content Grid Layout --- */
+  .detail-content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+  }
+
+  /* --- Panel Styling --- */
+  .info-panel, .specs-panel {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 25px;
+  }
+  .panel-title {
+    font-size: 1.5em;
+    color: #343a40;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #dee2e6;
+  }
+
+  /* --- General Info Panel --- */
+  .info-list {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 15px;
+    font-size: 1em;
+  }
+  .info-list dt {
+    font-weight: 600;
+    color: #495057;
+  }
+  .info-list dd {
+    margin: 0;
+    color: #212529;
+  }
+
+  /* --- Specifications Panel with Grouping --- */
+  .spec-group-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .spec-group-list > li {
+    margin-bottom: 1.25rem;
+  }
+  .spec-group-title {
+    font-weight: 600;
+    color: #343a40;
+    margin-bottom: .5rem;
+    font-size: 1.1em;
+  }
+  .spec-item-list {
+    list-style: disc inside;
+    margin: 0;
+    padding-left: 1rem;
+    font-size: .95em;
+    color: #495057;
+  }
+  .no-specs-info {
+    font-style: italic;
+    color: #6c757d;
+    padding: 10px 0;
+  }
+
+  /* --- Footer / Actions --- */
+  .detail-footer {
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 1px solid #e9ecef;
+  }
+  .btn-back {
+    text-decoration: none;
+    color: #0d6efd;
+    font-weight: 500;
+    font-size: 1em;
+    transition: color 0.2s;
+  }
+  .btn-back:hover {
+    color: #0b5ed7;
+    text-decoration: underline;
+  }
+
+  .action-link {
+    display: inline-block;
+    padding: 8px 18px;
+    font-size: 0.9em;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+  }
+  .action-link.edit {
+    color: #fff;
+    background-color: #0d6efd;
+  }
+  .action-link.edit:hover {
+    background-color: #0b5ed7;
+    transform: translateY(-1px);
+  }
+  .action-link.delete {
+    color: #dc3545;
+    background-color: rgba(220, 53, 69, 0.1);
+  }
+  .action-link.delete:hover {
+    color: #fff;
+    background-color: #dc3545;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="detail-container">
+  <header class="detail-header">
+    <div class="header-info">
+      <h1>{{ product.name }}</h1>
+      <div class="subtitle">
+        BOM Code: <strong>{{ product.code }}</strong>
+      </div>
+    </div>
+    {% if perms.QC.change_product or perms.QC.delete_product %}
+    <div class="header-actions">
+      {% if perms.QC.change_product %}
+      <a href="{% url 'product_update' product.pk %}" class="action-link edit">Edit</a>
+      {% endif %}
+      {% if perms.QC.delete_product %}
+      <a href="{% url 'product_delete' product.pk %}" class="action-link delete"
+         onclick="return confirm('Are you sure you want to delete {{ product.name|escapejs }}?');">
+        Delete
+      </a>
+      {% endif %}
+    </div>
+    {% endif %}
+  </header>
+
+  <main class="detail-content-grid">
+    <!-- General Information Panel -->
+    <section class="info-panel">
+      <h2 class="panel-title">General Information</h2>
+      <dl class="info-list">
+        <dt>Stage</dt>
+        <dd>{{ product.stages|default:"Not specified" }}</dd>
+
+        <dt>Item Type</dt>
+        <dd>{{ product.item_type|default:"Not specified" }}</dd>
+      </dl>
+    </section>
+
+    <!-- Specifications Panel with Grouping -->
+    <section class="specs-panel">
+      <h2 class="panel-title">Specifications</h2>
+
+      {% if visible_specs %}
+        {% regroup visible_specs by group as spec_groups %}
+        <ul class="spec-group-list">
+          {% for grp in spec_groups %}
+            <li>
+              <div class="spec-group-title">{{ grp.grouper|default:"General" }}</div>
+              <ul class="spec-item-list">
+                {% for s in grp.list %}
+                  <li>
+                    {{ s.name }}
+                    {% if s.spec_type == 'numeric' %}
+                      : {{ s.min_val|default:"N/A" }} – {{ s.max_val|default:"N/A" }}
+                    {% elif s.spec_type == 'choice' %}
+                      : {{ s.allowed_choices|default:"N/A" }}
+                    {% else %}
+                      : Free-text Allowed
+                    {% endif %}
+                  </li>
+                {% endfor %}
+              </ul>
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p class="no-specs-info">No specifications have been defined for this product.</p>
+      {% endif %}
+    </section>
+  </main>
+
+  <footer class="detail-footer">
+    <a href="{% url 'product_list' %}" class="btn-back">← Back to Product List</a>
+  </footer>
+</div>
+{% endblock content %}

@@ -1,0 +1,244 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}QC Entries – QC Project{% endblock %}
+
+{% block head_extra %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  /* ───────────────────────────────────
+      PAGE & CARD LAYOUT
+  ─────────────────────────────────── */
+  body {
+    background-color: #f4f7f9;
+    font-family: -apple-system, "Segoe UI", "Roboto", sans-serif;
+  }
+  .content-area {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+    overflow: hidden;
+  }
+
+  /* ───────────────────────────────────
+      HEADER & TOOLBAR
+  ─────────────────────────────────── */
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 1px solid #e9ecef;
+  }
+  .page-header h1 { font-size: 2em; font-weight: 700; color: #1a253c; margin: 0; }
+  .btn-primary-action {
+    background-color: #007bff; color: white; text-decoration: none; padding: 10px 20px;
+    border-radius: 6px; font-weight: 500; font-size: 0.95em;
+    display: inline-flex; align-items: center; gap: 8px; transition: background-color 0.2s ease;
+  }
+  .btn-primary-action:hover { background-color: #0069d9; }
+
+  .filter-toolbar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px 20px;
+    padding: 16px 24px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+    align-items: flex-end;
+  }
+  .filter-toolbar .form-group label { display: block; font-weight: 600; font-size: 0.85em; margin-bottom: 6px; color: #495057; }
+  .filter-toolbar input[type="text"], .filter-toolbar input[type="date"], .filter-toolbar select {
+    width: 100%; padding: 8px 12px; border: 1px solid #ced4da; border-radius: 4px;
+  }
+  .filter-toolbar .actions { grid-column: -1; display: flex; align-items: center; gap: 10px; justify-content: flex-end; }
+  .btn-filter { padding: 8px 16px; border-radius: 4px; font-weight: 500; border: 1px solid; cursor: pointer; }
+  .btn-apply { background-color: #007bff; color: white; border-color: #007bff; }
+  .btn-clear { background-color: transparent; color: #6c757d; border-color: #ced4da; text-decoration: none; }
+
+  /* ───────────────────────────────────
+      DATA TABLE & SUMMARY
+  ─────────────────────────────────── */
+  .table-meta-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px 8px;
+    font-size: 0.9em;
+    color: #6c757d;
+  }
+  .data-table-container { padding: 0 24px 24px; }
+  .data-table { width: 100%; border-collapse: collapse; font-size: 0.9em; }
+  .data-table th, .data-table td { padding: 14px 10px; text-align: left; vertical-align: middle; border-bottom: 1px solid #e9ecef; }
+  .data-table thead th {
+    color: #495057; font-weight: 600; text-transform: uppercase;
+    font-size: 0.8em; letter-spacing: 0.5px;
+  }
+  .data-table tbody tr:first-child td { border-top: 1px solid #e9ecef; }
+  .data-table tbody tr:hover { background-color: #f8f9fa; }
+  .entry-link { font-weight: 600; color: #007bff; text-decoration: none; }
+  .entry-link:hover { text-decoration: underline; }
+
+  .status-pill, .decision-pill { display: inline-block; padding: 4px 12px; border-radius: 16px; font-size: 0.85em; font-weight: 600; color: white; text-align: center; min-width: 90px; }
+  .status-draft { background-color: #6c757d; }
+  .status-pending { background-color: #ffc107; color: #212529; }
+  .status-completed { background-color: #28a745; }
+  .status-cancelled { background-color: #dc3545; }
+  .decision-approved { background-color: #28a745; }
+  .decision-rejected { background-color: #dc3545; }
+  .decision-variation { background-color: #fd7e14; }
+
+  /* ───────────────────────────────────
+      ACTIONS, PAGINATION & NO RESULTS
+  ─────────────────────────────────── */
+  .actions-cell { display: flex; gap: 8px; }
+  .action-btn { display: inline-flex; justify-content: center; align-items: center; width: 32px; height: 32px; border-radius: 50%; text-decoration: none; color: #495057; background-color: #e9ecef; transition: all 0.2s; }
+  .action-btn:hover { background-color: #ced4da; color: #212529; }
+  .action-btn.edit:hover { background-color: #007bff; color: white; }
+  .action-btn.cancel:hover { background-color: #dc3545; color: white; }
+
+  .pagination-container { display: flex; justify-content: center; padding-top: 20px; }
+
+  .no-entries { text-align: center; padding: 60px 24px; color: #6c757d; }
+  .no-entries i { font-size: 3em; color: #ced4da; margin-bottom: 16px; }
+  .no-entries p { margin: 0; }
+  .no-entries a { color: #007bff; font-weight: 600; text-decoration: none; }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="content-area">
+  <div class="page-header">
+    <h1>QC Entries</h1>
+    {% if perms.QC.add_qcentry %}
+      <a href="{% url 'qc_create' %}" class="btn-primary-action">
+        <i class="fa-solid fa-plus"></i> New QC Entry
+      </a>
+    {% endif %}
+  </div>
+
+  <form method="get" class="filter-toolbar">
+    <div class="form-group">
+      <label for="search-query">Search</label>
+      <input type="text" id="search-query" name="q" placeholder="Product, Batch, or Entry No..." value="{{ request.GET.q|default:'' }}">
+    </div>
+    <div class="form-group">
+      <label for="status-filter">Status</label>
+      <select id="status-filter" name="status">
+        <option value="" {% if not request.GET.status %}selected{% endif %}>All Statuses</option>
+        <option value="draft" {% if request.GET.status == 'draft' %}selected{% endif %}>Draft</option>
+        <option value="pending_qc" {% if request.GET.status == 'pending_qc' %}selected{% endif %}>Pending QC</option>
+        <option value="qc_completed" {% if request.GET.status == 'qc_completed' %}selected{% endif %}>QC Completed</option>
+        <option value="cancelled" {% if request.GET.status == 'cancelled' %}selected{% endif %}>Cancelled</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="start-date">Start Date</label>
+      <input type="date" id="start-date" name="start_date" value="{{ request.GET.start_date|default:'' }}">
+    </div>
+    <div class="form-group">
+      <label for="end-date">End Date</label>
+      <input type="date" id="end-date" name="end_date" value="{{ request.GET.end_date|default:'' }}">
+    </div>
+    <div class="actions">
+      <button type="submit" class="btn-filter btn-apply">Apply</button>
+      <a href="{% url 'qc_list' %}" class="btn-filter btn-clear">Clear</a>
+    </div>
+  </form>
+
+  <div class="table-meta-header">
+    <span class="results-summary">
+      Showing <strong>{{ entries.start_index|default:1 }}–{{ entries.end_index|default:entries|length }}</strong> of <strong>{{ entries.paginator.count|default:entries|length }}</strong> entries
+    </span>
+  </div>
+
+  <div class="data-table-container">
+    {% if entries %}
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Entry No.</th>
+            <th>Product</th>
+            <th>Batch No.</th>
+            <th>Group</th>            {# ← NEW COLUMN #}
+            <th>Entry Date</th>
+            <th>Status</th>
+            <th>QC Decision</th>
+            {% if perms.QC.view_qcentry or perms.QC.change_qcentry or perms.QC.delete_qcentry %}
+              <th style="width:15%;">Actions</th>
+            {% endif %}
+          </tr>
+        </thead>
+        <tbody>
+          {% for entry in entries %}
+            <tr>
+              <td><a href="{% url 'qc_detail' entry.id %}" class="entry-link">#{{ entry.id }}</a></td>
+              <td>{{ entry.product.name }}</td>
+              <td>{{ entry.batch_no|default:"—" }}</td>
+              <td>{{ entry.group|default:"—" }}</td>  {# ← SHOW THE SAVED GROUP FIELD #}
+              <td>{{ entry.entry_date|date:"Y-m-d"|default:"—" }}</td>
+              <td>
+                {% if entry.status == 'draft' %}
+                  <span class="status-pill status-draft">Draft</span>
+                {% elif entry.status == 'pending_qc' %}
+                  <span class="status-pill status-pending">Pending QC</span>
+                {% elif entry.status == 'qc_completed' %}
+                  <span class="status-pill status-completed">Completed</span>
+                {% elif entry.status == 'cancelled' %}
+                  <span class="status-pill status-cancelled">Cancelled</span>
+                {% else %}
+                  <span class="text-muted">Unknown</span>
+                {% endif %}
+              </td>
+              <td>
+                {% if entry.decision_status == 'approved' %}
+                  <span class="decision-pill decision-approved">Approved</span>
+                {% elif entry.decision_status == 'approved_under_deviation' %}
+                  <span class="decision-pill decision-variation">Under Deviation</span>
+                {% elif entry.decision_status == 'rejected' %}
+                  <span class="decision-pill decision-rejected">Rejected</span>
+                {% else %}
+                  <span class="text-muted">—</span>
+                {% endif %}
+              </td>
+              {% if perms.QC.view_qcentry or perms.QC.change_qcentry or perms.QC.delete_qcentry %}
+                <td class="actions-cell">
+                  {% if perms.QC.view_qcentry %}
+                    <a href="{% url 'qc_detail' entry.id %}" class="action-btn view" title="View Details">
+                      <i class="fa-solid fa-eye"></i>
+                    </a>
+                  {% endif %}
+                  {% if perms.QC.change_qcentry and entry.status in 'draft,pending_qc' %}
+                    <a href="{% url 'qc_update' entry.id %}" class="action-btn edit" title="Edit Entry">
+                      <i class="fa-solid fa-pencil"></i>
+                    </a>
+                  {% endif %}
+                  {% if perms.QC.delete_qcentry and entry.status != 'cancelled' %}
+                    <a href="{% url 'qc_cancel' entry.id %}" class="action-btn cancel" title="Cancel Entry" onclick="return confirm('Cancel entry #{{ entry.id }}?');">
+                      <i class="fa-solid fa-trash"></i>
+                    </a>
+                  {% endif %}
+                </td>
+              {% endif %}
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+      {% if entries.has_other_pages %}
+        <div class="pagination-container">
+          {# Add your Django pagination controls here #}
+        </div>
+      {% endif %}
+
+    {% else %}
+      <div class="no-entries">
+        <i class="fa-solid fa-folder-open"></i>
+        <p><strong>No QC entries found</strong></p>
+        <p><a href="{% url 'qc_create' %}">Create a new entry</a> or <a href="{% url 'qc_list' %}">clear the filters</a>.</p>
+      </div>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

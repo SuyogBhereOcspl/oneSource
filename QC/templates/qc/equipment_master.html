@@ -1,0 +1,119 @@
+{# qc/templates/qc/equipment_master.html #}
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Equipment Master – QC Project{% endblock %}
+
+{% block head_extra %}
+<style>
+  .list-page-card {
+    background-color: #ffffff;
+    padding: 30px 35px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.07);
+    margin-bottom: 30px;
+  }
+  .list-page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #e9ecef;
+  }
+  .list-page-header h1 {
+    font-size: 2.1em;
+    color: #2c3e50;
+    margin-bottom: 0;
+  }
+
+  .table-responsive-container {
+    overflow-x: auto;
+  }
+  .styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    font-size: 0.95em;
+  }
+  .styled-table th,
+  .styled-table td {
+    padding: 14px 12px;
+    vertical-align: middle;
+    border-bottom: 1px solid #e9ecef;
+    text-align: left;
+  }
+  .styled-table td:last-child,
+  .styled-table th:last-child {
+    text-align: right;
+  }
+  .styled-table thead th {
+    border-bottom-width: 2px;
+    border-color: #dee2e6;
+    background-color: #f8f9fa;
+    color: #343a40;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .styled-table tbody tr:hover {
+    background-color: #f8f9fa;
+  }
+
+  .action-link {
+    margin-right: 8px;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 0.9em;
+  }
+  .action-link:hover {
+    text-decoration: underline;
+  }
+  .no-data {
+    text-align: center;
+    color: #6c757d;
+    padding: 20px;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="list-page-card">
+  <div class="list-page-header">
+    <h1>Equipment Master</h1>
+    <a href="{% url 'qc_list' %}" class="action-link">← Back to QC Entries</a>
+  </div>
+
+  {% if equipment_list %}
+    <div class="table-responsive-container">
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th>EQP Code</th>
+            <th>EQP Name</th>
+            <th>EQP Remarks</th>
+            <th>UnitCode</th>
+            <th>Tag No</th>
+            <th>Block Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for eq in equipment_list %}
+            <tr>
+              <td>{{ eq.eqp_code }}</td>
+              <td>{{ eq.eqp_name }}</td>
+              <td>{{ eq.eqp_remarks|default:"—" }}</td>
+              <td>{{ eq.unit_code|default:"—" }}</td>
+              <td>{{ eq.tag_no|default:"—" }}</td>
+              <td>{{ eq.block_name|default:"—" }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  {% else %}
+    <div class="no-data">
+      <p>No equipment records found in the ERP database.</p>
+    </div>
+  {% endif %}
+</div>
+{% endblock %}

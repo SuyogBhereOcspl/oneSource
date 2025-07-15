@@ -1,0 +1,52 @@
+[2025-06-30 10:45:27,088] ERROR django.request Internal Server Error: /admin/HR/dailyattendance/process_import/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\contrib\admin\sites.py", line 240, in inner
+    return view(request, *args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\import_export\admin.py", line 173, in process_import
+    data = tmp_storage.read()
+  File "L:\oneSource_Live\venv\Lib\site-packages\import_export\tmp_storages.py", line 31, in read
+    with self._open(mode=self.read_mode) as file:
+         ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\import_export\tmp_storages.py", line 42, in _open
+    return open(self.get_full_path(), mode, encoding=self.encoding)
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\2\\tmpvhvuu1zu'
+[2025-06-30 10:45:27,111] ERROR django.server "POST /admin/HR/dailyattendance/process_import/ HTTP/1.1" 500 145
+[2025-06-30 10:45:59,976] ERROR django.request Internal Server Error: /admin/HR/dailyattendance/process_import/
+Traceback (most recent call last):
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\decorators.py", line 188, in _view_wrapper
+    result = _process_exception(request, e)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\decorators.py", line 186, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\contrib\admin\sites.py", line 240, in inner
+    return view(request, *args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\django\views\decorators\http.py", line 64, in inner
+    return func(request, *args, **kwargs)
+  File "L:\oneSource_Live\venv\Lib\site-packages\import_export\admin.py", line 177, in process_import
+    tmp_storage.remove()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "L:\oneSource_Live\venv\Lib\site-packages\import_export\tmp_storages.py", line 35, in remove
+    os.remove(self.get_full_path())
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified: 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\2\\tmpvhvuu1zu'

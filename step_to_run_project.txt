@@ -1,0 +1,12 @@
+
+1)Run project first activate environment
+.\venv\Scripts\activate
+cd \oneSource\
+python manage.py runserver
+
+
+If you any changes in static files you need to run below command other static files related code not reflcting
+2)python manage.py collectstatic
+
+
+3)If you want to check all configuration related variable check the .env file

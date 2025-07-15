@@ -1,0 +1,322 @@
+{# templates/home.html #}
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}In-Process QC Dashboard{% endblock %}
+
+{% block head_extra %}
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" 
+    rel="stylesheet"
+  >
+  <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" 
+  />
+
+  <style>
+    :root {
+      --bg-color: #f8f9fa;
+      --card-bg: #ffffff;
+      --text-primary: #343a40;
+      --text-secondary: #6c757d;
+      --border-color: #dee2e6;
+      --shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      --primary-color: #0d6efd;
+      --green-color: #198754;
+      --orange-color: #fd7e14;
+      --red-color: #dc3545;
+      --teal-color: #20c997;
+      --cyan-color: #0dcaf0;
+      --gray-color: #6c757d;
+    }
+    body {
+      background-color: var(--bg-color);
+      font-family: 'Poppins', sans-serif;
+      color: var(--text-primary);
+    }
+    .dashboard-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 30px;
+    }
+    /* ─── NEW: Stat Group Styling ────────────────────── */
+    .stats-group {
+      margin-bottom: 40px;
+    }
+    .stats-group-title {
+      font-size: 1.5em;
+      font-weight: 600;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border-color);
+      color: var(--text-primary);
+    }
+
+    /* ─── Stat Cards (margin-bottom removed) ───────── */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+    }
+    .stat-card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+      padding: 25px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      transition: transform .2s ease, box-shadow .2s ease;
+      text-decoration: none;
+      color: inherit;
+    }
+    .stat-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+    .stat-icon {
+      font-size: 24px;
+      width: 60px; height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+    .stat-info h3 {
+      font-size: 2.2em; font-weight: 600; margin: 0; line-height: 1;
+    }
+    .stat-info p {
+      margin: 5px 0 0; font-size: .95em;
+      color: var(--text-secondary); font-weight: 500;
+    }
+    .icon-total      { background-color: var(--primary-color); }
+    .icon-pending    { background-color: var(--orange-color); }
+    .icon-completed  { background-color: var(--green-color); }
+    .icon-cancelled  { background-color: var(--gray-color); }
+    .icon-approved   { background-color: var(--teal-color); }
+    .icon-variation  { background-color: var(--cyan-color); }
+    .icon-rejected   { background-color: var(--red-color); }
+
+    /* ─── Chart Panel ───────────────────────────────────────────────── */
+    .chart-panel {
+      background: var(--card-bg);
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+      padding: 25px;
+      box-shadow: var(--shadow);
+    }
+    .chart-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .chart-header h2 {
+      font-size: 1.5em; font-weight: 600; margin: 0;
+    }
+    .chart-header form {
+      display: flex; align-items: center; gap: 10px;
+    }
+    .chart-header label {
+      font-weight: 500; color: var(--text-secondary);
+    }
+    .chart-header select {
+      padding: 8px 15px; font-size: 1em;
+      font-family: 'Poppins', sans-serif;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      background-color: var(--bg-color);
+      cursor: pointer;
+    }
+    .chart-container {
+      position: relative; height: 400px;
+    }
+    @media(max-width:768px) {
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media(max-width:576px) {
+      .stats-grid { grid-template-columns: 1fr; }
+      .chart-header { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+{% endblock %}
+
+
+{% block content %}
+  <div class="dashboard-container">
+
+    <!-- Section 1: Entry Status -->
+    <section class="stats-group">
+      <h2 class="stats-group-title">Entry Status</h2>
+      <div class="stats-grid">
+        <a href="{% url 'qc_list' %}" class="stat-card">
+          <div class="stat-icon icon-total"><i class="fa-solid fa-list-ol"></i></div>
+          <div class="stat-info">
+            <h3>{{ stats.total }}</h3>
+            <p>Total Entries</p>
+          </div>
+        </a>
+        <a href="{% url 'qc_list' %}?status=pending_qc" class="stat-card">
+          <div class="stat-icon icon-pending"><i class="fa-solid fa-hourglass-half"></i></div>
+          <div class="stat-info">
+            <h3>{{ stats.pending }}</h3>
+            <p>Pending QC</p>
+          </div>
+        </a>
+        <a href="{% url 'qc_list' %}?status=qc_completed" class="stat-card">
+          <div class="stat-icon icon-completed"><i class="fa-solid fa-check-double"></i></div>
+          <div class="stat-info">
+            <h3>{{ stats.completed }}</h3>
+            <p>Completed</p>
+          </div>
+        </a>
+        <a href="{% url 'qc_list' %}?status=cancelled" class="stat-card">
+          <div class="stat-icon icon-cancelled"><i class="fa-solid fa-times"></i></div>
+          <div class="stat-info">
+            <h3>{{ stats.cancelled }}</h3>
+            <p>Cancelled</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Section 2: QC Decision Status -->
+    <section class="stats-group">
+      <h2 class="stats-group-title">QC Decision Status</h2>
+      <div class="stats-grid">
+        <a href="{% url 'qc_list' %}?decision=approved" class="stat-card">
+          <div class="stat-icon icon-approved"><i class="fa-solid fa-thumbs-up"></i></div>
+          <div class="stat-info">
+            <h3>{{ stats.approved }}</h3>
+            <p>Approved</p>
+          </div>
+        </a>
+        <a href="{% url 'qc_list' %}?decision=approved_under_deviation" class="stat-card">
+          <div class="stat-icon icon-variation"><i class="fa-solid fa-code-branch"></i></div>
+          <div class="stat-info">
+            <h3>{{ stats.variation }}</h3>
+            <p>Under Deviation</p>
+          </div>
+        </a>
+        <a href="{% url 'qc_list' %}?decision=rejected" class="stat-card">
+          <div class="stat-icon icon-rejected"><i class="fa-solid fa-ban"></i></div>
+          <div class="stat-info">
+            <h3>{{ stats.rejected }}</h3>
+            <p>Rejected</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Chart Panel -->
+    <section class="chart-panel">
+      <div class="chart-header">
+        <h2>Entry Trends</h2>
+        <form method="get">
+          <label for="freq">View by:</label>
+          <select name="freq" id="freq" onchange="this.form.submit()">
+            <option value="daily"       {% if freq == 'daily' %}selected{% endif %}>Daily</option>
+            <option value="weekly"      {% if freq == 'weekly' %}selected{% endif %}>Weekly</option>
+            <option value="fortnightly" {% if freq == 'fortnightly' %}selected{% endif %}>Fortnightly</option>
+            <option value="monthly"     {% if freq == 'monthly' %}selected{% endif %}>Monthly</option>
+          </select>
+        </form>
+      </div>
+      <div class="chart-container">
+        <canvas id="comboChart"></canvas>
+      </div>
+    </section>
+
+  </div>
+{% endblock %}
+
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const labels     = {{ chart_labels|safe }};
+  const counts     = {{ chart_counts|safe }};
+  const cumulative = {{ chart_cumulative|safe }};
+
+  const ctx = document.getElementById('comboChart').getContext('2d');
+  new Chart(ctx, {
+    data: {
+      labels: labels,
+      datasets: [
+        {
+          type: 'bar',
+          label: 'Count per Period',
+          data: counts,
+          backgroundColor: 'rgba(13, 110, 253, 0.6)',
+          borderColor: 'rgba(13, 110, 253, 1)',
+          borderRadius: 4,
+          borderWidth: 1
+        },
+        {
+          type: 'line',
+          label: 'Cumulative Total',
+          data: cumulative,
+          borderColor: 'rgba(25, 135, 84, 1)',
+          backgroundColor: 'rgba(25, 135, 84, 0.2)',
+          fill: true,
+          tension: 0.4,
+          pointRadius: 4,
+          pointBackgroundColor: 'rgba(25, 135, 84, 1)'
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      scales: {
+        x: {
+          title: {
+            display: true,
+            text: '{{ freq|capfirst }} Period',
+            font: { size: 14, weight: '500' }
+          },
+          grid: { display: false }
+        },
+        y: {
+          beginAtZero: true,
+          title: {
+            display: true,
+            text: 'Number of Entries',
+            font: { size: 14, weight: '500' }
+          },
+          grid: { color: '#e9ecef' }
+        }
+      },
+      plugins: {
+        legend: {
+          position: 'top',
+          labels: { font: { size: 13, family: 'Poppins' }, padding: 20 }
+        },
+        tooltip: {
+          mode: 'index',
+          intersect: false,
+          backgroundColor: '#212529',
+          titleFont: { weight: '600' },
+          bodyFont: { weight: '400' },
+          padding: 12,
+          cornerRadius: 8
+        }
+      },
+      interaction: { mode: 'index', intersect: false }
+    }
+  });
+});
+</script>
+{% endblock %}
